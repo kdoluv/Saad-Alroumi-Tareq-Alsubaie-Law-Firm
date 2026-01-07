@@ -51,4 +51,18 @@ footer {
     text-align: left;
     font-size: 14px;
 }
+.hero {
+    background: linear-gradient(rgba(11,60,93,0.85), rgba(11,60,93,0.85)),
+                url('hero.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero h1 {
+    font-size: 36px;
+}
+.hero p {
+    font-size: 20px;
+}
 
