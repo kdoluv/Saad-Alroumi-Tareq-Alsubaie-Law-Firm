@@ -1,10 +1,10 @@
 let slides = document.querySelectorAll('.slide');
-let index = 0;
+let i = 0;
 
 setInterval(() => {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
+  slides[i].classList.remove('active');
+  i = (i + 1) % slides.length;
+  slides[i].classList.add('active');
 }, 5000);
 
 function setLang(lang) {
@@ -15,4 +15,3 @@ function setLang(lang) {
     el.textContent = el.getAttribute('data-' + lang);
   });
 }
-
