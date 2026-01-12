@@ -5,4 +5,22 @@
     object-fit: cover;
     display: block;
 }
+.slideshow-container {
+    background: url("assets/images/slide-bg.jpg") center/cover no-repeat;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+    font-size: 22px;
+    line-height: 2;
+    color: #fff;
+    max-width: 900px;
+    margin: auto;
+}
+
+.slide.active {
+    display: block;
+}
 
