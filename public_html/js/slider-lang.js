@@ -1,22 +1,26 @@
-/* SLIDER */
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove("active");
-  index = (index + 1) % slides.length;
-  slides[index].classList.add("active");
-}, 5000);
-
-/* LANGUAGE SWITCH */
+// LANGUAGE SWITCH
 function setLang(lang) {
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
-  document.querySelectorAll("[data-ar]").forEach(el => {
+  document.querySelectorAll('[data-ar]').forEach(el => {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
 }
 
-/* DEFAULT LANGUAGE */
-setLang("ar");
+// SLIDER
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 5000);
+
+// Default language
+setLang('ar');
