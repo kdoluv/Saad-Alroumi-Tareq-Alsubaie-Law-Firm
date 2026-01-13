@@ -108,3 +108,9 @@ nav a:hover::after {
   font-weight: bold;
   border-left: 4px solid var(--gold);
 }
+.footer {
+  background: var(--navy);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
