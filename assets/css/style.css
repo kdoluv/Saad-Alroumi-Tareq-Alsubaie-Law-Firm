@@ -107,6 +107,71 @@ body {
   line-height: 1.8;
 }
 
+.team {
+  background: var(--gray);
+  padding: 80px 40px;
+}
+
+.team h2 {
+  color: var(--navy);
+  font-size: 36px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.team h2::after {
+  content: "";
+  width: 90px;
+  height: 3px;
+  background: var(--gold);
+  display: block;
+  margin-top: 15px;
+}
+
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: white;
+  padding: 30px 25px;
+  border-right: 5px solid var(--navy);
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.team-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: var(--navy);
+}
+
+.team-card span {
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* تمييز الشركاء */
+.team-card.lead {
+  border-right-color: var(--gold);
+  background: #fffdf6;
+}
+
+/* تمييز المستشارين */
+.team-card.consultant {
+  border-right-color: #999;
+}
+
+.team-note {
+  margin-top: 50px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #333;
+  max-width: 900px;
+}
+
 /* ABOUT */
 .about h2 {
   color: var(--navy);
