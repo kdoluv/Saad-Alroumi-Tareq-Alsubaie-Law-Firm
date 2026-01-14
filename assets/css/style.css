@@ -172,6 +172,71 @@ body {
   max-width: 900px;
 }
 
+.contact {
+  padding: 90px 40px;
+  background: white;
+}
+
+.contact h2 {
+  font-size: 36px;
+  color: var(--navy);
+  margin-bottom: 50px;
+}
+
+.contact h2::after {
+  content: "";
+  width: 90px;
+  height: 3px;
+  background: var(--gold);
+  display: block;
+  margin-top: 15px;
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.contact-form button {
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: var(--gold);
+}
+
 /* ABOUT */
 .about h2 {
   color: var(--navy);
