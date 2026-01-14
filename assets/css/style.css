@@ -237,10 +237,10 @@ body {
   background: var(--gold);
 }
 @media (max-width: 900px) {
-  .footer-grid {
+  .contact-box {
     grid-template-columns: 1fr;
-    text-align: center;
   }
+}
 
   .footer-logo {
     margin: 0 auto 20px;
