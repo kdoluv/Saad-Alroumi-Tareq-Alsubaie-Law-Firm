@@ -15,23 +15,25 @@
 
 <!-- HEADER -->
 <header class="header">
-  <div class="container header-flex">
-    <img src="assets/images/logo.png" alt="ST Lawyers" class="logo">
-    
-    <nav class="nav">
-      <a href="#">الرئيسية</a>
-      <a href="#about">عن المكتب</a>
-      <a href="#team">أعضاء المكتب</a>
-      <a href="#contact">اتصل بنا</a>
-      
+  <div class="container">
+    <img src="images/logo.png" class="logo" alt="ST Lawyers">
+
+    <nav>
+      <a href="#home" data-ar="الرئيسية" data-en="Home"></a>
+      <a href="#about" data-ar="نبذة عن المكتب" data-en="About"></a>
+      <a href="#team" data-ar="أعضاء المكتب" data-en="Our Team"></a>
+      <a href="#contact" data-ar="اتصل بنا" data-en="Contact"></a>
+
+      <span class="lang-switch" onclick="setLang('ar')">AR</span> |
+      <span class="lang-switch" onclick="setLang('en')">EN</span>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
   <!-- INTRODUCTION -->
-<section class="intro container">
-  <h2 data-ar="نبذة عن المكتب"  data-en="About the Firm"></h2>
+<section id="home" class="hero-slider">
+ <h2 data-ar="نبذة عن المكتب"  data-en="About the Firm"></h2>
  <p
  data-ar="تَأَسَّسَ مَكْتَبُ اَلْمُحاميانِ سَعْدُ الرُّومِيِّ وَطارِقُ السُّبَيْعي عَامَ 1982 ، وَمُنْذُ ذَلِكَ التّاريخِ تَعامُلَ المَكْتَبُ مَعَ الكَثيرِ مِنْ القَضَايَا سَواءٌ كَانَتْ الشَّرِكاتُ أَوْ الأَفْرادُ 
  بَدَأَ المَكْتَبُ بِالتَّعَامُلِ مَعَ القَضَايَا التِّجاريَّةِ وَفُروعِها وَكَذَلِكَ القَضَايَا المَدَنيَّةِ بِالْإِضَافَةِ الَّى قَضَايَا الإِيجَارَاتِ وَالقَضَايَا العُمّاليَّةِ ، ثُمَّ اتَّسَعَ لِيَشْمَلَ القَضَايَا الجِنائيَّةَ وَقَضَايَا أَسْواقِ الْمَالِ وَالِاشْكَالِيَّاتِ المُتَعَلِّقَةَ بِهَا بِالْإِضَافَةِ الَّى القِسْمِ الأَجْنَبيِّ
@@ -45,7 +47,7 @@ The Firm carries out its functions through a fully integrated legal and administ
 </section>
 
   <!-- TEAM -->
-<section id="team" class="team container">
+<section id="about" class="about container">
   <h2 data-ar="أعضاء المكتب" data-en="Our Team"></h2>
 
   <div class="team-grid">
