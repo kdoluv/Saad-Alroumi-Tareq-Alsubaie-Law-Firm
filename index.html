@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<span class="lang-switch" onclick="setLang('ar')">AR</span> |
-<span class="lang-switch" onclick="setLang('en')">EN</span><head>
+<html lang="ar" dir="rtl">
+<head>
   <meta charset="UTF-8">
   <title>مكتب سعد الرومي وطارق السبيعي للمحاماة</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -13,16 +15,15 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container">
     <img src="images/logo.png" class="logo" alt="ST Lawyers">
 
     <nav>
-      <a href="#home" data-ar="الرئيسية" data-en="Home"></a>
-      <a href="#about" data-ar="نبذة عن المكتب" data-en="About"></a>
-      <a href="#team" data-ar="أعضاء المكتب" data-en="Our Team"></a>
-      <a href="#contact" data-ar="اتصل بنا" data-en="Contact"></a>
+      <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="#about" data-ar="نبذة عن المكتب" data-en="About">نبذة عن المكتب</a>
+      <a href="#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
+      <a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
 
       <span class="lang-switch" onclick="setLang('ar')">AR</span> |
       <span class="lang-switch" onclick="setLang('en')">EN</span>
@@ -30,201 +31,54 @@
   </div>
 </header>
 
-<!-- HERO -->
-  <!-- INTRODUCTION -->
-<section id="home" class="hero-slider">
-<h2 data-ar="عن المكتب" data-en="About the Firm">
-  عن المكتب
-</h2>
- <p
- data-ar="تَأَسَّسَ مَكْتَبُ اَلْمُحاميانِ سَعْدُ الرُّومِيِّ وَطارِقُ السُّبَيْعي عَامَ 1982 ، وَمُنْذُ ذَلِكَ التّاريخِ تَعامُلَ المَكْتَبُ مَعَ الكَثيرِ مِنْ القَضَايَا سَواءٌ كَانَتْ الشَّرِكاتُ أَوْ الأَفْرادُ 
- بَدَأَ المَكْتَبُ بِالتَّعَامُلِ مَعَ القَضَايَا التِّجاريَّةِ وَفُروعِها وَكَذَلِكَ القَضَايَا المَدَنيَّةِ بِالْإِضَافَةِ الَّى قَضَايَا الإِيجَارَاتِ وَالقَضَايَا العُمّاليَّةِ ، ثُمَّ اتَّسَعَ لِيَشْمَلَ القَضَايَا الجِنائيَّةَ وَقَضَايَا أَسْواقِ الْمَالِ وَالِاشْكَالِيَّاتِ المُتَعَلِّقَةَ بِهَا بِالْإِضَافَةِ الَّى القِسْمِ الأَجْنَبيِّ
-وَخِلَالَ تِلْكَ السَّنَوَاتِ كَوْنَ المَكْتَبِ عَلاقاتٍ واسِعَةً كَانَ لَهَا مَرْدودٌ إيجابيٌّ يَهْدِفُ لِلْحُصُولِ عَلَى أَكْمَلِ خِدْمَةٍ مُمْكِنٍ أَنْ يَتِمَّ تَحْقيقُها لِموَكَّليه "
- data-en="Saad Al-Roomi & Tareq Al-Subaie Lawyers and Legal Consultants was established in 1982. Since its inception, the Firm has handled a wide range of legal cases representing both corporate entities and individual clients.
-The Firm initially focused on commercial cases and their branches, as well as civil cases, in addition to lease disputes and labor cases. Thereafter, its scope of practice expanded to include criminal cases, capital markets cases, and related legal disputes, in addition to the foreign department.
-Over the years, the Firm has built extensive professional relationships that have yielded positive results, with the objective of providing the highest possible level of legal services to its clients.
-The Firm carries out its functions through a fully integrated legal and administrative team, possessing the expertise and experience necessary to achieve the objectives and protect the interests of its clients.>
-</p>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1 data-ar="مكتب سعد الرومي وطارق السبيعي للمحاماة"
+        data-en="Saad Alroomi & Tareq Alsubaiei Law Firm">
+      مكتب سعد الرومي وطارق السبيعي للمحاماة
+    </h1>
 
+    <p data-ar="خبرة قانونية راسخة منذ عام 1982"
+       data-en="Trusted legal expertise since 1982">
+      خبرة قانونية راسخة منذ عام 1982
+    </p>
+  </div>
 </section>
 
-  <!-- TEAM -->
 <section id="about" class="about container">
-  <h2 data-ar="أعضاء المكتب" data-en="Our Team"></h2>
+  <h2 data-ar="عن المكتب" data-en="About the Firm">عن المكتب</h2>
 
-  <div class="team-grid">
-
-    <div class="member">
-      <h3
-        data-ar="الأستاذ سعد علي الرومي"
-        data-en="Mr. Saad Ali Alroomi">
-      </h3>
-    </div>
-
-    <div class="member">
-      <h3
-        data-ar="الأستاذ طارق عبد العزيز السبيعي"
-        data-en="Mr. Tareq Abdulaziz Alsubaiei">
-      </h3>
-    </div>
-
-    <div class="member">
-      <h3
-        data-ar="الأستاذ يوسف مساعد السبيعي"
-        data-en="Mr. Yousef Mosaed Alsubaiei">
-      </h3>
-    </div>
-
-    <div class="member">
-      <h3
-        data-ar="الأستاذ عبد اللطيف طارق السبيعي"
-        data-en="Mr. Abdulatif Tareq Alsubaiei">
-      </h3>
-    </div>
-
-    <div class="member">
-      <h3
-        data-ar="المستشار محمود محمد الشامي"
-        data-en="Counsel Mahmoud Mohammed Alshami">
-      </h3>
-    </div>
-
-    <div class="member">
-      <h3
-        data-ar="المستشار هشام محمد العويل"
-        data-en="Counsel Hisham Mohammed Alowail">
-      </h3>
-    </div>
-
-    <div class="member">
-      <h3
-        data-ar="المستشار عبد الفتاح سعد متولي"
-        data-en="Counsel Abdel Fattah Saad Metwally">
-      </h3>
-    </div>
-
-  </div>
-
-  <p class="team-note"
-   data-ar="كما يستعين المكتب بنخبة من الكفاءات القانونية من المحامين المتخصصين في إجراءات التنفيذ، ومتابعة الإجراءات الإدارية في المحاكم، وإدارة الخبراء، ووزارة الشؤون الاجتماعية والعمل، بالإضافة إلى مختصين لمتابعة الشكاوى في المخافر والإدارة العامة للتحقيقات، إلى جانب الجهاز الإداري للمكتب."
-   data-en="The firm is also supported by a select group of qualified legal professionals, including lawyers specialized in enforcement procedures, follow-up of administrative processes before the courts, the Department of Experts, and the Ministry of Social Affairs and Labor, in addition to specialists handling complaints before police stations and the Public Prosecution, alongside the firm’s administrative staff.">
-</p>
-
+  <p
+    data-ar="تأسس مكتب سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا للشركات والأفراد..."
+    data-en="Established in 1982, Saad Alroomi & Tareq Alsubaiei Law Firm has handled a wide range of legal matters for corporate and individual clients.">
+    تأسس مكتب سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا للشركات والأفراد...
+  </p>
 </section>
 
-  <!-- CONTACT -->
+<section id="team" class="team container">
+  <h2 data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</h2>
+
+  <ul class="team-list">
+    <li data-ar="الأستاذ سعد علي الرومي" data-en="Mr. Saad Ali Alroomi">الأستاذ سعد علي الرومي</li>
+    <li data-ar="الأستاذ طارق عبد العزيز السبيعي" data-en="Mr. Tareq Abdulaziz Alsubaiei">الأستاذ طارق عبد العزيز السبيعي</li>
+    <li data-ar="الأستاذ يوسف مساعد السبيعي" data-en="Mr. Yousef Mosaed Alsubaiei">الأستاذ يوسف مساعد السبيعي</li>
+    <li data-ar="الأستاذ عبد اللطيف طارق السبيعي" data-en="Mr. Abdulatif Tareq Alsubaiei">الأستاذ عبد اللطيف طارق السبيعي</li>
+  </ul>
+</section>
+
 <section id="contact" class="contact container">
-  <h2
-    data-ar="اتصل بنا"
-    data-en="Contact Us">
-  </h2>
+  <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
 
-  <div class="contact-box">
-
-    <div class="contact-info">
-      <p
-        data-ar="يرحب مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية بالتواصل مع عملائه الكرام للرد على الاستفسارات القانونية وتقديم الاستشارات المتخصصة."
-        data-en="Saad Alroomi & Tareq Alsubaiei Law Firm welcomes communication with its valued clients to respond to legal inquiries and provide specialized legal consultations.">
-      </p>
-
-      <ul>
-        <li
-          data-ar="📍 العنوان: دولة الكويت – محافظة العاصمة – منطقة الشرق"
-          data-en="📍 Address: State of Kuwait – Capital Governorate – Sharq Area">
-        </li>
-
-        <li
-          data-ar="📞 الهاتف: +965 22435001 / +965 22435003 / +965 22435006 / +965 22435009"
-          data-en="📞 Phone: +965 22435001 / +965 22435003 / +965 22435006 / +965 22435009">
-        </li>
-
-        <li
-          data-ar="📱 واتساب: +965 95571635"
-          data-en="📱 WhatsApp: +965 95571635">
-        </li>
-
-        <li
-          data-ar="📧 البريد الإلكتروني: info@st-lawyers.com"
-          data-en="📧 Email: info@st-lawyers.com">
-        </li>
-      </ul>
-
-    </div>
-
-    <form class="contact-form">
-      <input
-        type="text"
-        data-ar="الاسم الكامل"
-        data-en="Full Name"
-        placeholder="">
-
-      <input
-        type="email"
-        data-ar="البريد الإلكتروني"
-        data-en="Email Address"
-        placeholder="">
-
-      <textarea
-        rows="5"
-        data-ar="اكتب رسالتك"
-        data-en="Write your message"
-        placeholder="">
-      </textarea>
-
-      <button
-        type="submit"
-        data-ar="إرسال"
-        data-en="Send Message">
-      </button>
-    </form>
-
-  </div>
+  <p data-ar="هاتف: +965 22435001"
+     data-en="Phone: +965 22435001">
+     هاتف: +965 22435001
+  </p>
 </section>
 
-  <footer class="footer">
-  <div class="container footer-grid">
-
-    <div class="footer-col">
-      <img src="images/logo.png" class="footer-logo" alt="ST Lawyers">
-      <p>
-        مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية،
-        خبرة قانونية راسخة منذ عام 1982 في مختلف مجالات التقاضي والتحكيم.
-      </p>
-    </div>
-
-    <div class="footer-col">
-      <h4>روابط سريعة</h4>
-      <ul>
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#about">نبذة عن المكتب</a></li>
-        <li><a href="#team">أعضاء المكتب</a></li>
-        <li><a href="#contact">اتصل بنا</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>وسائل التواصل</h4>
-      <ul>
-        <li>📞 +965 22435001</li>
-        <li>📞 +965 22435003</li>
-        <li>📞 +965 22435006</li>
-        <li>📞 +965 22435009</li>
-        <li>📱 WhatsApp: +965 95571635</li>
-        <li>📧 info@st-lawyers.com</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة
-    <p
- data-ar="خبرة قانونية راسخة منذ عام 1982 في مختلف مجالات القانون"
- data-en="Trusted legal expertise since 1982 across multiple legal disciplines">
-</p>
-  </div>
+<footer class="footer">
+  <p>© 2026 Saad Alroomi & Tareq Alsubaiei Law Firm</p>
 </footer>
-<script src="js/lang.js"></script>
+
+<script src="assets/js/lang.js" defer></script>
 </body>
 </html>
-
