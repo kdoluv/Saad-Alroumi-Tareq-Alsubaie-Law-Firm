@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --navy: #0b1c2d;
   --gold: #c9a24d;
@@ -57,217 +53,28 @@ body {
 }
 
 .hero-overlay {
-  background: rgba(11, 28, 45, 0.78);
+  background: rgba(11, 28, 45, 0.75);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 80px;
+  padding: 80px;
   color: white;
 }
 
 .hero-overlay h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 54px;
+  font-size: 52px;
   color: var(--gold);
-  margin-bottom: 25px;
 }
 
 .hero-overlay p {
-  font-size: 22px;
-  max-width: 750px;
-  line-height: 1.8;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 /* ABOUT */
 .about h2 {
   color: var(--navy);
   margin-bottom: 20px;
-}
-
-.intro {
-  background: white;
-  padding: 80px 40px;
-}
-
-.intro h2 {
-  color: var(--navy);
-  font-size: 36px;
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.intro h2::after {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background: var(--gold);
-  display: block;
-  margin-top: 15px;
-}
-
-.intro p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 25px;
-  color: #333;
-}
-
-.team {
-  background: var(--gray);
-  padding: 80px 40px;
-}
-
-.team h2 {
-  color: var(--navy);
-  font-size: 36px;
-  margin-bottom: 50px;
-  position: relative;
-}
-
-.team h2::after {
-  content: "";
-  width: 90px;
-  height: 3px;
-  background: var(--gold);
-  display: block;
-  margin-top: 15px;
-}
-
-.team-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.team-card {
-  background: white;
-  padding: 30px 25px;
-  border-right: 5px solid var(--navy);
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-}
-
-.team-card h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-  color: var(--navy);
-}
-
-.team-card span {
-  font-size: 14px;
-  color: var(--gold);
-  font-weight: 600;
-}
-
-/* تمييز الشركاء */
-.team-card.lead {
-  border-right-color: var(--gold);
-  background: #fffdf6;
-}
-
-/* تمييز المستشارين */
-.team-card.consultant {
-  border-right-color: #999;
-}
-
-.team-note {
-  margin-top: 50px;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #333;
-  max-width: 900px;
-}
-
-.contact {
-  padding: 90px 40px;
-  background: white;
-}
-
-.contact h2 {
-  font-size: 36px;
-  color: var(--navy);
-  margin-bottom: 50px;
-}
-
-.contact h2::after {
-  content: "";
-  width: 90px;
-  height: 3px;
-  background: var(--gold);
-  display: block;
-  margin-top: 15px;
-}
-
-.contact-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-.contact-info p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 25px;
-}
-
-.contact-info ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-info li {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: 15px;
-}
-
-.contact-form button {
-  background: var(--navy);
-  color: white;
-  border: none;
-  padding: 14px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background: var(--gold);
-}
-
-@media (max-width: 900px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-}
-
-
-
-  .footer-logo {
-    margin: 0 auto 20px;
-  }
-}
-
-.lang-switch {
-  cursor: pointer;
-  color: var(--gold);
-  margin: 0 5px;
-  font-weight: 600;
-}
-
-html[dir="ltr"] {
-  text-align: left;
-}
-
-html[dir="rtl"] {
-  text-align: right;
 }
