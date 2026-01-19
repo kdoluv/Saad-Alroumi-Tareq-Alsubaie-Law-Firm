@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <title>مكتب سعد الرومي وطارق السبيعي للمحاماة</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -15,11 +13,13 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
-  <div class="container">
+  <div class="container header-flex">
+
     <img src="images/logo.png" class="logo" alt="ST Lawyers">
 
-    <nav>
+    <nav class="nav">
       <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <a href="#about" data-ar="نبذة عن المكتب" data-en="About">نبذة عن المكتب</a>
       <a href="#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
@@ -28,57 +28,139 @@
       <span class="lang-switch" onclick="setLang('ar')">AR</span> |
       <span class="lang-switch" onclick="setLang('en')">EN</span>
     </nav>
+
   </div>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-content">
-    <h1 data-ar="مكتب سعد الرومي وطارق السبيعي للمحاماة"
-        data-en="Saad Alroomi & Tareq Alsubaiei Law Firm">
+  <div class="hero-overlay">
+    <h1
+      data-ar="مكتب سعد الرومي وطارق السبيعي للمحاماة"
+      data-en="Saad Alroomi & Tareq Alsubaiei Law Firm">
       مكتب سعد الرومي وطارق السبيعي للمحاماة
     </h1>
 
-    <p data-ar="خبرة قانونية راسخة منذ عام 1982"
-       data-en="Trusted legal expertise since 1982">
-      خبرة قانونية راسخة منذ عام 1982
+    <p
+      data-ar="خبرة قانونية راسخة منذ عام 1982 في مختلف مجالات التقاضي والتحكيم"
+      data-en="Trusted legal expertise since 1982 across litigation and arbitration">
+      خبرة قانونية راسخة منذ عام 1982 في مختلف مجالات التقاضي والتحكيم
     </p>
   </div>
 </section>
 
-<section id="about" class="about container">
+<!-- ABOUT -->
+<section id="about" class="intro container">
   <h2 data-ar="عن المكتب" data-en="About the Firm">عن المكتب</h2>
 
-  <p
-    data-ar="تأسس مكتب سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا للشركات والأفراد..."
-    data-en="Established in 1982, Saad Alroomi & Tareq Alsubaiei Law Firm has handled a wide range of legal matters for corporate and individual clients.">
-    تأسس مكتب سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا للشركات والأفراد...
+  <p data-ar="تأسس مكتب المحاميان سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء للشركات أو الأفراد."
+     data-en="Founded in 1982, the firm has represented corporations and individuals across a wide range of legal matters.">
+    تأسس مكتب المحاميان سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء للشركات أو الأفراد.
   </p>
 </section>
 
+<!-- TEAM -->
 <section id="team" class="team container">
   <h2 data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</h2>
 
-  <ul class="team-list">
-    <li data-ar="الأستاذ سعد علي الرومي" data-en="Mr. Saad Ali Alroomi">الأستاذ سعد علي الرومي</li>
-    <li data-ar="الأستاذ طارق عبد العزيز السبيعي" data-en="Mr. Tareq Abdulaziz Alsubaiei">الأستاذ طارق عبد العزيز السبيعي</li>
-    <li data-ar="الأستاذ يوسف مساعد السبيعي" data-en="Mr. Yousef Mosaed Alsubaiei">الأستاذ يوسف مساعد السبيعي</li>
-    <li data-ar="الأستاذ عبد اللطيف طارق السبيعي" data-en="Mr. Abdulatif Tareq Alsubaiei">الأستاذ عبد اللطيف طارق السبيعي</li>
-  </ul>
-</section>
+  <div class="team-list">
 
-<section id="contact" class="contact container">
-  <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+    <div class="team-card lead">
+      <h3 data-ar="الأستاذ سعد علي الرومي" data-en="Mr. Saad Ali Alroomi">
+        الأستاذ سعد علي الرومي
+      </h3>
+      <span>شريك مؤسس</span>
+    </div>
 
-  <p data-ar="هاتف: +965 22435001"
-     data-en="Phone: +965 22435001">
-     هاتف: +965 22435001
+    <div class="team-card lead">
+      <h3 data-ar="الأستاذ طارق عبد العزيز السبيعي" data-en="Mr. Tareq Abdulaziz Alsubaiei">
+        الأستاذ طارق عبد العزيز السبيعي
+      </h3>
+      <span>شريك مؤسس</span>
+    </div>
+
+    <div class="team-card consultant">
+      <h3 data-ar="المستشار محمود محمد الشامي" data-en="Counsel Mahmoud Mohammed Alshami">
+        المستشار محمود محمد الشامي
+      </h3>
+    </div>
+
+  </div>
+
+  <p class="team-note"
+     data-ar="كما يستعين المكتب بنخبة من الكفاءات القانونية المتخصصة في مختلف الإجراءات القانونية."
+     data-en="The firm is supported by a select group of highly qualified legal professionals.">
+    كما يستعين المكتب بنخبة من الكفاءات القانونية المتخصصة في مختلف الإجراءات القانونية.
   </p>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="contact container">
+  <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+
+  <div class="contact-box">
+
+    <div class="contact-info">
+      <p
+        data-ar="يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية."
+        data-en="We welcome your inquiries and are pleased to assist you.">
+        يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية.
+      </p>
+
+      <ul>
+        <li>📞 +965 22435001</li>
+        <li>📞 +965 22435003</li>
+        <li>📞 +965 22435006</li>
+        <li>📞 +965 22435009</li>
+        <li>📱 WhatsApp: +965 95571635</li>
+        <li>📧 info@st-lawyers.com</li>
+      </ul>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="الاسم الكامل">
+      <input type="email" placeholder="البريد الإلكتروني">
+      <textarea rows="5" placeholder="اكتب رسالتك"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 Saad Alroomi & Tareq Alsubaiei Law Firm</p>
+  <div class="container footer-grid">
+
+    <div>
+      <img src="images/logo.png" class="footer-logo" alt="ST Lawyers">
+      <p>خبرة قانونية راسخة منذ عام 1982</p>
+    </div>
+
+    <div>
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">عن المكتب</a></li>
+        <li><a href="#team">أعضاء المكتب</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>وسائل التواصل</h4>
+      <ul>
+        <li>📞 +965 22435001</li>
+        <li>📧 info@st-lawyers.com</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 جميع الحقوق محفوظة
+  </div>
 </footer>
 
-<script src="assets/js/lang.js" defer></script>
+<script src="assets/js/lang.js"></script>
 </body>
 </html>
