@@ -263,3 +263,11 @@ body {
   margin: 0 5px;
   font-weight: 600;
 }
+
+html[dir="ltr"] {
+  text-align: left;
+}
+
+html[dir="rtl"] {
+  text-align: right;
+}
