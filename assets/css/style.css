@@ -53,24 +53,26 @@ body {
 }
 
 .hero-overlay {
-  background: rgba(11, 28, 45, 0.75);
+  background: rgba(11, 28, 45, 0.78);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px;
+  padding: 120px 80px;
   color: white;
 }
 
 .hero-overlay h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 52px;
+  font-size: 54px;
   color: var(--gold);
+  margin-bottom: 25px;
 }
 
 .hero-overlay p {
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 22px;
+  max-width: 750px;
+  line-height: 1.8;
 }
 
 /* ABOUT */
