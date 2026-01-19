@@ -240,3 +240,9 @@ body {
 .contact-form button:hover {
   background: var(--gold);
 }
+
+@media (max-width: 900px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+}
