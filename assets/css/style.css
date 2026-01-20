@@ -349,3 +349,12 @@ html[dir="rtl"] {
   opacity: 1;
   transform: translateY(0);
 }
+
+.team-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
