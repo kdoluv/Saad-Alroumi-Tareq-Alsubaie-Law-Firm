@@ -45,6 +45,14 @@ body {
   color: var(--white);
 }
 
+html[dir="ltr"] {
+  text-align: left;
+}
+
+html[dir="rtl"] {
+  text-align: right;
+}
+
 /* HERO */
 .hero {
   height: 85vh;
