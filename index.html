@@ -170,26 +170,9 @@
   </div>
 </footer>
 
-<script src="js/lang.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const reveals = document.querySelectorAll(".reveal");
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  reveals.forEach(el => observer.observe(el));
-});
-<script>
-  function setLanguage(lang) {
+ <script>
+  <script src="js/lang.js"></script>
+    function setLanguage(lang) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
