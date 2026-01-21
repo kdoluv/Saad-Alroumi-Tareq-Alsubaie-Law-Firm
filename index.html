@@ -17,6 +17,8 @@
 <header class="header">
   <div class="container header-flex">
     <img src="assets/images/logo.png" alt="ST Lawyers" class="logo">
+<button onclick="setLanguage('ar')">AR</button>
+<button onclick="setLanguage('en')">EN</button>
 
     <nav class="nav">
       <a href="#home"
@@ -271,6 +273,21 @@ document.addEventListener("DOMContentLoaded", function () {
   reveals.forEach(el => observer.observe(el));
 });
 </script>
+
+  <script>
+  function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('[data-ar]').forEach(el => {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    });
+  }
+
+  // اللغة الافتراضية
+  setLanguage('ar');
+</script>
+
 </body>
 </html>
 
