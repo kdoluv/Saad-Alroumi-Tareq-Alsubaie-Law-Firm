@@ -33,6 +33,10 @@ body {
   align-items: center;
 }
 
+.logo {
+  height: 70px;
+}
+
 .nav a {
   color: #fff;
   margin: 0 18px;
@@ -54,6 +58,18 @@ body {
 
 .nav a:hover::after {
   width: 100%;
+}
+
+.nav a:hover {
+  color: var(--white);
+}
+
+html[dir="ltr"] {
+  text-align: left;
+}
+
+html[dir="rtl"] {
+  text-align: right;
 }
 
 /* HERO */
@@ -84,7 +100,6 @@ body {
   opacity: .9;
 }
 
-
 /* ABOUT */
 .about h2 {
   color: var(--navy);
@@ -99,6 +114,15 @@ body {
 .intro h2 {
   font-size: 38px;
   margin-bottom: 40px;
+}
+
+.intro h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  display: block;
+  margin-top: 15px;
 }
 
 .intro p {
@@ -252,6 +276,41 @@ body {
 
 .footer-grid {
   grid-template-columns: 2fr 1fr 1fr;
+}
+
+.footer-logo {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.footer h4 {
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: var(--gold);
 }
 
 .footer-bottom {
