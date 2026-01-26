@@ -131,7 +131,12 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact container">
+<div class="lang-switch">
+  <button type="button" onclick="setLang('ar')">العربية</button>
+  <button type="button" onclick="setLang('en')">English</button>
+</div>
+
+  <section id="contact" class="contact container">
   <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
 
   <div class="contact-box">
@@ -155,13 +160,38 @@
     </div>
 
     <form class="contact-form">
-      <input type="text" placeholder="الاسم الكامل">
-      <input type="email" placeholder="البريد الإلكتروني">
-      <textarea rows="5" placeholder="اكتب رسالتك"></textarea>
-      <button type="submit">إرسال</button>
-    </form>
+     <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
 
-  </div>
+    <input type="text" name="name"
+      placeholder="الاسم الكامل"
+      data-ar-placeholder="الاسم الكامل"
+      data-en-placeholder="Full Name"
+      required>
+
+    <input type="email" name="email"
+      placeholder="البريد الإلكتروني"
+      data-ar-placeholder="البريد الإلكتروني"
+      data-en-placeholder="Email Address"
+      required>
+
+    <textarea name="message"
+      placeholder="اكتب رسالتك هنا"
+      data-ar-placeholder="اكتب رسالتك هنا"
+      data-en-placeholder="Write your message here"
+      required></textarea>
+
+    <button type="submit"
+      data-ar="إرسال"
+      data-en="Send">
+      إرسال
+    </button>
+
+    <!-- إعدادات FormSubmit -->
+    <input type="hidden" name="_subject" value="رسالة جديدة من موقع المكتب">
+    <input type="hidden" name="_captcha" value="false">
+
+  </form>
+
 </section>
 
 <!-- FOOTER -->
@@ -187,9 +217,10 @@ function setLanguage(lang) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  setLanguage('ar');
-});
+  document.querySelectorAll("[data-ar-placeholder]").forEach(el => {
+    el.placeholder = el.getAttribute("data-" + lang + "-placeholder");
+  });
+}
 </script>
 
 </body>
