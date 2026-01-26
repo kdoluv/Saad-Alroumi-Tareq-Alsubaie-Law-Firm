@@ -163,9 +163,18 @@
       <input type="email" placeholder="البريد الإلكتروني">
       <textarea rows="5" placeholder="اكتب رسالتك"></textarea>
       <button type="submit">إرسال</button>
-    </form>
+    <form action="https://formsubmit.co/info@st-lawyers.com" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+    <textarea name="message" placeholder="رسالتك" required></textarea>
 
-  </div>
+    <button type="submit">إرسال</button>
+
+  <input type="hidden" name="_subject" value="رسالة جديدة من موقع المكتب">
+  <input type="hidden" name="_captcha" value="false">
+</form>
+      
+</div>
 </section>
 
 <!-- FOOTER -->
