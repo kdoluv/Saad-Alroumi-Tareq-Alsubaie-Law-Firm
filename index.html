@@ -217,10 +217,9 @@ function setLanguage(lang) {
   });
 }
 
-  document.querySelectorAll("[data-ar-placeholder]").forEach(el => {
-    el.placeholder = el.getAttribute("data-" + lang + "-placeholder");
-  });
-}
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage('ar');
+});
 </script>
 
 </body>
