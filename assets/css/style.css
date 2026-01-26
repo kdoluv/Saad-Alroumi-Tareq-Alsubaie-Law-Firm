@@ -422,4 +422,23 @@ html[lang="en"] body {
   border-color: #d4af37;
 }
 
+.lang-switch {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #c9a24d;
+  color: #c9a24d;
+  padding: 6px 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lang-switch button:hover {
+  background: #c9a24d;
+  color: white;
+}
 
