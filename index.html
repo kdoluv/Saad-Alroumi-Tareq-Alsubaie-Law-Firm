@@ -158,17 +158,37 @@
       </ul>
     </div>
 
-   <form class="contact-form">
-     <form action="https://formsubmit.co/info@st-lawyers.com" method="POST">
-      <input type="text" placeholder="الاسم الكامل">
-      <input type="email" placeholder="البريد الإلكتروني">
-      <textarea rows="5" placeholder="اكتب رسالتك"></textarea>
-     
-       <button type="submit">إرسال</button>
+  <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
 
+    <input type="text" name="name"
+      placeholder="الاسم الكامل"
+      data-ar-placeholder="الاسم الكامل"
+      data-en-placeholder="Full Name"
+      required>
+
+    <input type="email" name="email"
+      placeholder="البريد الإلكتروني"
+      data-ar-placeholder="البريد الإلكتروني"
+      data-en-placeholder="Email Address"
+      required>
+
+    <textarea name="message"
+      placeholder="اكتب رسالتك هنا"
+      data-ar-placeholder="اكتب رسالتك هنا"
+      data-en-placeholder="Write your message here"
+      required></textarea>
+
+    <button type="submit"
+      data-ar="إرسال"
+      data-en="Send">
+      إرسال
+    </button>
+
+    <!-- إعدادات FormSubmit -->
     <input type="hidden" name="_subject" value="رسالة جديدة من موقع المكتب">
     <input type="hidden" name="_captcha" value="false">
-   </form>
+
+  </form>
       
 </div>
 </section>
