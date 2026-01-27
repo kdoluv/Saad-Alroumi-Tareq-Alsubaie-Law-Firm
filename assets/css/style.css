@@ -268,8 +268,8 @@ html[dir="rtl"] {
 }
 
 .footer-logo {
-  width: 70px;
-  margin-bottom: 20px;
+  width: 100px;
+  centre-bottom: 20px;
 }
 
 .footer p {
