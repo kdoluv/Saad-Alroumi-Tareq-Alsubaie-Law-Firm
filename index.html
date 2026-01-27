@@ -2,8 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية</title>
-  <meta name="description" content="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية – خبرة قانونية منذ عام 1982 في دولة الكويت.">
+  <title>مكتب سعد الرومي وطارق السبيعي للمحاماة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
@@ -38,7 +37,7 @@
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-overlay animate-hero">
+  <div class="hero-overlay">
     <h1
       data-ar="مكتب المحاميان سعد الرومي وطارق السبيعي"
       data-en="Saad Alroomi & Tareq Al-Subaie Law Firm">
@@ -105,25 +104,22 @@
       </h3>
     </div>
 
-    <div class="team-card legal-advisor">
-      <h3 data-ar="الأستاذ محمود محمد الشامي" data-en="Mr. Mahmoud Mohammed Alshami">
-        الأستاذ محمود محمد الشامي
+    <div class="team-card Legal Advisor">
+      <h3 data-ar="المستشار محمود محمد الشامي" data-en="Legal Advisor Mahmoud Mohammed Alshami">
+        المستشار محمود محمد الشامي
       </h3>
-      <span data-ar="مستشار قانوني" data-en="Legal Advisor">مستشار قانوني</span>
     </div>
 
-    <div class="team-card legal-advisor">
-      <h3 data-ar="الأستاذ هشام محمد العويل" data-en="Mr. Hesham Mohamed Al-Aweel">
-        الأستاذ هشام محمد العويل
+    <div class="team-card Legal Advisor">
+      <h3 data-ar="المستشار هشام محمد العويل" data-en="Legal Advisor Hesham Mohamed Al-Aweel">
+        المستشار هشام محمد العويل
       </h3>
-      <span data-ar="مستشار قانوني" data-en="Legal Advisor">مستشار قانوني</span>
     </div>
 
-    <div class="team-card legal-advisor">
-      <h3 data-ar="الأستاذ عبد الفتاح سعد سليمان" data-en="Mr. Abdulfatah Saad Suliman">
-        الأستاذ عبد الفتاح سعد سليمان
+    <div class="team-card Legal Advisor">
+      <h3 data-ar="المستشار عبد الفتاح سعد متولي" data-en="Legal Advisor Abdulfatah Saad Mutwali">
+        المستشار عبد الفتاح سعد متولي
       </h3>
-      <span data-ar="مستشار قانوني" data-en="Legal Advisor">مستشار قانوني</span>
     </div>
   </div>
 
@@ -158,52 +154,23 @@
       </ul>
     </div>
 
-     <div class="contact-form">
-      <form action="https://formsubmit.co/info@st-lawyers.com" method="POST">
+    <form class="contact-form">
+      <input type="text" placeholder="الاسم الكامل">
+      <input type="email" placeholder="البريد الإلكتروني">
+      <textarea rows="5" placeholder="اكتب رسالتك"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
 
-        <input type="text" name="name"
-          placeholder="الاسم الكامل"
-          data-ar-placeholder="الاسم الكامل"
-          data-en-placeholder="Full Name"
-          required>
-
-        <input type="email" name="email"
-          placeholder="البريد الإلكتروني"
-          data-ar-placeholder="البريد الإلكتروني"
-          data-en-placeholder="Email Address"
-          required>
-
-        <textarea name="message"
-          placeholder="اكتب رسالتك هنا"
-          data-ar-placeholder="اكتب رسالتك هنا"
-          data-en-placeholder="Write your message here"
-          required></textarea>
-
-        <button type="submit"
-          data-ar="إرسال"
-          data-en="Send">
-          إرسال
-        </button>
-
-        <!-- إعدادات FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="رسالة جديدة من موقع مكتب المحاماة">
-
-      </form>
-    </div>
-
-      </div>
+  </div>
 </section>
-    
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-grid">
 
     <div>
       <img src="assets/images/logo.png" class="footer-logo" alt="">
-      <p>©2026جميع الحقوق محفوظة </p>
-      <p>مكتب سعد الرومي وطارق السبيعي للمحاماة</p>
+      <p>© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة</p>
     </div>
 
   </div>
@@ -215,14 +182,8 @@ function setLanguage(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-  // تغيير النصوص
   document.querySelectorAll('[data-ar]').forEach(el => {
     el.textContent = el.getAttribute('data-' + lang);
-  });
-
-  // تغيير الـ placeholders
-  document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
-    el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
   });
 }
 
