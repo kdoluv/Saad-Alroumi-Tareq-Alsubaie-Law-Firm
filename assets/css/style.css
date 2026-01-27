@@ -182,76 +182,71 @@ html[dir="rtl"] {
   max-width: 900px;
 }
 
-.contact {
-  padding: 90px 40px;
-  background: white;
+/* قسم التواصل */
+.contact-section {
+  padding: 80px 8%;
+  background: #fff;
 }
 
-.contact h2 {
-  font-size: 36px;
-  color: var(--navy);
-  margin-bottom: 50px;
-}
-
-.contact h2::after {
-  content: "";
-  width: 90px;
-  height: 3px;
-  background: var(--gold);
-  display: block;
-  margin-top: 15px;
-}
-
-.contact-box {
+/* الحاوية الرئيسية */
+.contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.contact-info p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 25px;
+/* نموذج التواصل */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.contact-info ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contact-info li {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
+/* الحقول */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
+  padding: 12px 14px;
   border: 1px solid #ccc;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
 }
 
+/* الرسالة */
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* زر الإرسال */
 .contact-form button {
-  background: var(--navy);
-  color: white;
+  width: 140px;
+  padding: 12px;
+  background: #0b1c2d;
+  color: #fff;
   border: none;
-  padding: 14px;
-  font-size: 16px;
   cursor: pointer;
 }
 
-.contact-form button:hover {
-  background: var(--gold);
+/* معلومات التواصل */
+.contact-info {
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-@media (max-width: 900px) {
-  .footer-grid {
+/* موبايل */
+@media (max-width: 768px) {
+  .contact-container {
     grid-template-columns: 1fr;
-    text-align: center;
   }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
 
   .footer-logo {
     margin: 0 auto 20px;
