@@ -149,8 +149,15 @@ html[dir="rtl"] {
 .team-card {
   background: white;
   padding: 30px 25px;
-  border-right: 5px solid var(--navy);
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+html[dir="rtl"] .team-card {
+  border-right: 5px solid var(--navy);
+}
+
+html[dir="ltr"] .team-card {
+  border-left: 5px solid var(--navy);
 }
 
 .team-card h3 {
@@ -166,9 +173,17 @@ html[dir="rtl"] {
 }
 
 .team-card.lead {
-  border-right-color: var(--gold);
-  background: #fffdf6;
+  background: white;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
+
+html[dir="rtl"] .team-card {
+  border-right: 5px solid var(--navy);
+}
+
+html[dir="ltr"] .team-card {
+border-left: 5px solid var(--navy);
 
 .team-card.consultant {
   border-right-color: #999;
@@ -182,12 +197,12 @@ html[dir="rtl"] {
   max-width: 900px;
 }
 
-.contact-section {
-  padding: 80px 10%;
+.contact {
+  padding: 80px 40px;
   background: #f9f9f9;
 }
 
-.contact-container {
+.contact-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -269,12 +284,11 @@ html[dir="rtl"] {
 
 .footer-logo {
   width: 100px;
-  centre-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer p {
-  line-height: 1.8;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .footer h4 {
@@ -308,14 +322,6 @@ html[dir="rtl"] {
   padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,0.2);
   font-size: 14px;
-}
-
-html[dir="ltr"] {
-  text-align: left;
-}
-
-html[dir="rtl"] {
-  text-align: right;
 }
 
 @keyframes fadeUp {
@@ -362,3 +368,6 @@ html[dir="rtl"] {
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
+html[dir="rtl"] {
+  text-align: right;
+}
