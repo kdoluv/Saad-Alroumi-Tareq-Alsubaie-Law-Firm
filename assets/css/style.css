@@ -58,39 +58,6 @@ body {
   font-weight: 600;
 }
 
-.firm-bar {
-  background: #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-  padding: 25px 0;
-}
-
-.firm-bar h1 {
-  margin: 0;
-  font-size: 28px;
-  color: var(--navy);
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.firm-bar h1 span {
-  display: block;
-  font-size: 18px;
-  color: var(--gold);
-  font-weight: 600;
-  margin-top: 6px;
-}
-
-@media (max-width: 768px) {
-  .firm-bar h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .firm-bar h1 span {
-    font-size: 16px;
-  }
-}
-
 /* HERO */
 .hero {
   height: 85vh;
