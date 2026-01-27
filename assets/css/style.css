@@ -112,12 +112,21 @@ body {
 }
 
 @media (max-width: 768px) {
+  .firm-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
   .firm-title h1 {
     font-size: 32px;
   }
 
   .firm-title span {
     font-size: 16px;
+  }
+
+  .gold-line {
+    margin: 15px auto;
   }
 }
 
@@ -399,4 +408,51 @@ html[dir="rtl"] {
 .team-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* FIRM TITLE */
+.firm-title {
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.firm-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  color: var(--gold);
+  margin: 0;
+}
+
+.firm-title span {
+  display: block;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: 'Cairo', sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* GOLD LINE */
+.gold-line {
+  width: 90px;
+  height: 3px;
+  background: var(--gold);
+  margin: 18px 0;
+}
+
+/* ANIMATION */
+.animate-title {
+  animation: titleReveal 1.4s ease forwards;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
