@@ -78,66 +78,6 @@
   </p>
 </section>
 
-<!-- PRACTICE AREAS -->
-<section class="practice-areas">
-  ...
-</section>
-
-<section class="practice-areas">
-  <h2 data-ar="مجالات الممارسة" data-en="Practice Areas">
-    مجالات الممارسة
-  </h2>
-
-  <div class="accordion">
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        ⚖️ القضايا الجنائية
-      </button>
-      <div class="accordion-content">
-        <p>
-          الدفاع في القضايا الجنائية بكافة أنواعها، ومتابعة التحقيقات
-          وتمثيل المتهمين أمام النيابة والمحاكم.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        🏛️ القضايا المدنية
-      </button>
-      <div class="accordion-content">
-        <p>
-          المنازعات المدنية، التعويضات، العقود، والمسؤولية المدنية.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        📊 القضايا التجارية
-      </button>
-      <div class="accordion-content">
-        <p>
-          تأسيس الشركات، النزاعات التجارية، التحكيم، والعقود التجارية.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        👷 القضايا العمالية
-      </button>
-      <div class="accordion-content">
-        <p>
-          قضايا الفصل التعسفي، المستحقات العمالية، وتمثيل العمال وأصحاب الأعمال.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <!-- TEAM -->
 <section id="team" class="team container">
   <h2 data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</h2>
@@ -255,15 +195,6 @@ function setLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
   setLanguage('ar');
 });
-</script>
-
-<script>
-  document.querySelectorAll(".accordion-header").forEach(button => {
-    button.addEventListener("click", () => {
-      const item = button.parentElement;
-      item.classList.toggle("active");
-    });
-  });
 </script>
 
 </body>
