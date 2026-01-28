@@ -92,14 +92,14 @@ body {
 }
 
 .firm-title {
-  margin-bottom: 35px;
+  margin-bottom:20px;
 }
 
 .firm-title h1 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   color: var(--gold);
-  margin: 0;
+  margin: 20;
 }
 
 .firm-title span {
