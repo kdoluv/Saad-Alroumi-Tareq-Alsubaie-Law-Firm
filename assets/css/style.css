@@ -60,7 +60,7 @@ body {
 
 /* HERO */
 .hero {
-  height: 65vh;
+  height: 50vh;
   background-image: url("../images/hero.jpg");
   background-position: center;
   background-size: cover;
@@ -73,7 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 50px !important;
+  padding: 60px 80px 40px;
   color: white;
 }
 
@@ -81,7 +81,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 54px;
   color: var(--gold);
-  margin-top: 0 !important;
+  margin-top: 0;
   margin-bottom: 25px;
 }
 
