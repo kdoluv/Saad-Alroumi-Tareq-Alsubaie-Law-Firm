@@ -17,6 +17,7 @@
 <!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
 
@@ -245,6 +246,12 @@ function setLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
   setLanguage('ar');
 });
+</script>
+
+<script>
+function toggleMenu() {
+  document.querySelector("nav ul").classList.toggle("show");
+}
 </script>
 
 </body>
