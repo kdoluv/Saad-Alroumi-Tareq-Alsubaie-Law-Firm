@@ -642,3 +642,9 @@ html[dir="rtl"] {
   }
 
 }
+
+@media (max-width: 768px) {
+  html[lang="ar"] {
+    word-break: keep-all;
+  }
+}
