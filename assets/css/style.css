@@ -538,11 +538,10 @@ html[dir="rtl"] {
    MOBILE DESIGN
 ========================= */
 @media (max-width: 768px) {
-
-  body {
-    font-size: 15px;
-    line-height: 1.8;
+  html[lang="ar"] {
+    word-break: keep-all;
   }
+}
 
   /* HEADER */
   header {
