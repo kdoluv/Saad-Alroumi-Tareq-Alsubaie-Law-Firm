@@ -533,3 +533,112 @@ html[dir="rtl"] {
   border-bottom: 1px solid #eee;
   font-size: 16px;
 }
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* HEADER */
+  header {
+    padding: 15px 20px;
+  }
+
+  .logo img {
+    max-height: 55px;
+  }
+
+  /* NAVBAR */
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    background: #0b1c2d;
+    padding: 20px;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: #c9a24d;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 70vh;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 40px 20px;
+  }
+
+  section h1,
+  section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  /* PRACTICE SECTIONS */
+  .practice-section ul {
+    padding-left: 0;
+  }
+
+  .practice-section li {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  /* TEAM */
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  /* CONTACT FORM */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+}
