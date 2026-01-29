@@ -208,14 +208,24 @@
       </ul>
     </div>
 
-    <form class="contact-form">
-      <input type="text" placeholder="الاسم الكامل">
-      <input type="email" placeholder="البريد الإلكتروني">
-      <textarea rows="5" placeholder="اكتب رسالتك"></textarea>
-      <button type="submit">إرسال</button>
-    </form>
+    <<form action="https://formsubmit.co/YOUREMAIL@gmail.com" method="POST">
 
-  </div>
+  <input type="text" name="name" placeholder="الاسم الكامل" required>
+
+  <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+
+  <textarea name="message" placeholder="اكتب رسالتك هنا" required></textarea>
+
+  <button type="submit">إرسال</button>
+
+  <!-- إعدادات ضرورية -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="رسالة جديدة من موقع مكتب المحاماة">
+
+</form>
+
+</div>
 </section>
 
 <!-- FOOTER -->
