@@ -512,6 +512,29 @@ html[dir="rtl"] {
   margin: 0;
 }
 
+.practice-hero {
+  background: var(--navy);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.practice-hero h1 {
+  color: var(--gold);
+  font-size: 42px;
+}
+
+.practice-content p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.practice-content ul {
+  list-style: disc;
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
+
 .practice-content {
   background: #fff;
   padding: 60px 20px;
@@ -522,17 +545,6 @@ html[dir="rtl"] {
   min-height: auto !important;
   overflow: visible !important;
   position: relative;
-}
-
-.practice-content p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 30px;
-}
-
-.practice-content ul {
-  margin-top: 25px;
-  padding-right: 20px;
 }
 
 .practice-content li {
