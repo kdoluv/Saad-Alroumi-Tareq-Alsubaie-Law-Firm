@@ -776,3 +776,45 @@ html[dir="rtl"] {
   }
 
 }
+
+/* ===== HAMBURGER ===== */
+.menu-btn {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--gold);
+  border-radius: 3px;
+  transition: all 0.35s ease;
+  left: 0;
+}
+
+.menu-btn span:nth-child(1) { top: 0; }
+.menu-btn span:nth-child(2) { top: 9px; }
+.menu-btn span:nth-child(3) { top: 18px; }
+
+/* عند الفتح */
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+@media (max-width: 768px) {
+  .menu-btn { display: block; }
+}
