@@ -38,9 +38,12 @@
 
   // اللغة الافتراضية عند التحميل
   document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('site_lang') || 'ar';
-    applyLanguage(savedLang);
-  });
+  const savedLang = localStorage.getItem('site_lang') || 'ar';
+  applyLanguage(savedLang);
+
+  // إعادة تطبيق اللغة بعد أي تغيير في الواجهة (موبايل)
+  setTimeout(() => applyLanguage(savedLang), 300);
+});
 
   function toggleDropdown() {
   document.querySelector('.dropdown').classList.toggle('open');
