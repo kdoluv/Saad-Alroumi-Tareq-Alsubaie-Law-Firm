@@ -819,3 +819,10 @@ html[dir="rtl"] {
   .menu-btn { display: block; }
 }
 
+.dropdown-menu {
+  display: none;
+}
+
+.nav.open .dropdown-menu {
+  display: block;
+}
