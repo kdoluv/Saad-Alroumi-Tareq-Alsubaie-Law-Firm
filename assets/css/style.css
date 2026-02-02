@@ -164,109 +164,94 @@ body {
   color: #333;
 }
 
-/* =========================
-   TEAM SECTIONS (GLOBAL)
-========================= */
-
+/* ===== TEAM SECTIONS ===== */
 .team-section {
-  margin-bottom: 90px;
+  margin: 80px auto;
 }
 
-.team-section h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  position: relative;
+.team-group {
+  margin-bottom: 70px;
 }
 
-.team-section h2::after {
-  content: "";
-  width: 70px;
-  height: 3px;
-  background: #c9a24d;
-  display: block;
-  margin-top: 12px;
+.team-group h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 26px;
+  color: var(--navy);
 }
 
-/* GRID */
+/* GRID: 3 CARDS PER ROW */
 .team-grid {
   display: grid;
-  gap: 35px;
-}
-
-/* DEFAULT: 2 CARDS */
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-/* 3 CARDS PER ROW */
-.grid-3 {
   grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
 
-/* CARD */
+/* TEAM CARD */
 .team-card {
-  background: #fff;
-  padding: 35px 30px;
-  border-right: 4px solid #0b1c2d;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-  min-height: 170px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 0.35s ease;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
 }
 
 .team-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0,0,0,.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .team-card h3 {
-  font-size: 20px;
-  color: #0b1c2d;
-  margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--navy);
 }
 
 .team-card span {
   font-size: 14px;
-  color: #c9a24d;
-  font-weight: 600;
+  color: #555;
 }
 
-/* ICON */
-.team-card i {
-  font-size: 26px;
-  color: #c9a24d;
-  margin-bottom: 12px;
+/* FOUNDERS */
+.team-card.lead {
+  border-top: 4px solid var(--gold);
 }
 
-/* =========================
-   FINANCE SPECIAL STYLE
-========================= */
-.finance .team-card {
-  background: linear-gradient(135deg, #fffdf6, #ffffff);
-  border-right-color: #c9a24d;
+/* CONSULTANTS */
+.team-card.consultant {
+  background: #fafafa;
 }
 
-.finance .team-card i {
-  color: #0b1c2d;
+/* ===== FINANCE SECTION – مميز ===== */
+.team-group.finance {
+  background: linear-gradient(135deg, #0b1c2d, #132f4c);
+  padding: 50px 25px;
+  border-radius: 18px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.team-group.finance h2 {
+  color: #fff;
+}
+
+.team-group.finance .team-card {
+  background: #ffffff;
+  border-top: 4px solid var(--gold);
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
-  .grid-3 {
+  .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .grid-2,
-  .grid-3 {
+@media (max-width: 576px) {
+  .team-grid {
     grid-template-columns: 1fr;
   }
 }
+
 
 /* قسم التواصل */
 .contact-section {
