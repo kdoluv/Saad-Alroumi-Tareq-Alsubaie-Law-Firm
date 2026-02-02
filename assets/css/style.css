@@ -822,3 +822,22 @@ html[dir="rtl"] {
 .nav.open .dropdown-menu {
   display: block;
 }
+
+/* توحيد شكل الأقسام الصغيرة */
+.team-grid.uniform {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.team-grid.uniform .team-card {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* تحسين التوازن البصري */
+@media (max-width: 768px) {
+  .team-grid.uniform {
+    grid-template-columns: 1fr;
+  }
+}
