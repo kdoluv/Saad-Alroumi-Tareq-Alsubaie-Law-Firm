@@ -164,42 +164,45 @@ body {
   color: #333;
 }
 
-.team {
+.team-section {
   background: var(--gray);
-  padding: 80px 40px;
 }
 
-.team h2 {
+.team-group {
+  margin-bottom: 70px;
+}
+
+.team-group h2 {
+  font-size: 34px;
   color: var(--navy);
-  font-size: 36px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   position: relative;
 }
 
-.team h2::after {
+.team-group h2::after {
   content: "";
-  width: 90px;
+  width: 80px;
   height: 3px;
   background: var(--gold);
   display: block;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
-.team-list {
+.team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
 .team-card {
-  background: white;
+  background: #fff;
   padding: 30px 25px;
   border-right: 5px solid var(--navy);
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .team-card h3 {
-  margin: 0 0 10px;
+  margin-bottom: 10px;
   font-size: 20px;
   color: var(--navy);
 }
@@ -216,16 +219,9 @@ body {
 }
 
 .team-card.consultant {
-  border-right-color: #999;
+  border-right-color: #888;
 }
 
-.team-note {
-  margin-top: 50px;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #333;
-  max-width: 900px;
-}
 
 /* قسم التواصل */
 .contact-section {
