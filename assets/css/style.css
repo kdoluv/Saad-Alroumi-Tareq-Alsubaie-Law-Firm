@@ -164,47 +164,67 @@ body {
   color: #333;
 }
 
+/* =========================
+   TEAM SECTIONS (GLOBAL)
+========================= */
+
 .team-section {
-  background: var(--gray);
+  margin-bottom: 90px;
 }
 
-.team-group {
-  margin-bottom: 70px;
-}
-
-.team-group h2 {
-  font-size: 34px;
-  color: var(--navy);
-  margin-bottom: 35px;
+.team-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
   position: relative;
 }
 
-.team-group h2::after {
+.team-section h2::after {
   content: "";
-  width: 80px;
+  width: 70px;
   height: 3px;
-  background: var(--gold);
+  background: #c9a24d;
   display: block;
   margin-top: 12px;
 }
 
+/* GRID */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 35px;
 }
 
+/* DEFAULT: 2 CARDS */
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 CARDS PER ROW */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* CARD */
 .team-card {
   background: #fff;
   padding: 35px 30px;
   border-right: 4px solid #0b1c2d;
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.15);
 }
 
 .team-card h3 {
-  margin-bottom: 10px;
   font-size: 20px;
   color: #0b1c2d;
+  margin-bottom: 10px;
 }
 
 .team-card span {
@@ -213,22 +233,40 @@ body {
   font-weight: 600;
 }
 
-/* موبايل */
-@media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: 1fr;
+/* ICON */
+.team-card i {
+  font-size: 26px;
+  color: #c9a24d;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   FINANCE SPECIAL STYLE
+========================= */
+.finance .team-card {
+  background: linear-gradient(135deg, #fffdf6, #ffffff);
+  border-right-color: #c9a24d;
+}
+
+.finance .team-card i {
+  color: #0b1c2d;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.team-card.lead {
-  border-right-color: var(--gold);
-  background: #fffdf6;
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
-
-.team-card.consultant {
-  border-right-color: #888;
-}
-
 
 /* قسم التواصل */
 .contact-section {
