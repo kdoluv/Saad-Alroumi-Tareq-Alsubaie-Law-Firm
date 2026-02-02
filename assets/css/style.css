@@ -208,6 +208,17 @@ body {
   color: var(--navy);
 }
 
+.team-card h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+  color: var(--navy);
+
+  /* ===== الاسم في سطر واحد ===== */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .team-card span {
   font-size: 14px;
   color: #555;
