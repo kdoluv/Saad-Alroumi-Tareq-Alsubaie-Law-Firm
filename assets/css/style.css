@@ -188,13 +188,18 @@ body {
 }
 
 /* TEAM CARD */
+/* حجم موحد لكل البطاقات */
 .team-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 25px 20px;
+  min-height: 160px; /* نفس ارتفاع بطاقات الشركاء */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
 }
 
 .team-card:hover {
@@ -208,15 +213,13 @@ body {
   color: var(--navy);
 }
 
+/* الاسم في سطر واحد */
 .team-card h3 {
-  font-size: 17px;
-  margin-bottom: 6px;
-  color: var(--navy);
-
-  /* ===== الاسم في سطر واحد ===== */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 17px;
+  margin-bottom: 6px;
 }
 
 .team-card span {
@@ -232,6 +235,12 @@ body {
 /* CONSULTANTS */
 .team-card.consultant {
   background: #fafafa;
+}
+
+.team-grid.three-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 /* ===== FINANCE SECTION – مميز ===== */
