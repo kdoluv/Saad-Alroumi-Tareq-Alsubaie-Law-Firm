@@ -871,3 +871,32 @@ html[dir="rtl"] {
 .nav.open .dropdown-menu {
   display: block;
 }
+
+/* ===== MOBILE NAV ===== */
+@media (max-width: 768px) {
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #0b1c2d;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    display: none;
+    background: #0b1c2d;
+  }
+
+  .dropdown-menu.open {
+    display: block;
+  }
+
+}
