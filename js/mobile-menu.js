@@ -1,13 +1,28 @@
-<script>
-function toggleMenu() {
+document.addEventListener('DOMContentLoaded', () => {
+
+  const menuBtn = document.querySelector('.menu-btn');
   const nav = document.querySelector('.nav');
-  nav.classList.toggle('open');
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
 
-  // إعادة تطبيق اللغة بعد فتح القائمة
-  const lang = localStorage.getItem('site_lang') || 'ar';
-  if (window.setLanguage) {
-    setLanguage(lang);
-  }
-}
+  // مينو الموبايل
+  menuBtn?.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    menuBtn.classList.toggle('active');
+  });
 
-</script>
+  // dropdown (موبايل فقط)
+  dropdownToggle?.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+  });
+
+  // غلق عند الضغط خارج القائمة
+  document.addEventListener('click', () => {
+    dropdown?.classList.remove('open');
+  });
+
+  dropdown?.addEventListener('click', e => e.stopPropagation());
+
+});
