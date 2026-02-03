@@ -361,9 +361,23 @@
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script>
-function toggleMenu() {
-  document.querySelector('.nav').classList.toggle('open');
-}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdown = document.querySelector(".dropdown");
+
+  dropdownToggle.addEventListener("click", function (e) {
+    e.preventDefault();
+    dropdown.classList.toggle("open");
+  });
+
+  // إغلاق القائمة عند الضغط خارجها
+  document.addEventListener("click", function (e) {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
+});
 </script>
 
 </body>
