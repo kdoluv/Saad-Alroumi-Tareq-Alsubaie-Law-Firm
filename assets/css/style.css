@@ -164,67 +164,105 @@ body {
   color: #333;
 }
 
-.team {
-  background: var(--gray);
-  padding: 80px 40px;
+/* =========================
+   TEAM SECTION
+========================= */
+.team-section {
+  padding: 80px 0;
 }
 
-.team h2 {
-  color: var(--navy);
-  font-size: 36px;
-  margin-bottom: 50px;
+.team-group {
+  margin-bottom: 70px;
+}
+
+.team-group h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 35px;
   position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
-.team h2::after {
+.team-group h2::after {
   content: "";
-  width: 90px;
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 60px;
   height: 3px;
-  background: var(--gold);
-  display: block;
-  margin-top: 15px;
+  background: #c9a24d; /* ذهبي */
 }
 
-.team-list {
+/* GRID */
+.team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
 }
 
+/* CARD */
 .team-card {
-  background: white;
-  padding: 30px 25px;
-  border-right: 5px solid var(--navy);
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.07);
+  transition: .3s ease;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
 }
 
 .team-card h3 {
-  margin: 0 0 10px;
-  font-size: 20px;
-  color: var(--navy);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .team-card span {
   font-size: 14px;
-  color: var(--gold);
-  font-weight: 600;
+  color: #666;
 }
 
+/* LEAD (Founders) */
 .team-card.lead {
-  border-right-color: var(--gold);
-  background: #fffdf6;
+  border-top: 4px solid #c9a24d;
 }
 
+/* CONSULTANT */
 .team-card.consultant {
-  border-right-color: #999;
+  background: #fafafa;
 }
 
-.team-note {
-  margin-top: 50px;
-  font-size: 17px;
-  line-height: 1.9;
-  color: #333;
-  max-width: 900px;
+/* FINANCE */
+.team-group.finance .team-card {
+  border-top: 4px solid #2f4f4f;
+}
+
+/* COURTS */
+.team-group.courts .team-card {
+  border-top: 4px solid #8b0000;
+}
+
+/* ADMIN */
+.team-group.admin .team-card {
+  border-top: 4px solid #003366;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .team-group h2 {
+    font-size: 22px;
+  }
+
+  .team-card h3 {
+    font-size: 16px;
+  }
 }
 
 /* قسم التواصل */
@@ -402,15 +440,6 @@ html[dir="rtl"] {
   transform: translateY(0);
 }
 
-.team-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
 /* FIRM TITLE */
 .firm-title {
   margin-bottom: 40px;
@@ -458,46 +487,33 @@ html[dir="rtl"] {
   }
 }
 
-/* DROPDOWN MENU */
+/* DROPDOWN */
 .dropdown {
   position: relative;
-  display: inline-block;
-}
-
-.dropdown-toggle {
-  color: var(--white);
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .dropdown-menu {
+  display: none;
   position: absolute;
-  top: 100%;
-  right: 0;
   background: #fff;
   min-width: 220px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  display: none;
-  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  border-radius: 10px;
   padding: 10px 0;
+  top: 100%;
+  inset-inline-start: 0;
+  z-index: 999;
 }
 
-.dropdown-menu a {
-  display: block;
-  padding: 10px 20px;
-  color: var(--navy);
-  text-decoration: none;
-  font-size: 15px;
+/* Desktop hover */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
-.dropdown-menu a:hover {
-  background: var(--gray);
-  color: var(--gold);
-}
-
-.dropdown:hover .dropdown-menu {
+/* Mobile click */
+.dropdown.open .dropdown-menu {
   display: block;
 }
 
