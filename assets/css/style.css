@@ -369,7 +369,7 @@ a {
 .footer {
   background: var(--navy);
   color: #fff;
-padding: 25px 15px;
+  padding: 25px 15px;
 }
 
 .footer-logo {
