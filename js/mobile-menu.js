@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const menuBtn = document.querySelector('.menu-btn');
-  const nav = document.querySelector('.nav');
-  const dropdown = document.querySelector('.dropdown');
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mainNav');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
 
-  // مينو الموبايل
-  menuBtn?.addEventListener('click', () => {
+  // فتح / غلق القائمة الرئيسية
+  menuBtn.addEventListener('click', () => {
     nav.classList.toggle('open');
     menuBtn.classList.toggle('active');
   });
 
-  // dropdown (موبايل فقط)
-  dropdownToggle?.addEventListener('click', (e) => {
+  // Dropdown (موبايل + ديسكتوب)
+  dropdownToggle.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    dropdown.classList.toggle('open');
+    dropdownMenu.classList.toggle('open');
   });
 
-  // غلق عند الضغط خارج القائمة
+  // غلق dropdown عند الضغط خارجها
   document.addEventListener('click', () => {
-    dropdown?.classList.remove('open');
+    dropdownMenu.classList.remove('open');
   });
 
-  dropdown?.addEventListener('click', e => e.stopPropagation());
+  dropdownMenu.addEventListener('click', e => e.stopPropagation());
 
 });
