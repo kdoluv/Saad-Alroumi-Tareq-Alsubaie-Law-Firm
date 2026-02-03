@@ -51,3 +51,31 @@
 
 })();
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const toggle = document.querySelector('.dropdown-toggle');
+  const menu = document.querySelector('.dropdown-menu');
+
+  if (!toggle || !menu) return;
+
+  // فتح / غلق القائمة عند الضغط
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+
+  // غلق القائمة عند الضغط خارجها
+  document.addEventListener('click', function () {
+    menu.classList.remove('open');
+  });
+
+  // منع الإغلاق عند الضغط داخل القائمة
+  menu.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
+
+});
+</script>
