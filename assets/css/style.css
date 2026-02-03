@@ -345,27 +345,31 @@ body {
     text-align: center;
   }
 
-/* ===== FOOTER ===== */
+  .footer-logo {
+    margin: 0 auto 20px;
+  }
+}
+
 .footer {
   background: var(--navy);
   color: white;
   padding: 60px 40px 20px;
-  text-align: center;
 }
 
-.footer-logo {
-  width: 100px;
-  margin-bottom: 20px;
-}
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
+.footer-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
 .footer p {
   line-height: 1.8;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .footer h4 {
