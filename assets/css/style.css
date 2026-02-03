@@ -29,19 +29,24 @@ body {
 
 .header-flex {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
   height: 100px;
 }
 
-.nav a {
-  color: var(--gold);
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: 600;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: nowrap; /* مهم */
+}
+
+.nav a,
+.nav .dropdown {
+  white-space: nowrap; /* يمنع كسر السطر */
 }
 
 .nav a:hover {
@@ -490,6 +495,8 @@ html[dir="rtl"] {
 /* DROPDOWN */
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-menu {
