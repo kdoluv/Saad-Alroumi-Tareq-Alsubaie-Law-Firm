@@ -501,23 +501,29 @@ html[dir="rtl"] {
   position: relative;
 }
 
+/* افتراضيًا مغلقة */
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: var(--navy);
-  border: 1px solid rgba(201,162,77,0.4);
-  border-radius: 6px;
-  min-width: 220px;
   display: none;
-  flex-direction: column;
-  padding: 10px 0;
-  z-index: 999;
 }
 
-/* إظهار القائمة */
-.dropdown.open .dropdown-menu {
-  display: flex;
+/* عند الفتح */
+.dropdown-menu.open {
+  display: block;
+}
+
+/* موبايل فقط */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    width: 100%;
+    background: #0b1c2d;
+    padding: 10px 0;
+  }
+
+  .dropdown-menu li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+  }
 }
 
 /* عناصر القائمة */
