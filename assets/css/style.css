@@ -296,13 +296,32 @@ a {
   font-size: 17px;
   margin-bottom: 12px;
 }
-
  /* ===== BACK BUTTON ===== */
   .back-btn {
     font-size: 14px;
     padding: 8px 14px;
   }
 
+}
+
+.back-button-container {
+  text-align: center;
+  margin: 20px 0; /* مسافة أعلى وأسفل */
+}
+
+.back-button {
+  background-color: #0b1c2d; /* لون الخلفية */
+  color: #ffffff; /* لون الخط */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #c9a24d; /* لون عند المرور */
 }
 /* ================= CONTACT ================= */
 .contact-section {
