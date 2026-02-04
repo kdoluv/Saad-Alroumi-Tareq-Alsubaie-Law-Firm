@@ -2,27 +2,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const menuBtn = document.getElementById('menuBtn');
   const nav = document.getElementById('mainNav');
+  const dropdown = document.querySelector('.dropdown');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
-  const dropdownMenu = document.querySelector('.dropdown-menu');
 
-  // فتح / غلق القائمة الرئيسية
-  menuBtn.addEventListener('click', () => {
+  /* =========================
+     فتح / غلق القائمة الرئيسية
+  ========================== */
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     nav.classList.toggle('open');
     menuBtn.classList.toggle('active');
   });
 
-  // Dropdown (موبايل + ديسكتوب)
-  dropdownToggle.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  dropdown.parentElement.classList.toggle("open");
-});
-
-  // غلق dropdown عند الضغط خارجها
-  document.addEventListener('click', () => {
-    dropdownMenu.classList.remove('open');
+  /* =========================
+     Dropdown الممارسات القانونية
+  ========================== */
+  dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
   });
 
-  dropdownMenu.addEventListener('click', e => e.stopPropagation());
+  /* =========================
+     إغلاق الكل عند الضغط خارج
+  ========================== */
+  document.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuBtn.classList.remove('active');
+    dropdown.classList.remove('open');
+  });
+
+  /* منع الإغلاق عند الضغط داخل القائمة */
+  nav.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 
 });
