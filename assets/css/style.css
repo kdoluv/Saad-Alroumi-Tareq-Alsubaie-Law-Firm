@@ -102,7 +102,6 @@ a {
 }
 
 /* ===== DROPDOWN ===== */
-
 .dropdown {
   position: relative;
 }
@@ -121,27 +120,24 @@ a {
   z-index: 999;
 }
 
-/* إظهار القائمة */
 .dropdown.open .dropdown-menu {
   display: flex;
 }
 
-/* عناصر القائمة */
-.dropdown-menu a {
-  color: var(--gold);
-  padding: 10px 18px;
-  display: block;
-  white-space: nowrap;
-  transition: background 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-  background: rgba(201,162,77,0.15);
-}
-/* Desktop hover */
+/* Desktop hover فقط */
 @media (min-width: 769px) {
   .dropdown:hover .dropdown-menu {
-    display: block;
+    display: flex;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    border: none;
+    padding-right: 15px;
   }
 }
 
@@ -309,8 +305,6 @@ a {
     font-size: 14px;
     padding: 8px 14px;
   }
-
-}
 
 .back-button-container {
   text-align: center;
