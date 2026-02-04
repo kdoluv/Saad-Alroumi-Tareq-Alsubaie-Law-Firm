@@ -363,16 +363,24 @@ a {
 .footer {
   background: var(--navy);
   color: #fff;
-  padding: 25px 15px;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .footer-logo {
-  width: 100px;
-  margin-bottom: 20px;
+  width: 120px;
 }
 
 .footer p {
-  font-size: 15px;
+  font-size: 14px;
+  color: #ddd;
 }
 
 /* ================= MOBILE ================= */
