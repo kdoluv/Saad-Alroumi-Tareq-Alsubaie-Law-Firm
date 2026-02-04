@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Dropdown (موبايل + ديسكتوب)
-  dropdownToggle.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    dropdownMenu.classList.toggle('open');
-  });
+  dropdownToggle.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  dropdown.parentElement.classList.toggle("open");
+});
 
   // غلق dropdown عند الضغط خارجها
   document.addEventListener('click', () => {
