@@ -606,6 +606,12 @@ html[dir="rtl"] .partners-track {
   transform: translateY(-3px);
 }
 
+.whatsapp-float {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 /* موبايل */
 @media (max-width: 768px) {
   .whatsapp-float {
