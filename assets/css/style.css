@@ -431,3 +431,55 @@ a {
   }
 
 }
+
+/* =====================
+   SUCCESS PARTNERS AUTO SLIDER
+===================== */
+
+.partners-section {
+  padding: 70px 0;
+  background: #f7f7f7;
+  text-align: center;
+  overflow: hidden;
+}
+
+.partners-section h2 {
+  margin-bottom: 40px;
+  color: #0b1d33;
+}
+
+.partners-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: max-content;
+  animation: scrollPartners 25s linear infinite;
+}
+
+.partners-track img {
+  max-height: 70px;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.partners-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* الحركة التلقائية */
+@keyframes scrollPartners {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
