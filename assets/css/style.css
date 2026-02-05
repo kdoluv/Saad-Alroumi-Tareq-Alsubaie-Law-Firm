@@ -437,7 +437,7 @@ a {
 ===================== */
 
 .partners-section {
-  padding: 40px 0;
+  padding: 20px 0;
   margin-top: 0;
   background: #f7f7f7;
   text-align: center;
@@ -494,4 +494,21 @@ html[dir="ltr"] .partners-track {
 
 html[dir="rtl"] .partners-track {
   animation: scrollPartnersRTL 25s linear infinite;
+}
+
+/* خط ذهبي تحت عنوان شركاء النجاح */
+
+.partners-section h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.partners-section h2::after {
+  content: "";
+  display: block;
+  width: 70px;        /* طول الخط */
+  height: 2px;        /* سمك الخط */
+  background: #c9a24d; /* اللون الذهبي */
+  margin: 10px auto 0;
 }
