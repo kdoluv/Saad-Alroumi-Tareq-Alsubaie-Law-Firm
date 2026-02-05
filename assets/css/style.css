@@ -437,7 +437,7 @@ a {
 ===================== */
 
 .partners-section {
-  padding: 70px 0;
+  padding: 40px 0;
   background: #f7f7f7;
   text-align: center;
   overflow: hidden;
@@ -474,12 +474,23 @@ a {
   transform: scale(1.05);
 }
 
-/* الحركة التلقائية */
-@keyframes scrollPartners {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+/* الحركة الافتراضية (EN - LTR) */
+@keyframes scrollPartnersLTR {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* الحركة العربية (RTL) */
+@keyframes scrollPartnersRTL {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+/* تطبيق الحركة حسب الاتجاه */
+html[dir="ltr"] .partners-track {
+  animation: scrollPartnersLTR 25s linear infinite;
+}
+
+html[dir="rtl"] .partners-track {
+  animation: scrollPartnersRTL 25s linear infinite;
 }
