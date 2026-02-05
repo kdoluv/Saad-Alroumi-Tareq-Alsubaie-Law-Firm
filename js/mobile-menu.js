@@ -2,39 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const menuBtn = document.getElementById('menuBtn');
   const nav = document.getElementById('mainNav');
-  const dropdown = document.querySelector('.dropdown');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdown = document.querySelector('.dropdown');
 
-  /* =========================
-     فتح / غلق القائمة الرئيسية
-  ========================== */
-  menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
+  // فتح / غلق القائمة الرئيسية
+  menuBtn.addEventListener('click', () => {
     nav.classList.toggle('open');
     menuBtn.classList.toggle('active');
   });
 
-  /* =========================
-     Dropdown الممارسات القانونية
-  ========================== */
+  // Dropdown موبايل
   dropdownToggle.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     dropdown.classList.toggle('open');
   });
 
-  /* =========================
-     إغلاق الكل عند الضغط خارج
-  ========================== */
+  // غلق القائمة عند الضغط خارجها
   document.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menuBtn.classList.remove('active');
     dropdown.classList.remove('open');
   });
 
-  /* منع الإغلاق عند الضغط داخل القائمة */
-  nav.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+  dropdown.addEventListener('click', e => e.stopPropagation());
 
 });
