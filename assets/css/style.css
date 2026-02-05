@@ -465,7 +465,7 @@ a {
 .partners-track img {
   max-height: 70px;
   opacity: 0.7;
-  filter: grayscale(100%);
+  filter: color(100%);
   transition: 0.3s;
 }
 
