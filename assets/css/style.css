@@ -675,3 +675,28 @@ html[dir="rtl"] .partners-track {
   visibility: visible;
   pointer-events: auto;
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+}
+
+.whatsapp-float i {
+  font-size: 20px;
+}
+
+html[dir="rtl"] .whatsapp-float {
+  right: auto;
+  left: 20px;
+}
