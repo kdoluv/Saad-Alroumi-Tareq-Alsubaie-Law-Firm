@@ -3,41 +3,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menuBtn');
   const nav = document.getElementById('mainNav');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
-  const dropdown = document.querySelector('.dropdown');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
 
-  /* ===============================
-     القائمة الرئيسية (Mobile Menu)
-  ================================ */
+  /* القائمة الرئيسية (موبايل) */
   if (menuBtn && nav) {
-  menuBtn.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    menuBtn.classList.toggle('active');
-  });
-}
-
-  /* ===============================
-     Dropdown (Practice Areas)
-  ================================ */
-  if (dropdownToggle && dropdown) {
-    dropdownToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      dropdown.classList.toggle('open');
-    });
-
-    // منع الإغلاق عند الضغط داخلها
-    dropdown.addEventListener('click', (e) => {
-      e.stopPropagation();
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      menuBtn.classList.toggle('active');
     });
   }
 
-  /* ===============================
-     غلق كل القوائم عند الضغط خارجها
-  ================================ */
-  document.addEventListener('click', () => {
-    if (nav) nav.classList.remove('open');
-    if (menuBtn) menuBtn.classList.remove('active');
-    if (dropdown) dropdown.classList.remove('open');
-  });
+  /* الممارسات القانونية */
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('open');
+    });
+
+    /* إغلاقها عند الضغط خارجها */
+    document.addEventListener('click', () => {
+      dropdownMenu.classList.remove('open');
+    });
+
+    dropdownMenu.addEventListener('click', e => e.stopPropagation());
+  }
 
 });
