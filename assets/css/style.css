@@ -665,3 +665,9 @@ html[dir="rtl"] .partners-track {
     transform: translateY(0);
   }
 }
+
+.wa-box.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
