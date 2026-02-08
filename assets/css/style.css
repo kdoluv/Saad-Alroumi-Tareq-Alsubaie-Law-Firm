@@ -30,18 +30,10 @@ a {
 
 /* ================= HEADER ================= */
 .header {
-  display: flex;
-  justify-content: space-between; /* يوزع العناصر بين اليسار واليمين */
-  align-items: center; /* يصطف كل شيء عموديًا */
-  padding: 10px 20px;
-}
-.nav-links {
-  display: flex;
-  gap: 15px; /* يباعد بين الروابط */
-}
-.language-switch {
-  display: flex;
-  gap: 10px;
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-flex {
