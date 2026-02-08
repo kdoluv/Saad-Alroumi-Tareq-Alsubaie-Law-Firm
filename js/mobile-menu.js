@@ -9,12 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
      القائمة الرئيسية (Mobile Menu)
   ================================ */
   if (menuBtn && nav) {
-    menuBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      nav.classList.toggle('open');
-      menuBtn.classList.toggle('active');
-    });
-  }
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    menuBtn.classList.toggle('active');
+  });
+}
 
   /* ===============================
      Dropdown (Practice Areas)
