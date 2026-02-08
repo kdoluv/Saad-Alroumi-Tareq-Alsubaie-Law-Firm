@@ -1,18 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function () {
+  const waBtn = document.getElementById("waToggle");
+  const waBox = document.getElementById("waBox");
 
-  const waToggle = document.getElementById('waToggle');
-  const waBox = document.getElementById('waBox');
+  if (!waBtn || !waBox) return;
 
-  if (!waToggle || !waBox) return;
-
-  waToggle.addEventListener('click', (e) => {
+  // فتح / غلق الفقاعة
+  waBtn.addEventListener("click", function (e) {
     e.stopPropagation();
-    waBox.classList.toggle('open');
+    waBox.classList.toggle("open");
   });
 
-  document.addEventListener('click', () => {
-    waBox.classList.remove('open');
+  // غلقها عند الضغط خارجها
+  document.addEventListener("click", function () {
+    waBox.classList.remove("open");
   });
 
+  // منع الغلق عند الضغط داخلها
+  waBox.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
 });
-
