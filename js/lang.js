@@ -22,28 +22,3 @@
     localStorage.setItem('site_lang', lang);
   }
 
-  updateWhatsApp(lang);
-
-  window.setLanguage = applyLanguage;
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('site_lang') || 'ar';
-    applyLanguage(savedLang);
-  });
-
-})();
-
-function updateWhatsApp(lang) {
-  const waBtn = document.getElementById('whatsappBtn');
-  if (!waBtn) return;
-
-  const phone = '965XXXXXXXX'; // رقم واتساب بدون +
-  
-  const messageAR = 'مرحبًا، أود التواصل مع مكتب سعد الرومي وطارق السبيعي';
-  const messageEN = 'Hello, I would like to contact Saad Alroomi & Tareq Al-Subaie Law Firm';
-
-  const message = lang === 'ar' ? messageAR : messageEN;
-
-  waBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-}
-
