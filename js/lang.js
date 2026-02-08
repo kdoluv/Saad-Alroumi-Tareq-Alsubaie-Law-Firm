@@ -5,9 +5,8 @@
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
     // النصوص
-    document.querySelectorAll('[data-ar]').forEach(el => {
-      const text = el.getAttribute(`data-${lang}`);
-      if (text) el.innerHTML = text;
+   document.querySelectorAll('[data-ar]').forEach(el => {
+      el.innerHTML = el.dataset[lang];
     });
 
     // placeholders
