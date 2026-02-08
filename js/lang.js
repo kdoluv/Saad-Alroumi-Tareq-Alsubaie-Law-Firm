@@ -16,7 +16,7 @@
     });
 
     // العنوان
-  const pageTitle = document.querySelector('title[data-ar]');
+    const pageTitle = document.querySelector('title[data-ar]');
       if (pageTitle) {
       pageTitle.textContent = pageTitle.dataset[lang];
     }
