@@ -16,9 +16,9 @@
     });
 
     // العنوان
-    const title = document.querySelector('title');
-    if (title && title.dataset[lang]) {
-      title.textContent = title.dataset[lang];
+  const pageTitle = document.querySelector('title[data-ar]');
+      if (pageTitle) {
+      pageTitle.textContent = pageTitle.dataset[lang];
     }
 
     // واتساب
