@@ -1,15 +1,18 @@
-<script>
+document.addEventListener('DOMContentLoaded', () => {
+
   const waToggle = document.getElementById('waToggle');
   const waBox = document.getElementById('waBox');
 
-  waToggle.addEventListener('click', () => {
-    waBox.style.display =
-      waBox.style.display === 'block' ? 'none' : 'block';
+  if (!waToggle || !waBox) return;
+
+  waToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    waBox.classList.toggle('open');
   });
 
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.wa-chat')) {
-      waBox.style.display = 'none';
-    }
+  document.addEventListener('click', () => {
+    waBox.classList.remove('open');
   });
-</script>
+
+});
+
