@@ -40,6 +40,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap; /* يمنع التكسير */
 }
 
 .logo {
@@ -85,9 +86,10 @@ a {
 
 /* ===== NAV ===== */
 .nav {
-  : flex;
+  display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
+  white-space: nowrap;
 }
 
 .nav a,
@@ -141,7 +143,7 @@ a {
   }
 }
 
-/* ===== LANGUAGE ===== */
+/* ===== UAGE ===== */
 .lang-switcher button {
   background: transparent;
   border: 1px solid var(--gold);
@@ -149,6 +151,17 @@ a {
   padding: 6px 10px;
   cursor: pointer;
   font-weight: 600;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* EN layout fix */
+html[dir="ltr"] .header-flex {
+  flex-direction: row;
 }
 
 /* ================= HERO ================= */
