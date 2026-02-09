@@ -16,14 +16,27 @@
 <!-- ================= HEADER ================= -->
 <header class="header">
   <div class="container header-flex">
-    <nav class="nav">
+
+    <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
+
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <a href="index.html#practices" data-ar="مجالات الممارسة" data-en="Practices">مجالات الممارسة</a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </nav>
-  <img src="assets/images/logo.png" class="logo" alt="logo">
+
+    <div class="lang-switcher">
+      <button onclick="setLanguage('ar')">AR</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+
   </div>
 </header>
+
 
 <!-- ================= HERO ================= -->
 <section class="page-hero">
