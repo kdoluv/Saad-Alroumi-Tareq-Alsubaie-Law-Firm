@@ -18,14 +18,14 @@ body {
   color: #222;
 }
 
-a {
-  text-decoration: none;
-}
-
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ================= HEADER ================= */
@@ -42,36 +42,29 @@ a {
   justify-content: space-between;
 }
 
-html[dir="rtl"] .header-flex {
-  flex-direction: row-reverse;
-}
-
-html[dir="ltr"] .header-flex {
-  flex-direction: row;
-}
-
 .logo {
-  height: 80px;
+  height: 85px;
 }
 
-/* ================= MENU BUTTON ================= */
+/* ===== MENU BUTTON ===== */
 .menu-btn {
   width: 30px;
   height: 22px;
+  position: relative;
   background: none;
   border: none;
   cursor: pointer;
   display: none;
-  position: relative;
 }
 
 .menu-btn span {
   position: absolute;
-  width: 100%;
   height: 3px;
+  width: 100%;
   background: var(--gold);
+  border-radius: 3px;
   left: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .menu-btn span:nth-child(1) { top: 0; }
@@ -90,11 +83,11 @@ html[dir="ltr"] .header-flex {
   top: 9px;
 }
 
-/* ================= NAV ================= */
+/* ===== NAV ===== */
 .nav {
-  display: flex;
+  : flex;
   align-items: center;
-  gap: 26px;
+  gap: 28px;
 }
 
 .nav a,
@@ -108,40 +101,54 @@ html[dir="ltr"] .header-flex {
   color: #e6c977;
 }
 
-/* ================= DROPDOWN ================= */
+/* ===== DROPDOWN ===== */
 .dropdown {
   position: relative;
 }
 
-.dropdown-toggle {
-  cursor: pointer;
-}
-
 .dropdown-menu {
-  display: none;
   position: absolute;
   top: 100%;
   right: 0;
-  min-width: 220px;
   background: var(--navy);
-  border: 1px solid rgba(201,162,77,.4);
+  border: 1px solid rgba(201,162,77,0.4);
   border-radius: 6px;
+  min-width: 220px;
+  display: none;
+  flex-direction: column;
   padding: 10px 0;
   z-index: 999;
 }
 
-.dropdown-menu a {
-  padding: 10px 18px;
-  color: var(--gold);
-  display: block;
-}
-
-.dropdown-menu a:hover {
-  background: rgba(255,255,255,.05);
-}
-
 .dropdown.open .dropdown-menu {
-  display: block;
+  display: flex;
+}
+
+/* Desktop hover فقط */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    border: none;
+    padding-right: 15px;
+  }
+}
+
+/* ===== LANGUAGE ===== */
+.lang-switcher button {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 6px 10px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 /* ================= HERO ================= */
@@ -161,6 +168,7 @@ html[dir="ltr"] .header-flex {
 }
 
 .hero-overlay h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 48px;
   color: var(--gold);
 }
@@ -182,6 +190,97 @@ html[dir="ltr"] .header-flex {
   font-size: 40px;
 }
 
+/* ================= ABOUT ================= */
+.intro {
+  background: #fff;
+  padding: 80px 40px;
+}
+
+.intro h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.intro h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  display: block;
+  margin-top: 15px;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+/* ================= TEAM ================= */
+.team-section {
+  padding: 80px 0;
+}
+
+.team-group {
+  margin-bottom: 40px;
+}
+
+.team-group h2 {
+  font-size: 28px;
+  margin-bottom: 35px;
+  position: relative;
+  display: inline-block;
+}
+
+.team-group h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.team-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,.07);
+  transition: .3s;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+.team-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  white-space: nowrap; /* الاسم في سطر واحد */
+}
+
+.team-card span {
+  font-size: 14px;
+  color: #666;
+}
+
+/* COLORS */
+.team-card.lead { border-top: 4px solid var(--gold); }
+.team-group.courts .team-card { border-top: 4px solid #8b0000; }
+.team-group.admin .team-card { border-top: 4px solid #003366; }
+.team-group.finance .team-card { border-top: 4px solid #2f4f4f; }
+.team-card.consultant { background: #fafafa; }
+
 /* ================= PRACTICE ================= */
 .practice-content {
   background: #fff;
@@ -193,28 +292,71 @@ html[dir="ltr"] .header-flex {
   line-height: 1.9;
 }
 
+.practice-content ul {
+  padding-right: 20px;
+}
+
 .practice-content li {
   font-size: 17px;
   margin-bottom: 12px;
 }
+ /* ===== BACK BUTTON ===== */
+  .back-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
 
-/* ================= BACK BUTTON ================= */
 .back-button-container {
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0; /* مسافة أعلى وأسفل */
 }
 
 .back-button {
-  background: var(--navy);
-  color: #fff;
+  background-color: #0b1c2d; /* لون الخلفية */
+  color: #ffffff; /* لون الخط */
   border: none;
-  padding: 10px 22px;
+  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .back-button:hover {
-  background: var(--gold);
+  background-color: #c9a24d; /* لون عند المرور */
+}
+/* ================= CONTACT ================= */
+.contact-section {
+  background: #fff;
+  padding: 80px 8%;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.contact-info {
+  line-height: 1.8;
 }
 
 /* ================= FOOTER ================= */
@@ -225,14 +367,150 @@ html[dir="ltr"] .header-flex {
   text-align: center;
 }
 
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 .footer-logo {
   width: 85px;
-  margin-bottom: 10px;
 }
 
 .footer p {
-  font-size: 12px;
+  font-size:12px;
   color: #ddd;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background: var(--navy);
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+  }
+
+  .hero-overlay {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 30px;
+  }
+
+  .hero-overlay p {
+    font-size: 16px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =====================
+   SUCCESS PARTNERS AUTO SLIDER
+===================== */
+
+.partners-section {
+  padding: 20px 0;
+  margin-top: 0;
+  background: #f7f7f7;
+  text-align: center;
+  overflow: hidden;
+}
+
+.partners-section h2 {
+  margin-bottom: 40px;
+  color: #0b1d33;
+}
+
+.partners-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: max-content;
+  animation: scrollPartners 25s linear infinite;
+}
+
+.partners-track img {
+  max-height: 70px;
+  opacity: 0.7;
+  filter: color(100%);
+  transition: 0.3s;
+}
+
+.partners-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* الحركة الافتراضية (EN - LTR) */
+@keyframes scrollPartnersLTR {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* الحركة العربية (RTL) */
+@keyframes scrollPartnersRTL {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}
+
+/* تطبيق الحركة حسب الاتجاه */
+html[dir="ltr"] .partners-track {
+  animation: scrollPartnersLTR 25s linear infinite;
+}
+
+html[dir="rtl"] .partners-track {
+  animation: scrollPartnersRTL 25s linear infinite;
+}
+
+/* خط ذهبي تحت عنوان شركاء النجاح */
+
+.partners-section h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.partners-section h2::after {
+  content: "";
+  display: block;
+  width: 70px;        /* طول الخط */
+  height: 2px;        /* سمك الخط */
+  background: #c9a24d; /* اللون الذهبي */
+  margin: 10px auto 0;
 }
 
 /* ================= SOCIAL SIDEBAR ================= */
@@ -249,24 +527,66 @@ html[dir="ltr"] .header-flex {
 .social-sidebar a {
   width: 45px;
   height: 45px;
-  background: #0b3c5d;
+  background: #0b3c5d; /* أزرق قانوني */
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3px 0;
+  margin: 2px 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
   border-radius: 0 6px 6px 0;
-  transition: .3s;
+  font-size: 18px;
 }
 
-/* ================= WHATSAPP ================= */
+/* Hover effect */
+.social-sidebar a:hover {
+  width: 55px;
+  background: #0f4c81;
+}
+
+/* تخصيص لكل شبكة */
+.social-sidebar .facebook:hover {
+  background: #1877f2;
+}
+.social-sidebar .twitter:hover {
+  background: #000;
+}
+.social-sidebar .instagram:hover {
+  background: #e1306c;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .social-sidebar {
+    top: auto;
+    bottom: 20px;
+    left: 10px;
+    flex-direction: row;
+  }
+
+  .social-sidebar a {
+    border-radius: 50%;
+    margin: 0 5px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .social-sidebar a:hover {
+    width: 42px;
+  }
+}
+
+/* ===== WhatsApp Business Chat ===== */
 .wa-chat {
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 999999;
+  font-family: 'Cairo', sans-serif;
 }
 
+/* الزر الدائري */
 .wa-btn {
   width: 60px;
   height: 60px;
@@ -276,56 +596,82 @@ html[dir="ltr"] .header-flex {
   border: none;
   font-size: 28px;
   cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,.3);
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 991px) {
+/* صندوق الدردشة */
+.wa-box {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 280px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  overflow: hidden;
 
-  .menu-btn {
-    display: block;
-  }
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
-  .nav {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background: var(--navy);
-    flex-direction: column;
-    padding: 20px;
-  }
+  animation: fadeUp .3s ease;
+}
 
-  .nav.open {
-    display: flex;
-  }
+/* الهيدر */
+.wa-header {
+  background: #075e54;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
-  .dropdown-menu {
-    position: static;
-    border: none;
-  }
+.wa-header i {
+  font-size: 26px;
+}
 
-  .hero-overlay {
-    padding: 40px 20px;
-    text-align: center;
-  }
+.wa-header span {
+  font-size: 13px;
+  opacity: .9;
+}
 
-  .hero-overlay h1 {
-    font-size: 30px;
-  }
+/* المحتوى */
+.wa-body {
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+}
 
-  .hero-overlay p {
-    font-size: 16px;
-  }
+/* زر بدء المحادثة */
+.wa-start {
+  display: block;
+  text-align: center;
+  background: #25d366;
+  color: #fff;
+  padding: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  .social-sidebar {
-    top: auto;
-    bottom: 15px;
-    left: 15px;
-    flex-direction: row;
-  }
+.wa-start:hover {
+  background: #1ebe5d;
+}
 
-  .social-sidebar a {
-    border-radius: 50%;
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wa-box.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
