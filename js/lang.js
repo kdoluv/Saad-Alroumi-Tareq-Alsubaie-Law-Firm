@@ -1,24 +1,28 @@
+// ===== LANGUAGE SWITCHER =====
 function setLanguage(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
   // تغيير النصوص
   document.querySelectorAll('[data-ar]').forEach(el => {
-    el.textContent = el.dataset[lang];
+    el.textContent = lang === 'ar'
+      ? el.getAttribute('data-ar')
+      : el.getAttribute('data-en');
   });
 
   // تغيير placeholders
   document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
-    el.placeholder = el.dataset[`${lang}Placeholder`];
+    el.placeholder = lang === 'ar'
+      ? el.getAttribute('data-ar-placeholder')
+      : el.getAttribute('data-en-placeholder');
   });
 
-  // تغيير title
-  const title = document.querySelector('title');
-  if (title && title.dataset[lang]) {
-    title.textContent = title.dataset[lang];
-  }
+  // حفظ اللغة
+  localStorage.setItem('siteLang', lang);
 }
 
+// ===== LOAD SAVED LANGUAGE =====
 document.addEventListener('DOMContentLoaded', () => {
-  setLanguage(document.documentElement.lang || 'ar');
+  const savedLang = localStorage.getItem('siteLang') || 'ar';
+  setLanguage(savedLang);
 });
