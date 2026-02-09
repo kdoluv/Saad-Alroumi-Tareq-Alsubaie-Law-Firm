@@ -1,8 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('waToggle');
-  const box = document.getElementById('waBox');
+function whatsappLink() {
+  const msg =
+    document.documentElement.lang === 'ar'
+      ? 'مرحباً، أود الاستفسار عن خدماتكم القانونية'
+      : 'Hello, I would like to inquire about your legal services';
 
-  btn.onclick = () => {
-    box.classList.toggle('open');
-  };
-});
+  window.open(
+    'https://wa.me/965XXXXXXXX?text=' + encodeURIComponent(msg),
+    '_blank'
+  );
+}
