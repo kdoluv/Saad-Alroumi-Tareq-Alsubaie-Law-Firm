@@ -1,21 +1,18 @@
-(function () {
+let currentLang = 'ar';
 
-  function applyLanguage(lang) {
+function setLang(lang) {
+  currentLang = lang;
 
-    document.documentElement.lang = lang;
-    document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-    document.querySelectorAll('[data-ar]').forEach(el => {
-      el.innerHTML = el.getAttribute(`data-${lang}`);
-    });
+  updateTexts();
+}
 
-    localStorage.setItem('site_lang', lang);
-  }
-
-  window.setLanguage = applyLanguage;
-
-  document.addEventListener('DOMContentLoaded', () => {
-    applyLanguage(localStorage.getItem('site_lang') || 'ar');
+function updateTexts() {
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    el.textContent = el.dataset[currentLang];
   });
+}
 
-})();
+document.addEventListener('DOMContentLoaded', updateTexts);
