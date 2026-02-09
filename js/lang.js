@@ -1,64 +1,44 @@
-// ================= LANGUAGE MANAGER =================
-(function () {
+document.addEventListener('DOMContentLoaded', () => {
 
-  function applyLanguage(lang) {
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mainNav');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdown = document.querySelector('.dropdown');
 
-    // اتجاه الصفحة
-    document.documentElement.lang = lang;
-    document.documentElement.dir  = (lang === 'ar') ? 'rtl' : 'ltr';
-
-    // النصوص العادية
-    document.querySelectorAll('[data-ar]').forEach(el => {
-      const text = el.getAttribute(`data-${lang}`);
-      if (text) {
-        el.innerHTML = text;
-      }
+  /* ===============================
+     القائمة الرئيسية (Mobile Menu)
+  ================================ */
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nav.classList.toggle('open');
+      menuBtn.classList.toggle('active');
     });
-
-    // placeholders
-    document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
-      const text = el.getAttribute(`data-${lang}-placeholder`);
-      if (text) {
-        el.placeholder = text;
-      }
-    });
-
-    // عنوان الصفحة
-    const title = document.querySelector('title');
-    if (title && title.getAttribute(`data-${lang}`)) {
-      title.textContent = title.getAttribute(`data-${lang}`);
-    }
-
-    // حفظ اللغة
-    localStorage.setItem('site_lang', lang);
   }
 
-  // إتاحة تغيير اللغة للأزرار
-  window.setLanguage = function (lang) {
-    applyLanguage(lang);
-  };
+  /* ===============================
+     Dropdown (Practice Areas)
+  ================================ */
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
 
-  // عند تحميل الصفحة
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('site_lang') || 'ar';
-    applyLanguage(savedLang);
-  });
-
-})();
-
-    // واتساب
-    updateWhatsApp(lang);
-
-    localStorage.setItem('site_lang', lang);
+    // منع الإغلاق عند الضغط داخلها
+    dropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
   }
 
-  window.setLanguage = function (lang) {
-    applyLanguage(lang);
-  };
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('site_lang') || 'ar';
-    applyLanguage(savedLang);
+  /* ===============================
+     غلق كل القوائم عند الضغط خارجها
+  ================================ */
+  document.addEventListener('click', () => {
+    if (nav) nav.classList.remove('open');
+    if (menuBtn) menuBtn.classList.remove('active');
+    if (dropdown) dropdown.classList.remove('open');
   });
 
-})();
+});
