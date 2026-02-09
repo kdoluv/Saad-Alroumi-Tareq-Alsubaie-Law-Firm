@@ -1,105 +1,425 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title data-ar="مكتب سعد الرومي وطارق السبيعي"
-        data-en="Saad Alroomi & Tareq Alsubaie Law Firm">
-    مكتب سعد الرومي وطارق السبيعي
-  </title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
-  <!-- Icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
 
     <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
 
-    <button class="menu-btn" id="menuBtn">
-      <span></span><span></span><span></span>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
     <nav class="nav" id="mainNav">
-
       <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-
       <a href="#about" data-ar="نبذة عن المكتب" data-en="About">نبذة عن المكتب</a>
+      <a href="#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
+<!-- الممارسات القانونية -->
+<div class="dropdown">
+  <a href="#"
+     class="dropdown-toggle"
+     data-ar="الممارسات القانونية ▾"
+     data-en="Practice Areas ▾">
+    الممارسات القانونية ▾
+  </a>
 
-      <div class="dropdown">
-        <a href="#" class="dropdown-toggle"
-           data-ar="الممارسات القانونية ▾"
-           data-en="Practice Areas ▾">
-          الممارسات القانونية ▾
-        </a>
+  <div class="dropdown-menu">
+    <a href="practice-criminal.html"
+       data-ar="القسم الجنائي"
+       data-en="Criminal Law">
+      القسم الجنائي
+    </a>
 
-        <div class="dropdown-menu">
-          <a data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</a>
-          <a data-ar="القسم المدني" data-en="Civil Law">القسم المدني</a>
-          <a data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</a>
-          <a data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</a>
-          <a data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</a>
-          <a data-ar="التحكيم" data-en="Arbitration">التحكيم</a>
-        </div>
-      </div>
+    <a href="practice-civil.html"
+       data-ar="القسم المدني"
+       data-en="Civil Law">
+      القسم المدني
+    </a>
 
+    <a href="practice-commercial.html"
+       data-ar="القسم التجاري"
+       data-en="Commercial Law">
+      القسم التجاري
+    </a>
+
+    <a href="practice-labor.html"
+       data-ar="القسم العمالي"
+       data-en="Labor Law">
+      القسم العمالي
+    </a>
+
+    <a href="practice-family.html"
+       data-ar="الأحوال الشخصية"
+       data-en="Personal Status Law">
+      الأحوال الشخصية
+    </a>
+
+    <a href="practice-arbitration.html"
+       data-ar="التحكيم"
+       data-en="Arbitration">
+      التحكيم
+    </a>
+  </div>
+</div>
       <a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </nav>
-
-    <div class="lang-switcher">
-      <button onclick="setLanguage('ar')">AR</button>
-      <button onclick="setLanguage('en')">EN</button>
-    </div>
+    
+      <div class="lang-switcher">
+        <button onclick="setLanguage('ar')">AR</button>
+        <button onclick="setLanguage('en')">EN</button>
+      </div>
 
   </div>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
   <div class="hero-overlay">
-    <h1 data-ar="مكتب سعد الرومي وطارق السبيعي"
-        data-en="Saad Alroomi & Tareq Alsubaie">
-      مكتب سعد الرومي وطارق السبيعي
-    </h1>
-
-    <p data-ar="محاماة – استشارات قانونية – تحكيم"
-       data-en="Litigation – Legal Consulting – Arbitration">
+    <!-- اسم المكتب -->
+    <div class="firm-title animate-title">
+      <h1
+        data-ar=" مكتب سعد الرومي وطارق السبيعي"
+        data-en="Saad Alroomi & Tareq Al-Subaie">
+        مكتب سعد الرومي وطارق السبيعي
+      </h1>
+      <div class="gold-line"></div>
+    </div>
+    <!-- الوصف -->
+    <p
+      data-ar="محاماة – استشارات قانونية – تحكيم"
+      data-en="Litigation – Legal Consulting – Arbitration">
       محاماة – استشارات قانونية – تحكيم
     </p>
+
   </div>
 </section>
 
-<section id="about" class="section container">
+<!-- ABOUT -->
+<section id="about" class="intro container">
   <h2 data-ar="عن المكتب" data-en="About the Firm">عن المكتب</h2>
-  <p data-ar="تأسس المكتب عام 1982 ويُعد من أعرق مكاتب المحاماة في دولة الكويت."
-     data-en="Founded in 1982, the firm is one of Kuwait’s most established law firms.">
+
+  <p
+    data-ar="تَأَسَّسَ مَكْتَبُ اَلْمُحاميانِ سَعْدُ الرُّومِيِّ وَطارِقُ السُّبَيْعي عَامَ 1982 ، وَمُنْذُ ذَلِكَ التّاريخِ تَعامُلَ المَكْتَبُ مَعَ الكَثيرِ مِنْ القَضَايَا سَواءٌ كَانَتْ الشَّرِكاتُ أَوْ الأَفْرادُ"
+    data-en=" Saad Al-Roomi & Tareq Al-Subaie Law Firm was established in 1982 and has since built a solid reputation in providing comprehensive legal services to both corporate clients and individuals.">
+    تأسس مكتب المحاميان سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك الحين تعامل مع طيف واسع من القضايا للشركات والأفراد.
   </p>
+  <p
+    data-ar="بَدَأَ المَكْتَبُ بِالتَّعَامُلِ مَعَ القَضَايَا التِّجاريَّةِ وَفُروعِها وَكَذَلِكَ القَضَايَا المَدَنيَّةِ بِالْإِضَافَةِ الَّى قَضَايَا الإِيجَارَاتِ وَالقَضَايَا العُمّاليَّةِ ، ثُمَّ اتَّسَعَ لِيَشْمَلَ القَضَايَا الجِنائيَّةَ وَقَضَايَا أَسْواقِ الْمَالِ وَالِاشْكَالِيَّاتِ المُتَعَلِّقَةَ بِهَا بِالْإِضَافَةِ الَّى القِسْمِ الأَجْنَبيِّ"
+    data-en="The Firm began its practice by handling commercial matters and their related branches, alongside civil cases, as well as lease and labor disputes. Over the years, the Firm’s scope of practice has expanded to include criminal litigation, capital markets and securities matters, and the legal issues arising therefrom, in addition to a dedicated Foreign Affairs Department.">
+    تبَدَأَ المَكْتَبُ بِالتَّعَامُلِ مَعَ القَضَايَا التِّجاريَّةِ وَفُروعِها وَكَذَلِكَ القَضَايَا المَدَنيَّةِ بِالْإِضَافَةِ الَّى قَضَايَا الإِيجَارَاتِ وَالقَضَايَا العُمّاليَّةِ.
+  </p>
+  <p
+    data-ar="وَخِلَالَ تِلْكَ السَّنَوَاتِ كَوْنَ المَكْتَبِ عَلاقاتٍ واسِعَةً كَانَ لَهَا مَرْدودٌ إيجابيٌّ يَهْدِفُ لِلْحُصُولِ عَلَى أَكْمَلِ خِدْمَةٍ مُمْكِنٍ أَنْ يَتِمَّ تَحْقيقُها لِموَكَّليه"
+    data-en="Throughout its years of practice, the Firm has developed extensive professional relationships that have significantly contributed to delivering effective legal solutions and ensuring the highest standards of legal representation and client service.">
+    وَخِلَالَ تِلْكَ السَّنَوَاتِ كَوْنَ المَكْتَبِ عَلاقاتٍ واسِعَةً كَانَ لَهَا مَرْدودٌ إيجابيٌّ يَهْدِفُ لِلْحُصُولِ عَلَى أَكْمَلِ خِدْمَةٍ مُمْكِنٍ أَنْ يَتِمَّ تَحْقيقُها لِموَكَّليه
+  </p>
+  <p
+     data-ar="كَمَا يَسْتَعينُ المَكْتَبُ بِنُخْبَةٍ مِنْ الكَفَاءَاتِ القانونيَّةِ مِنْ المُحَامِينَ المُخْتَصِّينَ بِإِجْراءاتِ التَّنْفيذِ وَمُتابَعَةُ الإِجْراءاتِ اَلْإِداريَّةِ فِي المَحاكِمِ وَإِدارَةِ الخُبَراءِ وَوِزارَةِ الشُّئُونِ الِاجْتِماعيَّةِ والْعَمَلِ ، بِالْإِضَافَةِ الَّى مُتَخَصِّصِينَ لِمُتابَعَةِ الشَّكَاوَى فِي المَخافِرِ والْإِدارَةِ العامَّةِ لِلتَّحْقِيقَاتِ بِالْإِضَافَةِ الَّى الجِهازِ الإِداريِّ لِلْمَكْتَبِ  ."
+     data-en="The Office is supported by a team of qualified legal professionals, including lawyers specialized in enforcement procedures and the follow-up of administrative matters before courts, the Experts Department, and the Ministry of Social Affairs and Labor. The team also includes specialists responsible for handling complaints before police stations and the Public Prosecution, in addition to the Office’s administrative staff.">
+    كما يستعين المكتب بنخبة من الكفاءات القانونية المتخصصة في مختلف المجالات.
+  </p>
+  </section>
+
+<!-- TEAM -->
+<section id="team" class="team-section container">
+
+  <!-- Partners & Founders -->
+  <div class="team-group">
+    <h2 data-ar="الشركاء والمؤسسون" data-en="Partners & Founders">الشركاء والمؤسسون</h2>
+    <div class="team-grid">
+      <div class="team-card lead">
+        <h3 data-ar="الأستاذ سعد الرومي" data-en="Mr. Saad Alroomi">الأستاذ سعد الرومي</h3>
+        <span data-ar="محامٍ – شريك مؤسس" data-en="Lawyer – Founding Partner">محامٍ – شريك مؤسس</span>
+      </div>
+      <div class="team-card lead">
+        <h3 data-ar="الأستاذ طارق السبيعي" data-en="Mr. Tareq Alsubaie">الأستاذ طارق السبيعي</h3>
+        <span data-ar="محامٍ – شريك مؤسس" data-en="Lawyer – Founding Partner">محامٍ – شريك مؤسس</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Management -->
+  <div class="team-group">
+    <h2 data-ar="الإدارة" data-en="Management">الإدارة</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <h3 data-ar="الأستاذ يوسف مساعد السبيعي" data-en="Mr. Yousef Musaed Alsubaie">الأستاذ يوسف مساعد السبيعي</h3>
+        <span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer - General Management">محامٍ – الإدارة العامة</span>
+      </div>
+      <div class="team-card">
+        <h3 data-ar="الأستاذ عبد اللطيف طارق السبيعي" data-en="Mr. Abdullateef Tareq Alsubaie">الأستاذ عبد اللطيف طارق السبيعي</h3>
+        <span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer - General Management">محامٍ – الإدارة العامة</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal Consultants -->
+  <div class="team-group">
+    <h2 data-ar="المستشارون" data-en="Legal Consultants">المستشارون</h2>
+    <div class="team-grid">
+      <div class="team-card consultant">
+        <h3 data-ar="الأستاذ محمود محمد الشامي" data-en="Mr. Mahmoud Mohamed Elshami">الأستاذ محمود محمد الشامي</h3>
+        <span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span>
+      </div>
+      <div class="team-card consultant">
+        <h3 data-ar="الاستاذ هشام محمد العويل" data-en="Mr. Hesham Mohamed Alaweel">الأستاذ هشام محمد العويل</h3>
+        <span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span>
+      </div>
+      <div class="team-card consultant">
+        <h3 data-ar="الأستاذ عبد الفتاح سعد سليمان" data-en="Mr. Abdulfatah Saad Suliman">الأستاذ عبد الفتاح سعد سليمان</h3>
+        <span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span>
+      </div>
+    </div>
+  </div>
+
+<!-- قسم المحاكم والتنفيذ / Courts & Execution Department -->
+<div class="team-group courts">
+  <h2 data-ar="قسم المحاكم والتنفيذ" data-en="Courts & Execution Department">
+    قسم المحاكم والتنفيذ
+  </h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <h3 data-ar="الأستاذ محمود اسماعيل السيد" data-en="Mr. Mahmoud Ismail El-Sayed">
+        الأستاذ محمود اسماعيل السيد
+      </h3>
+      <span data-ar="رئيس قسم المتابعة والتنفيذ" data-en="Head of Follow-up & Execution">
+        رئيس قسم المتابعة والتنفيذ
+      </span>
+    </div>
+    <div class="team-card">
+      <h3 data-ar="الأستاذ عبد الواحد عبد السلام نصر" data-en="Mr. Abdulwahed Abdelsalam Nasr">
+        الأستاذ عبد الواحد عبد السلام نصر
+      </h3>
+      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
+        مسئول المتابعة والتنفيذ
+      </span>
+    </div>
+    <div class="team-card">
+      <h3 data-ar="الأستاذ محمد حسن عبد المجيد" data-en="Mr. Mohamed Hassan Abdelmageed">
+        الأستاذ محمد حسن عبد المجيد
+      </h3>
+      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
+        مسئول المتابعة والتنفيذ
+      </span>
+    </div>
+    <div class="team-card">
+      <h3 data-ar="الأستاذ عصمت عبد البصير بحر" data-en="Mr. Esmat Abdelbasir Bahr">
+        الأستاذ عصمت عبد البصير بحر
+      </h3>
+      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
+        مسئول المتابعة والتنفيذ
+      </span>
+    </div>
+    <div class="team-card">
+      <h3 data-ar="الأستاذ معتز حمدي العنتبلي" data-en="Mr. Moataz Hamdi Al-Entably">
+        الأستاذ معتز حمدي العنتبلي
+      </h3>
+      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
+        مسئول المتابعة والتنفيذ
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- القسم الإداري -->
+<div class="team-group admin">
+  <h2 data-ar="القسم الإداري" data-en="Administrative Department">القسم الإداري</h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <h3 data-ar="الأستاذ أحمد مصطفى الحسانين" data-en="MR. Ahmed Mostafa Alhasanin">الأستاذ أحمد مصطفى الحسانين</h3>
+      <span data-ar="سكرتير تنفيذي" data-en="Executive Secretary">سكرتير تنفيذي</span>
+    </div>
+    <div class="team-card">
+      <h3 data-ar="الأستاذ يحيى عبد الله المهري" data-en="Mr. Yehya Abdullah Almehri">الأستاذ يحيى عبد الله المهري</h3>
+      <span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span>
+    </div>
+    <div class="team-card">
+      <h3 data-ar="الأستاذ خالد عبد البصير محمد" data-en="Mr. Khaled Abdulbasir Mohamed">الأستاذ خالد عبد البصير محمد</h3>
+      <span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span>
+    </div>
+    <div class="team-card">
+      <h3 data-ar="الأستاذ سيد سايح احمد" data-en="Mr. Sayed Sayeh Ahmed">الأستاذ سيد سايح احمد</h3>
+      <span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span>
+    </div>
+  </div>
+</div>
+
+  <!-- Financial Section -->
+  <div class="team-group finance">
+    <h2 data-ar="القسم المالي والحسابات" data-en="Finance Department">القسم المالي والحسابات</h2>
+    <div class="team-grid">
+    <div class="team-card">
+      <h3 data-ar="الأستاذ خالد محمد الشربيني" data-en="Mr. Khaled Mohamed El-Sherbiny">
+       الأستاذ خالد محمد الشربيني
+      </h3>
+      <span data-ar="إدارة الحسابات والمالية" data-en="Accounts & Finance Department">
+      إدارة الحسابات والمالية
+      </span>
+      </div>
+    </div>
+  </div>
+
 </section>
 
-<section id="contact" class="section container">
+<!-- SUCCESS PARTNERS -->
+<section class="partners-section">
+
+  <div class="container">
+
+    <h2 data-ar="شركائنا في النجاح" data-en="Our Clients in Success">
+      شركائنا في النجاح
+    </h2>
+
+    <div class="partners-slider">
+      <div class="partners-track">
+        
+      <img src="assets/images/client1.png" alt="">
+      <img src="assets/images/client2.png" alt="">
+      <img src="assets/images/client3.png" alt="">
+      <img src="assets/images/client5.png" alt="">
+      <img src="assets/images/client6.png" alt="">
+      <img src="assets/images/client7.png" alt="">
+      <img src="assets/images/client8.png" alt="">
+      <img src="assets/images/client9.png" alt="">
+      <img src="assets/images/client10.png" alt="">
+      <img src="assets/images/client11.png" alt="">
+      <img src="assets/images/client12.png" alt="">
+      <img src="assets/images/client13.png" alt="">
+
+      <img src="assets/images/client1.png" alt="">
+      <img src="assets/images/client2.png" alt="">
+      <img src="assets/images/client3.png" alt="">
+      <img src="assets/images/client5.png" alt="">
+      <img src="assets/images/client6.png" alt="">
+      <img src="assets/images/client7.png" alt="">
+      <img src="assets/images/client8.png" alt="">
+      <img src="assets/images/client9.png" alt="">
+      <img src="assets/images/client10.png" alt="">
+      <img src="assets/images/client11.png" alt="">
+      <img src="assets/images/client12.png" alt="">
+      <img src="assets/images/client13.png" alt="">
+
+
+     </div>
+    </div>
+
+  </div>
+
+</section>
+  
+<!-- CONTACT -->
+<section class="contact-section">
+
   <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
-  <p>📞 +965 22435001</p>
-  <p>📱 WhatsApp: +965 95571635</p>
-</section>
 
+  <div class="contact-container">
+
+    <!-- نموذج التواصل -->
+    <div class="contact-form">
+      <form action="https://formsubmit.co/info@st-lawyers.com" method="POST">
+
+        <input type="text" name="name"
+          placeholder="الاسم الكامل"
+          data-ar-placeholder="الاسم الكامل"
+          data-en-placeholder="Full Name"
+          required>
+
+        <input type="email" name="email"
+          placeholder="البريد الإلكتروني"
+          data-ar-placeholder="البريد الإلكتروني"
+          data-en-placeholder="Email Address"
+          required>
+
+        <textarea name="message"
+          placeholder="اكتب رسالتك هنا"
+          data-ar-placeholder="اكتب رسالتك هنا"
+          data-en-placeholder="Write your message here"
+          required></textarea>
+
+        <button type="submit"
+          data-ar="إرسال"
+          data-en="Send">
+          إرسال
+        </button>
+
+        <!-- إعدادات FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="رسالة جديدة من موقع مكتب المحاماة">
+
+      </form>
+    </div>
+
+    <!-- معلومات التواصل -->
+    <div class="contact-info">
+
+      <p
+        data-ar="يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية."
+        data-en="We are pleased to communicate with you and respond to your legal inquiries.">
+        يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية.
+      </p>
+
+      <ul>
+        <li
+          data-ar="📍 الكويت - محافظة العاصمة - الشرق - شارع مبارك الكبير - مبنى المزيني - الطابق الثاني والثالث"
+          data-en="📍 Kuwait – Capital Governorate – Sharq – Mubarak Al-Kabeer St. – Almuzini Building – Floors 2 & 3">
+          📍 الكويت - محافظة العاصمة - الشرق
+        </li>
+        <li>📞 +965 22435001</li>
+        <li>📱 WhatsApp: +965 95571635</li>
+        <li>📧 info@st-lawyers.com</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+  
+  <!-- FOOTER -->
 <footer class="footer">
-  <img src="assets/images/logo.png" class="footer-logo">
-  <p data-ar="© جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي"
-     data-en="© All rights reserved – Saad Alroomi & Tareq Alsubaie">
-  </p>
+  <div class="footer-center">
+    <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
+    <p>© 2026  جميع الحقوق محفوظة - سعد الرومي وطارق السبيعي للمحاماة</p>
+  </div>
 </footer>
 
-<!-- WhatsApp -->
+<div class="social-sidebar">
+  <a href="https://www.facebook.com/SaadTareqLawyers.Group?locale=ar_AR" target="_blank" class="facebook" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" class="twitter" aria-label="Twitter">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" class="instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+
+<!-- WhatsApp Business Chat Bubble -->
 <div class="wa-chat">
   <button class="wa-btn" id="waToggle">
     <i class="fab fa-whatsapp"></i>
@@ -107,19 +427,28 @@
 
   <div class="wa-box" id="waBox">
     <div class="wa-header">
-      <strong>WhatsApp</strong>
+      <i class="fab fa-whatsapp"></i>
+      <div>
+        <strong>WhatsApp Business</strong><br>
+        <span>مكتب سعد الرومي وطارق السبيعي</span>
+      </div>
     </div>
-    <div class="wa-body"
-         data-ar="يسعدنا تواصلكم معنا مباشرة"
-         data-en="We are happy to assist you via WhatsApp">
+
+    <div class="wa-body">
+      مرحبًا 👋  
+      يسعدنا تواصلكم معنا مباشرة عبر واتساب.
     </div>
-    <a href="https://wa.me/96595571635" target="_blank" class="wa-start"
-       data-ar="بدء المحادثة"
-       data-en="Start Chat">
+
+    <a
+      href="https://wa.me/96595571635"
+      target="_blank"
+      class="wa-start">
+      بدء المحادثة
     </a>
   </div>
 </div>
 
+<!-- ===== SCRIPTS ===== -->
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script src="js/whatsapp.js"></script>
