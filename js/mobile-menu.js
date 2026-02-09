@@ -1,23 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const btn = document.getElementById('menuBtn');
+  const menuBtn = document.getElementById('menuBtn');
   const nav = document.getElementById('mainNav');
-  const toggle = document.querySelector('.dropdown-toggle');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
   const dropdown = document.querySelector('.dropdown');
 
-  btn.onclick = () => {
-    nav.classList.toggle('open');
-  };
+  /* ===============================
+     القائمة الرئيسية (Mobile Menu)
+  ================================ */
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nav.classList.toggle('open');
+      menuBtn.classList.toggle('active');
+    });
+  }
 
-  toggle.onclick = e => {
-    e.preventDefault();
-    dropdown.classList.toggle('open');
-  };
+  /* ===============================
+     Dropdown (Practice Areas)
+  ================================ */
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
 
-  document.addEventListener('click', e => {
-    if (!dropdown.contains(e.target)) {
-      dropdown.classList.remove('open');
-    }
+    // منع الإغلاق عند الضغط داخلها
+    dropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+
+  /* ===============================
+     غلق كل القوائم عند الضغط خارجها
+  ================================ */
+  document.addEventListener('click', () => {
+    if (nav) nav.classList.remove('open');
+    if (menuBtn) menuBtn.classList.remove('active');
+    if (dropdown) dropdown.classList.remove('open');
   });
 
 });
