@@ -129,6 +129,25 @@ html[dir="rtl"] .header-flex {
 }
 
 /* ===== DROPDOWN ===== */
+@media (max-width: 991px) {
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu.open {
+    display: block;
+  }
+}
+
 .dropdown {
   position: relative;
 }
