@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('mainNav');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
   const dropdown = document.querySelector('.dropdown');
-
+  if (!menuBtn || !nav) return;
   // فتح القائمة الرئيسية
   menuBtn.addEventListener('click', e => {
     e.stopPropagation();
