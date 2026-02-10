@@ -718,3 +718,45 @@ html[dir="rtl"] .partners-track {
     grid-template-columns: 1fr;
   }
 }
+
+.about-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* الخط الذهبي */
+.about-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #c9a24d,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* إخفاء الخط في الموبايل */
+@media (max-width: 768px) {
+  .about-grid::before {
+    display: none;
+  }
+}
+
+.about-col {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.about-col.show {
+  opacity: 1;
+  transform: translateY(0);
+}
