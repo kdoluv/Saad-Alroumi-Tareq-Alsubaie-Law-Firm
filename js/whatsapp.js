@@ -1,17 +1,35 @@
-document.getElementById('waToggle').addEventListener('click', () => {
-  document.getElementById('waBox').classList.toggle('open');
-});
+document.addEventListener("DOMContentLoaded", () => {
 
-function waMessage() {
-  return document.documentElement.lang === 'ar'
-    ? 'مرحبًا، أود الاستفسار عن خدماتكم القانونية'
-    : 'Hello, I would like to inquire about your legal services';
-}
+  const whatsappBtn = document.getElementById("whatsappBtn");
 
-document.querySelector('.wa-start').addEventListener('click', e => {
-  e.preventDefault();
-  window.open(
-    'https://wa.me/96595571635?text=' + encodeURIComponent(waMessage()),
-    '_blank'
-  );
+  const whatsappData = {
+    ar: {
+      phone: "96595571635", // رقم عربي
+      message: "السلام عليكم، أود الاستفسار عن خدمات مكتب سعد الرومي وطارق السبيعي القانونية"
+    },
+    en: {
+      phone: "96595571635", // رقم إنجليزي أو نفس الرقم
+      message: "Hello, I would like to inquire about the legal services of Saad Alroomi & Tareq Alsubaie Law Firm"
+    }
+  };
+
+  function updateWhatsApp() {
+    const lang = localStorage.getItem("site_lang") || "ar";
+    const data = whatsappData[lang];
+
+    const url =
+      "https://wa.me/" +
+      data.phone +
+      "?text=" +
+      encodeURIComponent(data.message);
+
+    whatsappBtn.href = url;
+  }
+
+  // تشغيل أول مرة
+  updateWhatsApp();
+
+  // الاستماع لتغيير اللغة
+  document.addEventListener("languageChanged", updateWhatsApp);
+
 });
