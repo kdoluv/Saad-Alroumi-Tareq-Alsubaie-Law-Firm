@@ -760,3 +760,23 @@ html[dir="rtl"] .partners-track {
   opacity: 1;
   transform: translateY(0);
 }
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b1c2d; /* كحلي تقيل */
+  margin-bottom: 15px;
+  position: relative;
+  font-family: 'Playfair Display', 'Cairo', serif;
+}
+
+/* الخط الذهبي */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #c9a24d;
+  margin: 12px auto 0;
+}
