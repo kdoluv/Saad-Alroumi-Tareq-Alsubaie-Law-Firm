@@ -26,3 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('siteLang') || 'ar';
   setLanguage(savedLang);
 });
+
+// 🔥 إعادة تعيين النصوص حتى لو كانت مخفية (موبايل)
+document.querySelectorAll('[data-ar]').forEach(el => {
+  el.textContent = lang === 'ar'
+    ? el.getAttribute('data-ar')
+    : el.getAttribute('data-en');
+});
+
+// ❌ اقفل أي dropdown مفتوحة بعد تغيير اللغة
+document.querySelectorAll('.dropdown').forEach(d => {
+  d.classList.remove('open');
+});
