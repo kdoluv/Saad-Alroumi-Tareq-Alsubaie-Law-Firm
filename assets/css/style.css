@@ -688,3 +688,33 @@ html[dir="rtl"] .partners-track {
   visibility: visible;
   pointer-events: auto;
 }
+
+.about-section {
+  margin-top: 80px;
+}
+
+.about-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about-col p {
+  line-height: 2;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
