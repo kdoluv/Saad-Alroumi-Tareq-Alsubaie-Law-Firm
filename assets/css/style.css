@@ -851,3 +851,32 @@ html[lang="en"] .about-col p {
 .wa-start {
   --whatsapp-green: transparent;
 }
+
+/* ===== WhatsApp Solid Gold Button ===== */
+.wa-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 58px;
+  height: 58px;
+  background: linear-gradient(135deg, #c9a24d, #b8923f);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 10px 25px rgba(201, 162, 77, 0.45);
+  transition: all 0.3s ease;
+}
+
+/* Solid Icon */
+.wa-btn i {
+  color: #ffffff;
+  font-size: 28px;
+}
+
+/* Hover */
+.wa-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 30px rgba(201, 162, 77, 0.6);
+}
