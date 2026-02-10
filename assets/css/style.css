@@ -780,3 +780,26 @@ html[dir="rtl"] .partners-track {
   background-color: #c9a24d;
   margin: 12px auto 0;
 }
+
+.about-col p {
+  font-size: 17px;
+  font-weight: 600;        /* خط تقيل */
+  line-height: 1.9;        /* مريح للعين */
+  color: #1f2933;          /* رمادي غامق احترافي */
+  margin-bottom: 18px;
+  text-align: justify;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* إنجليزي */
+html[lang="en"] .about-col p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .about-col p {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+}
