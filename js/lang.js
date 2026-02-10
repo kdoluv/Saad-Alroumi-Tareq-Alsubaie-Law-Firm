@@ -38,20 +38,3 @@ document.querySelectorAll('[data-ar]').forEach(el => {
 document.querySelectorAll('.dropdown').forEach(d => {
   d.classList.remove('open');
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const aboutCols = document.querySelectorAll(".about-col");
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  aboutCols.forEach(col => observer.observe(col));
-});
