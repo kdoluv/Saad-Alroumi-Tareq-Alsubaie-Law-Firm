@@ -803,3 +803,51 @@ html[lang="en"] .about-col p {
     line-height: 1.85;
   }
 }
+
+/* ===== WhatsApp Gold Style ===== */
+
+/* زر واتساب */
+.wa-btn {
+  background-color: #c9a24d !important; /* ذهبي */
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(201, 162, 77, 0.45);
+  transition: all 0.3s ease;
+}
+
+/* أيقونة واتساب */
+.wa-btn i {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* Hover */
+.wa-btn:hover {
+  background-color: #b8923f; /* ذهبي أغمق */
+  transform: scale(1.05);
+}
+
+/* الهيدر داخل صندوق واتساب */
+.wa-header {
+  background: linear-gradient(135deg, #c9a24d, #b8923f);
+  color: #fff;
+}
+
+/* زر بدء المحادثة */
+.wa-start {
+  background-color: #c9a24d;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.wa-start:hover {
+  background-color: #b8923f;
+}
+
+.wa-chat,
+.wa-box,
+.wa-btn,
+.wa-header,
+.wa-start {
+  --whatsapp-green: transparent;
+}
