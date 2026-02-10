@@ -475,6 +475,24 @@
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script src="js/whatsapp.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutCols = document.querySelectorAll(".about-col");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  aboutCols.forEach(col => observer.observe(col));
+});
+</script>
 
 </body>
 </html>
