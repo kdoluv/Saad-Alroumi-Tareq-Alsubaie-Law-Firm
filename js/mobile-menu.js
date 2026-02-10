@@ -18,10 +18,21 @@ menuBtn.addEventListener('click', () => {
 
 // قفل القائمة بعد الضغط على أي لينك
 nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
+  link.addEventListener('click', (e) => {
+
+    // لو زر dropdown (الممارسات) → ما تقفلش المينيو
+    if (link.classList.contains('dropdown-toggle')) {
+      e.preventDefault();
+      link.parentElement.classList.toggle('open');
+      return;
+    }
+
+    // أي لينك عادي
     nav.classList.remove('open');
     menuBtn.classList.remove('active');
 
-    dropdowns.forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.dropdown').forEach(d => {
+      d.classList.remove('open');
+    });
   });
 });
