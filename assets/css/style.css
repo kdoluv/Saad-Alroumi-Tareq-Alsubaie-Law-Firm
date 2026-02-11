@@ -914,3 +914,120 @@ html[lang="en"] .about-col p {
     width: 60px;
   }
 }
+
+/* ===== Luxury Hero ===== */
+
+.luxury-hero {
+  position: relative;
+  background: url('../images/law-bg.jpg') center/cover no-repeat;
+  padding: 140px 0 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.luxury-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,20,35,0.85);
+}
+
+.luxury-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.breadcrumb a {
+  color: #c9a24d;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.luxury-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.gold-line {
+  width: 80px;
+  height: 3px;
+  background: #c9a24d;
+  margin: 15px auto 0;
+}
+
+/* ===== Practice Content ===== */
+
+.practice-content {
+  padding: 80px 0;
+  font-size: 18px;
+  line-height: 1.9;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.practice-content ul {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.practice-content li {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 4px solid #c9a24d;
+  background: #f8f8f8;
+  transition: all 0.3s ease;
+}
+
+html[dir="rtl"] .practice-content li {
+  border-left: none;
+  border-right: 4px solid #c9a24d;
+}
+
+.practice-content li:hover {
+  background: #fff;
+  transform: translateX(-5px);
+}
+
+html[dir="rtl"] .practice-content li:hover {
+  transform: translateX(5px);
+}
+
+/* ===== Back Button ===== */
+
+.back-button {
+  background: #0b1c2d;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #c9a24d;
+  color: #000;
+}
+
+/* ===== Animation ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
