@@ -1,14 +1,14 @@
 // ===== LANGUAGE SWITCHER =====
-function setLanguage(lang) {
+function setLang(lang) {
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
 
-  // تغيير النصوص
-  document.querySelectorAll('[data-ar]').forEach(el => {
-    el.textContent = lang === 'ar'
-      ? el.getAttribute('data-ar')
-      : el.getAttribute('data-en');
+  document.querySelectorAll("[data-ar]").forEach(el => {
+    el.textContent = lang === "ar"
+      ? el.getAttribute("data-ar")
+      : el.getAttribute("data-en");
   });
+}
 
   // تغيير placeholders
   document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
