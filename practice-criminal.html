@@ -2,8 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title data-ar="القسم الجنائي | مكتب سعد الرومي وطارق السبيعي"
-        data-en="Criminal Law | Saad Alroomi & Tareq Alsubaiei Law Firm">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title 
+    data-ar="القسم الجنائي | مكتب سعد الرومي وطارق السبيعي"
+    data-en="Criminal Law | Saad Alroomi & Tareq Alsubaie Law Firm">
     القسم الجنائي | مكتب سعد الرومي وطارق السبيعي
   </title>
 
@@ -15,55 +18,76 @@
 <!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
+
     <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
 
-    <nav class="nav">
+    <button class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
+      <a href="index.html#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </nav>
+
+    <div class="lang-switcher">
+      <button onclick="setLanguage('ar')">AR</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+
   </div>
 </header>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
-  <h1 data-ar="القسم الجنائي" data-en="Criminal Law">
+  <h1 
+    data-ar="القسم الجنائي"
+    data-en="Criminal Law">
     القسم الجنائي
   </h1>
+  <div class="gold-line"></div>
 </section>
 
 <!-- CONTENT -->
 <section class="practice-content container">
 
   <p
-    data-ar="يقدم مكتب سعد الرومي وطارق السبيعي خدمات قانونية متكاملة في مجال القضايا الجنائية، تشمل الدفاع عن المتهمين وتمثيلهم أمام النيابة العامة والمحاكم بكافة درجاتها."
-    data-en="Saad Alroomi & Tareq Alsubaiei Law Firm provides comprehensive legal services in criminal law, including defense representation before public prosecution and courts of all levels.">
+    data-ar="يقدم المكتب خدمات قانونية متكاملة في هذا المجال تشمل التمثيل أمام جميع درجات المحاكم والجهات القضائية."
+    data-en="The firm provides comprehensive legal services in this field, including representation before all court levels and judicial authorities.">
+    يقدم المكتب خدمات قانونية متكاملة في هذا المجال تشمل التمثيل أمام جميع درجات المحاكم والجهات القضائية.
   </p>
 
   <ul>
-    <li
-      data-ar="الدفاع في قضايا الجنايات والجنح"
-      data-en="Defense in felony and misdemeanor cases">
+    <li 
+      data-ar="الاستشارات القانونية المتخصصة"
+      data-en="Specialized legal consultations">
+      الاستشارات القانونية المتخصصة
     </li>
 
-    <li
-      data-ar="متابعة التحقيقات أمام النيابة العامة"
-      data-en="Follow-up of investigations before Public Prosecution">
+    <li 
+      data-ar="إعداد وصياغة المذكرات القانونية"
+      data-en="Drafting legal memoranda">
+      إعداد وصياغة المذكرات القانونية
     </li>
 
-    <li
-      data-ar="إعداد المذكرات القانونية والطعون"
-      data-en="Drafting legal memoranda and appeals">
+    <li 
+      data-ar="التمثيل أمام المحاكم"
+      data-en="Court representation">
+      التمثيل أمام المحاكم
     </li>
 
-    <li
-      data-ar="تمثيل المتهمين أمام المحاكم"
-      data-en="Representation before criminal courts">
+    <li 
+      data-ar="متابعة الإجراءات والتنفيذ"
+      data-en="Follow-up & enforcement procedures">
+      متابعة الإجراءات والتنفيذ
     </li>
   </ul>
 
 </section>
 
+<!-- BACK BUTTON -->
 <div class="back-button-container">
   <button class="back-button"
           onclick="goBack()"
@@ -73,25 +97,26 @@
   </button>
 </div>
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <img src="assets/images/logo.png" class="footer-logo" alt="">
-      <p>© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة</p>
-    </div>
+  <div class="footer-center">
+    <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
+    <p data-ar="© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة"
+       data-en="© 2026 All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm">
+       © 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة
+    </p>
   </div>
 </footer>
+
+<!-- SCRIPTS -->
+<script src="js/lang.js"></script>
+<script src="js/mobile-menu.js"></script>
 
 <script>
 function goBack() {
   window.history.back();
 }
 </script>
-
-<!-- ===== SCRIPTS ===== -->
-<script src="js/lang.js"></script>
-<script src="js/mobile-menu.js"></script>
 
 </body>
 </html>
