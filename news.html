@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title 
+    data-ar="فعاليات وأخبار المكتب | مكتب سعد الرومي وطارق السبيعي"
+    data-en="News & Events | Saad Alroomi & Tareq Alsubaie Law Firm">
+    فعاليات وأخبار المكتب
+  </title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- HEADER (نفس الهيدر الرئيسي بدون تغيير) -->
+<header class="header">
+  <div class="container header-flex">
+    <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
+
+    <button class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
+      <a href="news.html" class="active"
+         data-ar="فعاليات وأخبار المكتب"
+         data-en="News">
+         فعاليات وأخبار المكتب
+      </a>
+      <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+    </nav>
+
+    <div class="lang-switcher">
+      <button onclick="setLanguage('ar')">AR</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO نفس ستايل Premium -->
+<section class="page-hero premium-hero">
+  <div class="overlay"></div>
+  <div class="hero-content container">
+
+    <div class="breadcrumb">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <span> / </span>
+      <span data-ar="فعاليات وأخبار المكتب"
+            data-en="News & Events">
+        فعاليات وأخبار المكتب
+      </span>
+    </div>
+
+    <h1 data-ar="فعاليات وأخبار المكتب"
+        data-en="News & Events">
+        فعاليات وأخبار المكتب
+    </h1>
+
+    <div class="gold-line"></div>
+
+  </div>
+</section>
+
+<!-- NEWS SECTION -->
+<section class="news-section container">
+
+  <div class="news-layout">
+
+    <!-- FEATURED NEWS -->
+    <div class="featured-news">
+
+      <img src="assets/images/news1.jpg" alt="">
+
+      <div class="featured-content">
+
+        <span class="news-date"
+              data-ar="15 يناير 2026"
+              data-en="15 January 2026">
+          15 يناير 2026
+        </span>
+
+        <h2
+          data-ar="مشاركة المكتب في مؤتمر التحكيم الدولي بالكويت"
+          data-en="Firm Participation in the International Arbitration Conference">
+          مشاركة المكتب في مؤتمر التحكيم الدولي بالكويت
+        </h2>
+
+        <p
+          data-ar="شارك المكتب في فعاليات مؤتمر التحكيم الدولي لتعزيز التعاون القانوني وتبادل الخبرات."
+          data-en="The firm participated in the International Arbitration Conference to enhance legal cooperation and exchange expertise.">
+          شارك المكتب في فعاليات مؤتمر التحكيم الدولي لتعزيز التعاون القانوني وتبادل الخبرات.
+        </p>
+
+        <a href="news-details.html" class="read-more"
+           data-ar="اقرأ المزيد"
+           data-en="Read More">
+           اقرأ المزيد
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- SIDE NEWS LIST -->
+    <div class="side-news">
+
+      <article class="side-item">
+        <span class="news-date">2 فبراير 2026</span>
+        <h4>توقيع شراكة قانونية جديدة</h4>
+      </article>
+
+      <article class="side-item">
+        <span class="news-date">10 مارس 2026</span>
+        <h4>إطلاق برنامج الاستشارات الرقمية</h4>
+      </article>
+
+    </div>
+
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+  </div>
+
+</section>
+
+<!-- FOOTER (نفس الفوتر الرئيسي) -->
+<footer class="footer">
+  <div class="footer-center">
+    <img src="assets/images/logo.png" class="footer-logo" alt="">
+    <p data-ar="© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة"
+       data-en="© 2026 All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm">
+       © 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة
+    </p>
+  </div>
+</footer>
+
+<script src="js/lang.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".featured-news, .side-item");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "0.6s ease";
+    observer.observe(el);
+  });
+});
+</script>
+
+</body>
+</html>
 
