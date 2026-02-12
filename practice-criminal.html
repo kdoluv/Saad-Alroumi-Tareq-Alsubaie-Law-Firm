@@ -132,5 +132,25 @@ function goBack() {
 }
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const items = document.querySelectorAll(".practice-content li");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show");
+        }, index * 150);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  items.forEach(item => observer.observe(item));
+
+});
+</script>
+
 </body>
 </html>
