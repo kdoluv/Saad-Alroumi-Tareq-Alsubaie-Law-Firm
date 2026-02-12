@@ -1,40 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title data-ar="قسم الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي"
-         data-en="family section | Saad Alroomi & Tareq Alsubaie">
-         قسم الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title 
+    data-ar="الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي"
+    data-en="Family Law | Saad Alroomi & Tareq Alsubaie Law Firm">
+    الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي
   </title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/favicon.png">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
-    <nav class="nav">
+
+    <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
+
+    <button class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="index.html#practices" data-ar="مجالات الممارسة" data-en="Practices">مجالات الممارسة</a>
+      <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
+      <a href="index.html#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </nav>
-  <img src="assets/images/logo.png" class="logo" alt="logo">
+
+    <div class="lang-switcher">
+      <button onclick="setLanguage('ar')">AR</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="page-hero">
-  <h1 data-ar="قسم الأحوال الشخصية" data-en="Family Section">قسم الأحوال الشخصية</h1>
+<!-- HERO -->
+<section class="page-hero luxury-hero">
+  <div class="overlay"></div>
+  <div class="hero-content container">
+    
+    <div class="breadcrumb">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <span> / </span>
+      <span data-ar="الأحوال الشخصية" data-en="Family Law">الأحوال الشخصية</span>
+    </div>
+
+    <h1 
+      data-ar="الأحوال الشخصية"
+      data-en="Family Law">
+      الأحوال الشخصية
+    </h1>
+
+    <div class="gold-line"></div>
+
+  </div>
 </section>
 
+<!-- CONTENT -->
 <section class="practice-content container">
 
- <p
+<p
     data-ar="يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون."
     data-en="The firm handles family law matters including marriage, divorce, alimony, child custody, visitation rights, and lineage claims, ensuring the protection of family rights in accordance with Sharia and applicable law.">
     يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون.
@@ -50,25 +82,26 @@
   </button>
 </div>
 
-FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <img src="assets/images/logo.png" class="footer-logo" alt="">
-      <p>© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة</p>
-    </div>
+  <div class="footer-center">
+    <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
+    <p data-ar="جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026"
+       data-en="All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm © 2026">
+       جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026    
+    </p>
   </div>
 </footer>
-  
+
+<!-- SCRIPTS -->
+<script src="js/lang.js"></script>
+<script src="js/mobile-menu.js"></script>
+
 <script>
 function goBack() {
   window.history.back();
 }
 </script>
-
-<!-- ===== SCRIPTS ===== -->
-<script src="js/lang.js"></script>
-<script src="js/mobile-menu.js"></script>
 
 </body>
 </html>
