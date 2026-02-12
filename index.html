@@ -572,6 +572,27 @@ document.addEventListener("DOMContentLoaded", () => {
   aboutCols.forEach(col => observer.observe(col));
 });
 </script>
+<script>
+const uploadBox = document.getElementById("uploadBox");
+const fileInput = document.getElementById("fileInput");
+
+uploadBox.addEventListener("click", () => fileInput.click());
+
+uploadBox.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  uploadBox.style.borderColor = "#c9a24d";
+});
+
+uploadBox.addEventListener("dragleave", () => {
+  uploadBox.style.borderColor = "rgba(255,255,255,0.4)";
+});
+
+uploadBox.addEventListener("drop", (e) => {
+  e.preventDefault();
+  fileInput.files = e.dataTransfer.files;
+  uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
+});
+</script>
 
 </body>
 </html>
