@@ -1309,3 +1309,96 @@ html[dir="rtl"] .side-news {
   background: #c9a24d;
   color: #000;
 }
+
+/* Floating Labels */
+
+.floating-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.floating-group input,
+.floating-group textarea,
+.floating-group select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding: 12px 0;
+  color: #fff;
+  font-size: 15px;
+}
+
+.floating-group label {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+html[dir="ltr"] .floating-group label {
+  right: auto;
+  left: 0;
+}
+
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label,
+.floating-group textarea:focus + label,
+.floating-group textarea:not(:placeholder-shown) + label,
+.floating-group select:focus + label,
+.floating-group select:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: #c9a24d;
+}
+
+/* Phone Group */
+
+.phone-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.phone-group select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  padding: 10px;
+  color: #fff;
+}
+
+/* Upload */
+
+.upload-box {
+  border: 2px dashed rgba(255,255,255,0.4);
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  border-color: #c9a24d;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Button */
+
+.contact-form-box button {
+  width: 100%;
+  padding: 14px;
+  background: #0b1c2d;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-form-box button:hover {
+  background: #c9a24d;
+  color: #000;
+}
