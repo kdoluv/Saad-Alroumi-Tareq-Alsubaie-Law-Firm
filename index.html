@@ -593,6 +593,37 @@ uploadBox.addEventListener("drop", (e) => {
   uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
 });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("t-z-VVLpo8mxt5LcX");
+})();
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.send("service_ov7xkq8",
+               "template_n07xlxe",
+               {
+                 firstName: document.getElementById("firstName").value,
+                 lastName: document.getElementById("lastName").value,
+                 email: document.getElementById("email").value,
+                 phone: document.getElementById("countryCode").value + 
+                        document.getElementById("phone").value,
+                 message: document.getElementById("message").value
+               })
+  .then(function(response) {
+      alert("تم الإرسال بنجاح");
+      document.getElementById("contactForm").reset();
+  }, function(error) {
+      alert("حدث خطأ: " + JSON.stringify(error));
+      console.log(error);
+  });
+
+});
+</script>
 
 </body>
 </html>
