@@ -11,21 +11,6 @@
   </title>
 
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Criminal Law Services",
-  "provider": {
-    "@type": "LegalService",
-    "name": "Saad Alroomi & Tareq Alsubaie Law Firm",
-    "url": "https://st-lawyers.com"
-  },
-  "areaServed": "KW"
-}
-</script>
-
 </head>
 
 <body>
@@ -56,22 +41,20 @@
 </header>
 
 <!-- HERO -->
-<section class="page-hero premium-hero">
+<section class="page-hero luxury-hero">
   <div class="overlay"></div>
-
   <div class="hero-content container">
-
+    
     <div class="breadcrumb">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <span> / </span>
-      <span data-ar="القسم الجنائي" data-en="Criminal Law">
-        القسم الجنائي
-      </span>
+      <span data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</span>
     </div>
 
-    <h1 data-ar="القسم الجنائي"
-        data-en="Criminal Law">
-        القسم الجنائي
+    <h1 
+      data-ar="القسم الجنائي"
+      data-en="Criminal Law">
+      القسم الجنائي
     </h1>
 
     <div class="gold-line"></div>
@@ -145,26 +128,6 @@
 function goBack() {
   window.history.back();
 }
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const items = document.querySelectorAll(".practice-content li");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add("show");
-        }, index * 150);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  items.forEach(item => observer.observe(item));
-
-});
 </script>
 
 </body>
