@@ -2,32 +2,33 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title data-ar="التحكيم | مكتب سعد الرومي وطارق السبيعي"
-         data-en="arbitration | Saad Alroomi & Tareq Alsubaie">
-         التحكيم | مكتب سعد الرومي وطارق السبيعي
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title 
+    data-ar="التحكيم | مكتب سعد الرومي وطارق السبيعي"
+    data-en="Arbitration | Saad Alroomi & Tareq Alsubaie Law Firm">
+    التحكيم | مكتب سعد الرومي وطارق السبيعي
   </title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/favicon.png">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
 
     <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
 
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+    <button class="menu-btn" id="menuBtn">
       <span></span><span></span><span></span>
     </button>
 
     <nav class="nav" id="mainNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="index.html#practices" data-ar="مجالات الممارسة" data-en="Practices">مجالات الممارسة</a>
+      <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
+      <a href="index.html#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </nav>
 
@@ -39,12 +40,29 @@
   </div>
 </header>
 
+<!-- HERO -->
+<section class="page-hero luxury-hero">
+  <div class="overlay"></div>
+  <div class="hero-content container">
+    
+    <div class="breadcrumb">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <span> / </span>
+      <span data-ar="التحكيم" data-en="Arbitration">التحكيم</span>
+    </div>
 
-<!-- ================= HERO ================= -->
-<section class="page-hero">
-  <h1 data-ar="التحكيم" data-en="Arbitration">التحكيم</h1>
+    <h1 
+      data-ar="التحكيم"
+      data-en="Arbitration">
+      القسم الجنائي
+    </h1>
+
+    <div class="gold-line"></div>
+
+  </div>
 </section>
 
+<!-- CONTENT -->
 <section class="practice-content container">
 
   <p
@@ -78,6 +96,7 @@
 
 </section>
 
+<!-- BACK BUTTON -->
 <div class="back-button-container">
   <button class="back-button"
           onclick="goBack()"
@@ -87,15 +106,20 @@
   </button>
 </div>
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <img src="assets/images/logo.png" class="footer-logo" alt="">
-      <p>© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة</p>
-    </div>
+  <div class="footer-center">
+    <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
+    <p data-ar="© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة"
+       data-en="© 2026 All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm">
+       © 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة
+    </p>
   </div>
 </footer>
+
+<!-- SCRIPTS -->
+<script src="js/lang.js"></script>
+<script src="js/mobile-menu.js"></script>
 
 <script>
 function goBack() {
@@ -103,9 +127,10 @@ function goBack() {
 }
 </script>
 
-<!-- ===== SCRIPTS ===== -->
-<script src="js/lang.js"></script>
-<script src="js/mobile-menu.js"></script>
-
 </body>
 </html>
+
+
+
+
+ 
