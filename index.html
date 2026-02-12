@@ -364,39 +364,69 @@
 </section>
   
 <!-- CONTACT -->
-<section class="contact-section">
+<section class="contact-hero">
 
-  <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+  <div class="overlay"></div>
 
-  <div class="contact-container">
+  <div class="container contact-layout">
 
-    <!-- نموذج التواصل -->
-    <div class="contact-form">
-      <form action="https://formsubmit.co/info@st-lawyers.com" method="POST">
+    <!-- النص -->
+    <div class="contact-text">
+      <h1 
+        data-ar="تواصل معنا بشأن متطلباتك القانونية"
+        data-en="Contact Us Regarding Your Legal Requirements">
+        تواصل معنا بشأن متطلباتك القانونية
+      </h1>
 
-        <input type="text" name="name"
-          placeholder="الاسم الكامل"
-          data-ar-placeholder="الاسم الكامل"
-          data-en-placeholder="Full Name"
-          required>
+      <p
+        data-ar="نحن هنا لتقديم أفضل الحلول القانونية بدعم من فريق من الخبراء."
+        data-en="We are here to provide the best legal solutions supported by a team of experts.">
+        نحن هنا لتقديم أفضل الحلول القانونية بدعم من فريق من الخبراء.
+      </p>
 
-        <input type="email" name="email"
-          placeholder="البريد الإلكتروني"
-          data-ar-placeholder="البريد الإلكتروني"
-          data-en-placeholder="Email Address"
-          required>
+      <a href="#contact-form" class="view-more"
+         data-ar="اعرف المزيد"
+         data-en="View More">
+         اعرف المزيد
+      </a>
+    </div>
 
-        <textarea name="message"
-          placeholder="اكتب رسالتك هنا"
-          data-ar-placeholder="اكتب رسالتك هنا"
-          data-en-placeholder="Write your message here"
-          required></textarea>
+    <!-- النموذج -->
+    <div class="contact-form-box" id="contact-form">
+
+      <form>
+
+        <div class="form-row">
+          <input type="text" placeholder="الاسم الأول" required>
+          <input type="text" placeholder="اسم العائلة" required>
+        </div>
+
+        <input type="email" placeholder="البريد الإلكتروني" required>
+
+        <input type="tel" placeholder="+965 رقم الجوال" required>
+
+        <select required>
+          <option value="">اختر مجال الممارسة</option>
+          <option>القسم الجنائي</option>
+          <option>القسم التجاري</option>
+          <option>القسم المدني</option>
+        </select>
+
+        <textarea placeholder="رسالتك" rows="4"></textarea>
 
         <button type="submit"
-          data-ar="إرسال"
-          data-en="Send">
+                data-ar="إرسال"
+                data-en="Submit">
           إرسال
         </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
 
         <!-- إعدادات FormSubmit -->
         <input type="hidden" name="_captcha" value="false">
