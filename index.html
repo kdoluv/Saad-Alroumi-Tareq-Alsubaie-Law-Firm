@@ -393,41 +393,85 @@
 
     <!-- النموذج -->
     <div class="contact-form-box" id="contact-form">
-      <form action="https://formsubmit.co/info@st-lawyers.com" method="POST">
 
-      <form>
+  <form id="contactForm">
 
-        <div class="form-row">
-          <input type="text" placeholder="الاسم الأول" required>
-          <input type="text" placeholder="اسم العائلة" required>
-        </div>
+    <div class="form-row">
 
-        <input type="email" placeholder="البريد الإلكتروني" required>
+      <div class="floating-group">
+        <input type="text" id="firstName" required>
+        <label data-ar="الاسم الأول" data-en="First Name">الاسم الأول</label>
+      </div>
 
-        <input type="tel" placeholder="+965 رقم الجوال" required>
+      <div class="floating-group">
+        <input type="text" id="lastName" required>
+        <label data-ar="اسم العائلة" data-en="Last Name">اسم العائلة</label>
+      </div>
 
-        <select required>
-          <option value="">اختر مجال الممارسة</option>
-          <option>القسم الجنائي</option>
-          <option>القسم التجاري</option>
-          <option>القسم المدني</option>
-        </select>
-
-        <textarea placeholder="رسالتك" rows="4"></textarea>
-
-        <button type="submit"
-                data-ar="إرسال"
-                data-en="Submit">
-          إرسال
-        </button>
-
-     <!-- إعدادات FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="رسالة جديدة من موقع مكتب المحاماة">
-
-      </form>
     </div>
+
+    <div class="floating-group">
+      <input type="email" id="email" required>
+      <label data-ar="البريد الإلكتروني" data-en="Email Address">
+        البريد الإلكتروني
+      </label>
+    </div>
+
+    <!-- Phone with country -->
+    <div class="phone-group">
+      <select id="countryCode">
+        <option value="+965">🇰🇼 +965</option>
+        <option value="+966">🇸🇦 +966</option>
+        <option value="+20">🇪🇬 +20</option>
+      </select>
+      <input type="tel" id="phone" placeholder="رقم الجوال" required>
+    </div>
+
+    <!-- Practice -->
+    <div class="floating-group">
+      <select id="practice" required>
+        <option value=""></option>
+        <option>القسم الجنائي</option>
+        <option>القسم التجاري</option>
+        <option>القسم المدني</option>
+        <option>القسم العمالي</option>
+        <option>الأحوال الشخصية</option>
+        <option>التحكيم</option>
+      </select>
+      <label data-ar="اختر مجال الممارسة"
+             data-en="Select Practice Area">
+        اختر مجال الممارسة
+      </label>
+    </div>
+
+    <!-- Drag & Drop -->
+    <div class="upload-box" id="uploadBox">
+      <input type="file" id="fileInput" hidden>
+      <div class="upload-content">
+        ⬆
+        <p data-ar="اضغط أو اسحب الملف هنا"
+           data-en="Click to upload or drag & drop">
+          اضغط أو اسحب الملف هنا
+        </p>
+      </div>
+    </div>
+
+    <div class="floating-group">
+      <textarea id="message" rows="4" required></textarea>
+      <label data-ar="رسالتك" data-en="Your Message">
+        رسالتك
+      </label>
+    </div>
+
+    <button type="submit"
+            data-ar="إرسال"
+            data-en="Submit">
+      إرسال
+    </button>
+
+  </form>
+
+</div>
 
     <!-- معلومات التواصل -->
     <div class="contact-info">
