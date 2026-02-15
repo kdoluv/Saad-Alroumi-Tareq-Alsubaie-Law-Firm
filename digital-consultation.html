@@ -203,5 +203,22 @@
     </p>
   </div>
 </footer>
+
+<script>
+const elements = document.querySelectorAll(".fade-up");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  elements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
 </body>
 </html>
