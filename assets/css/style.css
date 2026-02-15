@@ -1402,3 +1402,62 @@ html[dir="ltr"] .floating-group label {
   background: #c9a24d;
   color: #000;
 }
+
+.video-thumb {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-thumb img {
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.video-thumb:hover img {
+  transform: scale(1.08);
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50%;
+}
+
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 450px;
+}
+
+.close-modal {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
