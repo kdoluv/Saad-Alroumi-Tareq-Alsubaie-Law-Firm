@@ -198,6 +198,42 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<div class="video-modal" id="videoModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <iframe id="youtubeFrame"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<script>
+const videoThumb = document.querySelector(".video-thumb");
+const modal = document.getElementById("videoModal");
+const iframe = document.getElementById("youtubeFrame");
+const closeBtn = document.querySelector(".close-modal");
+
+videoThumb.addEventListener("click", function() {
+  const videoId = this.getAttribute("data-video");
+  iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+  modal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+  iframe.src = "";
+});
+
+modal.addEventListener("click", function(e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    iframe.src = "";
+  }
+});
+</script>
+
 </body>
 </html>
 
