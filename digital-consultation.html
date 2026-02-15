@@ -100,7 +100,45 @@
         font-size:26px;
       }
     }
-  </style>
+
+    .fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.step span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #c9a24d;
+  color: #000;
+  line-height: 60px;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+</style>
 </head>
 
 <body>
@@ -151,6 +189,32 @@
       <div class="service-card">
         <h3>حماية البيانات والامتثال</h3>
         <p>مراجعة أنظمة حماية البيانات، الامتثال القانوني، وإدارة المخاطر الرقمية للشركات التقنية.</p>
+      </div>
+
+  <section class="page-section fade-up" style="background:#f8f8f8;">
+  <div class="container">
+    <h2 style="text-align:center;">آلية تقديم الخدمة</h2>
+
+    <div class="timeline">
+
+      <div class="step">
+        <span>1</span>
+        <p>حجز الموعد إلكترونيًا</p>
+      </div>
+
+      <div class="step">
+        <span>2</span>
+        <p>سداد الرسوم إلكترونيًا</p>
+      </div>
+
+      <div class="step">
+        <span>3</span>
+        <p>استشارة عبر Zoom</p>
+      </div>
+
+      <div class="step">
+        <span>4</span>
+        <p>استلام رأي قانوني بصيغة PDF</p>
       </div>
 
     </div>
