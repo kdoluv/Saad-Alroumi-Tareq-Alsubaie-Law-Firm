@@ -8,9 +8,35 @@
 </head>
 
 <body>
+
+<header class="header">
+  <div class="container header-flex">
+    <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
+
+    <button class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
+      <a href="news.html" class="active"
+         data-ar="فعاليات وأخبار المكتب"
+         data-en="News">
+         فعاليات وأخبار المكتب
+      </a>
+      <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+    </nav>
+
+    <div class="lang-switcher">
+      <button onclick="setLanguage('ar')">AR</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+  </div>
+</header>
+  
 <section class="consultation-section">
 <div class="container dual-language">
-
  <!-- عربي -->
     <div class="arabic">
       <h2>الاستشارات القانونية الرقمية والتقنية</h2>
