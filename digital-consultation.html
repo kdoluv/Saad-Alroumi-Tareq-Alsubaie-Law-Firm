@@ -138,6 +138,35 @@
   margin-bottom: 15px;
 }
 
+.consult-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.consult-form input,
+.consult-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.consult-form button {
+  background: #0b1c2d;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.consult-form button:hover {
+  background: #c9a24d;
+  color: black;
+}
+
 </style>
 </head>
 
@@ -254,6 +283,20 @@
       </a>
     </div>
 
+  </div>
+</section>
+
+<section class="page-section fade-up">
+  <div class="container">
+    <h2 style="text-align:center;">طلب استشارة رقمية</h2>
+
+    <form class="consult-form">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <input type="tel" placeholder="رقم الهاتف" required>
+      <textarea placeholder="تفاصيل الاستشارة" rows="5"></textarea>
+      <button type="submit">إرسال الطلب</button>
+    </form>
   </div>
 </section>
 
