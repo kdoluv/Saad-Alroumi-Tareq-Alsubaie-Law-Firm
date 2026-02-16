@@ -3,237 +3,225 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title 
-    data-ar="فعاليات وأخبار المكتب"
-    data-en="News & Events">
-    فعاليات وأخبار المكتب
+  <title data-ar="فعاليات، أخبار، ومدونة | مكتب سعد الرومي وطارق السبيعي"
+         data-en="News, Events & Blog">
+         فعاليات، أخبار، ومدونة
   </title>
 
   <link rel="stylesheet" href="assets/css/style.css">
-</head>
 
+  <style>
+    /* ===== Filter Tabs ===== */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px 0 20px;
+    }
+    .filter-tabs button {
+      padding: 10px 22px;
+      border: none;
+      background: #eee;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .filter-tabs button.active,
+    .filter-tabs button:hover {
+      background: #c9a24d;
+      color: #000;
+    }
+
+    /* ===== Grid ===== */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .post-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .post-card:hover {
+      transform: translateY(-6px);
+    }
+    .post-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 18px;
+    }
+    .post-category {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #0b1c2d;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .post-date {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .post-content h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    .post-content p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .read-more {
+      color: #c9a24d;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+
+</head>
 <body>
 
-<!-- HEADER (نفس الهيدر الرئيسي بدون تغيير) -->
+<!-- HEADER (انسخ هيدر موقعك هنا) -->
 <header class="header">
   <div class="container header-flex">
     <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
-
-    <button class="menu-btn" id="menuBtn">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav" id="mainNav">
+    <nav class="nav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
       <a href="news.html" class="active"
-         data-ar="فعاليات وأخبار المكتب"
-         data-en="News">
-         فعاليات وأخبار المكتب
+         data-ar="فعاليات وأخبار ومدونة"
+         data-en="News & Blog">
+         فعاليات وأخبار ومدونة
       </a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </nav>
-
-    <div class="lang-switcher">
-      <button onclick="setLanguage('ar')">AR</button>
-      <button onclick="setLanguage('en')">EN</button>
-    </div>
   </div>
 </header>
 
-<!-- HERO نفس ستايل Premium -->
+<!-- Hero -->
 <section class="page-hero premium-hero">
   <div class="overlay"></div>
   <div class="hero-content container">
-
-    <div class="breadcrumb">
-      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <span> / </span>
-      <span data-ar="فعاليات وأخبار المكتب"
-            data-en="News & Events">
-        فعاليات وأخبار المكتب
-      </span>
-    </div>
-
-    <h1 data-ar="فعاليات وأخبار المكتب"
-        data-en="News & Events">
-        فعاليات وأخبار المكتب
+    <h1 data-ar="فعاليات، أخبار، ومدونة"
+        data-en="News, Events & Blog">
+      فعاليات، أخبار، ومدونة
     </h1>
-
     <div class="gold-line"></div>
-
   </div>
 </section>
 
-<!-- NEWS SECTION -->
-<section class="news-section container">
+<!-- Filters -->
+<div class="container">
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-filter="all"
+            data-ar="الكل" data-en="All">الكل</button>
+    <button class="filter-btn" data-filter="news"
+            data-ar="أخبار" data-en="News">أخبار</button>
+    <button class="filter-btn" data-filter="events"
+            data-ar="فعاليات" data-en="Events">فعاليات</button>
+    <button class="filter-btn" data-filter="blog"
+            data-ar="مدونة" data-en="Blog">مدونة</button>
+  </div>
+</div>
 
-  <div class="news-layout">
+<!-- Posts Grid -->
+<section class="posts-section container">
+  <div class="posts-grid">
 
-    <!-- FEATURED NEWS -->
-    <div class="featured-news">
-
-      <img src="assets/images/event1.jpg" alt="">
-      <img src="assets/images/event2.jpg" alt="">
-      <img src="assets/images/event3.jpg" alt="">
-
-      <div class="featured-content">
-
-        <span class="news-date"
-              data-ar="20 مارس 2025"
-              data-en="20 March 2025">
-              20 مارس 2025
-        </span>
-
-        <h2
-          data-ar="اللقاءات الدورية لأعضاء المكتب خارج نطاق العمل"
-          data-en="Regular gatherings of the office members outside the scope of work.">
-          اللقاءات الدورية لأعضاء المكتب خارج نطاق العمل
-        </h2>
-
-        <p
-          data-ar="يقوم المكتب بعمل لقاءات وحفلات شبه دورية خارج نطاق العمل ما يؤدي الى توطيد العلاقة داخل العمل مما يكون له مردود ايجابي على انجاز معاملات موكلينا وتحقيق أهدافهم"
-          data-en="The firm organizes semi-regular gatherings and social events outside the workplace, which help strengthen internal relationships and foster team cohesion. This, in turn, positively reflects on the efficient handling of our clients’ matters and the achievement of their objectives.">
-          يقوم المكتب بعمل لقاءات وحفلات شبه دورية خارج نطاق العمل ما يؤدي الى توطيد العلاقة داخل العمل مما يكون له مردود ايجابي على انجاز معاملات موكلينا وتحقيق أهدافهم  
+    <!-- Example Card 1: News -->
+    <div class="post-card" data-type="news">
+      <img src="assets/images/news1.jpg" alt="">
+      <div class="post-content">
+        <span class="post-category" data-ar="خبر" data-en="News">خبر</span>
+        <span class="post-date" data-ar="15 فبراير 2026" data-en="15 Feb 2026">15 فبراير 2026</span>
+        <h3 data-ar="مشاركة المكتب في مؤتمر قانوني" data-en="Firm Participates in Legal Conference">
+          مشاركة المكتب في مؤتمر قانوني
+        </h3>
+        <p data-ar="شارك مكتبنا في المؤتمر القانوني الدولي لتعزيز التعاون..." data-en="Our firm participated in the international conference to strengthen cooperation...">
+          شارك مكتبنا في المؤتمر القانوني الدولي لتعزيز التعاون...
         </p>
-
-        <a href="news-details.html" class="read-more"
-           data-ar="اقرأ المزيد"
-           data-en="Read More">
-           اقرأ المزيد
-        </a>
-
+        <a href="#" class="read-more" data-ar="اقرأ المزيد" data-en="Read More">اقرأ المزيد</a>
       </div>
-
     </div>
 
-    <!-- SIDE NEWS LIST -->
-    <div class="side-news">
-
-   <article class="side-item video-news">
-
-      <div class="video-thumb" data-video="1C1zDocblZU">
-
-      <img src="https://img.youtube.com/vi/1C1zDocblZU/hqdefault.jpg" alt="YouTube Video">
-
-      <div class="play-btn">
-        ▶
+    <!-- Example Card 2: Event -->
+    <div class="post-card" data-type="events">
+      <img src="assets/images/event1.jpg" alt="">
+      <div class="post-content">
+        <span class="post-category" data-ar="فعالية" data-en="Event">فعالية</span>
+        <span class="post-date" data-ar="10 مارس 2026" data-en="10 Mar 2026">10 مارس 2026</span>
+        <h3 data-ar="ورشة عمل حول قانون التجارة الإلكترونية" data-en="E-Commerce Law Workshop">
+          ورشة عمل حول قانون التجارة الإلكترونية
+        </h3>
+        <p data-ar="ندوة تدريبية حول أحدث مستجدات التجارة الإلكترونية..." data-en="A training session on the latest e-commerce developments...">
+          ندوة تدريبية حول أحدث مستجدات التجارة الإلكترونية...
+        </p>
+        <a href="#" class="read-more" data-ar="تفاصيل الفعالية" data-en="Event Details">تفاصيل الفعالية</a>
       </div>
-
     </div>
 
-    <div class="side-content">
-      <span class="news-date"
-          data-ar="18 2025 فبراير"
-          data-en="18 2025 Feb">
-          18 2025 فبراير
-    </span>
-
-    <h4
-      data-ar="مقتطفات من البرنامج التدريبي الذي نظمه اتحاد العقاريين بالتعاون مع المكتب"
-      data-en="Highlights from the training program organized by the Real Estate Union in collaboration with our Firm">
-      مقتطفات من البرنامج التدريبي الذي نظمه اتحاد العقاريين بالتعاون مع المكتب
-    </h4>
-  </div>
-
-</article>
-
-      
-      <article class="side-item">
-        <span class="news-date">2 فبراير 2026</span>
-        <h4>توقيع شراكة قانونية جديدة</h4>
-      </article>
-
-      <article class="side-item">
-        <span class="news-date">10 فبراير 2026</span>
-        <h4>إطلاق برنامج الاستشارات الرقمية</h4>
-      </article>
-
+    <!-- Example Card 3: Blog -->
+    <div class="post-card" data-type="blog">
+      <img src="assets/images/blog1.jpg" alt="">
+      <div class="post-content">
+        <span class="post-category" data-ar="مدونة" data-en="Blog">مدونة</span>
+        <span class="post-date" data-ar="5 أبريل 2026" data-en="5 Apr 2026">5 أبريل 2026</span>
+        <h3 data-ar="أهمية العقود الإلكترونية في الكويت" data-en="Importance of E-Contracts in Kuwait">
+          أهمية العقود الإلكترونية في الكويت
+        </h3>
+        <p data-ar="تتناول هذه المقالة دور العقود الإلكترونية وآليات الإبرام..." data-en="This article covers the role of e-contracts and drafting methods...">
+          تتناول هذه المقالة دور العقود الإلكترونية وآليات الإبرام...
+        </p>
+        <a href="#" class="read-more" data-ar="اقرأ المقال" data-en="Read Article">اقرأ المقال</a>
+      </div>
     </div>
 
   </div>
-
-  <!-- PAGINATION -->
-  <div class="pagination">
-    <a href="#" class="active">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
-  </div>
-
 </section>
 
-<!-- FOOTER (نفس الفوتر الرئيسي) -->
+<!-- Footer (انسخ فوتر موقعك هنا) -->
 <footer class="footer">
   <div class="footer-center">
-    <img src="assets/images/logo.png" class="footer-logo" alt="">
-    <p data-ar="© 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة"
-       data-en="© 2026 All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm">
-       © 2026 جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة
-    </p>
+    <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
+    <p>© 2026 جميع الحقوق محفوظة – سعد الرومي وطارق السبيعي للمحاماة</p>
   </div>
 </footer>
 
 <script src="js/lang.js"></script>
-<script src="js/mobile-menu.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".featured-news, .side-item");
+  // Filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const postCards = document.querySelectorAll('.post-card');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-      }
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      postCards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-type') === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
-  }, { threshold: 0.2 });
-
-  elements.forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "0.6s ease";
-    observer.observe(el);
   });
-});
-</script>
-
-<div class="video-modal" id="videoModal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <iframe id="youtubeFrame"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
-<script>
-const videoThumb = document.querySelector(".video-thumb");
-const modal = document.getElementById("videoModal");
-const iframe = document.getElementById("youtubeFrame");
-const closeBtn = document.querySelector(".close-modal");
-
-videoThumb.addEventListener("click", function() {
-  const videoId = this.getAttribute("data-video");
-  iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
-  modal.style.display = "flex";
-});
-
-closeBtn.addEventListener("click", function() {
-  modal.style.display = "none";
-  iframe.src = "";
-});
-
-modal.addEventListener("click", function(e) {
-  if (e.target === modal) {
-    modal.style.display = "none";
-    iframe.src = "";
-  }
-});
 </script>
 
 </body>
 </html>
-
