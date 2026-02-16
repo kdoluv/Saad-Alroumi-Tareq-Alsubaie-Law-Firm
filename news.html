@@ -94,20 +94,28 @@
 </head>
 <body>
 
-<!-- HEADER (انسخ هيدر موقعك هنا) -->
+<!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
+
     <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
-    <nav class="nav">
+
+    <button class="menu-btn" id="menuBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="mainNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
-      <a href="news.html" class="active"
-         data-ar="فعاليات وأخبار ومدونة"
-         data-en="News & Blog">
-         فعاليات وأخبار ومدونة
-      </a>
+      <a href="index.html#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
     </nav>
+
+    <div class="lang-switcher">
+      <button onclick="setLanguage('ar')">AR</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+
   </div>
 </header>
 
@@ -117,7 +125,7 @@
   <div class="hero-content container">
     <h1 data-ar="فعاليات، أخبار، ومدونة"
         data-en="News, Events & Blog">
-      فعاليات، أخبار، ومدونة
+        فعاليات، أخبار، ومدونة
     </h1>
     <div class="gold-line"></div>
   </div>
