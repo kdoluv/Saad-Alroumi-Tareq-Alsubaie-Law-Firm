@@ -43,39 +43,6 @@ a {
   position: relative;
 }
 
-.firm-title {
-  text-align: center;
-}
-
-/* اسم المكتب */
-.firm-title h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  color: var(--gold);   /* ذهبي أوضح */
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-/* السطر التعريفي */
-.hero-overlay p {
-  font-size: 20px;
-  color: var(--white);   /* أبيض واضح */
-  margin-top: 10px;
-  letter-spacing: 1px;
-}
-
-.gold-line {
-  width: 80px;
-  height: 2px;
-  background: var(--gold);
-  margin: 0 auto;
-}
-
-.firm-title h1,
-.hero-overlay p {
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-}
-
 .logo {
   height: 85px;
 }
@@ -1477,4 +1444,37 @@ html[dir="ltr"] .floating-group label {
   font-size: 30px;
   color: white;
   cursor: pointer;
+}
+
+.firm-title {
+  text-align: center;
+}
+
+/* اسم المكتب */
+.firm-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  color: var(--gold);   /* ذهبي أوضح */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* السطر التعريفي */
+.hero-overlay p {
+  font-size: 20px;
+  color: var(--white);   /* أبيض واضح */
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.gold-line {
+  width: 80px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto;
+}
+
+.firm-title h1,
+.hero-overlay p {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
