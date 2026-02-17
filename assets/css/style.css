@@ -50,7 +50,7 @@ a {
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  color: var(--gold);
+  color: #c9a24d;
 }
 
 .site-title::after {
