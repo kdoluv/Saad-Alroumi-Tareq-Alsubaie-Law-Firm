@@ -164,29 +164,8 @@ html[dir="ltr"] .header-flex {
   flex-direction: row;
 }
 
-/* ================= HERO ================= */
-.hero {
-  position: relative;
-  height: 85vh;
-  background: url("../images/hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(11,28,45,.78);
-}
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-}
 
 /* ================= PAGE HERO ================= */
 .page-hero {
@@ -419,20 +398,7 @@ html[dir="ltr"] .header-flex {
     position: static;
   }
 
-  .hero-overlay {
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .hero-overlay h1 {
-    font-size: 30px;
-  }
-
-  .hero-overlay p {
-    font-size: 16px;
-  }
-
-  .team-grid {
+   .team-grid {
     grid-template-columns: 1fr;
   }
 
@@ -758,13 +724,6 @@ html[dir="rtl"] .partners-track {
   transform: translateY(0);
 }
 
-
-.hero-title {
-    color: #d4af37;
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
 .about-col p {
   font-size: 17px;
   font-weight: 600;        /* خط تقيل */
@@ -897,56 +856,6 @@ html[lang="en"] .about-col p {
   .section-title::after {
     width: 60px;
   }
-}
-
-/* ===== Luxury Hero ===== */
-
-.luxury-hero {
-  position: relative;
-  background: url('../images/law-bg.jpg') center/cover no-repeat;
-  padding: 140px 0 100px;
-  text-align: center;
-  color: #fff;
-}
-
-.luxury-hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10,20,35,0.85);
-}
-
-.luxury-hero .hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.breadcrumb {
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.breadcrumb a {
-  color: #c9a24d;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.luxury-hero h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  animation: fadeUp 1s ease forwards;
-}
-
-.gold-line {
-  width: 80px;
-  height: 3px;
-  background: #c9a24d;
-  margin: 15px auto 0;
 }
 
 /* ===== Practice Content ===== */
@@ -1450,31 +1359,69 @@ html[dir="ltr"] .floating-group label {
   text-align: center;
 }
 
-/* اسم المكتب */
-.firm-title h1 {
+/* ================= HERO SYSTEM ================= */
+
+.hero {
+  position: relative;
+  background: url('../images/law-bg.jpg') center/cover no-repeat;
+  padding: 140px 20px 100px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* الطبقة الداكنة */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 35, 0.85);
+}
+
+/* المحتوى */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* عنوان المكتب */
+.hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  color: var(--gold);   /* ذهبي أوضح */
+  font-size: 48px;
+  font-weight: 700;
+  color: #d4af37;
   margin-bottom: 15px;
-  font-weight: 600;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.6);
+}
+
+/* الخط الذهبي */
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #c9a24d;
+  margin: 15px auto 0;
 }
 
 /* السطر التعريفي */
-.hero-overlay p {
+.hero-subtitle {
   font-size: 20px;
-  color: var(--white);   /* أبيض واضح */
-  margin-top: 10px;
+  color: #ffffff;
+  margin-top: 20px;
   letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
-.gold-line {
-  width: 80px;
-  height: 2px;
-  background: var(--gold);
-  margin: 0 auto;
-}
+/* موبايل */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 30px;
+  }
 
-.firm-title h1,
-.hero-overlay p {
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  .hero-subtitle {
+    font-size: 16px;
+  }
 }
