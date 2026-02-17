@@ -50,6 +50,16 @@ a {
   margin: 0;
   font-size: 20px;
   font-weight: 600;
+  color: var(--gold);
+}
+
+.site-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 8px auto 0;
 }
 
 .logo {
@@ -195,13 +205,6 @@ html[dir="ltr"] .header-flex {
   position: relative;
   z-index: 2;
   color: #fff;
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  color: #c9a24d;
-  margin-bottom: 15px;
 }
 
 .gold-line {
