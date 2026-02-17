@@ -1389,9 +1389,9 @@ html[dir="ltr"] .floating-group label {
 /* عنوان المكتب */
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 700;
-  color: #d4af37;
+  color: #c9a24d;
   margin-bottom: 15px;
   text-shadow: 0 3px 15px rgba(0,0,0,0.6);
 }
