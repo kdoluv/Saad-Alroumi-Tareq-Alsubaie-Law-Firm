@@ -51,7 +51,7 @@ a {
 .firm-title h1 {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
-  color: #c9a24d;   /* ذهبي أوضح */
+  color: var(--gold);   /* ذهبي أوضح */
   margin-bottom: 15px;
   font-weight: 600;
 }
@@ -59,7 +59,7 @@ a {
 /* السطر التعريفي */
 .hero-overlay p {
   font-size: 20px;
-  color: #ffffff;   /* أبيض واضح */
+  color: var(--white);   /* أبيض واضح */
   margin-top: 10px;
   letter-spacing: 1px;
 }
@@ -67,7 +67,7 @@ a {
 .gold-line {
   width: 80px;
   height: 2px;
-  background: #c9a24d;
+  background: var(--gold);
   margin: 0 auto;
 }
 
