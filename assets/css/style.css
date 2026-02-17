@@ -824,40 +824,6 @@ html[lang="en"] .about-col p {
   box-shadow: 0 14px 30px rgba(201, 162, 77, 0.6);
 }
 
-/* ================= SECTION TITLES ================= */
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #444; /* رمادي غامق */
-  margin-bottom: 40px;
-  position: relative;
-  letter-spacing: 0.5px;
-}
-
-/* الخط الذهبي تحت العنوان */
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #c9a24d; /* ذهبي */
-  margin: 14px auto 0;
-  border-radius: 2px;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 24px;
-    margin-bottom: 30px;
-  }
-
-  .section-title::after {
-    width: 60px;
-  }
-}
-
 /* ===== Practice Content ===== */
 
 .practice-content {
