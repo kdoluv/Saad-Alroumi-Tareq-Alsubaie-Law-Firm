@@ -770,24 +770,25 @@ html[dir="rtl"] .partners-track {
   transform: translateY(0);
 }
 
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #0b1c2d; /* كحلي تقيل */
-  margin-bottom: 15px;
-  position: relative;
-  font-family: 'Playfair Display', 'Cairo', serif;
+.hero-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* الخط الذهبي */
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #c9a24d;
-  margin: 12px auto 0;
+.hero-title {
+    color: #d4af37;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.gold-line {
+    width: 80px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 0 auto 20px auto;
 }
 
 .about-col p {
