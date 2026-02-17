@@ -50,7 +50,7 @@ a {
 .firm-title h1 {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
-  color: #c9a24d;
+  color: var(--gold);
   margin-bottom: 10px;
 }
 
