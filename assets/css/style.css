@@ -1471,53 +1471,73 @@ html[dir="ltr"] .floating-group label {
   cursor: pointer;
 }
 
-/* ===== ABOUT US SECTION ===== */
-.about-us-section {
+/* ===== ABOUT SECTION FIX ===== */
+
+.about-section {
   padding: 100px 0;
   background: #fff;
 }
 
-.about-us-grid {
+.about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
   align-items: center;
 }
 
-.about-us-image img {
+/* التحكم في صورة الـ GIF */
+.about-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about-image img {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  height: 500px;           /* تحكم ثابت في الارتفاع */
+  object-fit: cover;       /* يمنع التمدد */
+  display: block;
+  border-radius: 12px;
 }
 
-.about-us-content p {
+/* النص */
+.about-content {
+  max-width: 650px;
+}
+
+.about-content p {
   font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #333;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 18px;
 }
 
-/* زر التفاعل */
-.btn-primary {
-  display: inline-block;
-  background: var(--gold);
-  color: #000;
-  padding: 12px 30px;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: 0.3s;
+/* العنوان */
+.section-title {
+  text-align: right;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 30px;
+  position: relative;
 }
 
-.btn-primary:hover {
-  background: #b8963f;
-  color: #000;
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #d4af37;
+  margin-top: 10px;
 }
 
-/* Responsive */
-@media(max-width: 992px) {
-  .about-us-grid {
+/* موبايل */
+@media (max-width: 992px) {
+  .about-grid {
     grid-template-columns: 1fr;
   }
-}
 
+  .about-image img {
+    height: 350px;
+  }
+}
