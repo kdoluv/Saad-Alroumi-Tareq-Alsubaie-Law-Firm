@@ -415,85 +415,64 @@
     <!-- النموذج -->
     <div class="contact-form-box" id="contact-form">
 
-  <form id="contactForm"
+ <form id="contactForm"
       action="send.php"
       method="POST"
       enctype="multipart/form-data">
 
-    <div class="form-row">
-
-      <div class="floating-group">
-        <input type="text" id="firstName" required>
-        <label data-ar="الاسم الأول" data-en="First Name">الاسم الأول</label>
-      </div>
-
-      <div class="floating-group">
-        <input type="text" id="lastName" required>
-        <label data-ar="اسم العائلة" data-en="Last Name">اسم العائلة</label>
-      </div>
-
+  <div class="form-row">
+    <div class="floating-group">
+      <input type="text" name="firstName" required>
+      <label>الاسم الأول</label>
     </div>
 
     <div class="floating-group">
-      <input type="email" id="email" required>
-      <label data-ar="البريد الإلكتروني" data-en="Email Address">
-        البريد الإلكتروني
-      </label>
+      <input type="text" name="lastName" required>
+      <label>اسم العائلة</label>
     </div>
+  </div>
 
-    <!-- Phone with country -->
-    <div class="phone-group">
-      <select id="countryCode">
-        <option value="+965">🇰🇼 +965</option>
-        <option value="+966">🇸🇦 +966</option>
-        <option value="+20">🇪🇬 +20</option>
-      </select>
-      <input type="tel" id="phone" placeholder="رقم الجوال" required>
-    </div>
+  <div class="floating-group">
+    <input type="email" name="email" required>
+    <label>البريد الإلكتروني</label>
+  </div>
 
-    <!-- Practice -->
-    <div class="floating-group">
-      <select id="practice" required>
-        <option value=""></option>
-        <option>القسم الجنائي</option>
-        <option>القسم التجاري</option>
-        <option>القسم المدني</option>
-        <option>القسم العمالي</option>
-        <option>الأحوال الشخصية</option>
-        <option>التحكيم</option>
-      </select>
-      <label data-ar="اختر مجال الممارسة"
-             data-en="Select Practice Area">
-        اختر مجال الممارسة
-      </label>
-    </div>
+  <div class="phone-group">
+    <select name="countryCode">
+      <option value="+965">🇰🇼 +965</option>
+      <option value="+966">🇸🇦 +966</option>
+      <option value="+20">🇪🇬 +20</option>
+    </select>
+    <input type="tel" name="phone" required>
+  </div>
 
-    <!-- Drag & Drop -->
-    <div class="upload-box" id="uploadBox">
-      <input type="file" id="fileInput" hidden>
-      <div class="upload-content">
-        ⬆
-        <p data-ar="اضغط أو اسحب الملف هنا"
-           data-en="Click to upload or drag & drop">
-          اضغط أو اسحب الملف هنا
-        </p>
-      </div>
-    </div>
+  <div class="floating-group">
+    <select name="practice" required>
+      <option value=""></option>
+      <option>القسم الجنائي</option>
+      <option>القسم التجاري</option>
+      <option>القسم المدني</option>
+      <option>القسم العمالي</option>
+      <option>الأحوال الشخصية</option>
+      <option>التحكيم</option>
+    </select>
+    <label>اختر مجال الممارسة</label>
+  </div>
 
-    <div class="floating-group">
-      <textarea id="message" rows="4" required></textarea>
-      <label data-ar="رسالتك" data-en="Your Message">
-        رسالتك
-      </label>
-    </div>
+  <!-- Upload -->
+  <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+    <input type="file" name="attachment" id="fileInput">
+    <p>اضغط لاختيار الملف</p>
+  </div>
 
-    <button type="submit"
-            data-ar="إرسال"
-            data-en="Submit">
-      إرسال
-    </button>
+  <div class="floating-group">
+    <textarea name="message" rows="4" required></textarea>
+    <label>رسالتك</label>
+  </div>
 
-  </form>
+  <button type="submit">إرسال</button>
+
+</form>
 
 </div>
 
@@ -615,37 +594,6 @@ uploadBox.addEventListener("drop", (e) => {
   e.preventDefault();
   fileInput.files = e.dataTransfer.files;
   uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-(function(){
-  emailjs.init("t-z-VVLpo8mxt5LcX");
-})();
-
-document.getElementById("contactForm")
-.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  emailjs.send("service_ov7xkq8",
-               "template_n07xlxe",
-               {
-                 firstName: document.getElementById("firstName").value,
-                 lastName: document.getElementById("lastName").value,
-                 email: document.getElementById("email").value,
-                 phone: document.getElementById("countryCode").value + 
-                        document.getElementById("phone").value,
-                 message: document.getElementById("message").value
-               })
-  .then(function(response) {
-      alert("تم الإرسال بنجاح");
-      document.getElementById("contactForm").reset();
-  }, function(error) {
-      alert("حدث خطأ: " + JSON.stringify(error));
-      console.log(error);
-  });
-
 });
 </script>
 
