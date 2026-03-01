@@ -14,14 +14,14 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'mail.google.com'; // سيرفر الاستضافة
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'lawyer.st@gmail.com'; // ايميل الموقع
-    $mail->Password   = 'St@22435001';
+    $mail->Username   = 'khaled@st-lawyers.com'; // ايميل الموقع
+    $mail->Password   = 'k@0472890860S';
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
     // المرسل والمستقبل
-    $mail->setFrom('info@st-lawyers.com', 'ST Lawyers Website');
-    $mail->addAddress('info@st-lawyers.com');
+    $mail->setFrom('khaled@st-lawyers.com', 'ST Lawyers Website');
+    $mail->addAddress('khaled@st-lawyers.com');
 
     // بيانات النموذج
     $firstName = $_POST['firstName'];
