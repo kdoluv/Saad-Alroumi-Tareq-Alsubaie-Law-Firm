@@ -15,7 +15,7 @@ try {
 
     // إعداد SMTP
     $mail->isSMTP();
-    $mail->Host       = 'mail.google.com'; // سيرفر الاستضافة
+    $mail->Host       = 'mail.st-lawyers.com'; // سيرفر الاستضافة
     $mail->SMTPAuth   = true;
     $mail->Username   = 'khaled@st-lawyers.com'; // ايميل الموقع
     $mail->Password   = 'k@0472890860S';
