@@ -1,3 +1,6 @@
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    exit;
+}
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
