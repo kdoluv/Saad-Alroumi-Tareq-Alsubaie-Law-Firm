@@ -1541,3 +1541,31 @@ html[dir="ltr"] .floating-group label {
     height: 350px;
   }
 }
+
+.upload-box {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.upload-box:hover {
+  border-color: #c9a74d;
+}
+
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+button.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
