@@ -452,16 +452,13 @@
     </div>
 
     <!-- Drag & Drop -->
-    <div class="upload-box" id="uploadBox">
-      <input type="file" id="fileInput" hidden>
-      <div class="upload-content">
-        ⬆
-        <p data-ar="اضغط أو اسحب الملف هنا"
-           data-en="Click to upload or drag & drop">
-          اضغط أو اسحب الملف هنا
-        </p>
-      </div>
-    </div>
+<div class="upload-box" id="uploadBox">
+    <input type="file" id="fileInput" name="attachment" hidden>
+    <div class="upload-content">
+    ⬆
+    <p>اضغط أو اسحب الملف هنا</p>
+  </div>
+</div>
 
     <div class="floating-group">
       <textarea id="message" rows="4" required></textarea>
@@ -603,34 +600,47 @@ uploadBox.addEventListener("drop", (e) => {
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
-(function(){
-  emailjs.init("t-z-VVLpo8mxt5LcX");
-})();
+emailjs.init("t-z-VVLpo8mxt5LcX"); // ضع Public Key هنا
 
-document.getElementById("contactForm")
-.addEventListener("submit", function(e) {
+const uploadBox = document.getElementById("uploadBox");
+const fileInput = document.getElementById("fileInput");
+const form = document.getElementById("contactForm");
+
+// فتح نافذة اختيار الملف عند الضغط
+uploadBox.addEventListener("click", () => fileInput.click());
+
+// دعم السحب والإفلات
+uploadBox.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  uploadBox.style.borderColor = "#c9a74d";
+});
+
+uploadBox.addEventListener("dragleave", () => {
+  uploadBox.style.borderColor = "#ccc";
+});
+
+uploadBox.addEventListener("drop", (e) => {
+  e.preventDefault();
+  fileInput.files = e.dataTransfer.files;
+  uploadBox.style.borderColor = "#ccc";
+});
+
+// إرسال النموذج
+form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  emailjs.send("service_ov7xkq8",
-               "template_n07xlxe",
-               {
-                 firstName: document.getElementById("firstName").value,
-                 lastName: document.getElementById("lastName").value,
-                 email: document.getElementById("email").value,
-                 phone: document.getElementById("countryCode").value + 
-                        document.getElementById("phone").value,
-                 message: document.getElementById("message").value
-               })
-  .then(function(response) {
-      alert("تم الإرسال بنجاح");
-      document.getElementById("contactForm").reset();
-  }, function(error) {
-      alert("حدث خطأ: " + JSON.stringify(error));
-      console.log(error);
+  emailjs.sendForm(
+    "service_ov7xkq8",     // ضع Service ID
+    "template_n07xlxe",    // ضع Template ID
+    this
+  ).then(() => {
+    alert("تم الإرسال بنجاح");
+    form.reset();
+  }, (error) => {
+    alert("فشل الإرسال");
+    console.log(error);
   });
-
 });
 </script>
-
 </body>
 </html>
