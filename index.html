@@ -426,17 +426,17 @@
 
     <!-- Phone with country -->
     <div class="phone-group">
-      <select id="countryCode">
+      <select id="countryCode" name="countryCode">
         <option value="+965">🇰🇼 +965</option>
         <option value="+966">🇸🇦 +966</option>
         <option value="+20">🇪🇬 +20</option>
       </select>
-      <input type="tel" id="phone" placeholder="رقم الجوال" required>
+      <input type="tel" id="phone" placeholder="رقم الجوال" name="phone" required>
     </div>
 
     <!-- Practice -->
     <div class="floating-group">
-      <select id="practice" required>
+      <select id="practice" name="practice"required>
         <option value=""></option>
         <option>القسم الجنائي</option>
         <option>القسم التجاري</option>
@@ -461,7 +461,7 @@
 </div>
 
     <div class="floating-group">
-      <textarea id="message" rows="4" required></textarea>
+      <textarea id="message" name="message" rows="4" required></textarea>
       <label data-ar="رسالتك" data-en="Your Message">
         رسالتك
       </label>
@@ -577,27 +577,7 @@ document.addEventListener("DOMContentLoaded", () => {
   aboutCols.forEach(col => observer.observe(col));
 });
 </script>
-<script>
-const uploadBox = document.getElementById("uploadBox");
-const fileInput = document.getElementById("fileInput");
 
-uploadBox.addEventListener("click", () => fileInput.click());
-
-uploadBox.addEventListener("dragover", (e) => {
-  e.preventDefault();
-  uploadBox.style.borderColor = "#c9a24d";
-});
-
-uploadBox.addEventListener("dragleave", () => {
-  uploadBox.style.borderColor = "rgba(255,255,255,0.4)";
-});
-
-uploadBox.addEventListener("drop", (e) => {
-  e.preventDefault();
-  fileInput.files = e.dataTransfer.files;
-  uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
