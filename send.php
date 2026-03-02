@@ -1,7 +1,8 @@
+<?php
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
-<?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -15,47 +16,57 @@ try {
 
     // إعداد SMTP
     $mail->isSMTP();
-    $mail->Host       = 'mail.st-lawyers.com'; // سيرفر الاستضافة
+    $mail->Host       = 'mail.st-lawyers.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'khaled@st-lawyers.com'; // ايميل الموقع
-    $mail->Password   = 'k@0472890860S';
-    $mail->SMTPSecure = 'tls';
+    $mail->Username   = 'khaled@st-lawyers.com';
+    $mail->Password   = getenv('MAIL_PASSWORD'); // لا تضع الباسورد هنا
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
+
+    $mail->CharSet = 'UTF-8';
 
     // المرسل والمستقبل
     $mail->setFrom('khaled@st-lawyers.com', 'ST Lawyers Website');
     $mail->addAddress('khaled@st-lawyers.com');
 
-    // بيانات النموذج
-    $firstName = $_POST['firstName'];
-    $lastName  = $_POST['lastName'];
-    $email     = $_POST['email'];
-    $phone     = $_POST['phone'];
-    $practice  = $_POST['practice'];
-    $message   = $_POST['message'];
+    // تنظيف المدخلات
+    $firstName = htmlspecialchars($_POST['firstName'] ?? '');
+    $lastName  = htmlspecialchars($_POST['lastName'] ?? '');
+    $email     = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+    $phone     = htmlspecialchars($_POST['countryCode'] . $_POST['phone']);
+    $practice  = htmlspecialchars($_POST['practice'] ?? '');
+    $message   = htmlspecialchars($_POST['message'] ?? '');
 
     $mail->Subject = "رسالة جديدة من الموقع";
 
     $mail->Body = "
-    الاسم: $firstName $lastName
-    البريد: $email
-    الهاتف: $phone
-    القسم: $practice
+الاسم: $firstName $lastName
+البريد: $email
+الهاتف: $phone
+القسم: $practice
 
-    الرسالة:
-    $message
-    ";
+الرسالة:
+$message
+";
 
-    // إرفاق الملف
-    if(isset($_FILES['attachment']) && $_FILES['attachment']['error'] == 0){
-        $mail->addAttachment(
-            $_FILES['attachment']['tmp_name'],
-            $_FILES['attachment']['name']
-        );
+    // فلترة المرفقات
+    if(isset($_FILES['attachment']) && $_FILES['attachment']['error'] === 0){
+
+        $allowedTypes = ['application/pdf','image/jpeg','image/png'];
+        $fileType = mime_content_type($_FILES['attachment']['tmp_name']);
+
+        if(in_array($fileType, $allowedTypes) && $_FILES['attachment']['size'] <= 5 * 1024 * 1024){
+
+            $mail->addAttachment(
+                $_FILES['attachment']['tmp_name'],
+                $_FILES['attachment']['name']
+            );
+        }
     }
 
     $mail->send();
-    echo "تم الإرسال بنجاح";
+
+    echo "<script>alert('تم الإرسال بنجاح'); window.location.href='index.html';</script>";
 
 } catch (Exception $e) {
     echo "خطأ في الإرسال: {$mail->ErrorInfo}";
