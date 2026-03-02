@@ -12,20 +12,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية في الكويت</title>
-  <meta name="description" content="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية في الكويت. خبرة منذ 1982 في القضايا التجارية، المدنية، الجنائية، التحكيم، وسوق المال. تواصل معنا الآن.">
-  <meta name="keywords" content="محامي في الكويت, مكتب محاماة الكويت, قضايا تجارية, قضايا مدنية, تحكيم, قضايا جنائية, سوق المال">
-  <meta name="author" content="Saad Alroomi & Tareq Alsubaie Law Firm">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="مكتب سعد الرومي وطارق السبيعي للمحاماة">
-  <meta property="og:description" content="خبرة قانونية منذ 1982 في القضايا التجارية والمدنية والجنائية والتحكيم في الكويت.">
-  <meta property="og:image" content="https://www.st-lawyers.com/assets/images/logo.png">
-  <meta property="og:url" content="https://www.st-lawyers.com">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="مكتب سعد الرومي وطارق السبيعي للمحاماة">
-  <meta name="twitter:description" content="مكتب محاماة في الكويت بخبرة قانونية واسعة منذ 1982.">
-  <meta name="twitter:image" content="https://www.st-lawyers.com/assets/images/logo.png">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -415,64 +401,82 @@
     <!-- النموذج -->
     <div class="contact-form-box" id="contact-form">
 
- <form id="contactForm"
-      action="send.php"
-      method="POST"
-      enctype="multipart/form-data">
+  <form id="contactForm">
 
-  <div class="form-row">
-    <div class="floating-group">
-      <input type="text" name="firstName" required>
-      <label>الاسم الأول</label>
+    <div class="form-row">
+
+      <div class="floating-group">
+        <input type="text" id="firstName" required>
+        <label data-ar="الاسم الأول" data-en="First Name">الاسم الأول</label>
+      </div>
+
+      <div class="floating-group">
+        <input type="text" id="lastName" required>
+        <label data-ar="اسم العائلة" data-en="Last Name">اسم العائلة</label>
+      </div>
+
     </div>
 
     <div class="floating-group">
-      <input type="text" name="lastName" required>
-      <label>اسم العائلة</label>
+      <input type="email" id="email" required>
+      <label data-ar="البريد الإلكتروني" data-en="Email Address">
+        البريد الإلكتروني
+      </label>
     </div>
-  </div>
 
-  <div class="floating-group">
-    <input type="email" name="email" required>
-    <label>البريد الإلكتروني</label>
-  </div>
+    <!-- Phone with country -->
+    <div class="phone-group">
+      <select id="countryCode">
+        <option value="+965">🇰🇼 +965</option>
+        <option value="+966">🇸🇦 +966</option>
+        <option value="+20">🇪🇬 +20</option>
+      </select>
+      <input type="tel" id="phone" placeholder="رقم الجوال" required>
+    </div>
 
-  <div class="phone-group">
-    <select name="countryCode">
-      <option value="+965">🇰🇼 +965</option>
-      <option value="+966">🇸🇦 +966</option>
-      <option value="+20">🇪🇬 +20</option>
-    </select>
-    <input type="tel" name="phone" required>
-  </div>
+    <!-- Practice -->
+    <div class="floating-group">
+      <select id="practice" required>
+        <option value=""></option>
+        <option>القسم الجنائي</option>
+        <option>القسم التجاري</option>
+        <option>القسم المدني</option>
+        <option>القسم العمالي</option>
+        <option>الأحوال الشخصية</option>
+        <option>التحكيم</option>
+      </select>
+      <label data-ar="اختر مجال الممارسة"
+             data-en="Select Practice Area">
+        اختر مجال الممارسة
+      </label>
+    </div>
 
-  <div class="floating-group">
-    <select name="practice" required>
-      <option value=""></option>
-      <option>القسم الجنائي</option>
-      <option>القسم التجاري</option>
-      <option>القسم المدني</option>
-      <option>القسم العمالي</option>
-      <option>الأحوال الشخصية</option>
-      <option>التحكيم</option>
-    </select>
-    <label>اختر مجال الممارسة</label>
-  </div>
+    <!-- Drag & Drop -->
+    <div class="upload-box" id="uploadBox">
+      <input type="file" id="fileInput" hidden>
+      <div class="upload-content">
+        ⬆
+        <p data-ar="اضغط أو اسحب الملف هنا"
+           data-en="Click to upload or drag & drop">
+          اضغط أو اسحب الملف هنا
+        </p>
+      </div>
+    </div>
 
-  <!-- Upload -->
-  <div class="upload-box" onclick="document.getElementById('fileInput').click()">
-    <input type="file" name="attachment" id="fileInput">
-    <p>اضغط لاختيار الملف</p>
-  </div>
+    <div class="floating-group">
+      <textarea id="message" rows="4" required></textarea>
+      <label data-ar="رسالتك" data-en="Your Message">
+        رسالتك
+      </label>
+    </div>
 
-  <div class="floating-group">
-    <textarea name="message" rows="4" required></textarea>
-    <label>رسالتك</label>
-  </div>
+    <button type="submit"
+            data-ar="إرسال"
+            data-en="Submit">
+      إرسال
+    </button>
 
-  <button type="submit">إرسال</button>
-
-</form>
+  </form>
 
 </div>
 
@@ -594,6 +598,37 @@ uploadBox.addEventListener("drop", (e) => {
   e.preventDefault();
   fileInput.files = e.dataTransfer.files;
   uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("t-z-VVLpo8mxt5LcX");
+})();
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.send("service_ov7xkq8",
+               "template_n07xlxe",
+               {
+                 firstName: document.getElementById("firstName").value,
+                 lastName: document.getElementById("lastName").value,
+                 email: document.getElementById("email").value,
+                 phone: document.getElementById("countryCode").value + 
+                        document.getElementById("phone").value,
+                 message: document.getElementById("message").value
+               })
+  .then(function(response) {
+      alert("تم الإرسال بنجاح");
+      document.getElementById("contactForm").reset();
+  }, function(error) {
+      alert("حدث خطأ: " + JSON.stringify(error));
+      console.log(error);
+  });
+
 });
 </script>
 
