@@ -19,7 +19,8 @@ try {
     $mail->Host       = 'mail.st-lawyers.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'khaled@st-lawyers.com';
-    $mail->Password   = getenv('MAIL_PASSWORD'); // لا تضع الباسورد هنا
+    require 'config.php';
+    $mail->Password = MAIL_PASSWORD;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
