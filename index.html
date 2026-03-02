@@ -453,10 +453,10 @@
 
     <!-- Drag & Drop -->
 <div class="upload-box" id="uploadBox">
-    <input type="file" id="fileInput" name="attachment" hidden>
-    <div class="upload-content">
-    ⬆
-    <p>اضغط أو اسحب الملف هنا</p>
+  <input type="file" id="fileInput" name="attachment" hidden>
+  <div class="upload-content">
+    <span id="uploadText">⬆ اضغط أو اسحب الملف هنا</span>
+    <small id="fileName"></small>
   </div>
 </div>
 
@@ -472,9 +472,10 @@
             data-en="Submit">
       إرسال
     </button>
-
-  </form>
-
+  <div id="successMessage" class="success-message">
+  ✅ تم إرسال رسالتك بنجاح، سنتواصل معك قريبًا.
+  </div>
+</form>
 </div>
 
     <!-- معلومات التواصل -->
