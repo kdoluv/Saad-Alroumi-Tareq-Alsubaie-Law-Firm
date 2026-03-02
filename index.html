@@ -601,16 +601,25 @@ uploadBox.addEventListener("drop", (e) => {
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
-emailjs.init("t-z-VVLpo8mxt5LcX"); // ضع Public Key هنا
+emailjs.init("t-z-VVLpo8mxt5LcX");
 
 const uploadBox = document.getElementById("uploadBox");
 const fileInput = document.getElementById("fileInput");
+const fileName = document.getElementById("fileName");
 const form = document.getElementById("contactForm");
+const successMessage = document.getElementById("successMessage");
+const submitButton = form.querySelector("button");
 
-// فتح نافذة اختيار الملف عند الضغط
+// عرض اسم الملف
+fileInput.addEventListener("change", () => {
+  if(fileInput.files.length > 0){
+    fileName.textContent = "📎 " + fileInput.files[0].name;
+  }
+});
+
+// Drag & Drop
 uploadBox.addEventListener("click", () => fileInput.click());
 
-// دعم السحب والإفلات
 uploadBox.addEventListener("dragover", (e) => {
   e.preventDefault();
   uploadBox.style.borderColor = "#c9a74d";
@@ -623,6 +632,7 @@ uploadBox.addEventListener("dragleave", () => {
 uploadBox.addEventListener("drop", (e) => {
   e.preventDefault();
   fileInput.files = e.dataTransfer.files;
+  fileName.textContent = "📎 " + fileInput.files[0].name;
   uploadBox.style.borderColor = "#ccc";
 });
 
@@ -630,16 +640,36 @@ uploadBox.addEventListener("drop", (e) => {
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
+  // حماية بسيطة من السبام (منع الإرسال المتكرر بسرعة)
+  if(submitButton.classList.contains("loading")) return;
+
+  submitButton.classList.add("loading");
+  submitButton.textContent = "جارٍ الإرسال...";
+
   emailjs.sendForm(
-    "service_ov7xkq8",     // ضع Service ID
-    "template_n07xlxe",    // ضع Template ID
+    "service_ov7xkq8",
+    "template_n07xlxe",
     this
   ).then(() => {
-    alert("تم الإرسال بنجاح");
+
     form.reset();
+    fileName.textContent = "";
+    successMessage.style.display = "block";
+
+    submitButton.classList.remove("loading");
+    submitButton.textContent = "إرسال";
+
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 5000);
+
   }, (error) => {
-    alert("فشل الإرسال");
+
+    alert("حدث خطأ أثناء الإرسال");
     console.log(error);
+
+    submitButton.classList.remove("loading");
+    submitButton.textContent = "إرسال";
   });
 });
 </script>
