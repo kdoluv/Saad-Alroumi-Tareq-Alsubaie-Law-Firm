@@ -7,9 +7,7 @@
 }
 
 /* ================= GLOBAL ================= */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -24,9 +22,7 @@ body {
   padding: 40px 20px;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
 /* ================= HEADER ================= */
 .header {
@@ -43,57 +39,9 @@ a {
   position: relative;
 }
 
-.site-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-}
+.logo { height: 85px; }
 
-.logo {
-  height: 85px;
-}
-
-/* ===== MENU BUTTON ===== */
-.menu-btn {
-  width: 30px;
-  height: 22px;
-  position: relative;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
-}
-
-.menu-btn span {
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: var(--gold);
-  border-radius: 3px;
-  left: 0;
-  transition: 0.3s;
-}
-
-.menu-btn span:nth-child(1) { top: 0; }
-.menu-btn span:nth-child(2) { top: 9px; }
-.menu-btn span:nth-child(3) { top: 18px; }
-
-.menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 9px;
-}
-.menu-btn.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 9px;
-}
-
-/* ===== NAV ===== */
+/* ================= NAV ================= */
 .nav {
   display: flex;
   align-items: center;
@@ -112,10 +60,8 @@ a {
   color: #e6c977;
 }
 
-/* ===== DROPDOWN ===== */
-.dropdown {
-  position: relative;
-}
+/* ================= DROPDOWN ================= */
+.dropdown { position: relative; }
 
 .dropdown-menu {
   position: absolute;
@@ -128,49 +74,12 @@ a {
   display: none;
   flex-direction: column;
   padding: 10px 0;
-  z-index: 999;
 }
 
-.dropdown.open .dropdown-menu {
-  display: flex;
-}
+.dropdown.open .dropdown-menu { display: flex; }
 
-/* Desktop hover فقط */
 @media (min-width: 769px) {
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    border: none;
-    padding-right: 15px;
-  }
-}
-
-/* ===== UAGE ===== */
-.lang-switcher button {
-  background: transparent;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  padding: 6px 10px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.lang-switcher {
-  display: flex;
-  gap: 6px;
-  flex-shrink: 0;
-}
-
-/* EN layout fix */
-html[dir="ltr"] .header-flex {
-  flex-direction: row;
+  .dropdown:hover .dropdown-menu { display: flex; }
 }
 
 /* ================= HERO ================= */
@@ -200,70 +109,27 @@ html[dir="ltr"] .header-flex {
   max-width: 700px;
 }
 
-/* ================= PAGE HERO ================= */
-.page-hero {
-  background: var(--navy);
-  padding: 80px 20px;
+/* ================= SECTION TITLES ================= */
+.section-title {
   text-align: center;
-}
-
-.page-hero h1 {
-  color: var(--gold);
-  font-size: 40px;
-}
-
-/* ================= ABOUT ================= */
-.intro {
-  background: #fff;
-  padding: 80px 40px;
-}
-
-.intro h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 40px;
   position: relative;
 }
 
-.intro h2::after {
+.section-title::after {
   content: "";
+  display: block;
   width: 80px;
   height: 3px;
   background: var(--gold);
-  display: block;
-  margin-top: 15px;
-}
-
-.intro p {
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 25px;
+  margin: 14px auto 0;
 }
 
 /* ================= TEAM ================= */
-.team-section {
-  padding: 80px 0;
-}
-
-.team-group {
-  margin-bottom: 40px;
-}
-
-.team-group h2 {
-  font-size: 28px;
-  margin-bottom: 35px;
-  position: relative;
-  display: inline-block;
-}
-
-.team-group h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  right: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--gold);
-}
+.team-section { padding: 80px 0; }
 
 .team-grid {
   display: grid;
@@ -271,7 +137,6 @@ html[dir="ltr"] .header-flex {
   gap: 25px;
 }
 
-/* CARD */
 .team-card {
   background: #fff;
   border-radius: 14px;
@@ -281,14 +146,11 @@ html[dir="ltr"] .header-flex {
   transition: .3s;
 }
 
-.team-card:hover {
-  transform: translateY(-6px);
-}
+.team-card:hover { transform: translateY(-6px); }
 
 .team-card h3 {
   font-size: 18px;
   margin-bottom: 6px;
-  white-space: nowrap; /* الاسم في سطر واحد */
 }
 
 .team-card span {
@@ -296,572 +158,89 @@ html[dir="ltr"] .header-flex {
   color: #666;
 }
 
-/* COLORS */
 .team-card.lead { border-top: 4px solid var(--gold); }
-.team-group.courts .team-card { border-top: 4px solid #8b0000; }
-.team-group.admin .team-card { border-top: 4px solid #003366; }
-.team-group.finance .team-card { border-top: 4px solid #2f4f4f; }
-.team-card.consultant { background: #fafafa; }
 
-/* ================= PRACTICE ================= */
-.practice-content {
-  background: #fff;
-  padding: 60px 20px;
-}
-
-.practice-content p {
-  font-size: 18px;
-  line-height: 1.9;
-}
-
-.practice-content ul {
-  padding-right: 20px;
-}
-
-.practice-content li {
-  font-size: 17px;
-  margin-bottom: 12px;
-}
- /* ===== BACK BUTTON ===== */
-  .back-btn {
-    font-size: 14px;
-    padding: 8px 14px;
-  }
-
-.back-button-container {
-  text-align: center;
-  margin: 20px 0; /* مسافة أعلى وأسفل */
-}
-
-.back-button {
-  background-color: #0b1c2d; /* لون الخلفية */
-  color: #ffffff; /* لون الخط */
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.back-button:hover {
-  background-color: #c9a24d; /* لون عند المرور */
-}
-/* ================= CONTACT ================= */
-.contact-section {
-  background: #fff;
-  padding: 80px 8%;
-}
-
-.contact-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button {
-  background: var(--navy);
-  color: #fff;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-}
-
-.contact-info {
-  line-height: 1.8;
-}
-
-/* ================= FOOTER ================= */
-.footer {
-  background: var(--navy);
-  color: #fff;
-  padding: 40px 15px;
-  text-align: center;
-}
-
-.footer-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.footer-logo {
-  width: 85px;
-}
-
-.footer p {
-  font-size:12px;
-  color: #ddd;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-  .menu-btn {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    left: 0;
-    background: var(--navy);
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .nav.open {
-    display: flex;
-  }
-
-  .dropdown-menu {
-    position: static;
-  }
-
-  .hero-overlay {
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .hero-overlay h1 {
-    font-size: 30px;
-  }
-
-  .hero-overlay p {
-    font-size: 16px;
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-/* =====================
-   SUCCESS PARTNERS AUTO SLIDER
-===================== */
-
+/* ================= PARTNERS ================= */
 .partners-section {
-  padding: 20px 0;
-  margin-top: 0;
+  padding: 40px 0;
   background: #f7f7f7;
   text-align: center;
   overflow: hidden;
 }
 
-.partners-section h2 {
-  margin-bottom: 40px;
-  color: #0b1d33;
-}
-
-.partners-slider {
-  overflow: hidden;
-  position: relative;
-}
-
 .partners-track {
   display: flex;
-  align-items: center;
   gap: 60px;
   width: max-content;
-  animation: scrollPartners 25s linear infinite;
+  animation: scrollLTR 25s linear infinite;
 }
 
-.partners-track img {
-  max-height: 70px;
-  opacity: 0.7;
-  filter: color(100%);
-  transition: 0.3s;
-}
-
-.partners-track img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
-  transform: scale(1.05);
-}
-
-/* الحركة الافتراضية (EN - LTR) */
-@keyframes scrollPartnersLTR {
+@keyframes scrollLTR {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-/* الحركة العربية (RTL) */
-@keyframes scrollPartnersRTL {
-  from { transform: translateX(0); }
-  to { transform: translateX(50%); }
-}
-
-/* تطبيق الحركة حسب الاتجاه */
-html[dir="ltr"] .partners-track {
-  animation: scrollPartnersLTR 25s linear infinite;
-}
-
-html[dir="rtl"] .partners-track {
-  animation: scrollPartnersRTL 25s linear infinite;
-}
-
-/* خط ذهبي تحت عنوان شركاء النجاح */
-
-.partners-section h2 {
+/* ================= CONTACT ================= */
+.contact-hero {
   position: relative;
-  display: inline-block;
-  margin-bottom: 40px;
-}
-
-.partners-section h2::after {
-  content: "";
-  display: block;
-  width: 70px;        /* طول الخط */
-  height: 2px;        /* سمك الخط */
-  background: #c9a24d; /* اللون الذهبي */
-  margin: 10px auto 0;
-}
-
-/* ================= SOCIAL SIDEBAR ================= */
-.social-sidebar {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  z-index: 9999;
-}
-
-.social-sidebar a {
-  width: 45px;
-  height: 45px;
-  background: #0b3c5d; /* أزرق قانوني */
+  background: url('../images/contact-bg.jpg') center/cover no-repeat;
+  padding: 140px 0;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2px 0;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-radius: 0 6px 6px 0;
-  font-size: 18px;
 }
 
-/* Hover effect */
-.social-sidebar a:hover {
-  width: 55px;
-  background: #0f4c81;
-}
-
-/* تخصيص لكل شبكة */
-.social-sidebar .facebook:hover {
-  background: #1877f2;
-}
-.social-sidebar .twitter:hover {
-  background: #000;
-}
-.social-sidebar .instagram:hover {
-  background: #e1306c;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .social-sidebar {
-    top: auto;
-    bottom: 20px;
-    left: 10px;
-    flex-direction: row;
-  }
-
-  .social-sidebar a {
-    border-radius: 50%;
-    margin: 0 5px;
-    width: 42px;
-    height: 42px;
-  }
-
-  .social-sidebar a:hover {
-    width: 42px;
-  }
-}
-
-/* ===== WhatsApp Business Chat ===== */
-.wa-chat {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 999999;
-  font-family: 'Cairo', sans-serif;
-}
-
-/* الزر الدائري */
-.wa-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0,0,0,.3);
-}
-
-/* صندوق الدردشة */
-.wa-box {
+.contact-hero .overlay {
   position: absolute;
-  bottom: 75px;
-  right: 0;
-  width: 280px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-  overflow: hidden;
-
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  animation: fadeUp .3s ease;
+  inset: 0;
+  background: rgba(10,30,60,0.75);
 }
 
-/* الهيدر */
-.wa-header {
-  background: #075e54;
-  color: #fff;
-  padding: 12px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.wa-header i {
-  font-size: 26px;
-}
-
-.wa-header span {
-  font-size: 13px;
-  opacity: .9;
-}
-
-/* المحتوى */
-.wa-body {
-  padding: 15px;
-  font-size: 14px;
-  color: #333;
-}
-
-/* زر بدء المحادثة */
-.wa-start {
-  display: block;
-  text-align: center;
-  background: #25d366;
-  color: #fff;
-  padding: 12px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.wa-start:hover {
-  background: #1ebe5d;
-}
-
-/* Animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.wa-box.open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.about-section {
-  margin-top: 80px;
-}
-
-.about-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.about-col p {
-  line-height: 2;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-/* موبايل */
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.about-grid {
+.contact-layout {
   position: relative;
+  z-index: 2;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 60px;
 }
 
-/* الخط الذهبي */
-.about-grid::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #c9a24d,
-    transparent
-  );
-  transform: translateX(-50%);
+.contact-form-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* إخفاء الخط في الموبايل */
-@media (max-width: 768px) {
-  .about-grid::before {
-    display: none;
-  }
-}
-
-.about-col {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.about-col.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #0b1c2d; /* كحلي تقيل */
-  margin-bottom: 15px;
-  position: relative;
-  font-family: 'Playfair Display', 'Cairo', serif;
-}
-
-/* الخط الذهبي */
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #c9a24d;
-  margin: 12px auto 0;
-}
-
-.about-col p {
-  font-size: 17px;
-  font-weight: 600;        /* خط تقيل */
-  line-height: 1.9;        /* مريح للعين */
-  color: #1f2933;          /* رمادي غامق احترافي */
-  margin-bottom: 18px;
-  text-align: justify;
-  font-family: 'Cairo', sans-serif;
-}
-
-/* إنجليزي */
-html[lang="en"] .about-col p {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
-  .about-col p {
-    font-size: 16px;
-    line-height: 1.85;
-  }
-}
-
-/* ===== WhatsApp Gold Style ===== */
-
-/* زر واتساب */
-.wa-btn {
-  background-color: #c9a24d !important; /* ذهبي */
-  color: #ffffff;
-  box-shadow: 0 8px 20px rgba(201, 162, 77, 0.45);
-  transition: all 0.3s ease;
-}
-
-/* أيقونة واتساب */
-.wa-btn i {
-  color: #ffffff;
-  font-size: 22px;
-}
-
-/* Hover */
-.wa-btn:hover {
-  background-color: #b8923f; /* ذهبي أغمق */
-  transform: scale(1.05);
-}
-
-/* الهيدر داخل صندوق واتساب */
-.wa-header {
-  background: linear-gradient(135deg, #c9a24d, #b8923f);
+.contact-form-box input,
+.contact-form-box textarea,
+.contact-form-box select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding: 12px 0;
+  margin-bottom: 25px;
   color: #fff;
 }
 
-/* زر بدء المحادثة */
-.wa-start {
-  background-color: #c9a24d;
+/* ================= BUTTONS ================= */
+.contact-form-box button,
+.back-button {
+  background: var(--navy);
   color: #fff;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
   font-weight: 600;
-  border-radius: 6px;
+  transition: .3s;
 }
 
-.wa-start:hover {
-  background-color: #b8923f;
+.contact-form-box button:hover,
+.back-button:hover {
+  background: var(--gold);
+  color: #000;
 }
 
-.wa-chat,
-.wa-box,
-.wa-btn,
-.wa-header,
-.wa-start {
-  --whatsapp-green: transparent;
-}
-
-/* ===== WhatsApp Solid Gold Button ===== */
+/* ================= WHATSAPP ================= */
 .wa-btn {
   position: fixed;
   bottom: 20px;
@@ -874,649 +253,40 @@ html[lang="en"] .about-col p {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  box-shadow: 0 10px 25px rgba(201, 162, 77, 0.45);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(201,162,77,.45);
+  transition: .3s;
 }
 
-/* Solid Icon */
-.wa-btn i {
-  color: #ffffff;
-  font-size: 28px;
-}
-
-/* Hover */
 .wa-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 14px 30px rgba(201, 162, 77, 0.6);
 }
 
-/* ================= SECTION TITLES ================= */
-.section-title {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #444; /* رمادي غامق */
-  margin-bottom: 40px;
-  position: relative;
-  letter-spacing: 0.5px;
-}
-
-/* الخط الذهبي تحت العنوان */
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background-color: #c9a24d; /* ذهبي */
-  margin: 14px auto 0;
-  border-radius: 2px;
-}
-
-/* موبايل */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 24px;
-    margin-bottom: 30px;
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: var(--navy);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    padding: 20px;
   }
 
-  .section-title::after {
-    width: 60px;
+  .nav.open { display: flex; }
+
+  .hero-overlay {
+    padding: 40px 20px;
+    text-align: center;
   }
-}
 
-/* ===== Luxury Hero ===== */
+  .hero-overlay h1 { font-size: 30px; }
+  .hero-overlay p { font-size: 16px; }
 
-.luxury-hero {
-  position: relative;
-  background: url('../images/law-bg.jpg') center/cover no-repeat;
-  padding: 140px 0 100px;
-  text-align: center;
-  color: #fff;
-}
+  .team-grid { grid-template-columns: 1fr; }
 
-.luxury-hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10,20,35,0.85);
-}
+  .contact-layout { grid-template-columns: 1fr; }
 
-.luxury-hero .hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.breadcrumb {
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.breadcrumb a {
-  color: #c9a24d;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-
-.luxury-hero h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  animation: fadeUp 1s ease forwards;
-}
-
-.gold-line {
-  width: 80px;
-  height: 3px;
-  background: #c9a24d;
-  margin: 15px auto 0;
-}
-
-/* ===== Practice Content ===== */
-
-.practice-content {
-  padding: 80px 0;
-  font-size: 18px;
-  line-height: 1.9;
-  animation: fadeUp 1.2s ease forwards;
-}
-
-.practice-content ul {
-  margin-top: 30px;
-  list-style: none;
-  padding: 0;
-}
-
-.practice-content li {
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  border-left: 4px solid #c9a24d;
-  background: #f8f8f8;
-  transition: all 0.3s ease;
-}
-
-html[dir="rtl"] .practice-content li {
-  border-left: none;
-  border-right: 4px solid #c9a24d;
-}
-
-.practice-content li:hover {
-  background: #fff;
-  transform: translateX(-5px);
-}
-
-html[dir="rtl"] .practice-content li:hover {
-  transform: translateX(5px);
-}
-
-/* ===== Back Button ===== */
-
-.back-button {
-  background: #0b1c2d;
-  color: #fff;
-  border: none;
-  padding: 12px 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.back-button:hover {
-  background: #c9a24d;
-  color: #000;
-}
-
-/* ===== Animation ===== */
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== News Section ===== */
-
-.news-section {
-  padding: 100px 0;
-}
-
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-}
-
-.news-card {
-  background: #fff;
-  border: 1px solid #eee;
-  overflow: hidden;
-  transition: 0.4s ease;
-}
-
-.news-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-}
-
-.news-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-.news-content {
-  padding: 25px;
-}
-
-.news-date {
-  font-size: 14px;
-  color: #c9a24d;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.news-content h3 {
-  font-size: 20px;
-  color: #1a1a1a;
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-.news-content p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.9;
-  margin-bottom: 20px;
-}
-
-.read-more {
-  display: inline-block;
-  font-weight: 600;
-  color: #c9a24d;
-  text-decoration: none;
-  position: relative;
-}
-
-.read-more::after {
-  content: "→";
-  margin-inline-start: 8px;
-  transition: 0.3s;
-}
-
-.read-more:hover::after {
-  margin-inline-start: 14px;
-}
-
-/* ===== News Layout ===== */
-
-.news-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 50px;
-  padding: 100px 0;
-}
-
-@media(max-width: 992px){
-  .news-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Featured */
-
-.featured-news img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-}
-
-.featured-content {
-  padding: 30px 0;
-}
-
-.featured-content h2 {
-  font-size: 28px;
-  margin: 15px 0;
-  line-height: 1.6;
-}
-
-/* Side News */
-
-.side-news {
-  border-left: 1px solid #eee;
-  padding-left: 30px;
-}
-
-html[dir="rtl"] .side-news {
-  border-left: none;
-  border-right: 1px solid #eee;
-  padding-left: 0;
-  padding-right: 30px;
-}
-
-.side-item {
-  margin-bottom: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.side-item:hover h4 {
-  color: #c9a24d;
-}
-
-.side-item h4 {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Pagination */
-
-.pagination {
-  text-align: center;
-  margin: 50px 0;
-}
-
-.pagination a {
-  display: inline-block;
-  padding: 8px 14px;
-  margin: 0 5px;
-  border: 1px solid #ddd;
-  text-decoration: none;
-  color: #333;
-}
-
-.pagination a.active,
-.pagination a:hover {
-  background: #c9a24d;
-  color: #000;
-}
-
-/* ===== Contact Hero ===== */
-
-.contact-hero {
-  position: relative;
-  background: url('../images/contact-bg.jpg') center/cover no-repeat;
-  padding: 140px 0;
-  color: #fff;
-}
-
-.contact-hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(10, 30, 60, 0.75);
-}
-
-.contact-layout {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-@media(max-width: 992px){
-  .contact-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Text */
-
-.contact-text h1 {
-  font-size: 32px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.contact-text p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  line-height: 1.9;
-}
-
-.view-more {
-  display: inline-block;
-  padding: 12px 25px;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  border-radius: 30px;
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.view-more:hover {
-  background: #c9a24d;
-  color: #000;
-}
-
-/* Glass Form */
-
-.contact-form-box {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(15px);
-  padding: 40px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-/* Inputs */
-
-.contact-form-box input,
-.contact-form-box select,
-.contact-form-box textarea {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  padding: 12px 0;
-  margin-bottom: 25px;
-  color: #fff;
-  font-size: 15px;
-}
-
-.contact-form-box input::placeholder,
-.contact-form-box textarea::placeholder {
-  color: rgba(255,255,255,0.7);
-}
-
-.contact-form-box select {
-  color: #fff;
-}
-
-.form-row {
-  display: flex;
-  gap: 20px;
-}
-
-.form-row input {
-  flex: 1;
-}
-
-/* Button */
-
-.contact-form-box button {
-  width: 100%;
-  padding: 14px;
-  background: #0b1c2d;
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.contact-form-box button:hover {
-  background: #c9a24d;
-  color: #000;
-}
-
-/* Floating Labels */
-
-.floating-group {
-  position: relative;
-  margin-bottom: 25px;
-}
-
-.floating-group input,
-.floating-group textarea,
-.floating-group select {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255,255,255,0.5);
-  padding: 12px 0;
-  color: #fff;
-  font-size: 15px;
-}
-
-.floating-group label {
-  position: absolute;
-  top: 12px;
-  right: 0;
-  font-size: 14px;
-  color: rgba(255,255,255,0.7);
-  transition: 0.3s;
-  pointer-events: none;
-}
-
-html[dir="ltr"] .floating-group label {
-  right: auto;
-  left: 0;
-}
-
-.floating-group input:focus + label,
-.floating-group input:not(:placeholder-shown) + label,
-.floating-group textarea:focus + label,
-.floating-group textarea:not(:placeholder-shown) + label,
-.floating-group select:focus + label,
-.floating-group select:valid + label {
-  top: -10px;
-  font-size: 12px;
-  color: #c9a24d;
-}
-
-/* Phone Group */
-
-.phone-group {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.phone-group select {
-  background: rgba(255,255,255,0.1);
-  border: none;
-  padding: 10px;
-  color: #fff;
-}
-
-/* Upload */
-
-.upload-box {
-  border: 2px dashed rgba(255,255,255,0.4);
-  padding: 30px;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 25px;
-  transition: 0.3s;
-}
-
-.upload-box:hover {
-  border-color: #c9a24d;
-  background: rgba(255,255,255,0.05);
-}
-
-/* Button */
-
-.contact-form-box button {
-  width: 100%;
-  padding: 14px;
-  background: #0b1c2d;
-  border: none;
-  color: #fff;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.contact-form-box button:hover {
-  background: #c9a24d;
-  color: #000;
-}
-
-.video-thumb {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.video-thumb img {
-  width: 100%;
-  display: block;
-  transition: 0.4s;
-}
-
-.video-thumb:hover img {
-  transform: scale(1.08);
-}
-
-.play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 15px 20px;
-  border-radius: 50%;
-}
-
-.video-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal-content {
-  width: 90%;
-  max-width: 800px;
-  position: relative;
-}
-
-.modal-content iframe {
-  width: 100%;
-  height: 450px;
-}
-
-.close-modal {
-  position: absolute;
-  top: -40px;
-  right: 0;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-}
-
-/* ===== ABOUT US SECTION ===== */
-.about-us-section {
-  padding: 100px 0;
-  background: #fff;
-}
-
-.about-us-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.about-us-image img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.about-us-content p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* زر التفاعل */
-.btn-primary {
-  display: inline-block;
-  background: var(--gold);
-  color: #000;
-  padding: 12px 30px;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: #b8963f;
-  color: #000;
-}
-
-/* Responsive */
-@media(max-width: 992px) {
-  .about-us-grid {
-    grid-template-columns: 1fr;
-  }
 }
