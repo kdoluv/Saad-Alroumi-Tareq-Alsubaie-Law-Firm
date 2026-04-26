@@ -1621,3 +1621,16 @@ height:auto;
 .about-modern {
   background: linear-gradient(to bottom, #ffffff, #f8f8f8);
 }
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  margin: 0 40px;
+}
