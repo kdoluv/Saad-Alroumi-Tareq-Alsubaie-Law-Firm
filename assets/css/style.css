@@ -1525,3 +1525,97 @@ height:auto;
 }
 
 }
+
+/* ===== ABOUT MODERN ===== */
+.about-modern {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* TEXT */
+.about-text h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: #0b1c2d;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #c9a24d;
+  display: block;
+  margin-top: 10px;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 2;
+  margin-bottom: 20px;
+  color: #444;
+  text-align: justify;
+}
+
+/* BUTTON */
+.about-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 25px;
+  background: #c9a24d;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #b8923f;
+}
+
+/* IMAGE */
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image {
+    order: -1; /* الصورة فوق */
+  }
+
+  .about-text h2 {
+    text-align: center;
+  }
+
+  .about-text p {
+    text-align: justify;
+  }
+
+  .about-btn {
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto 0;
+  }
+}
+
+.about-modern {
+  background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+}
