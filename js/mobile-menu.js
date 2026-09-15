@@ -1,38 +1,131 @@
-const menuBtn = document.getElementById('menuBtn');
-const nav = document.getElementById('mainNav');
-const dropdowns = document.querySelectorAll('.dropdown');
+document.addEventListener('DOMContentLoaded', function () {
 
-menuBtn.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  menuBtn.classList.toggle('active');
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mainNav');
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
 
-  // 🔁 إعادة تطبيق اللغة بعد فتح المينيو
-  const currentLang = localStorage.getItem('siteLang') || 'ar';
-  if (typeof setLanguage === 'function') {
-    setLanguage(currentLang);
+  // =========================
+  // فتح وإغلاق القائمة الرئيسية
+  // =========================
+
+  if (menuBtn && nav) {
+
+    menuBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      nav.classList.toggle('open');
+      menuBtn.classList.toggle('active');
+
+    });
+
   }
 
-  // ❌ اقفل أي dropdown مفتوحة
-  dropdowns.forEach(d => d.classList.remove('open'));
-});
 
-// قفل القائمة بعد الضغط على أي لينك
-nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', (e) => {
+  // =========================
+  // القائمة المنسدلة
+  // =========================
 
-    // لو زر dropdown (الممارسات) → ما تقفلش المينيو
-    if (link.classList.contains('dropdown-toggle')) {
+  if (dropdown && dropdownToggle) {
+
+    dropdownToggle.addEventListener('click', function (e) {
+
+      // في الكمبيوتر نعتمد على Hover
+      if (window.innerWidth > 768) {
+        return;
+      }
+
       e.preventDefault();
-      link.parentElement.classList.toggle('open');
+      e.stopPropagation();
+
+      dropdown.classList.toggle('open');
+
+    });
+
+  }
+
+
+  // =========================
+  // روابط القائمة
+  // =========================
+
+  if (nav) {
+
+    const navLinks = nav.querySelectorAll('a');
+
+    navLinks.forEach(function (link) {
+
+      link.addEventListener('click', function (e) {
+
+        // زر الممارسات القانونية لا يغلق القائمة
+        if (
+          link.classList.contains('dropdown-toggle') &&
+          window.innerWidth <= 768
+        ) {
+          return;
+        }
+
+        // أي رابط آخر يغلق القائمة
+        nav.classList.remove('open');
+
+        if (menuBtn) {
+          menuBtn.classList.remove('active');
+        }
+
+        if (dropdown) {
+          dropdown.classList.remove('open');
+        }
+
+      });
+
+    });
+
+  }
+
+
+  // =========================
+  // الضغط خارج القائمة
+  // =========================
+
+  document.addEventListener('click', function (e) {
+
+    if (!nav || !menuBtn) return;
+
+    // إذا كان الضغط داخل الهيدر لا نفعل شيئاً
+    if (
+      nav.contains(e.target) ||
+      menuBtn.contains(e.target)
+    ) {
       return;
     }
 
-    // أي لينك عادي
     nav.classList.remove('open');
     menuBtn.classList.remove('active');
 
-    document.querySelectorAll('.dropdown').forEach(d => {
-      d.classList.remove('open');
-    });
+    if (dropdown) {
+      dropdown.classList.remove('open');
+    }
+
   });
+
+
+  // =========================
+  // عند تغيير حجم الشاشة
+  // =========================
+
+  window.addEventListener('resize', function () {
+
+    if (window.innerWidth > 768) {
+
+      nav.classList.remove('open');
+      menuBtn.classList.remove('active');
+
+      if (dropdown) {
+        dropdown.classList.remove('open');
+      }
+
+    }
+
+  });
+
 });
