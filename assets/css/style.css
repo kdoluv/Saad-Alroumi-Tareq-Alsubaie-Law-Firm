@@ -2082,18 +2082,6 @@ html[dir="ltr"] .founder-info h3 {
 
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav > a,
-.nav > .dropdown {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
 
 .dropdown {
   position: relative;
@@ -2105,4 +2093,10 @@ html[dir="ltr"] .founder-info h3 {
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 38px;
 }
