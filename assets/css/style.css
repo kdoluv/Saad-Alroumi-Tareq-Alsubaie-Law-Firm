@@ -2100,3 +2100,10 @@ html[dir="ltr"] .founder-info h3 {
   align-items: center;
   gap: 38px;
 }
+
+.nav > a,
+.nav > .dropdown {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
