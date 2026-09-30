@@ -1,720 +1,614 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية</title>
+  <meta name="description" content="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية في الكويت. محاماة واستشارات قانونية وتحكيم منذ عام 1982.">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "مكتب سعد الرومي وطارق السبيعي للمحاماة",
-  "url": "https://www.st-lawyers.com",
-  "logo": "https://www.st-lawyers.com/assets/images/logo.png",
-  "image": "https://www.st-lawyers.com/assets/images/logo.png",
-  "telephone": "+96522435001",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+96595571635",
-    "contactType": "customer service",
-    "areaServed": "KW",
-    "availableLanguage": ["Arabic", "English"]
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "KW"
+  {
+    "@context":"https://schema.org",
+    "@type":"LegalService",
+    "name":"مكتب سعد الرومي وطارق السبيعي للمحاماة",
+    "url":"https://www.st-lawyers.com",
+    "logo":"https://www.st-lawyers.com/assets/images/logo.png",
+    "telephone":"+96522435001",
+    "areaServed":"KW",
+    "availableLanguage":["Arabic","English"],
+    "address":{"@type":"PostalAddress","addressCountry":"KW"}
   }
-}
-</script>
- 
+  </script>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-flex">
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="ST Lawyers">
+      <img src="assets/images/logo.png" alt="ST Lawyers">
+    </a>
 
-    <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
-
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
 
-    <nav class="nav" id="mainNav">
+    <nav class="main-nav" id="mainNav">
       <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
       <a href="#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a>
-      <a href="#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
-<!-- الممارسات القانونية -->
-<div class="dropdown">
-  <a href="#"
-     class="dropdown-toggle"
-     data-ar="الممارسات القانونية ▾"
-     data-en="Practice Areas ▾">
-    الممارسات القانونية ▾
-  </a>
 
-  <div class="dropdown-menu">
-    <a href="practice-criminal.html"
-       data-ar="القسم الجنائي"
-       data-en="Criminal Law">
-      القسم الجنائي
-    </a>
+      <div class="nav-dropdown dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          <span data-ar="الممارسات القانونية" data-en="Practice Areas">الممارسات القانونية</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
 
-    <a href="practice-civil.html"
-       data-ar="القسم المدني"
-       data-en="Civil Law">
-      القسم المدني
-    </a>
-
-    <a href="practice-commercial.html"
-       data-ar="القسم التجاري"
-       data-en="Commercial Law">
-      القسم التجاري
-    </a>
-
-    <div class="dropdown-menu">
-    <a href="practice-real-estate.html"
-       data-ar="العقارات والايجارات"
-       data-en="Real-Estate">
-      العقارات والايجارات
-    </a>
-      
-    <a href="practice-labor.html"
-       data-ar="القسم العمالي"
-       data-en="Labor Law">
-      القسم العمالي
-    </a>
-
-    <a href="practice-family.html"
-       data-ar="الأحوال الشخصية"
-       data-en="Personal Status Law">
-      الأحوال الشخصية
-    </a>
-
-    <a href="practice-arbitration.html"
-       data-ar="التحكيم"
-       data-en="Arbitration">
-      التحكيم
-    </a>
-  </div>
-</div>
-
-    <a href="news.html"data-ar="أخبار المكتب" data-en="News">أخبار المكتب</a>
-    <a href="#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
-
-    </nav>
-    
-      <div class="lang-switcher">
-        <button onclick="setLanguage('ar')">AR</button>
-        <button onclick="setLanguage('en')">EN</button>
+        <div class="dropdown-menu">
+          <a href="practice-criminal.html" data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</a>
+          <a href="practice-civil.html" data-ar="القسم المدني" data-en="Civil Law">القسم المدني</a>
+          <a href="practice-commercial.html" data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</a>
+          <a href="practice-real-estate.html" data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</a>
+          <a href="practice-labor.html" data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</a>
+          <a href="practice-family.html" data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</a>
+          <a href="practice-arbitration.html" data-ar="التحكيم" data-en="Arbitration">التحكيم</a>
+        </div>
       </div>
 
+      <a href="#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a>
+      <a href="news.html" data-ar="أخبار المكتب" data-en="News & Insights">أخبار المكتب</a>
+      <a href="#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
+    </nav>
+
+    <div class="lang-switcher" aria-label="Language">
+      <button type="button" class="active" onclick="changeLanguage('ar')">AR</button>
+      <span>/</span>
+      <button type="button" onclick="changeLanguage('en')">EN</button>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-overlay">
-    <!-- اسم المكتب -->
-    <div class="firm-title animate-title">
-      <h1
-        data-ar=" مكتب سعد الرومي وطارق السبيعي"
-        data-en="Saad Alroomi & Tareq Al-Subaie">
-        مكتب سعد الرومي وطارق السبيعي
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero-editorial" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-shade"></div>
+
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <span class="eyebrow" data-ar="مكتب محاماة كويتي منذ 1982" data-en="Kuwaiti Law Firm Since 1982">مكتب محاماة كويتي منذ 1982</span>
+
+      <h1 data-ar="سعد الرومي<br>وطارق السبيعي" data-en="Saad Alroomi<br>&amp; Tareq Al-Subaie">
+        سعد الرومي<br>وطارق السبيعي
       </h1>
-      <div class="gold-line"></div>
-    </div>
-    <!-- الوصف -->
-    <p
-      data-ar="محاماة – استشارات قانونية – تحكيم"
-      data-en="Litigation – Legal Consulting – Arbitration">
-      محاماة – استشارات قانونية – تحكيم
-    </p>
 
-  </div>
-</section>
+      <div class="gold-rule"></div>
 
-<!-- ABOUT US SECTION -->
-<section class="about-modern">
-  <div class="container about-wrapper">
-
-    <!-- صورة القسم -->
-<div class="about-image">
-  <img src="assets/images/Kuwait.gif" alt="عن المكتب">
-</div>
-
-    <!-- نص القسم -->
-<div class="about-content">
- <h2 class="section-title"
-     data-ar="عن المكتب"
-     data-en="About Us">
-          عن المكتب
-      </h2>
-
-     <p data-ar="تَأَسَّسَ مَكْتَبُ المحاميان سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء كانت للشركات أو الأفراد، وبدأ نشاطه في القضايا التجارية وفروعها وكذلك القضايا المدنية."
-        data-en="Saad Alroomi & Tareq Alsubaie Law Firm was established in 1982 and has since handled a wide range of cases for both corporate clients and individuals, beginning with commercial and civil matters.">
-        تَأَسَّسَ مَكْتَبُ المحاميان سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء كانت للشركات أو الأفراد، وبدأ نشاطه في القضايا التجارية وفروعها وكذلك القضايا المدنية.
-    </p>
-
-      <p data-ar="وخلال تلك السنوات كوّن المكتب علاقات مهنية واسعة كان لها مردود إيجابي في تحقيق أفضل النتائج موكليه."
-         data-en="Over the years, the firm has developed extensive professional relationships that contributed positively to achieving optimal results for its clients.">
-         وخلال تلك السنوات كوّن المكتب علاقات مهنية واسعة كان لها مردود إيجابي في تحقيق أفضل النتائج موكليه.
+      <p data-ar="محاماة • استشارات قانونية • تحكيم" data-en="Litigation • Legal Consulting • Arbitration">
+        محاماة • استشارات قانونية • تحكيم
       </p>
 
-      <p data-ar="كما توسع نطاق عمل المكتب ليشمل القضايا الجنائية، وقضايا سوق المال، والتحكيم، بالإضافة إلى القضايا العمالية والإيجارات."
-         data-en="The firm’s practice expanded to include criminal litigation, capital markets, arbitration, labor law, and lease disputes.">
-         كما توسع نطاق عمل المكتب ليشمل القضايا الجنائية، وقضايا سوق المال، والتحكيم، بالإضافة إلى القضايا العمالية والإيجارات.
-      </p>
-
-      <p data-ar="ويستعين المكتب بنخبة من الكفاءات القانونية المتخصصة في إجراءات التنفيذ والمتابعة أمام المحاكم والجهات الرسمية، بما يضمن تقديم خدمة قانونية متكاملة."
-         data-en="The firm is supported by a team of qualified legal professionals specialized in enforcement procedures and administrative follow-up before courts and official authorities.">
-         ويستعين المكتب بنخبة من الكفاءات القانونية المتخصصة في إجراءات التنفيذ والمتابعة أمام المحاكم والجهات الرسمية، بما يضمن تقديم خدمة قانونية متكاملة.
-      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#contact" data-ar="تواصل معنا" data-en="Get in Touch">تواصل معنا</a>
+        <a class="btn btn-outline" href="#practice" data-ar="مجالات الممارسة" data-en="Practice Areas">مجالات الممارسة</a>
+      </div>
     </div>
 
+    <div class="hero-side-note">
+      <span>01</span>
+      <div></div>
+      <small data-ar="خبرة قانونية راسخة<br>وخدمة متكاملة" data-en="Established legal expertise<br>and integrated service">
+        خبرة قانونية راسخة<br>وخدمة متكاملة
+      </small>
+    </div>
   </div>
+
+  <a class="scroll-down" href="#about" aria-label="Scroll">
+    <span data-ar="اكتشف المزيد" data-en="Discover more">اكتشف المزيد</span>
+    <i class="fa-solid fa-arrow-down"></i>
+  </a>
 </section>
-  
-<!-- TEAM -->
-<section id="team" class="team-section container">
 
- <!-- ================= FOUNDERS ================= -->
-<section class="founders-section" id="founders">
-
+<!-- ================= INTRO / ABOUT ================= -->
+<section class="about-modern" id="about">
   <div class="container">
-
-    <div class="founders-heading">
-      <span class="section-kicker"
-            data-ar="قيادة المكتب"
-            data-en="THE FIRM'S LEADERSHIP">
-        قيادة المكتب
-      </span>
-
-      <h2
-        data-ar="الشركاء والمؤسسون"
-        data-en="Partners & Founders">
-        الشركاء والمؤسسون
+    <div class="section-heading">
+      <span class="eyebrow dark" data-ar="عن المكتب" data-en="ABOUT THE FIRM">عن المكتب</span>
+      <h2 data-ar="خبرة قانونية ممتدة لأكثر من أربعة عقود" data-en="More than four decades of legal experience">
+        خبرة قانونية ممتدة لأكثر من أربعة عقود
       </h2>
-
-      <div class="founders-line"></div>
-
-      <p
-        data-ar="خبرة قانونية راسخة منذ عام 1982"
-        data-en="Established legal expertise since 1982">
-        خبرة قانونية راسخة منذ عام 1982
+      <p data-ar="منذ تأسيس المكتب عام 1982، نعمل على تقديم خدمات قانونية متكاملة للشركات والأفراد في دولة الكويت."
+         data-en="Since 1982, we have provided integrated legal services to corporate and individual clients in Kuwait.">
+        منذ تأسيس المكتب عام 1982، نعمل على تقديم خدمات قانونية متكاملة للشركات والأفراد في دولة الكويت.
       </p>
     </div>
 
+    <div class="about-grid-premium">
+      <div class="about-image-frame">
+        <img src="assets/images/Kuwait.gif" alt="عن مكتب سعد الرومي وطارق السبيعي">
+        <div class="image-caption">
+          <strong>1982</strong>
+          <span data-ar="عام التأسيس" data-en="Year established">عام التأسيس</span>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <div class="about-number">40+</div>
+        <div class="about-text">
+          <p data-ar="تَأَسَّسَ مَكْتَبُ المحاميين سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء كانت للشركات أو الأفراد، وبدأ نشاطه في القضايا التجارية وفروعها وكذلك القضايا المدنية."
+             data-en="Saad Alroomi & Tareq Alsubaie Law Firm was established in 1982 and has since handled a wide range of matters for corporate and individual clients, beginning with commercial and civil work.">
+            تَأَسَّسَ مَكْتَبُ المحاميين سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء كانت للشركات أو الأفراد، وبدأ نشاطه في القضايا التجارية وفروعها وكذلك القضايا المدنية.
+          </p>
+
+          <p data-ar="وخلال تلك السنوات كوّن المكتب علاقات مهنية واسعة كان لها مردود إيجابي في تحقيق أفضل النتائج لموكليه."
+             data-en="Over the years, the firm has developed extensive professional relationships that have supported the interests and objectives of its clients.">
+            وخلال تلك السنوات كوّن المكتب علاقات مهنية واسعة كان لها مردود إيجابي في تحقيق أفضل النتائج لموكليه.
+          </p>
+
+          <p data-ar="كما توسع نطاق عمل المكتب ليشمل القضايا الجنائية، وقضايا سوق المال، والتحكيم، بالإضافة إلى القضايا العمالية والإيجارات، مع فريق متخصص في إجراءات التنفيذ والمتابعة أمام المحاكم والجهات الرسمية."
+             data-en="The firm's practice has expanded to criminal litigation, capital markets, arbitration, labor matters and lease disputes, supported by a specialized team handling enforcement and follow-up before courts and official authorities.">
+            كما توسع نطاق عمل المكتب ليشمل القضايا الجنائية، وقضايا سوق المال، والتحكيم، بالإضافة إلى القضايا العمالية والإيجارات، مع فريق متخصص في إجراءات التنفيذ والمتابعة أمام المحاكم والجهات الرسمية.
+          </p>
+        </div>
+
+        <a href="#team" class="text-link" data-ar="تعرف على فريق العمل" data-en="Meet our team">تعرف على فريق العمل <i class="fa-solid fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRACTICE AREAS ================= -->
+<section class="practice-section" id="practice">
+  <div class="container">
+    <div class="section-heading centered">
+      <span class="eyebrow dark" data-ar="مجالات العمل" data-en="OUR EXPERTISE">مجالات العمل</span>
+      <h2 data-ar="مجالات الممارسة القانونية" data-en="Practice Areas">مجالات الممارسة القانونية</h2>
+      <p data-ar="نقدم خدمات قانونية متخصصة تغطي مجموعة واسعة من المجالات والاحتياجات القانونية."
+         data-en="We provide specialized legal services across a broad range of legal needs and practice areas.">
+        نقدم خدمات قانونية متخصصة تغطي مجموعة واسعة من المجالات والاحتياجات القانونية.
+      </p>
+    </div>
+
+    <div class="practice-grid">
+      <a class="practice-card" href="practice-criminal.html">
+        <span class="practice-index">01</span>
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h3 data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</h3>
+        <p data-ar="تمثيل ومتابعة القضايا والإجراءات الجنائية." data-en="Representation and legal support in criminal matters.">تمثيل ومتابعة القضايا والإجراءات الجنائية.</p>
+        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a class="practice-card" href="practice-civil.html">
+        <span class="practice-index">02</span>
+        <i class="fa-solid fa-gavel"></i>
+        <h3 data-ar="القسم المدني" data-en="Civil Law">القسم المدني</h3>
+        <p data-ar="استشارات وتمثيل في المنازعات والحقوق المدنية." data-en="Advice and representation in civil disputes and rights.">استشارات وتمثيل في المنازعات والحقوق المدنية.</p>
+        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a class="practice-card" href="practice-commercial.html">
+        <span class="practice-index">03</span>
+        <i class="fa-solid fa-building-columns"></i>
+        <h3 data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</h3>
+        <p data-ar="حلول قانونية للمسائل والمعاملات التجارية والشركات." data-en="Legal solutions for commercial and corporate matters.">حلول قانونية للمسائل والمعاملات التجارية والشركات.</p>
+        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a class="practice-card" href="practice-real-estate.html">
+        <span class="practice-index">04</span>
+        <i class="fa-solid fa-city"></i>
+        <h3 data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</h3>
+        <p data-ar="استشارات ومنازعات الملكية والإيجارات والمسائل العقارية." data-en="Advice and representation in property and lease matters.">استشارات ومنازعات الملكية والإيجارات والمسائل العقارية.</p>
+        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a class="practice-card" href="practice-labor.html">
+        <span class="practice-index">05</span>
+        <i class="fa-solid fa-briefcase"></i>
+        <h3 data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</h3>
+        <p data-ar="معالجة المنازعات والحقوق والالتزامات العمالية." data-en="Advice and representation in employment matters and disputes.">معالجة المنازعات والحقوق والالتزامات العمالية.</p>
+        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a class="practice-card" href="practice-family.html">
+        <span class="practice-index">06</span>
+        <i class="fa-solid fa-people-roof"></i>
+        <h3 data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</h3>
+        <p data-ar="خدمات قانونية متخصصة في مسائل الأحوال الشخصية." data-en="Specialized legal services in personal status matters.">خدمات قانونية متخصصة في مسائل الأحوال الشخصية.</p>
+        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+
+      <a class="practice-card featured" href="practice-arbitration.html">
+        <span class="practice-index">07</span>
+        <i class="fa-solid fa-comments"></i>
+        <h3 data-ar="التحكيم" data-en="Arbitration">التحكيم</h3>
+        <p data-ar="تمثيل الأطراف وتقديم الاستشارات في إجراءات التحكيم." data-en="Representation and advice throughout arbitration proceedings.">تمثيل الأطراف وتقديم الاستشارات في إجراءات التحكيم.</p>
+        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUNDERS ================= -->
+<section class="founders-section" id="founders">
+  <div class="container">
+    <div class="section-heading centered light">
+      <span class="eyebrow" data-ar="قيادة المكتب" data-en="THE FIRM'S LEADERSHIP">قيادة المكتب</span>
+      <h2 data-ar="الشركاء والمؤسسون" data-en="Partners & Founders">الشركاء والمؤسسون</h2>
+      <p data-ar="خبرة قانونية راسخة منذ عام 1982" data-en="Established legal expertise since 1982">خبرة قانونية راسخة منذ عام 1982</p>
+    </div>
 
     <div class="founders-grid">
-
-      <!-- سعد الرومي -->
-      <div class="founder-profile">
-
+      <article class="founder-profile">
         <div class="founder-photo-wrap">
-          <div class="founder-photo">
-            <img
-              src="assets/images/Saad.jpg"
-              alt="Saad Alroomi">
-          </div>
+          <div class="founder-photo"><img src="assets/images/Saad.jpg" alt="Saad Alroomi"></div>
         </div>
-
         <div class="founder-info">
-
-          <h3
-            data-ar="الأستاذ سعد الرومي"
-            data-en="Mr. Saad Alroomi">
-            الأستاذ سعد الرومي
-          </h3>
-
-          <span
-            data-ar="شريك مؤسس – محامٍ"
-            data-en="Founding Partner – Lawyer">
-            شريك مؤسس – محامٍ
-          </span>
-
-          <div class="founder-divider"></div>
-
+          <span class="role" data-ar="شريك مؤسس – محامٍ" data-en="Founding Partner – Lawyer">شريك مؤسس – محامٍ</span>
+          <h3 data-ar="الأستاذ سعد الرومي" data-en="Mr. Saad Alroomi">الأستاذ سعد الرومي</h3>
         </div>
+      </article>
 
-      </div>
-
-
-      <!-- طارق السبيعي -->
-      <div class="founder-profile">
-
+      <article class="founder-profile">
         <div class="founder-photo-wrap">
-          <div class="founder-photo">
-            <img
-              src="assets/images/Tareq.jpg"
-              alt="Tareq Alsubaie">
-          </div>
+          <div class="founder-photo"><img src="assets/images/Tareq.jpg" alt="Tareq Alsubaie"></div>
         </div>
-
         <div class="founder-info">
-
-          <h3
-            data-ar="الأستاذ طارق السبيعي"
-            data-en="Mr. Tareq Alsubaie">
-            الأستاذ طارق السبيعي
-          </h3>
-
-          <span
-            data-ar="شريك مؤسس – محامٍ"
-            data-en="Founding Partner – Lawyer">
-            شريك مؤسس – محامٍ
-          </span>
-
-          <div class="founder-divider"></div>
-
+          <span class="role" data-ar="شريك مؤسس – محامٍ" data-en="Founding Partner – Lawyer">شريك مؤسس – محامٍ</span>
+          <h3 data-ar="الأستاذ طارق السبيعي" data-en="Mr. Tareq Alsubaie">الأستاذ طارق السبيعي</h3>
         </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-  <!-- Management -->
-  <div class="team-group">
-    <h2 data-ar="الإدارة" data-en="Management">الإدارة</h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <h3 data-ar="الأستاذ يوسف مساعد السبيعي" data-en="Mr. Yousef Musaed Alsubaie">الأستاذ يوسف مساعد السبيعي</h3>
-        <span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer - General Management">محامٍ – الإدارة العامة</span>
-      </div>
-      <div class="team-card">
-        <h3 data-ar="الأستاذ عبد اللطيف طارق السبيعي" data-en="Mr. Abdullateef Tareq Alsubaie">الأستاذ عبد اللطيف طارق السبيعي</h3>
-        <span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer - General Management">محامٍ – الإدارة العامة</span>
-      </div>
+      </article>
     </div>
   </div>
-
-  <!-- Legal Consultants -->
-  <div class="team-group">
-    <h2 data-ar="المستشارون" data-en="Legal Consultants">المستشارون</h2>
-    <div class="team-grid">
-      <div class="team-card consultant">
-        <h3 data-ar="الأستاذ محمود محمد الشامي" data-en="Mr. Mahmoud Mohamed Elshami">الأستاذ محمود محمد الشامي</h3>
-        <span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span>
-      </div>
-      <div class="team-card consultant">
-        <h3 data-ar="الاستاذ هشام محمد العويل" data-en="Mr. Hesham Mohamed Alaweel">الأستاذ هشام محمد العويل</h3>
-        <span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span>
-      </div>
-      <div class="team-card consultant">
-        <h3 data-ar="الأستاذ عبد الفتاح سعد سليمان" data-en="Mr. Abdulfatah Saad Suliman">الأستاذ عبد الفتاح سعد سليمان</h3>
-        <span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span>
-      </div>
-    </div>
-  </div>
-
-<!-- قسم المحاكم والتنفيذ / Courts & Execution Department -->
-<div class="team-group courts">
-  <h2 data-ar="قسم المحاكم والتنفيذ" data-en="Courts & Execution Department">
-    قسم المحاكم والتنفيذ
-  </h2>
-  <div class="team-grid">
-    <div class="team-card">
-      <h3 data-ar="الأستاذ محمود اسماعيل السيد" data-en="Mr. Mahmoud Ismail El-Sayed">
-        الأستاذ محمود اسماعيل السيد
-      </h3>
-      <span data-ar="رئيس قسم المتابعة والتنفيذ" data-en="Head of Follow-up & Execution">
-        رئيس قسم المتابعة والتنفيذ
-      </span>
-    </div>
-    <div class="team-card">
-      <h3 data-ar="الأستاذ عبد الواحد عبد السلام نصر" data-en="Mr. Abdulwahed Abdelsalam Nasr">
-        الأستاذ عبد الواحد عبد السلام نصر
-      </h3>
-      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
-        مسئول المتابعة والتنفيذ
-      </span>
-    </div>
-    <div class="team-card">
-      <h3 data-ar="الأستاذ محمد حسن عبد المجيد" data-en="Mr. Mohamed Hassan Abdelmageed">
-        الأستاذ محمد حسن عبد المجيد
-      </h3>
-      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
-        مسئول المتابعة والتنفيذ
-      </span>
-    </div>
-    <div class="team-card">
-      <h3 data-ar="الأستاذ عصمت عبد البصير بحر" data-en="Mr. Esmat Abdelbasir Bahr">
-        الأستاذ عصمت عبد البصير بحر
-      </h3>
-      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
-        مسئول المتابعة والتنفيذ
-      </span>
-    </div>
-    <div class="team-card">
-      <h3 data-ar="الأستاذ معتز حمدي العنتبلي" data-en="Mr. Moataz Hamdi Al-Entably">
-        الأستاذ معتز حمدي العنتبلي
-      </h3>
-      <span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">
-        مسئول المتابعة والتنفيذ
-      </span>
-    </div>
-  </div>
-</div>
-
-<!-- القسم الإداري -->
-<div class="team-group admin">
-  <h2 data-ar="القسم الإداري" data-en="Administrative Department">القسم الإداري</h2>
-  <div class="team-grid">
-    <div class="team-card">
-      <h3 data-ar="الأستاذ أحمد مصطفى الحسانين" data-en="MR. Ahmed Mostafa Alhasanin">الأستاذ أحمد مصطفى الحسانين</h3>
-      <span data-ar="سكرتير تنفيذي" data-en="Executive Secretary">سكرتير تنفيذي</span>
-    </div>
-    <div class="team-card">
-      <h3 data-ar="الأستاذ يحيى عبد الله المهري" data-en="Mr. Yehya Abdullah Almehri">الأستاذ يحيى عبد الله المهري</h3>
-      <span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span>
-    </div>
-    <div class="team-card">
-      <h3 data-ar="الأستاذ خالد عبد البصير محمد" data-en="Mr. Khaled Abdulbasir Mohamed">الأستاذ خالد عبد البصير محمد</h3>
-      <span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span>
-    </div>
-    <div class="team-card">
-      <h3 data-ar="الأستاذ سيد سايح احمد" data-en="Mr. Sayed Sayeh Ahmed">الأستاذ سيد سايح احمد</h3>
-      <span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span>
-    </div>
-  </div>
-</div>
-
-  <!-- Financial Section -->
-  <div class="team-group finance">
-    <h2 data-ar="القسم المالي والحسابات" data-en="Finance Department">القسم المالي والحسابات</h2>
-    <div class="team-grid">
-    <div class="team-card">
-      <h3 data-ar="الأستاذ خالد محمد الشربيني" data-en="Mr. Khaled Mohamed El-Sherbiny">
-       الأستاذ خالد محمد الشربيني
-      </h3>
-      <span data-ar="إدارة الحسابات والمالية" data-en="Accounts & Finance Department">
-      إدارة الحسابات والمالية
-      </span>
-      </div>
-    </div>
-  </div>
-
 </section>
 
-<!-- SUCCESS PARTNERS -->
-<section class="partners-section">
-
+<!-- ================= TEAM ================= -->
+<section class="team-section" id="team">
   <div class="container">
+    <div class="section-heading centered">
+      <span class="eyebrow dark" data-ar="فريق العمل" data-en="OUR TEAM">فريق العمل</span>
+      <h2 data-ar="كفاءات قانونية وإدارية متكاملة" data-en="A multidisciplinary team">كفاءات قانونية وإدارية متكاملة</h2>
+      <p data-ar="يضم المكتب نخبة من المحامين والمستشارين وفريق المتابعة والتنفيذ والإدارة."
+         data-en="Our firm brings together lawyers, legal consultants, execution specialists and administrative professionals.">
+        يضم المكتب نخبة من المحامين والمستشارين وفريق المتابعة والتنفيذ والإدارة.
+      </p>
+    </div>
 
-    <h2 data-ar="شركائنا في النجاح" data-en="Our Clients in Success">
-      شركائنا في النجاح
-    </h2>
+    <div class="team-group">
+      <div class="group-title"><span data-ar="الإدارة" data-en="Management">الإدارة</span></div>
+      <div class="team-grid compact">
+        <article class="team-card"><h3 data-ar="الأستاذ يوسف مساعد السبيعي" data-en="Mr. Yousef Musaed Alsubaie">الأستاذ يوسف مساعد السبيعي</h3><span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer – General Management">محامٍ – الإدارة العامة</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ عبد اللطيف طارق السبيعي" data-en="Mr. Abdullateef Tareq Alsubaie">الأستاذ عبد اللطيف طارق السبيعي</h3><span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer – General Management">محامٍ – الإدارة العامة</span></article>
+      </div>
+    </div>
+
+    <div class="team-group">
+      <div class="group-title"><span data-ar="المستشارون" data-en="Legal Consultants">المستشارون</span></div>
+      <div class="team-grid compact">
+        <article class="team-card"><h3 data-ar="الأستاذ محمود محمد الشامي" data-en="Mr. Mahmoud Mohamed Elshami">الأستاذ محمود محمد الشامي</h3><span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ هشام محمد العويل" data-en="Mr. Hesham Mohamed Alaweel">الأستاذ هشام محمد العويل</h3><span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ عبد الفتاح سعد سليمان" data-en="Mr. Abdulfatah Saad Suliman">الأستاذ عبد الفتاح سعد سليمان</h3><span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span></article>
+      </div>
+    </div>
+
+    <div class="team-group">
+      <div class="group-title"><span data-ar="المحاكم والتنفيذ" data-en="Courts & Execution">المحاكم والتنفيذ</span></div>
+      <div class="team-grid compact">
+        <article class="team-card"><h3 data-ar="الأستاذ محمود اسماعيل السيد" data-en="Mr. Mahmoud Ismail El-Sayed">الأستاذ محمود اسماعيل السيد</h3><span data-ar="رئيس قسم المتابعة والتنفيذ" data-en="Head of Follow-up & Execution">رئيس قسم المتابعة والتنفيذ</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ عبد الواحد عبد السلام نصر" data-en="Mr. Abdulwahed Abdelsalam Nasr">الأستاذ عبد الواحد عبد السلام نصر</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ محمد حسن عبد المجيد" data-en="Mr. Mohamed Hassan Abdelmageed">الأستاذ محمد حسن عبد المجيد</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ عصمت عبد البصير بحر" data-en="Mr. Esmat Abdelbasir Bahr">الأستاذ عصمت عبد البصير بحر</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ معتز حمدي العنتبلي" data-en="Mr. Moataz Hamdi Al-Entably">الأستاذ معتز حمدي العنتبلي</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
+      </div>
+    </div>
+
+    <div class="team-group">
+      <div class="group-title"><span data-ar="القسم الإداري" data-en="Administrative Department">القسم الإداري</span></div>
+      <div class="team-grid compact">
+        <article class="team-card"><h3 data-ar="الأستاذ أحمد مصطفى الحسانين" data-en="Mr. Ahmed Mostafa Alhasanin">الأستاذ أحمد مصطفى الحسانين</h3><span data-ar="سكرتير تنفيذي" data-en="Executive Secretary">سكرتير تنفيذي</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ يحيى عبد الله المهري" data-en="Mr. Yehya Abdullah Almehri">الأستاذ يحيى عبد الله المهري</h3><span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ خالد عبد البصير محمد" data-en="Mr. Khaled Abdulbasir Mohamed">الأستاذ خالد عبد البصير محمد</h3><span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span></article>
+        <article class="team-card"><h3 data-ar="الأستاذ سيد سايح احمد" data-en="Mr. Sayed Sayeh Ahmed">الأستاذ سيد سايح احمد</h3><span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span></article>
+      </div>
+    </div>
+
+    <div class="team-group">
+      <div class="group-title"><span data-ar="القسم المالي والحسابات" data-en="Finance Department">القسم المالي والحسابات</span></div>
+      <div class="team-grid compact">
+        <article class="team-card"><h3 data-ar="الأستاذ خالد محمد الشربيني" data-en="Mr. Khaled Mohamed El-Sherbiny">الأستاذ خالد محمد الشربيني</h3><span data-ar="إدارة الحسابات والمالية" data-en="Accounts & Finance Department">إدارة الحسابات والمالية</span></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLIENTS ================= -->
+<section class="clients-section">
+  <div class="container">
+    <div class="section-heading centered">
+      <span class="eyebrow dark" data-ar="شركاؤنا في النجاح" data-en="OUR CLIENTS">شركاؤنا في النجاح</span>
+      <h2 data-ar="ثقة نعتز بها" data-en="A relationship built on trust">ثقة نعتز بها</h2>
+    </div>
 
     <div class="partners-slider">
       <div class="partners-track">
-        
-      <img src="assets/images/client1.png" alt="">
-      <img src="assets/images/client2.png" alt="">
-      <img src="assets/images/client3.png" alt="">
-      <img src="assets/images/client5.png" alt="">
-      <img src="assets/images/client6.png" alt="">
-      <img src="assets/images/client7.png" alt="">
-      <img src="assets/images/client8.png" alt="">
-      <img src="assets/images/client9.png" alt="">
-      <img src="assets/images/client10.png" alt="">
-      <img src="assets/images/client11.png" alt="">
-      <img src="assets/images/client12.png" alt="">
-      <img src="assets/images/client13.png" alt="">
-
-      <img src="assets/images/client1.png" alt="">
-      <img src="assets/images/client2.png" alt="">
-      <img src="assets/images/client3.png" alt="">
-      <img src="assets/images/client5.png" alt="">
-      <img src="assets/images/client6.png" alt="">
-      <img src="assets/images/client7.png" alt="">
-      <img src="assets/images/client8.png" alt="">
-      <img src="assets/images/client9.png" alt="">
-      <img src="assets/images/client10.png" alt="">
-      <img src="assets/images/client11.png" alt="">
-      <img src="assets/images/client12.png" alt="">
-      <img src="assets/images/client13.png" alt="">
-
-
-     </div>
+        <img src="assets/images/client1.png" alt="">
+        <img src="assets/images/client2.png" alt="">
+        <img src="assets/images/client3.png" alt="">
+        <img src="assets/images/client5.png" alt="">
+        <img src="assets/images/client6.png" alt="">
+        <img src="assets/images/client7.png" alt="">
+        <img src="assets/images/client8.png" alt="">
+        <img src="assets/images/client9.png" alt="">
+        <img src="assets/images/client10.png" alt="">
+        <img src="assets/images/client11.png" alt="">
+        <img src="assets/images/client12.png" alt="">
+        <img src="assets/images/client13.png" alt="">
+        <img src="assets/images/client1.png" alt="">
+        <img src="assets/images/client2.png" alt="">
+        <img src="assets/images/client3.png" alt="">
+        <img src="assets/images/client5.png" alt="">
+        <img src="assets/images/client6.png" alt="">
+        <img src="assets/images/client7.png" alt="">
+        <img src="assets/images/client8.png" alt="">
+        <img src="assets/images/client9.png" alt="">
+        <img src="assets/images/client10.png" alt="">
+        <img src="assets/images/client11.png" alt="">
+        <img src="assets/images/client12.png" alt="">
+        <img src="assets/images/client13.png" alt="">
+      </div>
     </div>
-
   </div>
-
 </section>
-  
-<!-- CONTACT -->
-<section id="contact" class="contact-hero">
 
-  <div class="overlay"></div>
-
+<!-- ================= CONTACT ================= -->
+<section class="contact-section" id="contact">
+  <div class="contact-background"></div>
   <div class="container contact-layout">
-
-    <!-- النص -->
-    <div class="contact-text">
-      <h1 
-        data-ar="تواصل معنا بشأن متطلباتك القانونية"
-        data-en="Contact Us Regarding Your Legal Requirements">
-        تواصل معنا بشأن متطلباتك القانونية
-      </h1>
-
-      <p
-        data-ar="نحن هنا لتقديم أفضل الحلول القانونية بدعم من فريق من الخبراء."
-        data-en="We are here to provide the best legal solutions supported by a team of experts.">
-        نحن هنا لتقديم أفضل الحلول القانونية بدعم من فريق من الخبراء.
+    <div class="contact-intro">
+      <span class="eyebrow" data-ar="تواصل معنا" data-en="GET IN TOUCH">تواصل معنا</span>
+      <h2 data-ar="لنبدأ من احتياجك القانوني" data-en="Let's start with your legal needs">لنبدأ من احتياجك القانوني</h2>
+      <p data-ar="يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية ومناقشة متطلباتكم."
+         data-en="We are pleased to hear from you and discuss your legal requirements.">
+        يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية ومناقشة متطلباتكم.
       </p>
 
-      <a href="#contact-form" class="view-more"
-         data-ar="اعرف المزيد"
-         data-en="View More">
-         اعرف المزيد
-      </a>
+      <div class="contact-details">
+        <a href="tel:+96522435001"><i class="fa-solid fa-phone"></i><span>+965 22435001</span></a>
+        <a href="https://wa.me/96595571635" target="_blank"><i class="fa-brands fa-whatsapp"></i><span>+965 95571635</span></a>
+        <a href="mailto:info@st-lawyers.com"><i class="fa-solid fa-envelope"></i><span>info@st-lawyers.com</span></a>
+        <div><i class="fa-solid fa-location-dot"></i><span data-ar="الكويت – العاصمة – الشرق – شارع مبارك الكبير – مبنى المزيني – الطابق الثاني والثالث"
+                    data-en="Kuwait – Capital Governorate – Sharq – Mubarak Al-Kabeer St. – Almuzini Building – Floors 2 & 3">
+          الكويت – العاصمة – الشرق – شارع مبارك الكبير – مبنى المزيني – الطابق الثاني والثالث
+        </span></div>
+      </div>
     </div>
 
-    <!-- النموذج -->
     <div class="contact-form-box" id="contact-form">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="firstName" data-ar="الاسم الأول" data-en="First Name">الاسم الأول</label>
+            <input type="text" id="firstName" required>
+          </div>
+          <div class="field">
+            <label for="lastName" data-ar="اسم العائلة" data-en="Last Name">اسم العائلة</label>
+            <input type="text" id="lastName" required>
+          </div>
+        </div>
 
-  <form id="contactForm">
+        <div class="field">
+          <label for="email" data-ar="البريد الإلكتروني" data-en="Email Address">البريد الإلكتروني</label>
+          <input type="email" id="email" required>
+        </div>
 
-    <div class="form-row">
+        <div class="field phone-field">
+          <label for="phone" data-ar="رقم الجوال" data-en="Phone Number">رقم الجوال</label>
+          <div class="phone-row">
+            <select id="countryCode" aria-label="Country Code">
+              <option value="+965">🇰🇼 +965</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+20">🇪🇬 +20</option>
+            </select>
+            <input type="tel" id="phone" required>
+          </div>
+        </div>
 
-      <div class="floating-group">
-        <input type="text" id="firstName" required>
-        <label data-ar="الاسم الأول" data-en="First Name">الاسم الأول</label>
-      </div>
+        <div class="field">
+          <label for="practice" data-ar="مجال الممارسة" data-en="Practice Area">مجال الممارسة</label>
+          <select id="practice" required>
+            <option value=""></option>
+            <option value="Criminal Law">القسم الجنائي</option>
+            <option value="Commercial Law">القسم التجاري</option>
+            <option value="Civil Law">القسم المدني</option>
+            <option value="Labor Law">القسم العمالي</option>
+            <option value="Personal Status">الأحوال الشخصية</option>
+            <option value="Arbitration">التحكيم</option>
+          </select>
+        </div>
 
-      <div class="floating-group">
-        <input type="text" id="lastName" required>
-        <label data-ar="اسم العائلة" data-en="Last Name">اسم العائلة</label>
-      </div>
+        <div class="upload-box" id="uploadBox">
+          <input type="file" id="fileInput" hidden>
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <p data-ar="اضغط أو اسحب الملف هنا" data-en="Click to upload or drag & drop">اضغط أو اسحب الملف هنا</p>
+        </div>
 
+        <div class="field">
+          <label for="message" data-ar="رسالتك" data-en="Your Message">رسالتك</label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+
+        <button class="submit-btn" type="submit" data-ar="إرسال الطلب" data-en="Send Request">إرسال الطلب</button>
+      </form>
     </div>
-
-    <div class="floating-group">
-      <input type="email" id="email" required>
-      <label data-ar="البريد الإلكتروني" data-en="Email Address">
-        البريد الإلكتروني
-      </label>
-    </div>
-
-    <!-- Phone with country -->
-    <div class="phone-group">
-      <select id="countryCode">
-        <option value="+965">🇰🇼 +965</option>
-        <option value="+966">🇸🇦 +966</option>
-        <option value="+20">🇪🇬 +20</option>
-      </select>
-      <input type="tel" id="phone" placeholder="رقم الجوال" required>
-    </div>
-
-    <!-- Practice -->
-    <div class="floating-group">
-      <select id="practice" required>
-        <option value=""></option>
-        <option>القسم الجنائي</option>
-        <option>القسم التجاري</option>
-        <option>القسم المدني</option>
-        <option>القسم العمالي</option>
-        <option>الأحوال الشخصية</option>
-        <option>التحكيم</option>
-      </select>
-      <label data-ar="اختر مجال الممارسة"
-             data-en="Select Practice Area">
-        اختر مجال الممارسة
-      </label>
-    </div>
-
-    <!-- Drag & Drop -->
-    <div class="upload-box" id="uploadBox">
-      <input type="file" id="fileInput" hidden>
-      <div class="upload-content">
-        ⬆
-        <p data-ar="اضغط أو اسحب الملف هنا"
-           data-en="Click to upload or drag & drop">
-          اضغط أو اسحب الملف هنا
-        </p>
-      </div>
-    </div>
-
-    <div class="floating-group">
-      <textarea id="message" rows="4" required></textarea>
-      <label data-ar="رسالتك" data-en="Your Message">
-        رسالتك
-      </label>
-    </div>
-
-    <button type="submit"
-            data-ar="إرسال"
-            data-en="Submit">
-      إرسال
-    </button>
-
-  </form>
-
-</div>
-
-    <!-- معلومات التواصل -->
-    <div class="contact-info">
-
-      <p
-        data-ar="يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية."
-        data-en="We are pleased to communicate with you and respond to your legal inquiries.">
-        يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية.
-      </p>
-
-      <ul>
-        <li
-          data-ar="📍 الكويت - محافظة العاصمة - الشرق - شارع مبارك الكبير - مبنى المزيني - الطابق الثاني والثالث"
-          data-en="📍 Kuwait – Capital Governorate – Sharq – Mubarak Al-Kabeer St. – Almuzini Building – Floors 2 & 3">
-          📍 الكويت - محافظة العاصمة - الشرق
-        </li>
-        <li>📞 +965 22435001</li>
-        <li>📱 WhatsApp: +965 95571635</li>
-        <li>📧 info@st-lawyers.com</li>
-      </ul>
-
-    </div>
-
   </div>
 </section>
 
-<!-- FOOTER -->
+</main>
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <div class="footer-center">
-    <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
+      <p data-ar="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية"
+         data-en="Saad Alroomi & Tareq Alsubaie Law Firm">
+        مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية
+      </p>
+    </div>
+
+    <div>
+      <h3 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
+      <a href="#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a>
+      <a href="#practice" data-ar="مجالات الممارسة" data-en="Practice Areas">مجالات الممارسة</a>
+      <a href="#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a>
+      <a href="news.html" data-ar="أخبار المكتب" data-en="News">أخبار المكتب</a>
+    </div>
+
+    <div>
+      <h3 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h3>
+      <a href="tel:+96522435001">+965 22435001</a>
+      <a href="mailto:info@st-lawyers.com">info@st-lawyers.com</a>
+      <span data-ar="الكويت – الشرق" data-en="Kuwait – Sharq">الكويت – الشرق</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
     <p data-ar="جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026"
        data-en="All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm © 2026">
-       جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026    
+      جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026
     </p>
   </div>
 </footer>
 
+<!-- SOCIAL -->
 <div class="social-sidebar">
-  <a href="https://www.facebook.com/SaadTareqLawyers.Group?locale=ar_AR" target="_blank" class="facebook" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://x.com/SaadTariq739982" target="_blank" class="twitter" aria-label="Twitter">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://www.instagram.com/saadaroumiandtareq" target="_blank" class="instagram" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
+  <a href="https://www.facebook.com/SaadTareqLawyers.Group?locale=ar_AR" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://x.com/SaadTariq739982" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+  <a href="https://www.instagram.com/saadaroumiandtareq" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
 </div>
 
-<!-- WhatsApp Business Chat Bubble -->
+<!-- WHATSAPP -->
 <div class="wa-chat">
-  <button class="wa-btn" id="waToggle">
-    <i class="fab fa-whatsapp"></i>
-  </button>
-
+  <button class="wa-btn" id="waToggle" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></button>
   <div class="wa-box" id="waBox">
     <div class="wa-header">
       <i class="fab fa-whatsapp"></i>
-      <div>
-        <strong>WhatsApp Business</strong><br>
-        <span>مكتب سعد الرومي وطارق السبيعي</span>
-      </div>
+      <div><strong>WhatsApp Business</strong><br><span>مكتب سعد الرومي وطارق السبيعي</span></div>
     </div>
-
-    <div class="wa-body">
-      مرحبًا 👋  
-      يسعدنا تواصلكم معنا مباشرة عبر واتساب.
+    <div class="wa-body" data-ar="مرحبًا 👋 يسعدنا تواصلكم معنا مباشرة عبر واتساب."
+         data-en="Hello 👋 We are pleased to assist you directly via WhatsApp.">
+      مرحبًا 👋 يسعدنا تواصلكم معنا مباشرة عبر واتساب.
     </div>
-
-    <a
-      href="https://wa.me/96595571635"
-      target="_blank"
-      class="wa-start">
-      بدء المحادثة
-    </a>
+    <a href="https://wa.me/96595571635" target="_blank" class="wa-start" data-ar="بدء المحادثة" data-en="Start Chat">بدء المحادثة</a>
   </div>
 </div>
 
-<!-- ===== SCRIPTS ===== -->
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script src="js/whatsapp.js"></script>
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const aboutCols = document.querySelectorAll(".about-col");
+function changeLanguage(lang) {
+  if (typeof setLang === "function") setLang(lang);
+  else if (typeof setLanguage === "function") setLanguage(lang);
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+  document.querySelectorAll(".lang-switcher button").forEach(btn => btn.classList.remove("active"));
+  const active = document.querySelector('.lang-switcher button[onclick*="' + lang + '"]');
+  if (active) active.classList.add("active");
+}
 
-  aboutCols.forEach(col => observer.observe(col));
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.querySelector(".nav-dropdown");
+  const toggle = document.querySelector(".dropdown-toggle");
+  const nav = document.getElementById("mainNav");
+  const menuBtn = document.getElementById("menuBtn");
+
+  if (toggle && dropdown) {
+    toggle.addEventListener("click", function(e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        e.stopPropagation();
+        const open = dropdown.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      }
+    });
+  }
+
+  document.querySelectorAll(".main-nav > a, .dropdown-menu a").forEach(link => {
+    link.addEventListener("click", function() {
+      if (nav) nav.classList.remove("open");
+      if (menuBtn) menuBtn.classList.remove("active");
+      if (dropdown) dropdown.classList.remove("open");
+    });
+  });
+
+  document.addEventListener("click", function(e) {
+    if (dropdown && !dropdown.contains(e.target)) {
+      dropdown.classList.remove("open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  window.addEventListener("scroll", function() {
+    const header = document.getElementById("siteHeader");
+    if (header) header.classList.toggle("scrolled", window.scrollY > 20);
+  });
 });
-</script>
-<script>
+
 const uploadBox = document.getElementById("uploadBox");
 const fileInput = document.getElementById("fileInput");
 
-uploadBox.addEventListener("click", () => fileInput.click());
-
-uploadBox.addEventListener("dragover", (e) => {
-  e.preventDefault();
-  uploadBox.style.borderColor = "#c9a24d";
-});
-
-uploadBox.addEventListener("dragleave", () => {
-  uploadBox.style.borderColor = "rgba(255,255,255,0.4)";
-});
-
-uploadBox.addEventListener("drop", (e) => {
-  e.preventDefault();
-  fileInput.files = e.dataTransfer.files;
-  uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
-});
+if (uploadBox && fileInput) {
+  uploadBox.addEventListener("click", () => fileInput.click());
+  uploadBox.addEventListener("dragover", e => {
+    e.preventDefault();
+    uploadBox.classList.add("dragging");
+  });
+  uploadBox.addEventListener("dragleave", () => uploadBox.classList.remove("dragging"));
+  uploadBox.addEventListener("drop", e => {
+    e.preventDefault();
+    uploadBox.classList.remove("dragging");
+    if (e.dataTransfer.files.length) {
+      fileInput.files = e.dataTransfer.files;
+      uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
+    }
+  });
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files.length) uploadBox.querySelector("p").textContent = fileInput.files[0].name;
+  });
+}
 </script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
 (function(){
   emailjs.init("avv-ilIXKVxZgUnWf");
 })();
 
-document.getElementById("contactForm")
-.addEventListener("submit", function(e) {
+document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  emailjs.send("service_ov7xkq8",
-               "template_n07xlxe",
-               {
-                 firstName: document.getElementById("firstName").value,
-                 lastName: document.getElementById("lastName").value,
-                 email: document.getElementById("email").value,
-                 phone: document.getElementById("countryCode").value + 
-                        document.getElementById("phone").value,
-                 message: document.getElementById("message").value
-               })
-  .then(function(response) {
-      alert("تم الإرسال بنجاح");
-      document.getElementById("contactForm").reset();
+  emailjs.send("service_ov7xkq8", "template_n07xlxe", {
+    firstName: document.getElementById("firstName").value,
+    lastName: document.getElementById("lastName").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("countryCode").value + document.getElementById("phone").value,
+    message: document.getElementById("message").value
+  }).then(function() {
+    alert(document.documentElement.lang === "en" ? "Your request has been sent successfully." : "تم إرسال الطلب بنجاح");
+    document.getElementById("contactForm").reset();
   }, function(error) {
-      alert("حدث خطأ: " + JSON.stringify(error));
-      console.log(error);
+    alert((document.documentElement.lang === "en" ? "Error: " : "حدث خطأ: ") + JSON.stringify(error));
   });
-
 });
 </script>
 
