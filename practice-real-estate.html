@@ -12,6 +12,21 @@
   </title>
 
   <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+.page-hero{min-height:58vh!important;background:linear-gradient(110deg,rgba(7,22,36,.97),rgba(11,28,45,.72)),url("assets/images/hero.jpg") center/cover!important;display:flex;align-items:end;position:relative;overflow:hidden}
+.page-hero .hero-content{padding-top:150px!important;padding-bottom:90px!important;position:relative;z-index:2}
+.page-hero h1{font-size:clamp(2.4rem,6vw,5.2rem)!important;line-height:1.05!important;color:#fff!important}
+.breadcrumb{font-size:.9rem!important;color:rgba(255,255,255,.72)!important;margin-bottom:25px!important}.breadcrumb a{color:#fff!important}
+.gold-line{width:82px!important;height:3px!important;background:#c9a24d!important}
+.practice-content{padding-top:90px!important;padding-bottom:80px!important;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.7fr);gap:65px;align-items:start}
+.practice-content>p{font-size:1.05rem;line-height:2;color:#39434c;grid-column:1}
+.practice-content ul{grid-column:2;grid-row:1 / span 3;list-style:none!important;margin:0!important;padding:0!important;background:#0b1c2d;color:#fff;box-shadow:0 24px 60px rgba(11,28,45,.15);padding:28px!important}
+.practice-content li{padding:15px 28px 15px 0!important;border-top:1px solid rgba(255,255,255,.12);line-height:1.7;position:relative}
+.practice-content li:first-child{border-top:0}.practice-content li:before{content:"";position:absolute;right:0;top:25px;width:7px;height:7px;border-radius:50%;background:#c9a24d}
+.back-button-container{padding:0 0 75px!important}.back-button{border:1px solid #c9a24d!important;background:transparent!important;color:#0b1c2d!important;padding:12px 24px!important;font-weight:700!important}
+@media(max-width:900px){.practice-content{grid-template-columns:1fr!important;gap:25px!important}.practice-content>p,.practice-content ul{grid-column:1!important;grid-row:auto!important}.practice-content ul{margin-top:15px!important}.page-hero{min-height:48vh!important}}
+</style>
 </head>
 
 <body>
@@ -34,8 +49,8 @@
     </nav>
 
     <div class="lang-switcher">
-      <button onclick="setLanguage('ar')">AR</button>
-      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="changeLanguage('ar')">AR</button>
+      <button onclick="changeLanguage('en')">EN</button>
     </div>
 
   </div>
@@ -140,6 +155,17 @@ function goBack() {
 }
 </script>
 
+
+<script>
+function changeLanguage(lang){
+  if(typeof setLang==='function') setLang(lang);
+  else if(typeof setLanguage==='function') setLanguage(lang);
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.querySelectorAll('.lang-switcher button').forEach(b=>b.classList.remove('active'));
+  const a=document.querySelector('.lang-switcher button[onclick*="'+lang+'"]'); if(a) a.classList.add('active');
+}
+</script>
 </body>
 </html>
   
