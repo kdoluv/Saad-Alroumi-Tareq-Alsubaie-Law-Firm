@@ -91,6 +91,15 @@
     }
   </style>
 
+
+<style>
+.page-hero{min-height:52vh!important;background:linear-gradient(110deg,rgba(7,22,36,.98),rgba(11,28,45,.75)),url("assets/images/hero.jpg") center/cover!important;display:flex;align-items:end}
+.page-hero .hero-content{padding-top:150px!important;padding-bottom:80px!important}
+.page-hero h1{font-size:clamp(2.5rem,6vw,5rem)!important;line-height:1.05!important;color:#fff!important}.gold-line{width:82px!important;height:3px!important;background:#c9a24d!important}
+.filter-tabs{gap:8px!important;margin:45px 0!important}.filter-tabs button{border:1px solid #d8d2c7!important;background:transparent!important;color:#0b1c2d!important;border-radius:0!important;padding:11px 22px!important}.filter-tabs button.active,.filter-tabs button:hover{background:#0b1c2d!important;color:#fff!important}
+.posts-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px!important}.post-card{border:1px solid #e8e3da!important;border-radius:0!important;box-shadow:0 14px 40px rgba(11,28,45,.05)!important}.post-card:hover{transform:translateY(-7px)!important}.post-card img{height:245px!important}.post-content{padding:26px!important}.post-category{background:none!important;color:#c9a24d!important;padding:0!important;font-weight:800!important}.post-date{color:#8a8f94!important}.post-content h3{color:#0b1c2d!important;font-size:1.3rem!important;line-height:1.5!important}.post-content p{color:#5c646c!important;line-height:1.85!important}.read-more{color:#0b1c2d!important;border-bottom:1px solid #c9a24d;padding-bottom:3px}.read-more:hover{color:#c9a24d!important}
+@media(max-width:900px){.posts-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}@media(max-width:600px){.posts-grid{grid-template-columns:1fr!important}.page-hero{min-height:46vh!important}}
+</style>
 </head>
 <body>
 
@@ -112,8 +121,8 @@
     </nav>
 
     <div class="lang-switcher">
-      <button onclick="setLanguage('ar')">AR</button>
-      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="changeLanguage('ar')">AR</button>
+      <button onclick="changeLanguage('en')">EN</button>
     </div>
 
   </div>
@@ -265,5 +274,16 @@ function goBack() {
 }
 </script>
   
+
+<script>
+function changeLanguage(lang){
+  if(typeof setLang==='function') setLang(lang);
+  else if(typeof setLanguage==='function') setLanguage(lang);
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.querySelectorAll('.lang-switcher button').forEach(b=>b.classList.remove('active'));
+  const a=document.querySelector('.lang-switcher button[onclick*="'+lang+'"]'); if(a) a.classList.add('active');
+}
+</script>
 </body>
 </html>
