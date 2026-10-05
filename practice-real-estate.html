@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title 
-    data-ar="القسم التجاري"
-    data-en="Commercial Law">
-    القسم التجاري
-  </title>
+  <title data-ar="العقارات والإيجارات | مكتب سعد الرومي وطارق السبيعي" data-en="Real Estate & Leases | Saad Alroomi & Tareq Alsubaie">العقارات والإيجارات | مكتب سعد الرومي وطارق السبيعي</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -31,28 +32,47 @@
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-flex">
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="ST Lawyers">
+      <img src="assets/images/logo.png" alt="ST Lawyers">
+    </a>
 
-    <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
-
-    <button class="menu-btn" id="menuBtn">
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="nav" id="mainNav">
+    <nav class="main-nav" id="mainNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
-      <a href="index.html#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
+      <a href="index.html#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a>
+
+      <div class="nav-dropdown dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          <span data-ar="الممارسات القانونية" data-en="Practice Areas">الممارسات القانونية</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a href="practice-criminal.html" data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</a>
+          <a href="practice-civil.html" data-ar="القسم المدني" data-en="Civil Law">القسم المدني</a>
+          <a href="practice-commercial.html" data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</a>
+          <a href="practice-real-estate.html" data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</a>
+          <a href="practice-labor.html" data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</a>
+          <a href="practice-family.html" data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</a>
+          <a href="practice-arbitration.html" data-ar="التحكيم" data-en="Arbitration">التحكيم</a>
+        </div>
+      </div>
+
+      <a href="index.html#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a>
+      <a href="news.html" data-ar="أخبار المكتب" data-en="News & Insights">أخبار المكتب</a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
     </nav>
 
-    <div class="lang-switcher">
-      <button onclick="changeLanguage('ar')">AR</button>
-      <button onclick="changeLanguage('en')">EN</button>
+    <div class="lang-switcher" aria-label="Language">
+      <button type="button" class="active" onclick="changeLanguage('ar')">AR</button>
+      <span>/</span>
+      <button type="button" onclick="changeLanguage('en')">EN</button>
     </div>
-
   </div>
 </header>
 
