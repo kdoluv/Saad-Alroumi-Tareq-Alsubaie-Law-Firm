@@ -1,106 +1,123 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-ar="الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي" data-en="Personal Status | Saad Alroomi & Tareq Alsubaie">الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
 
-  <title 
-    data-ar="الأحوال الشخصية | خبرة تزيد عن 40 عاماً في قضايا الأحوال الشخصية"
-    data-en="Family Law | Over 40 Years of Experience in Family Litigation">
-    الأحوال الشخصية | خبرة تزيد عن 40 عاماً في قضايا الأحوال الشخصية
-  </title>
+<style>
+.page-hero{min-height:58vh;background:linear-gradient(110deg,rgba(7,22,36,.97),rgba(11,28,45,.72)),url("assets/images/hero.jpg") center/cover;display:flex;align-items:end;position:relative;overflow:hidden}
+.page-hero .hero-content{padding-top:150px;padding-bottom:90px;position:relative;z-index:2}
+.page-hero h1{font-size:clamp(2.4rem,6vw,5.2rem);line-height:1.05;color:#fff;margin:0 0 22px}
+.breadcrumb{font-size:.9rem;color:rgba(255,255,255,.72);margin-bottom:25px}.breadcrumb a{color:#fff}
+.gold-line{width:82px;height:3px;background:#c9a24d}
+.practice-content{padding-top:90px;padding-bottom:80px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.7fr);gap:65px;align-items:start}
+.practice-copy{font-size:1.05rem;line-height:2;color:#39434c}
+.practice-copy p{margin:0 0 22px}
+.service-panel{grid-column:2;grid-row:1 / span 3;background:#0b1c2d;color:#fff;box-shadow:0 24px 60px rgba(11,28,45,.15);padding:30px}
+.service-panel .eyebrow{color:#c9a24d;letter-spacing:.12em;font-size:.75rem;font-weight:800;margin-bottom:10px}
+.service-panel h2{margin:0 0 18px;font-size:1.45rem}
+.service-panel .service-text{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;line-height:1.9;color:rgba(255,255,255,.88)}
+.service-list{list-style:none;padding:0;margin:18px 0 0}
+.service-list li{position:relative;padding:13px 24px 13px 0;border-top:1px solid rgba(255,255,255,.12);line-height:1.7}
+.service-list li:before{content:"";position:absolute;right:0;top:23px;width:7px;height:7px;border-radius:50%;background:#c9a24d}
+[dir="ltr"] .service-list li{padding:13px 0 13px 24px}[dir="ltr"] .service-list li:before{right:auto;left:0}
+.back-button-container{padding:0 0 75px}.back-button{border:1px solid #c9a24d;background:transparent;color:#0b1c2d;padding:12px 24px;font-weight:700;cursor:pointer}
+@media(max-width:900px){.practice-content{grid-template-columns:1fr;gap:28px}.service-panel{grid-column:1;grid-row:auto}.page-hero{min-height:48vh}.page-hero .hero-content{padding-top:125px;padding-bottom:60px}}
+</style>
 
-  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-flex">
-
-    <img src="assets/images/logo.png" class="logo" alt="ST Lawyers">
-
-    <button class="menu-btn" id="menuBtn">
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="ST Lawyers">
+      <img src="assets/images/logo.png" alt="ST Lawyers">
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-
-    <nav class="nav" id="mainNav">
+    <nav class="main-nav" id="mainNav">
       <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="index.html#about" data-ar="عن المكتب" data-en="About">عن المكتب</a>
-      <a href="index.html#team" data-ar="أعضاء المكتب" data-en="Our Team">أعضاء المكتب</a>
+      <a href="index.html#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a>
+      <div class="nav-dropdown dropdown">
+        <button class="dropdown-toggle" type="button" aria-expanded="false">
+          <span data-ar="الممارسات القانونية" data-en="Practice Areas">الممارسات القانونية</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a href="practice-criminal.html" data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</a>
+          <a href="practice-civil.html" data-ar="القسم المدني" data-en="Civil Law">القسم المدني</a>
+          <a href="practice-commercial.html" data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</a>
+          <a href="practice-real-estate.html" data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</a>
+          <a href="practice-labor.html" data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</a>
+          <a href="practice-family.html" data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</a>
+          <a href="practice-arbitration.html" data-ar="التحكيم" data-en="Arbitration">التحكيم</a>
+        </div>
+      </div>
+      <a href="index.html#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a>
+      <a href="news.html" data-ar="أخبار المكتب" data-en="News & Insights">أخبار المكتب</a>
       <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
     </nav>
-
-    <div class="lang-switcher">
-      <button onclick="setLanguage('ar')">AR</button>
-      <button onclick="setLanguage('en')">EN</button>
+    <div class="lang-switcher" aria-label="Language">
+      <button type="button" class="active" onclick="changeLanguage('ar')">AR</button>
+      <span>/</span>
+      <button type="button" onclick="changeLanguage('en')">EN</button>
     </div>
-
   </div>
 </header>
 
-<!-- HERO -->
-<section class="page-hero luxury-hero">
-  <div class="overlay"></div>
+<section class="page-hero">
   <div class="hero-content container">
-    
-    <div class="breadcrumb">
-      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <span> / </span>
-      <span data-ar="الأحوال الشخصية" data-en="Family Law">الأحوال الشخصية</span>
-    </div>
-
-    <h1 
-      data-ar="الأحوال الشخصية"
-      data-en="Family Law">
-      الأحوال الشخصية
-    </h1>
-
+    <div class="breadcrumb"><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a><span> / </span><span data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</span></div>
+    <div class="eyebrow" style="color:#c9a24d;letter-spacing:.12em;font-size:.78rem;font-weight:800;margin-bottom:14px" data-ar="مجالات الممارسة القانونية" data-en="PRACTICE AREA">مجالات الممارسة القانونية</div>
+    <h1 data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</h1>
     <div class="gold-line"></div>
-
   </div>
 </section>
-
-<!-- CONTENT -->
 <section class="practice-content container">
-
-<p
-    data-ar="يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون."
-    data-en="The firm handles family law matters including marriage, divorce, alimony, child custody, visitation rights, and lineage claims, ensuring the protection of family rights in accordance with Sharia and applicable law.">
-    يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون.
- </p>
+  <div class="practice-copy">
+    <p data-ar="يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون." data-en="The firm handles family law matters including marriage, divorce, alimony, child custody, visitation rights, and lineage claims, ensuring the protection of family rights in accordance with Sharia and applicable law.">يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون.</p>
+  </div>
+  <aside class="service-panel">
+    <div class="eyebrow" data-ar="نطاق الممارسة" data-en="PRACTICE SCOPE">نطاق الممارسة</div>
+    <h2 data-ar="قضايا الأحوال الشخصية" data-en="Personal Status Matters">قضايا الأحوال الشخصية</h2>
+    <div class="service-text" data-ar="يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون." data-en="The firm handles family law matters including marriage, divorce, alimony, child custody, visitation rights, and lineage claims, ensuring the protection of family rights in accordance with Sharia and applicable law.">يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون.</div>
+    
+  </aside>
 </section>
 
-<div class="back-button-container">
-  <button class="back-button"
-          onclick="goBack()"
-          data-ar="← رجوع"
-          data-en="← Back">
-    ← رجوع
-  </button>
+<div class="container back-button-container">
+  <button class="back-button" onclick="goBack()" data-ar="← رجوع" data-en="← Back">← رجوع</button>
 </div>
-
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-center">
     <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
     <p data-ar="جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026"
        data-en="All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm © 2026">
-       جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026    
+       جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026
     </p>
   </div>
 </footer>
 
-<!-- SCRIPTS -->
+
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
-
 <script>
-function goBack() {
-  window.history.back();
+function changeLanguage(lang){
+  if(typeof setLang==='function') setLang(lang);
+  else if(typeof setLanguage==='function') setLanguage(lang);
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  document.querySelectorAll('.lang-switcher button').forEach(b=>b.classList.remove('active'));
+  const a=document.querySelector('.lang-switcher button[onclick*="'+lang+'"]'); if(a) a.classList.add('active');
 }
+function goBack(){ window.history.back(); }
 </script>
 
 </body>
