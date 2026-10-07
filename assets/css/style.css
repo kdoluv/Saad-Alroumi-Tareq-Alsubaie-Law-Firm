@@ -968,3 +968,42 @@ html[lang="en"] .contact-form-box{text-align:left}
 html[dir="rtl"] .practice-card,
 html[dir="rtl"] .team-card,
 html[dir="rtl"] .contact-form-box{text-align:right}
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 720px;
+        height: auto;
+
+        background-position: 35% center;
+    }
+
+    .hero-content {
+        padding: 120px 25px 80px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 34px;
+        line-height: 1.35;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+
+    .hero-logo {
+        width: 170px;
+        max-width: 45vw;
+        opacity: .06;
+    }
+}
