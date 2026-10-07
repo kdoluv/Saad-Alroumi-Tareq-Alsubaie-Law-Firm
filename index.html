@@ -403,17 +403,67 @@
           <input type="email" id="email" required>
         </div>
 
-        <div class="field phone-field">
-          <label for="phone" data-ar="رقم الجوال" data-en="Phone Number">رقم الجوال</label>
-          <div class="phone-row">
-            <select id="countryCode" aria-label="Country Code">
-              <option value="+965">🇰🇼 +965</option>
-              <option value="+966">🇸🇦 +966</option>
-              <option value="+20">🇪🇬 +20</option>
-            </select>
-            <input type="tel" id="phone" required>
-          </div>
-        </div>
+       <div class="field phone-field">
+
+  <label for="phone"
+         data-ar="رقم الجوال"
+         data-en="Phone Number">
+    رقم الجوال
+  </label>
+
+  <div class="phone-picker">
+
+    <button type="button"
+            class="country-picker"
+            id="countryPicker">
+
+      <span class="selected-country">
+        🇰🇼
+      </span>
+
+      <span class="selected-code">
+        +965
+      </span>
+
+      <i class="fa-solid fa-chevron-down"></i>
+
+    </button>
+
+    <input
+      type="tel"
+      id="phone"
+      inputmode="tel"
+      autocomplete="tel"
+      required
+      placeholder="رقم الجوال"
+    >
+
+    <div class="country-dropdown" id="countryDropdown">
+
+      <div class="country-search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+          type="text"
+          id="countrySearch"
+          placeholder="ابحث عن الدولة..."
+          data-placeholder-ar="ابحث عن الدولة..."
+          data-placeholder-en="Search country..."
+        >
+
+      </div>
+
+      <div class="country-list" id="countryList"></div>
+
+    </div>
+
+  </div>
+
+  <!-- القيمة الفعلية التي سيتم إرسالها -->
+  <input type="hidden" id="countryCode" value="+965">
+
+</div>
 
         <div class="field">
           <label for="practice" data-ar="مجال الممارسة" data-en="Practice Area">مجال الممارسة</label>
