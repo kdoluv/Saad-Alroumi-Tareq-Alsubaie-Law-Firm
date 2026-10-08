@@ -1,616 +1,876 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية</title>
-  <meta name="description" content="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية في الكويت. محاماة واستشارات قانونية وتحكيم منذ عام 1982.">
+/* =========================================================
+   ST LAWYERS — Editorial / Premium Law Firm Design
+   Inspired by the clean structure of modern international
+   law-firm websites while preserving ST Lawyers branding.
+========================================================= */
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
-  <link rel="apple-touch-icon" href="assets/images/favicon.png">
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LegalService",
-    "name":"مكتب سعد الرومي وطارق السبيعي للمحاماة",
-    "url":"https://www.st-lawyers.com",
-    "logo":"https://www.st-lawyers.com/assets/images/logo.png",
-    "telephone":"+96522435001",
-    "areaServed":"KW",
-    "availableLanguage":["Arabic","English"],
-    "address":{"@type":"PostalAddress","addressCountry":"KW"}
-  }
-  </script>
-</head>
-
-<body>
-
-<!-- ================= HEADER ================= -->
-<header class="site-header" id="siteHeader">
-  <div class="container header-inner">
-    <a class="brand" href="#home" aria-label="ST Lawyers">
-      <img src="assets/images/logo.png" alt="ST Lawyers">
-    </a>
-
-    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a>
-
-      <div class="nav-dropdown dropdown">
-        <button class="dropdown-toggle" type="button" aria-expanded="false">
-          <span data-ar="الممارسات القانونية" data-en="Practice Areas">الممارسات القانونية</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <div class="dropdown-menu">
-          <a href="practice-criminal.html" data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</a>
-          <a href="practice-civil.html" data-ar="القسم المدني" data-en="Civil Law">القسم المدني</a>
-          <a href="practice-commercial.html" data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</a>
-          <a href="practice-real-estate.html" data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</a>
-          <a href="practice-labor.html" data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</a>
-          <a href="practice-family.html" data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</a>
-          <a href="practice-arbitration.html" data-ar="التحكيم" data-en="Arbitration">التحكيم</a>
-        </div>
-      </div>
-
-      <a href="#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a>
-      <a href="news.html" data-ar="أخبار المكتب" data-en="News & Insights">أخبار المكتب</a>
-      <a href="#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
-    </nav>
-
-    <div class="lang-switcher" aria-label="Language">
-      <button type="button" class="active" onclick="changeLanguage('ar')">AR</button>
-      <span>/</span>
-      <button type="button" onclick="changeLanguage('en')">EN</button>
-    </div>
-  </div>
-</header>
-
-<main>
-
-<!-- ================= HERO ================= -->
-<section class="hero-editorial" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-shade"></div>
-
-  <div class="container hero-content">
-    <div class="hero-copy">
-      <span class="eyebrow" data-ar="مكتب محاماة كويتي منذ 1982" data-en="Kuwaiti Law Firm Since 1982">مكتب محاماة كويتي منذ 1982</span>
-
-      <h1 data-ar="سعد الرومي<br>وطارق السبيعي" data-en="Saad Alroomi<br>&amp; Tareq Al-Subaie">
-        سعد الرومي<br>وطارق السبيعي
-      </h1>
-
-      <div class="gold-rule"></div>
-
-      <p data-ar="محاماة • استشارات قانونية • تحكيم" data-en="Litigation • Legal Consulting • Arbitration">
-        محاماة • استشارات قانونية • تحكيم
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="#contact" data-ar="تواصل معنا" data-en="Get in Touch">تواصل معنا</a>
-        <a class="btn btn-outline" href="#practice" data-ar="مجالات الممارسة" data-en="Practice Areas">مجالات الممارسة</a>
-      </div>
-    </div>
-
-    <div class="hero-side-note">
-      <span>01</span>
-      <div></div>
-      <small data-ar="خبرة قانونية راسخة<br>وخدمة متكاملة" data-en="Established legal expertise<br>and integrated service">
-        خبرة قانونية راسخة<br>وخدمة متكاملة
-      </small>
-    </div>
-  </div>
-
-  <a class="scroll-down" href="#about" aria-label="Scroll">
-    <span data-ar="اكتشف المزيد" data-en="Discover more">اكتشف المزيد</span>
-    <i class="fa-solid fa-arrow-down"></i>
-  </a>
-</section>
-
-<!-- ================= INTRO / ABOUT ================= -->
-<section class="about-modern" id="about">
-  <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow dark" data-ar="عن المكتب" data-en="ABOUT THE FIRM">عن المكتب</span>
-      <h2 data-ar="خبرة قانونية ممتدة لأكثر من أربعة عقود" data-en="More than four decades of legal experience">
-        خبرة قانونية ممتدة لأكثر من أربعة عقود
-      </h2>
-      <p data-ar="منذ تأسيس المكتب عام 1982، نعمل على تقديم خدمات قانونية متكاملة للشركات والأفراد في دولة الكويت."
-         data-en="Since 1982, we have provided integrated legal services to corporate and individual clients in Kuwait.">
-        منذ تأسيس المكتب عام 1982، نعمل على تقديم خدمات قانونية متكاملة للشركات والأفراد في دولة الكويت.
-      </p>
-    </div>
-
-    <div class="about-grid-premium">
-      <div class="about-image-frame">
-        <img src="assets/images/Kuwait.gif" alt="عن مكتب سعد الرومي وطارق السبيعي">
-        <div class="image-caption">
-          <strong>1982</strong>
-          <span data-ar="عام التأسيس" data-en="Year established">عام التأسيس</span>
-        </div>
-      </div>
-
-      <div class="about-copy">
-        <div class="about-number">40+</div>
-        <div class="about-text">
-          <p data-ar="تَأَسَّسَ مَكْتَبُ المحاميين سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء كانت للشركات أو الأفراد، وبدأ نشاطه في القضايا التجارية وفروعها وكذلك القضايا المدنية."
-             data-en="Saad Alroomi & Tareq Alsubaie Law Firm was established in 1982 and has since handled a wide range of matters for corporate and individual clients, beginning with commercial and civil work.">
-            تَأَسَّسَ مَكْتَبُ المحاميين سعد الرومي وطارق السبيعي عام 1982، ومنذ ذلك التاريخ تعامل المكتب مع العديد من القضايا سواء كانت للشركات أو الأفراد، وبدأ نشاطه في القضايا التجارية وفروعها وكذلك القضايا المدنية.
-          </p>
-
-          <p data-ar="وخلال تلك السنوات كوّن المكتب علاقات مهنية واسعة كان لها مردود إيجابي في تحقيق أفضل النتائج لموكليه."
-             data-en="Over the years, the firm has developed extensive professional relationships that have supported the interests and objectives of its clients.">
-            وخلال تلك السنوات كوّن المكتب علاقات مهنية واسعة كان لها مردود إيجابي في تحقيق أفضل النتائج لموكليه.
-          </p>
-
-          <p data-ar="كما توسع نطاق عمل المكتب ليشمل القضايا الجنائية، وقضايا سوق المال، والتحكيم، بالإضافة إلى القضايا العمالية والإيجارات، مع فريق متخصص في إجراءات التنفيذ والمتابعة أمام المحاكم والجهات الرسمية."
-             data-en="The firm's practice has expanded to criminal litigation, capital markets, arbitration, labor matters and lease disputes, supported by a specialized team handling enforcement and follow-up before courts and official authorities.">
-            كما توسع نطاق عمل المكتب ليشمل القضايا الجنائية، وقضايا سوق المال، والتحكيم، بالإضافة إلى القضايا العمالية والإيجارات، مع فريق متخصص في إجراءات التنفيذ والمتابعة أمام المحاكم والجهات الرسمية.
-          </p>
-        </div>
-
-        <a href="#team" class="text-link" data-ar="تعرف على فريق العمل" data-en="Meet our team">تعرف على فريق العمل <i class="fa-solid fa-arrow-left"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PRACTICE AREAS ================= -->
-<section class="practice-section" id="practice">
-  <div class="container">
-    <div class="section-heading centered">
-      <span class="eyebrow dark" data-ar="مجالات العمل" data-en="OUR EXPERTISE">مجالات العمل</span>
-      <h2 data-ar="مجالات الممارسة القانونية" data-en="Practice Areas">مجالات الممارسة القانونية</h2>
-      <p data-ar="نقدم خدمات قانونية متخصصة تغطي مجموعة واسعة من المجالات والاحتياجات القانونية."
-         data-en="We provide specialized legal services across a broad range of legal needs and practice areas.">
-        نقدم خدمات قانونية متخصصة تغطي مجموعة واسعة من المجالات والاحتياجات القانونية.
-      </p>
-    </div>
-
-    <div class="practice-grid">
-      <a class="practice-card" href="practice-criminal.html">
-        <span class="practice-index">01</span>
-        <i class="fa-solid fa-scale-balanced"></i>
-        <h3 data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</h3>
-        <p data-ar="تمثيل ومتابعة القضايا والإجراءات الجنائية." data-en="Representation and legal support in criminal matters.">تمثيل ومتابعة القضايا والإجراءات الجنائية.</p>
-        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-
-      <a class="practice-card" href="practice-civil.html">
-        <span class="practice-index">02</span>
-        <i class="fa-solid fa-gavel"></i>
-        <h3 data-ar="القسم المدني" data-en="Civil Law">القسم المدني</h3>
-        <p data-ar="استشارات وتمثيل في المنازعات والحقوق المدنية." data-en="Advice and representation in civil disputes and rights.">استشارات وتمثيل في المنازعات والحقوق المدنية.</p>
-        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-
-      <a class="practice-card" href="practice-commercial.html">
-        <span class="practice-index">03</span>
-        <i class="fa-solid fa-building-columns"></i>
-        <h3 data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</h3>
-        <p data-ar="حلول قانونية للمسائل والمعاملات التجارية والشركات." data-en="Legal solutions for commercial and corporate matters.">حلول قانونية للمسائل والمعاملات التجارية والشركات.</p>
-        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-
-      <a class="practice-card" href="practice-real-estate.html">
-        <span class="practice-index">04</span>
-        <i class="fa-solid fa-city"></i>
-        <h3 data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</h3>
-        <p data-ar="استشارات ومنازعات الملكية والإيجارات والمسائل العقارية." data-en="Advice and representation in property and lease matters.">استشارات ومنازعات الملكية والإيجارات والمسائل العقارية.</p>
-        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-
-      <a class="practice-card" href="practice-labor.html">
-        <span class="practice-index">05</span>
-        <i class="fa-solid fa-briefcase"></i>
-        <h3 data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</h3>
-        <p data-ar="معالجة المنازعات والحقوق والالتزامات العمالية." data-en="Advice and representation in employment matters and disputes.">معالجة المنازعات والحقوق والالتزامات العمالية.</p>
-        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-
-      <a class="practice-card" href="practice-family.html">
-        <span class="practice-index">06</span>
-        <i class="fa-solid fa-people-roof"></i>
-        <h3 data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</h3>
-        <p data-ar="خدمات قانونية متخصصة في مسائل الأحوال الشخصية." data-en="Specialized legal services in personal status matters.">خدمات قانونية متخصصة في مسائل الأحوال الشخصية.</p>
-        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-
-      <a class="practice-card featured" href="practice-arbitration.html">
-        <span class="practice-index">07</span>
-        <i class="fa-solid fa-comments"></i>
-        <h3 data-ar="التحكيم" data-en="Arbitration">التحكيم</h3>
-        <p data-ar="تمثيل الأطراف وتقديم الاستشارات في إجراءات التحكيم." data-en="Representation and advice throughout arbitration proceedings.">تمثيل الأطراف وتقديم الاستشارات في إجراءات التحكيم.</p>
-        <span class="card-link" data-ar="اكتشف المجال" data-en="Explore">اكتشف المجال <i class="fa-solid fa-arrow-left"></i></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FOUNDERS ================= -->
-<section class="founders-section" id="founders">
-  <div class="container">
-    <div class="section-heading centered light">
-      <span class="eyebrow" data-ar="قيادة المكتب" data-en="THE FIRM'S LEADERSHIP">قيادة المكتب</span>
-      <h2 data-ar="الشركاء والمؤسسون" data-en="Partners & Founders">الشركاء والمؤسسون</h2>
-      <p data-ar="خبرة قانونية راسخة منذ عام 1982" data-en="Established legal expertise since 1982">خبرة قانونية راسخة منذ عام 1982</p>
-    </div>
-
-    <div class="founders-grid">
-      <article class="founder-profile">
-        <div class="founder-photo-wrap">
-          <div class="founder-photo"><img src="assets/images/Saad.jpg" alt="Saad Alroomi"></div>
-        </div>
-        <div class="founder-info">
-          <span class="role" data-ar="شريك مؤسس – محامٍ" data-en="Founding Partner – Lawyer">شريك مؤسس – محامٍ</span>
-          <h3 data-ar="الأستاذ سعد الرومي" data-en="Mr. Saad Alroomi">الأستاذ سعد الرومي</h3>
-        </div>
-      </article>
-
-      <article class="founder-profile">
-        <div class="founder-photo-wrap">
-          <div class="founder-photo"><img src="assets/images/Tareq.jpg" alt="Tareq Alsubaie"></div>
-        </div>
-        <div class="founder-info">
-          <span class="role" data-ar="شريك مؤسس – محامٍ" data-en="Founding Partner – Lawyer">شريك مؤسس – محامٍ</span>
-          <h3 data-ar="الأستاذ طارق السبيعي" data-en="Mr. Tareq Alsubaie">الأستاذ طارق السبيعي</h3>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= TEAM ================= -->
-<section class="team-section" id="team">
-  <div class="container">
-    <div class="section-heading centered">
-      <span class="eyebrow dark" data-ar="فريق العمل" data-en="OUR TEAM">فريق العمل</span>
-      <h2 data-ar="كفاءات قانونية وإدارية متكاملة" data-en="A multidisciplinary team">كفاءات قانونية وإدارية متكاملة</h2>
-      <p data-ar="يضم المكتب نخبة من المحامين والمستشارين وفريق المتابعة والتنفيذ والإدارة."
-         data-en="Our firm brings together lawyers, legal consultants, execution specialists and administrative professionals.">
-        يضم المكتب نخبة من المحامين والمستشارين وفريق المتابعة والتنفيذ والإدارة.
-      </p>
-    </div>
-
-    <div class="team-group">
-      <div class="group-title"><span data-ar="الإدارة" data-en="Management">الإدارة</span></div>
-      <div class="team-grid compact">
-        <article class="team-card"><h3 data-ar="الأستاذ يوسف مساعد السبيعي" data-en="Mr. Yousef Musaed Alsubaie">الأستاذ يوسف مساعد السبيعي</h3><span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer – General Management">محامٍ – الإدارة العامة</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ عبد اللطيف طارق السبيعي" data-en="Mr. Abdullateef Tareq Alsubaie">الأستاذ عبد اللطيف طارق السبيعي</h3><span data-ar="محامٍ – الإدارة العامة" data-en="Lawyer – General Management">محامٍ – الإدارة العامة</span></article>
-      </div>
-    </div>
-
-    <div class="team-group">
-      <div class="group-title"><span data-ar="المستشارون" data-en="Legal Consultants">المستشارون</span></div>
-      <div class="team-grid compact">
-        <article class="team-card"><h3 data-ar="الأستاذ محمود محمد الشامي" data-en="Mr. Mahmoud Mohamed Elshami">الأستاذ محمود محمد الشامي</h3><span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ هشام محمد العويل" data-en="Mr. Hesham Mohamed Alaweel">الأستاذ هشام محمد العويل</h3><span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ عبد الفتاح سعد سليمان" data-en="Mr. Abdulfatah Saad Suliman">الأستاذ عبد الفتاح سعد سليمان</h3><span data-ar="مستشار قانوني" data-en="Legal Consultant">مستشار قانوني</span></article>
-      </div>
-    </div>
-
-    <div class="team-group">
-      <div class="group-title"><span data-ar="المحاكم والتنفيذ" data-en="Courts & Execution">المحاكم والتنفيذ</span></div>
-      <div class="team-grid compact">
-        <article class="team-card"><h3 data-ar="الأستاذ محمود اسماعيل السيد" data-en="Mr. Mahmoud Ismail El-Sayed">الأستاذ محمود اسماعيل السيد</h3><span data-ar="رئيس قسم المتابعة والتنفيذ" data-en="Head of Follow-up & Execution">رئيس قسم المتابعة والتنفيذ</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ عبد الواحد عبد السلام نصر" data-en="Mr. Abdulwahed Abdelsalam Nasr">الأستاذ عبد الواحد عبد السلام نصر</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ محمد حسن عبد المجيد" data-en="Mr. Mohamed Hassan Abdelmageed">الأستاذ محمد حسن عبد المجيد</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ عصمت عبد البصير بحر" data-en="Mr. Esmat Abdelbasir Bahr">الأستاذ عصمت عبد البصير بحر</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ معتز حمدي العنتبلي" data-en="Mr. Moataz Hamdi Al-Entably">الأستاذ معتز حمدي العنتبلي</h3><span data-ar="مسئول المتابعة والتنفيذ" data-en="Follow-up & Execution Officer">مسئول المتابعة والتنفيذ</span></article>
-      </div>
-    </div>
-
-    <div class="team-group">
-      <div class="group-title"><span data-ar="القسم الإداري" data-en="Administrative Department">القسم الإداري</span></div>
-      <div class="team-grid compact">
-        <article class="team-card"><h3 data-ar="الأستاذ أحمد مصطفى الحسانين" data-en="Mr. Ahmed Mostafa Alhasanin">الأستاذ أحمد مصطفى الحسانين</h3><span data-ar="سكرتير تنفيذي" data-en="Executive Secretary">سكرتير تنفيذي</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ يحيى عبد الله المهري" data-en="Mr. Yehya Abdullah Almehri">الأستاذ يحيى عبد الله المهري</h3><span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ خالد عبد البصير محمد" data-en="Mr. Khaled Abdulbasir Mohamed">الأستاذ خالد عبد البصير محمد</h3><span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span></article>
-        <article class="team-card"><h3 data-ar="الأستاذ سيد سايح احمد" data-en="Mr. Sayed Sayeh Ahmed">الأستاذ سيد سايح احمد</h3><span data-ar="شؤون إدارية وتنظيمية" data-en="Administrative Affairs">شؤون إدارية وتنظيمية</span></article>
-      </div>
-    </div>
-
-    <div class="team-group">
-      <div class="group-title"><span data-ar="القسم المالي والحسابات" data-en="Finance Department">القسم المالي والحسابات</span></div>
-      <div class="team-grid compact">
-        <article class="team-card"><h3 data-ar="الأستاذ خالد محمد الشربيني" data-en="Mr. Khaled Mohamed El-Sherbiny">الأستاذ خالد محمد الشربيني</h3><span data-ar="إدارة الحسابات والمالية" data-en="Accounts & Finance Department">إدارة الحسابات والمالية</span></article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CLIENTS ================= -->
-<section class="clients-section">
-  <div class="container">
-    <div class="section-heading centered">
-      <span class="eyebrow dark" data-ar="شركاؤنا في النجاح" data-en="OUR CLIENTS">شركاؤنا في النجاح</span>
-      <h2 data-ar="ثقة نعتز بها" data-en="A relationship built on trust">ثقة نعتز بها</h2>
-    </div>
-
-    <div class="partners-slider">
-      <div class="partners-track">
-        <img src="assets/images/client1.png" alt="">
-        <img src="assets/images/client2.png" alt="">
-        <img src="assets/images/client3.png" alt="">
-        <img src="assets/images/client5.png" alt="">
-        <img src="assets/images/client6.png" alt="">
-        <img src="assets/images/client7.png" alt="">
-        <img src="assets/images/client8.png" alt="">
-        <img src="assets/images/client9.png" alt="">
-        <img src="assets/images/client10.png" alt="">
-        <img src="assets/images/client11.png" alt="">
-        <img src="assets/images/client12.png" alt="">
-        <img src="assets/images/client13.png" alt="">
-        <img src="assets/images/client1.png" alt="">
-        <img src="assets/images/client2.png" alt="">
-        <img src="assets/images/client3.png" alt="">
-        <img src="assets/images/client5.png" alt="">
-        <img src="assets/images/client6.png" alt="">
-        <img src="assets/images/client7.png" alt="">
-        <img src="assets/images/client8.png" alt="">
-        <img src="assets/images/client9.png" alt="">
-        <img src="assets/images/client10.png" alt="">
-        <img src="assets/images/client11.png" alt="">
-        <img src="assets/images/client12.png" alt="">
-        <img src="assets/images/client13.png" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="contact-section" id="contact">
-  <div class="contact-background"></div>
-  <div class="container contact-layout">
-    <div class="contact-intro">
-      <span class="eyebrow" data-ar="تواصل معنا" data-en="GET IN TOUCH">تواصل معنا</span>
-      <h2 data-ar="لنبدأ من احتياجك القانوني" data-en="Let's start with your legal needs">لنبدأ من احتياجك القانوني</h2>
-      <p data-ar="يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية ومناقشة متطلباتكم."
-         data-en="We are pleased to hear from you and discuss your legal requirements.">
-        يسعدنا تواصلكم معنا للرد على استفساراتكم القانونية ومناقشة متطلباتكم.
-      </p>
-
-      <div class="contact-details">
-        <a href="tel:+96522435001"><i class="fa-solid fa-phone"></i><span>+965 22435001</span></a>
-        <a href="https://wa.me/96595571635" target="_blank"><i class="fa-brands fa-whatsapp"></i><span>+965 95571635</span></a>
-        <a href="mailto:info@st-lawyers.com"><i class="fa-solid fa-envelope"></i><span>info@st-lawyers.com</span></a>
-        <div><i class="fa-solid fa-location-dot"></i><span data-ar="الكويت – العاصمة – الشرق – شارع مبارك الكبير – مبنى المزيني – الطابق الثاني والثالث"
-                    data-en="Kuwait – Capital Governorate – Sharq – Mubarak Al-Kabeer St. – Almuzini Building – Floors 2 & 3">
-          الكويت – العاصمة – الشرق – شارع مبارك الكبير – مبنى المزيني – الطابق الثاني والثالث
-        </span></div>
-      </div>
-    </div>
-
-    <div class="contact-form-box" id="contact-form">
-      <form id="contactForm">
-        <div class="form-row">
-          <div class="field">
-            <label for="firstName" data-ar="الاسم الأول" data-en="First Name">الاسم الأول</label>
-            <input type="text" id="firstName" required>
-          </div>
-          <div class="field">
-            <label for="lastName" data-ar="اسم العائلة" data-en="Last Name">اسم العائلة</label>
-            <input type="text" id="lastName" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="email" data-ar="البريد الإلكتروني" data-en="Email Address">البريد الإلكتروني</label>
-          <input type="email" id="email" required>
-        </div>
-
-        <div class="field phone-field">
-          <label for="phone" data-ar="رقم الجوال" data-en="Phone Number">رقم الجوال</label>
-          <div class="phone-row">
-            <select id="countryCode" aria-label="Country Code">
-              <option value="+965">🇰🇼 +965</option>
-              <option value="+966">🇸🇦 +966</option>
-              <option value="+20">🇪🇬 +20</option>
-            </select>
-            <input type="tel" id="phone" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="practice" data-ar="مجال الممارسة" data-en="Practice Area">مجال الممارسة</label>
-          <select id="practice" required>
-            <option value=""></option>
-            <option value="Criminal Law">القسم الجنائي</option>
-            <option value="Commercial Law">القسم التجاري</option>
-            <option value="Civil Law">القسم المدني</option>
-            <option value="Labor Law">القسم العمالي</option>
-            <option value="Personal Status">الأحوال الشخصية</option>
-            <option value="Arbitration">التحكيم</option>
-          </select>
-        </div>
-
-        <div class="upload-box" id="uploadBox">
-          <input type="file" id="fileInput" hidden>
-          <i class="fa-solid fa-cloud-arrow-up"></i>
-          <p data-ar="اضغط أو اسحب الملف هنا" data-en="Click to upload or drag & drop">اضغط أو اسحب الملف هنا</p>
-        </div>
-
-        <div class="field">
-          <label for="message" data-ar="رسالتك" data-en="Your Message">رسالتك</label>
-          <textarea id="message" rows="5" required></textarea>
-        </div>
-
-        <button class="submit-btn" type="submit" data-ar="إرسال الطلب" data-en="Send Request">إرسال الطلب</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
-      <p data-ar="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية"
-         data-en="Saad Alroomi & Tareq Alsubaie Law Firm">
-        مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية
-      </p>
-    </div>
-
-    <div>
-      <h3 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
-      <a href="#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a>
-      <a href="#practice" data-ar="مجالات الممارسة" data-en="Practice Areas">مجالات الممارسة</a>
-      <a href="#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a>
-      <a href="news.html" data-ar="أخبار المكتب" data-en="News">أخبار المكتب</a>
-    </div>
-
-    <div>
-      <h3 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h3>
-      <a href="tel:+96522435001">+965 22435001</a>
-      <a href="mailto:info@st-lawyers.com">info@st-lawyers.com</a>
-      <span data-ar="الكويت – الشرق" data-en="Kuwait – Sharq">الكويت – الشرق</span>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p data-ar="جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026"
-       data-en="All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm © 2026">
-      جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026
-    </p>
-  </div>
-</footer>
-
-<!-- SOCIAL -->
-<div class="social-sidebar">
-  <a href="https://www.facebook.com/SaadTareqLawyers.Group?locale=ar_AR" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://x.com/SaadTariq739982" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-  <a href="https://www.instagram.com/saadaroumiandtareq" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-</div>
-
-<!-- WHATSAPP -->
-<div class="wa-chat">
-  <button class="wa-btn" id="waToggle" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></button>
-  <div class="wa-box" id="waBox">
-    <div class="wa-header">
-      <i class="fab fa-whatsapp"></i>
-      <div><strong>WhatsApp Business</strong><br><span>مكتب سعد الرومي وطارق السبيعي</span></div>
-    </div>
-    <div class="wa-body" data-ar="مرحبًا 👋 يسعدنا تواصلكم معنا مباشرة عبر واتساب."
-         data-en="Hello 👋 We are pleased to assist you directly via WhatsApp.">
-      مرحبًا 👋 يسعدنا تواصلكم معنا مباشرة عبر واتساب.
-    </div>
-    <a href="https://wa.me/96595571635" target="_blank" class="wa-start" data-ar="بدء المحادثة" data-en="Start Chat">بدء المحادثة</a>
-  </div>
-</div>
-
-<script src="js/lang.js"></script>
-<script src="js/mobile-menu.js"></script>
-<script src="js/whatsapp.js"></script>
-
-<script>
-function changeLanguage(lang) {
-  if (typeof setLang === "function") setLang(lang);
-  else if (typeof setLanguage === "function") setLanguage(lang);
-
-  document.querySelectorAll(".lang-switcher button").forEach(btn => btn.classList.remove("active"));
-  const active = document.querySelector('.lang-switcher button[onclick*="' + lang + '"]');
-  if (active) active.classList.add("active");
+:root{
+  --navy:#0a1827;
+  --navy-2:#102437;
+  --gold:#c9a24d;
+  --gold-light:#e0c47b;
+  --ink:#17202a;
+  --muted:#68717b;
+  --cream:#f5f2eb;
+  --offwhite:#fbfaf7;
+  --white:#fff;
+  --line:#dedbd3;
+  --shadow:0 18px 50px rgba(10,24,39,.10);
+  --container:1240px;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdown = document.querySelector(".nav-dropdown");
-  const toggle = document.querySelector(".dropdown-toggle");
-  const nav = document.getElementById("mainNav");
-  const menuBtn = document.getElementById("menuBtn");
-
-  if (toggle && dropdown) {
-    toggle.addEventListener("click", function(e) {
-      if (window.innerWidth <= 900) {
-        e.preventDefault();
-        e.stopPropagation();
-        const open = dropdown.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      }
-    });
-  }
-
-  document.querySelectorAll(".main-nav > a, .dropdown-menu a").forEach(link => {
-    link.addEventListener("click", function() {
-      if (nav) nav.classList.remove("open");
-      if (menuBtn) menuBtn.classList.remove("active");
-      if (dropdown) dropdown.classList.remove("open");
-    });
-  });
-
-  document.addEventListener("click", function(e) {
-    if (dropdown && !dropdown.contains(e.target)) {
-      dropdown.classList.remove("open");
-      if (toggle) toggle.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  window.addEventListener("scroll", function() {
-    const header = document.getElementById("siteHeader");
-    if (header) header.classList.toggle("scrolled", window.scrollY > 20);
-  });
-});
-
-const uploadBox = document.getElementById("uploadBox");
-const fileInput = document.getElementById("fileInput");
-
-if (uploadBox && fileInput) {
-  uploadBox.addEventListener("click", () => fileInput.click());
-  uploadBox.addEventListener("dragover", e => {
-    e.preventDefault();
-    uploadBox.classList.add("dragging");
-  });
-  uploadBox.addEventListener("dragleave", () => uploadBox.classList.remove("dragging"));
-  uploadBox.addEventListener("drop", e => {
-    e.preventDefault();
-    uploadBox.classList.remove("dragging");
-    if (e.dataTransfer.files.length) {
-      fileInput.files = e.dataTransfer.files;
-      uploadBox.querySelector("p").textContent = e.dataTransfer.files[0].name;
-    }
-  });
-  fileInput.addEventListener("change", () => {
-    if (fileInput.files.length) uploadBox.querySelector("p").textContent = fileInput.files[0].name;
-  });
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--offwhite);
+  font-family:'Cairo',sans-serif;
+  line-height:1.7;
 }
-</script>
+body,button,input,select,textarea{font-family:'Cairo',sans-serif}
+img{max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(var(--container),calc(100% - 48px));margin-inline:auto}
+section{position:relative}
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-(function(){
-  emailjs.init("avv-ilIXKVxZgUnWf");
-})();
+/* ================= HEADER ================= */
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+.site-header{
+  position:fixed;
+  inset:0 0 auto 0;
+  z-index:5000;
+  background:rgba(10,24,39,.18);
+  border-bottom:1px solid rgba(255,255,255,.12);
+  transition:.35s ease;
+}
+.site-header.scrolled{
+  background:rgba(10,24,39,.97);
+  box-shadow:0 8px 30px rgba(0,0,0,.16);
+}
+.header-inner{
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.brand{display:flex;align-items:center;flex:0 0 auto}
+.brand img{height:70px;width:auto;display:block}
 
-  emailjs.send("service_ov7xkq8", "template_n07xlxe", {
-    firstName: document.getElementById("firstName").value,
-    lastName: document.getElementById("lastName").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("countryCode").value + document.getElementById("phone").value,
-    message: document.getElementById("message").value
-  }).then(function() {
-    alert(document.documentElement.lang === "en" ? "Your request has been sent successfully." : "تم إرسال الطلب بنجاح");
-    document.getElementById("contactForm").reset();
-  }, function(error) {
-    alert((document.documentElement.lang === "en" ? "Error: " : "حدث خطأ: ") + JSON.stringify(error));
-  });
-});
-</script>
+.main-nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+  margin-inline:auto;
+  flex:1;
+}
+.main-nav>a,
+.dropdown-toggle{
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  white-space:nowrap;
+  transition:.25s ease;
+}
+.main-nav>a:hover,
+.dropdown-toggle:hover{color:var(--gold-light)}
 
-</body>
-</html>
+.dropdown{position:relative}
+.dropdown-toggle{
+  background:none;
+  border:0;
+  padding:8px 0;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.dropdown-toggle i{font-size:9px;transition:.25s}
+.dropdown.open .dropdown-toggle i{transform:rotate(180deg)}
+
+.dropdown-menu{
+  position:absolute;
+  top:calc(100% + 18px);
+  inset-inline-end:0;
+  width:245px;
+  padding:10px;
+  background:rgba(10,24,39,.98);
+  border:1px solid rgba(201,162,77,.35);
+  box-shadow:0 20px 45px rgba(0,0,0,.25);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(8px);
+  transition:.25s ease;
+}
+.dropdown:hover .dropdown-menu,
+.dropdown.open .dropdown-menu{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+.dropdown-menu a{
+  display:block;
+  color:#fff;
+  padding:11px 13px;
+  font-size:14px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.dropdown-menu a:last-child{border-bottom:0}
+.dropdown-menu a:hover{background:rgba(201,162,77,.12);color:var(--gold-light)}
+
+.lang-switcher{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  flex:0 0 auto;
+  color:rgba(255,255,255,.6);
+  font-size:12px;
+}
+.lang-switcher button{
+  border:0;
+  background:none;
+  color:rgba(255,255,255,.7);
+  padding:3px;
+  cursor:pointer;
+  font-size:12px;
+  letter-spacing:1px;
+}
+.lang-switcher button:hover,
+.lang-switcher button.active{color:var(--gold-light)}
+
+.menu-btn{
+  display:none;
+  width:42px;height:42px;
+  border:1px solid rgba(201,162,77,.6);
+  background:transparent;
+  cursor:pointer;
+  padding:10px;
+}
+.menu-btn span{
+  display:block;height:2px;background:var(--gold);
+  margin:5px 0;transition:.25s
+}
+.menu-btn.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn.active span:nth-child(2){opacity:0}
+.menu-btn.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ================= TYPOGRAPHY ================= */
+
+.eyebrow{
+  display:inline-block;
+  color:var(--gold-light);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.eyebrow.dark{color:#9b7934}
+.section-heading{max-width:780px;margin-bottom:60px}
+.section-heading.centered{text-align:center;margin-inline:auto}
+.section-heading h2{
+  margin:12px 0 18px;
+  color:var(--navy);
+  font-family:'Playfair Display','Cairo',serif;
+  font-size:clamp(32px,4vw,52px);
+  line-height:1.2;
+  font-weight:600;
+}
+.section-heading p{
+  margin:0;
+  color:var(--muted);
+  font-size:16px;
+  line-height:2;
+}
+.section-heading.light h2{color:#fff}
+.section-heading.light p{color:rgba(255,255,255,.65)}
+
+/* ================= HERO ================= */
+
+.hero-editorial{
+  min-height:780px;
+  height:92vh;
+  min-height:700px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:var(--navy);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url("../images/hero.jpg") center/cover no-repeat;
+  transform:scale(1.02);
+}
+.hero-shade{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(7,18,30,.92) 0%,rgba(7,18,30,.68) 48%,rgba(7,18,30,.38) 100%),
+    linear-gradient(180deg,rgba(7,18,30,.2),rgba(7,18,30,.65));
+}
+html[dir="rtl"] .hero-shade{
+  background:
+    linear-gradient(270deg,rgba(7,18,30,.92) 0%,rgba(7,18,30,.68) 48%,rgba(7,18,30,.38) 100%),
+    linear-gradient(180deg,rgba(7,18,30,.2),rgba(7,18,30,.65));
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  padding-top:120px;
+}
+.hero-copy{max-width:760px;color:#fff}
+.hero-copy h1{
+  margin:18px 0 22px;
+  font-family:'Playfair Display','Cairo',serif;
+  font-size:clamp(52px,7vw,92px);
+  line-height:1.02;
+  font-weight:500;
+  letter-spacing:-1px;
+}
+.hero-copy .gold-rule{
+  width:90px;height:3px;background:var(--gold);
+  margin-bottom:22px;
+}
+.hero-copy>p{
+  margin:0;
+  font-size:21px;
+  color:rgba(255,255,255,.84);
+}
+.hero-actions{display:flex;gap:12px;margin-top:35px}
+.btn{
+  min-width:155px;
+  padding:13px 24px;
+  text-align:center;
+  font-size:13px;
+  font-weight:700;
+  transition:.3s ease;
+}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{border:1px solid rgba(255,255,255,.45);color:#fff}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold-light)}
+.hero-side-note{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  color:rgba(255,255,255,.65);
+  margin-bottom:8px;
+}
+.hero-side-note span{
+  color:var(--gold);
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+}
+.hero-side-note>div{height:1px;width:55px;background:var(--gold)}
+.hero-side-note small{font-size:11px;line-height:1.8}
+.scroll-down{
+  position:absolute;
+  z-index:3;
+  bottom:28px;
+  inset-inline-start:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:rgba(255,255,255,.65);
+  font-size:10px;
+  letter-spacing:2px;
+}
+.scroll-down i{color:var(--gold)}
+
+/* ================= ABOUT ================= */
+
+.about-modern{padding:125px 0 115px;background:var(--offwhite)}
+.about-grid-premium{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:90px;
+  align-items:center;
+}
+.about-image-frame{
+  position:relative;
+  min-height:560px;
+  padding:0 0 35px 35px;
+}
+html[dir="rtl"] .about-image-frame{padding:0 35px 35px 0}
+.about-image-frame::before{
+  content:"";
+  position:absolute;
+  inset:35px 35px 0 0;
+  border:1px solid var(--gold);
+  opacity:.7;
+}
+html[dir="rtl"] .about-image-frame::before{inset:35px 0 0 35px}
+.about-image-frame img{
+  position:relative;
+  width:100%;height:525px;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.88);
+}
+.image-caption{
+  position:absolute;
+  bottom:0;
+  inset-inline-end:0;
+  width:180px;
+  padding:18px 22px;
+  background:var(--navy);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.image-caption strong{
+  color:var(--gold);
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+}
+.image-caption span{font-size:12px;color:rgba(255,255,255,.7)}
+.about-copy{position:relative}
+.about-number{
+  color:rgba(201,162,77,.17);
+  font-family:'Playfair Display',serif;
+  font-size:110px;
+  line-height:.8;
+  position:absolute;
+  top:-30px;
+  inset-inline-end:0;
+}
+.about-text{position:relative;z-index:2;padding-top:45px}
+.about-text p{
+  color:#4f5861;
+  font-size:16px;
+  line-height:2.15;
+  margin:0 0 19px;
+}
+.text-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:700;
+  margin-top:14px;
+  border-bottom:1px solid var(--gold);
+  padding-bottom:6px;
+}
+.text-link i{color:var(--gold)}
+
+/* ================= PRACTICE ================= */
+
+.practice-section{padding:120px 0;background:#fff}
+.practice-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-inline-start:1px solid var(--line);
+}
+.practice-card{
+  position:relative;
+  min-height:310px;
+  padding:35px 30px 30px;
+  border-inline-end:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  transition:.35s ease;
+  overflow:hidden;
+}
+.practice-card::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:3px;
+  background:var(--gold);
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:.35s ease;
+}
+.practice-card:hover{
+  background:var(--navy);
+  color:#fff;
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+  z-index:2;
+}
+.practice-card:hover::after{transform:scaleX(1)}
+.practice-card i{
+  color:var(--gold);
+  font-size:27px;
+  margin:42px 0 20px;
+}
+.practice-index{
+  position:absolute;
+  top:25px;
+  inset-inline-end:25px;
+  color:#b7b2a9;
+  font-family:'Playfair Display',serif;
+  font-size:13px;
+}
+.practice-card h3{
+  margin:0 0 10px;
+  font-size:19px;
+  font-weight:700;
+}
+.practice-card p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.9;
+  min-height:50px;
+  margin:0;
+}
+.practice-card:hover p{color:rgba(255,255,255,.65)}
+.card-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:24px;
+  color:var(--gold);
+  font-size:11px;
+  font-weight:700;
+}
+.card-link i{font-size:11px;margin:0}
+.practice-card:hover .card-link{color:var(--gold-light)}
+
+/* ================= FOUNDERS ================= */
+
+.founders-section{
+  padding:120px 0 130px;
+  background:
+    linear-gradient(rgba(8,22,36,.94),rgba(8,22,36,.98)),
+    url("../images/law-bg.jpg") center/cover;
+  color:#fff;
+  overflow:hidden;
+}
+.founders-section::before{
+  content:"ST";
+  position:absolute;
+  inset-inline-start:-35px;
+  top:10px;
+  color:rgba(255,255,255,.025);
+  font-family:'Playfair Display',serif;
+  font-size:340px;
+  line-height:1;
+}
+.founders-grid{
+  position:relative;
+  z-index:2;
+  max-width:930px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:45px;
+}
+.founder-profile{
+  display:grid;
+  grid-template-columns:210px 1fr;
+  align-items:end;
+  gap:25px;
+  padding:28px;
+  border:1px solid rgba(201,162,77,.35);
+  background:rgba(255,255,255,.035);
+  transition:.35s ease;
+}
+.founder-profile:hover{
+  border-color:var(--gold);
+  background:rgba(255,255,255,.065);
+  transform:translateY(-7px);
+}
+.founder-photo-wrap{
+  height:280px;
+  padding:5px;
+  border:1px solid rgba(201,162,77,.7);
+}
+.founder-photo{width:100%;height:100%;overflow:hidden;background:#ddd}
+.founder-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  display:block;transition:.5s ease;
+}
+.founder-profile:hover .founder-photo img{transform:scale(1.035)}
+.founder-info{padding-bottom:15px}
+.founder-info .role{
+  display:block;
+  color:var(--gold);
+  font-size:11px;
+  margin-bottom:12px;
+}
+.founder-info h3{
+  margin:0;
+  color:#fff;
+  font-size:22px;
+  line-height:1.5;
+}
+
+/* ================= TEAM ================= */
+
+.team-section{padding:125px 0;background:var(--offwhite)}
+.team-group{margin-top:58px}
+.group-title{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:24px;
+  color:var(--navy);
+  font-size:20px;
+  font-weight:700;
+}
+.group-title::after{
+  content:"";
+  width:80px;height:1px;background:var(--gold);
+}
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.team-grid.compact .team-card{
+  min-height:130px;
+  padding:24px;
+}
+.team-card{
+  background:#fff;
+  border:1px solid #e7e3da;
+  padding:25px;
+  transition:.3s ease;
+}
+.team-card:hover{
+  border-color:rgba(201,162,77,.65);
+  box-shadow:0 15px 35px rgba(10,24,39,.07);
+  transform:translateY(-4px);
+}
+.team-card h3{
+  margin:0 0 7px;
+  color:var(--navy);
+  font-size:16px;
+  line-height:1.6;
+}
+.team-card span{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* ================= CLIENTS ================= */
+
+.clients-section{padding:90px 0;background:#fff;overflow:hidden}
+.clients-section .section-heading{margin-bottom:40px}
+.partners-slider{overflow:hidden}
+.partners-track{
+  display:flex;
+  align-items:center;
+  gap:70px;
+  width:max-content;
+  animation:partnersLTR 30s linear infinite;
+}
+html[dir="rtl"] .partners-track{animation-name:partnersRTL}
+.partners-track img{
+  width:auto;
+  max-width:130px;
+  max-height:62px;
+  object-fit:contain;
+  filter:grayscale(1);
+  opacity:.55;
+  transition:.25s;
+}
+.partners-track img:hover{filter:grayscale(0);opacity:1}
+@keyframes partnersLTR{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes partnersRTL{from{transform:translateX(0)}to{transform:translateX(50%)}}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+  padding:125px 0;
+  color:#fff;
+  background:var(--navy);
+  overflow:hidden;
+}
+.contact-background{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(201,162,77,.10),transparent 32%),
+    linear-gradient(135deg,#0a1827,#102437);
+}
+.contact-layout{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:80px;
+  align-items:start;
+}
+.contact-intro h2{
+  margin:16px 0 18px;
+  color:#fff;
+  font-family:'Playfair Display','Cairo',serif;
+  font-size:clamp(34px,4vw,55px);
+  line-height:1.2;
+}
+.contact-intro>p{color:rgba(255,255,255,.65);font-size:15px;line-height:2;max-width:470px}
+.contact-details{margin-top:40px;display:grid;gap:16px}
+.contact-details a,
+.contact-details div{
+  display:flex;align-items:flex-start;gap:13px;
+  color:rgba(255,255,255,.8);
+  font-size:13px;
+}
+.contact-details i{width:18px;color:var(--gold);margin-top:4px}
+.contact-form-box{
+  background:#fff;
+  color:var(--ink);
+  padding:38px;
+  box-shadow:0 25px 70px rgba(0,0,0,.2);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:19px}
+.field label{
+  display:block;
+  margin-bottom:7px;
+  color:#46515b;
+  font-size:12px;
+  font-weight:600;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  border:1px solid #dcd9d1;
+  background:#fff;
+  padding:12px 13px;
+  outline:none;
+  color:var(--ink);
+  font-size:13px;
+  transition:.25s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.phone-row{display:grid;grid-template-columns:105px 1fr;gap:8px}
+.upload-box{
+  border:1px dashed #c9c4b9;
+  min-height:105px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  cursor:pointer;
+  margin:5px 0 20px;
+  color:#7c817f;
+  transition:.25s;
+}
+.upload-box:hover,.upload-box.dragging{border-color:var(--gold);background:#faf7ef}
+.upload-box i{font-size:25px;color:var(--gold);margin-bottom:5px}
+.upload-box p{margin:0;font-size:11px}
+.submit-btn{
+  width:100%;
+  border:0;
+  background:var(--navy);
+  color:#fff;
+  padding:14px;
+  cursor:pointer;
+  font-weight:700;
+  font-size:13px;
+  transition:.25s;
+}
+.submit-btn:hover{background:var(--gold);color:var(--navy)}
+
+/* ================= FOOTER ================= */
+
+.footer{background:#07131f;color:#fff;padding-top:65px}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:70px;
+  padding-bottom:55px;
+}
+.footer-brand p{color:rgba(255,255,255,.55);font-size:12px;max-width:300px}
+.footer-logo{height:62px;width:auto}
+.footer h3{color:var(--gold);font-size:13px;margin:5px 0 18px}
+.footer-grid>div:not(.footer-brand) a,
+.footer-grid>div:not(.footer-brand) span{
+  display:block;color:rgba(255,255,255,.62);font-size:12px;margin:9px 0;
+}
+.footer-grid a:hover{color:#fff!important}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;
+  padding:18px;
+}
+.footer-bottom p{margin:0;color:rgba(255,255,255,.4);font-size:10px}
+
+/* ================= SOCIAL ================= */
+
+.social-sidebar{
+  position:fixed;
+  z-index:4500;
+  inset-inline-start:0;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+}
+.social-sidebar a{
+  width:39px;height:39px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--navy);
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  font-size:15px;
+  transition:.25s;
+}
+.social-sidebar a:hover{background:var(--gold);color:var(--navy)}
+
+/* ================= WHATSAPP ================= */
+
+.wa-chat{
+  position:fixed;
+  z-index:6000;
+  bottom:23px;
+  inset-inline-end:23px;
+}
+.wa-btn{
+  width:58px;height:58px;border:0;border-radius:50%;
+  background:var(--gold);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
+  transition:.25s;
+}
+.wa-btn:hover{transform:scale(1.06);background:var(--gold-light)}
+.wa-btn i{font-size:27px}
+.wa-box{
+  position:absolute;
+  bottom:72px;
+  inset-inline-end:0;
+  width:295px;
+  background:#fff;
+  color:var(--ink);
+  box-shadow:0 20px 55px rgba(0,0,0,.22);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translateY(8px);
+  transition:.25s;
+}
+.wa-box.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+.wa-header{
+  padding:15px;
+  background:var(--navy);
+  color:#fff;
+  display:flex;align-items:center;gap:11px;
+}
+.wa-header i{font-size:25px;color:var(--gold)}
+.wa-header strong{font-size:12px}
+.wa-header span{font-size:10px;color:rgba(255,255,255,.65)}
+.wa-body{padding:18px;font-size:12px;line-height:1.8}
+.wa-start{display:block;text-align:center;background:var(--gold);color:var(--navy);padding:11px;font-size:12px;font-weight:700}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:1100px){
+  .main-nav{gap:18px}
+  .header-inner{gap:15px}
+  .practice-grid{grid-template-columns:repeat(2,1fr)}
+  .founder-profile{grid-template-columns:170px 1fr}
+  .founder-photo-wrap{height:240px}
+}
+@media (max-width:900px){
+  .container{width:min(100% - 34px,var(--container))}
+  .header-inner{min-height:78px}
+  .brand img{height:58px}
+  .menu-btn{display:block;order:2}
+  .lang-switcher{order:1;margin-inline-start:auto}
+  .brand{order:0}
+  .main-nav{
+    display:none;
+    position:absolute;
+    top:78px;
+    inset-inline:0;
+    background:rgba(10,24,39,.99);
+    padding:15px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+  }
+  .main-nav.open{display:flex}
+  .main-nav>a,.dropdown-toggle{
+    width:100%;
+    padding:14px 10px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .dropdown-toggle{justify-content:space-between}
+  .dropdown-menu{
+    position:static;
+    width:100%;
+    display:none;
+    opacity:1;visibility:visible;transform:none;
+    box-shadow:none;
+    border:0;
+    padding:0 10px 5px;
+  }
+  .dropdown.open .dropdown-menu{display:block}
+  .dropdown:hover .dropdown-menu{display:none}
+  .dropdown.open:hover .dropdown-menu{display:block}
+  .hero-content{padding-top:100px}
+  .hero-side-note{display:none}
+  .about-grid-premium,.contact-layout{grid-template-columns:1fr;gap:55px}
+  .about-image-frame{min-height:auto}
+  .about-image-frame img{height:470px}
+  .practice-grid{grid-template-columns:repeat(2,1fr)}
+  .founders-grid{grid-template-columns:1fr;max-width:600px}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .container{width:calc(100% - 30px)}
+  .site-header{background:rgba(10,24,39,.95)}
+  .lang-switcher{margin-inline-start:0}
+  .hero-editorial{min-height:680px;height:88vh}
+  .hero-copy h1{font-size:49px}
+  .hero-copy>p{font-size:17px}
+  .hero-actions{flex-direction:column;max-width:230px}
+  .btn{width:100%}
+  .scroll-down{display:none}
+  .about-modern,.practice-section,.founders-section,.team-section,.contact-section{padding:85px 0}
+  .section-heading{margin-bottom:40px}
+  .section-heading h2{font-size:32px}
+  .about-grid-premium{gap:45px}
+  .about-image-frame{padding:0 0 25px 25px}
+  html[dir="rtl"] .about-image-frame{padding:0 25px 25px 0}
+  .about-image-frame::before{inset:25px 25px 0 0}
+  html[dir="rtl"] .about-image-frame::before{inset:25px 0 0 25px}
+  .about-image-frame img{height:390px}
+  .about-number{font-size:80px}
+  .practice-grid{grid-template-columns:1fr}
+  .practice-card{min-height:260px}
+  .founder-profile{grid-template-columns:1fr;padding:20px}
+  .founder-photo-wrap{width:220px;height:275px;margin:auto}
+  .founder-info{text-align:center;padding:5px}
+  .team-grid{grid-template-columns:1fr}
+  .team-grid.compact .team-card{min-height:110px}
+  .clients-section{padding:65px 0}
+  .partners-track{gap:45px}
+  .partners-track img{max-width:100px;max-height:52px}
+  .contact-form-box{padding:24px 18px}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .social-sidebar{top:auto;bottom:18px;inset-inline-start:15px;transform:none;flex-direction:row}
+  .social-sidebar a{width:38px;height:38px;border-radius:50%;margin-inline-end:5px}
+  .wa-chat{bottom:18px;inset-inline-end:15px}
+  .wa-btn{width:54px;height:54px}
+}
+
+/* English typography */
+html[lang="en"] body{direction:ltr}
+html[lang="en"] .hero-copy h1,
+html[lang="en"] .section-heading h2,
+html[lang="en"] .contact-intro h2,
+html[lang="en"] .about-number,
+html[lang="en"] .founder-info h3{font-family:'Playfair Display',serif}
+html[lang="en"] .practice-card,
+html[lang="en"] .team-card,
+html[lang="en"] .contact-form-box{text-align:left}
+
+/* RTL alignment helpers */
+html[dir="rtl"] .practice-card,
+html[dir="rtl"] .team-card,
+html[dir="rtl"] .contact-form-box{text-align:right}
