@@ -84,23 +84,21 @@
 
         <div class="hero-text">
 
-            <div class="hero-eyebrow">
+            <div class="hero-eyebrow" data-ar="نمارس مهنة المحاماة منذ عام 1982" data-en="Practicing law since 1982">
                 نمارس مهنة المحاماة منذ عام 1982
             </div>
            
-            <p class="hero-description">
-                خبرة قانونية راسخة في دولة الكويت منذ عام 1982،
-                نقدم خدمات التقاضي والاستشارات القانونية والتحكيم
-                وفق أعلى المعايير المهنية.
+            <p class="hero-description" data-ar="خبرة قانونية راسخة في دولة الكويت منذ عام 1982، نقدم خدمات التقاضي والاستشارات القانونية والتحكيم وفق أعلى المعايير المهنية." data-en="Established legal expertise in Kuwait since 1982, providing litigation, legal consulting and arbitration services to the highest professional standards.">
+                خبرة قانونية راسخة في دولة الكويت منذ عام 1982، نقدم خدمات التقاضي والاستشارات القانونية والتحكيم وفق أعلى المعايير المهنية.
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#contact" class="primary">
+                <a href="#contact" class="primary" data-ar="تواصل معنا" data-en="Contact Us">
                     تواصل معنا
                 </a>
 
-                <a href="#practice" class="secondary">
+                <a href="#practice" class="secondary" data-ar="مجالات الممارسة" data-en="Practice Areas">
                     مجالات الممارسة
                 </a>
 
@@ -403,67 +401,17 @@
           <input type="email" id="email" required>
         </div>
 
-       <div class="field phone-field">
-
-  <label for="phone"
-         data-ar="رقم الجوال"
-         data-en="Phone Number">
-    رقم الجوال
-  </label>
-
-  <div class="phone-picker">
-
-    <button type="button"
-            class="country-picker"
-            id="countryPicker">
-
-      <span class="selected-country">
-        🇰🇼
-      </span>
-
-      <span class="selected-code">
-        +965
-      </span>
-
-      <i class="fa-solid fa-chevron-down"></i>
-
-    </button>
-
-    <input
-      type="tel"
-      id="phone"
-      inputmode="tel"
-      autocomplete="tel"
-      required
-      placeholder="رقم الجوال"
-    >
-
-    <div class="country-dropdown" id="countryDropdown">
-
-      <div class="country-search">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <input
-          type="text"
-          id="countrySearch"
-          placeholder="ابحث عن الدولة..."
-          data-placeholder-ar="ابحث عن الدولة..."
-          data-placeholder-en="Search country..."
-        >
-
-      </div>
-
-      <div class="country-list" id="countryList"></div>
-
-    </div>
-
-  </div>
-
-  <!-- القيمة الفعلية التي سيتم إرسالها -->
-  <input type="hidden" id="countryCode" value="+965">
-
-</div>
+        <div class="field phone-field">
+          <label for="phone" data-ar="رقم الجوال" data-en="Phone Number">رقم الجوال</label>
+          <div class="phone-row">
+            <select id="countryCode" aria-label="Country Code">
+              <option value="+965">🇰🇼 +965</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+20">🇪🇬 +20</option>
+            </select>
+            <input type="tel" id="phone" required>
+          </div>
+        </div>
 
         <div class="field">
           <label for="practice" data-ar="مجال الممارسة" data-en="Practice Area">مجال الممارسة</label>
@@ -655,6 +603,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 });
 </script>
 <script>
+
 /* =====================================================
    PREMIUM COUNTRY PHONE PICKER
 ===================================================== */
