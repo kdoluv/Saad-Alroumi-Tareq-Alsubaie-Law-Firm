@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية</title>
   <meta name="description" content="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية في الكويت. محاماة واستشارات قانونية وتحكيم منذ عام 1982.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -29,6 +30,33 @@
 </head>
 
 <body>
+
+<!-- ================= PREMIUM CINEMATIC INTRO ================= -->
+<div class="cinematic-intro" id="cinematicIntro" aria-label="Website introduction">
+  <video
+    id="introVideo"
+    class="cinematic-intro__video"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    poster="assets/video/intro-poster.jpg">
+    <source src="assets/video/st-lawyers-premium-intro.mp4" type="video/mp4">
+  </video>
+  <div class="cinematic-intro__veil"></div>
+  <div class="cinematic-intro__goldline"></div>
+  <div class="cinematic-intro__controls">
+    <button type="button" id="introSound" class="intro-control">
+      <i class="fa-solid fa-volume-xmark"></i>
+      <span data-ar="تشغيل الصوت" data-en="Sound On">تشغيل الصوت</span>
+    </button>
+    <button type="button" id="introSkip" class="intro-control intro-skip">
+      <span data-ar="تخطي" data-en="Skip">تخطي</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+  <div class="cinematic-intro__progress"><span id="introProgress"></span></div>
+</div>
 
 <!-- ================= HEADER ================= -->
 <header class="site-header" id="siteHeader">
@@ -78,37 +106,45 @@
 <main>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
+<section class="hero-editorial" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-shade"></div>
 
-    <div class="hero-content">
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <span class="eyebrow" data-ar="مكتب محاماة كويتي منذ 1982" data-en="Kuwaiti Law Firm Since 1982">مكتب محاماة كويتي منذ 1982</span>
 
-        <div class="hero-text">
+      <h1 data-ar="سعد الرومي<br>وطارق السبيعي" data-en="Saad Alroomi<br>&amp; Tareq Al-Subaie">
+        سعد الرومي<br>وطارق السبيعي
+      </h1>
 
-            <div class="hero-eyebrow" data-ar="نمارس مهنة المحاماة منذ عام 1982" data-en="Practicing law since 1982">
-                نمارس مهنة المحاماة منذ عام 1982
-            </div>
-           
-            <p class="hero-description" data-ar="خبرة قانونية راسخة في دولة الكويت منذ عام 1982، نقدم خدمات التقاضي والاستشارات القانونية والتحكيم وفق أعلى المعايير المهنية." data-en="Established legal expertise in Kuwait since 1982, providing litigation, legal consulting and arbitration services to the highest professional standards.">
-                خبرة قانونية راسخة في دولة الكويت منذ عام 1982، نقدم خدمات التقاضي والاستشارات القانونية والتحكيم وفق أعلى المعايير المهنية.
-            </p>
+      <div class="gold-rule"></div>
 
-            <div class="hero-buttons">
+      <p data-ar="محاماة • استشارات قانونية • تحكيم" data-en="Litigation • Legal Consulting • Arbitration">
+        محاماة • استشارات قانونية • تحكيم
+      </p>
 
-                <a href="#contact" class="primary" data-ar="تواصل معنا" data-en="Contact Us">
-                    تواصل معنا
-                </a>
-
-                <a href="#practice" class="secondary" data-ar="مجالات الممارسة" data-en="Practice Areas">
-                    مجالات الممارسة
-                </a>
-
-            </div>
-
-        </div>
-
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#contact" data-ar="تواصل معنا" data-en="Get in Touch">تواصل معنا</a>
+        <a class="btn btn-outline" href="#practice" data-ar="مجالات الممارسة" data-en="Practice Areas">مجالات الممارسة</a>
+      </div>
     </div>
 
+    <div class="hero-side-note">
+      <span>01</span>
+      <div></div>
+      <small data-ar="خبرة قانونية راسخة<br>وخدمة متكاملة" data-en="Established legal expertise<br>and integrated service">
+        خبرة قانونية راسخة<br>وخدمة متكاملة
+      </small>
+    </div>
+  </div>
+
+  <a class="scroll-down" href="#about" aria-label="Scroll">
+    <span data-ar="اكتشف المزيد" data-en="Discover more">اكتشف المزيد</span>
+    <i class="fa-solid fa-arrow-down"></i>
+  </a>
 </section>
+
 <!-- ================= INTRO / ABOUT ================= -->
 <section class="about-modern" id="about">
   <div class="container">
@@ -401,43 +437,26 @@
           <input type="email" id="email" required>
         </div>
 
-      <div class="phone-row">
-
-    <div class="phone-picker">
-
-        <button type="button" class="country-picker" id="countryPicker">
-            <span class="selected-country">🇰🇼</span>
-            <span class="selected-code">+965</span>
-            <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <div class="country-dropdown" id="countryDropdown">
-
-            <div class="country-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-                <input
-                    type="text"
-                    id="countrySearch"
-                    placeholder="ابحث عن الدولة..."
-                    autocomplete="off">
+        <div class="field phone-field">
+          <label for="phone" data-ar="رقم الجوال" data-en="Phone Number">رقم الجوال</label>
+          <div class="phone-row">
+            <div class="phone-picker" id="phonePicker">
+              <button type="button" class="country-picker" id="countryPicker" aria-haspopup="listbox" aria-expanded="false">
+                <span class="selected-country">🇰🇼</span>
+                <span class="selected-code">+965</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="country-dropdown" id="countryDropdown">
+                <div class="country-search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input type="text" id="countrySearch" placeholder="ابحث عن الدولة..." autocomplete="off">
+                </div>
+                <div class="country-list" id="countryList" role="listbox"></div>
+              </div>
+              <input type="hidden" id="countryCode" value="+965">
             </div>
-
-            <div class="country-list" id="countryList"></div>
-
-        </div>
-
-        <input type="hidden" id="countryCode" value="+965">
-
-    </div>
-
-    <input
-        type="tel"
-        id="phone"
-        required
-        autocomplete="tel">
-
-</div>
+            <input type="tel" id="phone" required>
+          </div>
         </div>
 
         <div class="field">
@@ -530,6 +549,76 @@
   </div>
 </div>
 
+
+<script>
+/* Premium cinematic intro */
+document.addEventListener("DOMContentLoaded", function () {
+  const intro = document.getElementById("cinematicIntro");
+  const video = document.getElementById("introVideo");
+  const sound = document.getElementById("introSound");
+  const skip = document.getElementById("introSkip");
+  const progress = document.getElementById("introProgress");
+  if (!intro || !video) return;
+
+  let closed = false;
+  const closeIntro = () => {
+    if (closed) return;
+    closed = true;
+    intro.classList.add("is-closing");
+    setTimeout(() => {
+      intro.classList.add("is-hidden");
+      document.body.classList.remove("intro-lock");
+    }, 850);
+  };
+
+  document.body.classList.add("intro-lock");
+
+  video.addEventListener("timeupdate", function () {
+    if (video.duration && progress) {
+      progress.style.width = Math.min(100, (video.currentTime / video.duration) * 100) + "%";
+    }
+  });
+
+  video.addEventListener("ended", closeIntro);
+
+  skip.addEventListener("click", function () {
+    video.pause();
+    closeIntro();
+  });
+
+  sound.addEventListener("click", function () {
+    video.muted = !video.muted;
+    const icon = sound.querySelector("i");
+    const label = sound.querySelector("span");
+    if (video.muted) {
+      icon.className = "fa-solid fa-volume-xmark";
+      label.textContent = document.documentElement.lang === "en" ? "Sound On" : "تشغيل الصوت";
+    } else {
+      icon.className = "fa-solid fa-volume-high";
+      label.textContent = document.documentElement.lang === "en" ? "Mute" : "كتم الصوت";
+      video.play().catch(() => {});
+    }
+  });
+
+  // A first user gesture can safely enable the cinematic soundtrack.
+  intro.addEventListener("click", function (e) {
+    if (e.target.closest("button")) return;
+    if (video.muted) {
+      video.muted = false;
+      const icon = sound.querySelector("i");
+      const label = sound.querySelector("span");
+      icon.className = "fa-solid fa-volume-high";
+      label.textContent = document.documentElement.lang === "en" ? "Mute" : "كتم الصوت";
+      video.play().catch(() => {});
+    }
+  });
+
+  // Fallback in case a browser refuses video playback.
+  setTimeout(closeIntro, 14000);
+  video.play().catch(() => {});
+});
+</script>
+
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script src="js/whatsapp.js"></script>
@@ -606,6 +695,75 @@ if (uploadBox && fileInput) {
 }
 </script>
 
+<script>
+/* Premium country-code picker */
+document.addEventListener("DOMContentLoaded", function () {
+  const picker = document.getElementById("countryPicker");
+  const dropdown = document.getElementById("countryDropdown");
+  const list = document.getElementById("countryList");
+  const search = document.getElementById("countrySearch");
+  const codeInput = document.getElementById("countryCode");
+  const selectedCountry = document.querySelector(".selected-country");
+  const selectedCode = document.querySelector(".selected-code");
+  const phonePicker = document.getElementById("phonePicker");
+
+  if (!picker || !dropdown || !list || !search || !codeInput) return;
+
+  const countries = [
+    ["🇰🇼","الكويت","Kuwait","+965"],["🇸🇦","السعودية","Saudi Arabia","+966"],["🇦🇪","الإمارات","United Arab Emirates","+971"],["🇶🇦","قطر","Qatar","+974"],["🇧🇭","البحرين","Bahrain","+973"],["🇴🇲","عُمان","Oman","+968"],["🇪🇬","مصر","Egypt","+20"],["🇯🇴","الأردن","Jordan","+962"],["🇱🇧","لبنان","Lebanon","+961"],["🇸🇾","سوريا","Syria","+963"],["🇮🇶","العراق","Iraq","+964"],["🇾🇪","اليمن","Yemen","+967"],["🇵🇸","فلسطين","Palestine","+970"],["🇱🇾","ليبيا","Libya","+218"],["🇹🇳","تونس","Tunisia","+216"],["🇩🇿","الجزائر","Algeria","+213"],["🇲🇦","المغرب","Morocco","+212"],["🇸🇩","السودان","Sudan","+249"],["🇲🇷","موريتانيا","Mauritania","+222"],["🇸🇴","الصومال","Somalia","+252"],["🇩🇯","جيبوتي","Djibouti","+253"],["🇰🇲","جزر القمر","Comoros","+269"],["🇮🇳","الهند","India","+91"],["🇵🇰","باكستان","Pakistan","+92"],["🇧🇩","بنغلاديش","Bangladesh","+880"],["🇳🇵","نيبال","Nepal","+977"],["🇱🇰","سريلانكا","Sri Lanka","+94"],["🇨🇳","الصين","China","+86"],["🇯🇵","اليابان","Japan","+81"],["🇰🇷","كوريا الجنوبية","South Korea","+82"],["🇮🇩","إندونيسيا","Indonesia","+62"],["🇲🇾","ماليزيا","Malaysia","+60"],["🇸🇬","سنغافورة","Singapore","+65"],["🇹🇭","تايلاند","Thailand","+66"],["🇵🇭","الفلبين","Philippines","+63"],["🇻🇳","فيتنام","Vietnam","+84"],["🇹🇼","تايوان","Taiwan","+886"],["🇭🇰","هونغ كونغ","Hong Kong","+852"],["🇹🇷","تركيا","Turkey","+90"],["🇮🇷","إيران","Iran","+98"],["🇮🇱","إسرائيل","Israel","+972"],["🇦🇫","أفغانستان","Afghanistan","+93"],["🇰🇿","كازاخستان","Kazakhstan","+7"],["🇺🇿","أوزبكستان","Uzbekistan","+998"],["🇦🇿","أذربيجان","Azerbaijan","+994"],["🇬🇪","جورجيا","Georgia","+995"],["🇦🇲","أرمينيا","Armenia","+374"],["🇹🇲","تركمانستان","Turkmenistan","+993"],["🇰🇬","قيرغيزستان","Kyrgyzstan","+996"],["🇹🇯","طاجيكستان","Tajikistan","+992"],["🇲🇳","منغوليا","Mongolia","+976"],["🇬🇧","المملكة المتحدة","United Kingdom","+44"],["🇫🇷","فرنسا","France","+33"],["🇩🇪","ألمانيا","Germany","+49"],["🇮🇹","إيطاليا","Italy","+39"],["🇪🇸","إسبانيا","Spain","+34"],["🇳🇱","هولندا","Netherlands","+31"],["🇧🇪","بلجيكا","Belgium","+32"],["🇨🇭","سويسرا","Switzerland","+41"],["🇦🇹","النمسا","Austria","+43"],["🇸🇪","السويد","Sweden","+46"],["🇳🇴","النرويج","Norway","+47"],["🇩🇰","الدنمارك","Denmark","+45"],["🇫🇮","فنلندا","Finland","+358"],["🇮🇪","أيرلندا","Ireland","+353"],["🇵🇹","البرتغال","Portugal","+351"],["🇬🇷","اليونان","Greece","+30"],["🇵🇱","بولندا","Poland","+48"],["🇨🇿","التشيك","Czech Republic","+420"],["🇷🇴","رومانيا","Romania","+40"],["🇭🇺","المجر","Hungary","+36"],["🇷🇺","روسيا","Russia","+7"],["🇺🇦","أوكرانيا","Ukraine","+380"],["🇺🇸","الولايات المتحدة","United States","+1"],["🇨🇦","كندا","Canada","+1"],["🇲🇽","المكسيك","Mexico","+52"]
+  ];
+
+  function currentLang(){ return document.documentElement.lang === "en" ? "en" : "ar"; }
+
+  function renderCountries(filter = "") {
+    const lang = currentLang();
+    const q = filter.trim().toLowerCase();
+    const matches = countries.filter(c => {
+      const name = (lang === "en" ? c[2] : c[1]).toLowerCase();
+      return !q || name.includes(q) || c[1].toLowerCase().includes(q) || c[2].toLowerCase().includes(q) || c[3].includes(q);
+    });
+    list.innerHTML = matches.map(c => `
+      <button type="button" class="country-item" data-code="${c[3]}" data-flag="${c[0]}" role="option">
+        <span class="country-flag">${c[0]}</span>
+        <span class="country-name">${lang === "en" ? c[2] : c[1]}</span>
+        <span class="country-dial">${c[3]}</span>
+      </button>
+    `).join("") || `<div class="no-country">${lang === "en" ? "No country found" : "لم يتم العثور على الدولة"}</div>`;
+  }
+
+  function closePicker(){
+    phonePicker.classList.remove("open");
+    picker.setAttribute("aria-expanded", "false");
+  }
+
+  picker.addEventListener("click", function(e){
+    e.stopPropagation();
+    const open = phonePicker.classList.toggle("open");
+    picker.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) { search.focus(); renderCountries(search.value); }
+  });
+
+  list.addEventListener("click", function(e){
+    const item = e.target.closest(".country-item");
+    if (!item) return;
+    selectedCountry.textContent = item.dataset.flag;
+    selectedCode.textContent = item.dataset.code;
+    codeInput.value = item.dataset.code;
+    closePicker();
+  });
+
+  search.addEventListener("input", function(){ renderCountries(this.value); });
+  search.addEventListener("click", e => e.stopPropagation());
+
+  document.addEventListener("click", function(e){
+    if (phonePicker && !phonePicker.contains(e.target)) closePicker();
+  });
+
+  window.renderCountryPicker = function(){ renderCountries(search.value); };
+  renderCountries();
+});
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
 (function(){
@@ -629,367 +787,6 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   });
 });
 </script>
-<script>
 
-/* =====================================================
-   PREMIUM COUNTRY PHONE PICKER
-===================================================== */
-
-const countries = [
-
-    /* ================= ARAB COUNTRIES ================= */
-
-    { flag:"🇰🇼", ar:"الكويت", en:"Kuwait", code:"+965", group:"العربية" },
-    { flag:"🇸🇦", ar:"السعودية", en:"Saudi Arabia", code:"+966", group:"العربية" },
-    { flag:"🇦🇪", ar:"الإمارات", en:"United Arab Emirates", code:"+971", group:"العربية" },
-    { flag:"🇶🇦", ar:"قطر", en:"Qatar", code:"+974", group:"العربية" },
-    { flag:"🇧🇭", ar:"البحرين", en:"Bahrain", code:"+973", group:"العربية" },
-    { flag:"🇴🇲", ar:"عُمان", en:"Oman", code:"+968", group:"العربية" },
-    { flag:"🇪🇬", ar:"مصر", en:"Egypt", code:"+20", group:"العربية" },
-    { flag:"🇯🇴", ar:"الأردن", en:"Jordan", code:"+962", group:"العربية" },
-    { flag:"🇱🇧", ar:"لبنان", en:"Lebanon", code:"+961", group:"العربية" },
-    { flag:"🇮🇶", ar:"العراق", en:"Iraq", code:"+964", group:"العربية" },
-    { flag:"🇸🇾", ar:"سوريا", en:"Syria", code:"+963", group:"العربية" },
-    { flag:"🇵🇸", ar:"فلسطين", en:"Palestine", code:"+970", group:"العربية" },
-    { flag:"🇾🇪", ar:"اليمن", en:"Yemen", code:"+967", group:"العربية" },
-    { flag:"🇱🇾", ar:"ليبيا", en:"Libya", code:"+218", group:"العربية" },
-    { flag:"🇹🇳", ar:"تونس", en:"Tunisia", code:"+216", group:"العربية" },
-    { flag:"🇩🇿", ar:"الجزائر", en:"Algeria", code:"+213", group:"العربية" },
-    { flag:"🇲🇦", ar:"المغرب", en:"Morocco", code:"+212", group:"العربية" },
-    { flag:"🇸🇩", ar:"السودان", en:"Sudan", code:"+249", group:"العربية" },
-    { flag:"🇸🇴", ar:"الصومال", en:"Somalia", code:"+252", group:"العربية" },
-    { flag:"🇩🇯", ar:"جيبوتي", en:"Djibouti", code:"+253", group:"العربية" },
-    { flag:"🇲🇷", ar:"موريتانيا", en:"Mauritania", code:"+222", group:"العربية" },
-    { flag:"🇰🇲", ar:"جزر القمر", en:"Comoros", code:"+269", group:"العربية" },
-
-
-    /* ================= EUROPEAN UNION ================= */
-
-    { flag:"🇦🇹", ar:"النمسا", en:"Austria", code:"+43", group:"الاتحاد الأوروبي" },
-    { flag:"🇧🇪", ar:"بلجيكا", en:"Belgium", code:"+32", group:"الاتحاد الأوروبي" },
-    { flag:"🇧🇬", ar:"بلغاريا", en:"Bulgaria", code:"+359", group:"الاتحاد الأوروبي" },
-    { flag:"🇭🇷", ar:"كرواتيا", en:"Croatia", code:"+385", group:"الاتحاد الأوروبي" },
-    { flag:"🇨🇾", ar:"قبرص", en:"Cyprus", code:"+357", group:"الاتحاد الأوروبي" },
-    { flag:"🇨🇿", ar:"التشيك", en:"Czech Republic", code:"+420", group:"الاتحاد الأوروبي" },
-    { flag:"🇩🇰", ar:"الدنمارك", en:"Denmark", code:"+45", group:"الاتحاد الأوروبي" },
-    { flag:"🇪🇪", ar:"إستونيا", en:"Estonia", code:"+372", group:"الاتحاد الأوروبي" },
-    { flag:"🇫🇮", ar:"فنلندا", en:"Finland", code:"+358", group:"الاتحاد الأوروبي" },
-    { flag:"🇫🇷", ar:"فرنسا", en:"France", code:"+33", group:"الاتحاد الأوروبي" },
-    { flag:"🇩🇪", ar:"ألمانيا", en:"Germany", code:"+49", group:"الاتحاد الأوروبي" },
-    { flag:"🇬🇷", ar:"اليونان", en:"Greece", code:"+30", group:"الاتحاد الأوروبي" },
-    { flag:"🇭🇺", ar:"المجر", en:"Hungary", code:"+36", group:"الاتحاد الأوروبي" },
-    { flag:"🇮🇪", ar:"أيرلندا", en:"Ireland", code:"+353", group:"الاتحاد الأوروبي" },
-    { flag:"🇮🇹", ar:"إيطاليا", en:"Italy", code:"+39", group:"الاتحاد الأوروبي" },
-    { flag:"🇱🇻", ar:"لاتفيا", en:"Latvia", code:"+371", group:"الاتحاد الأوروبي" },
-    { flag:"🇱🇹", ar:"ليتوانيا", en:"Lithuania", code:"+370", group:"الاتحاد الأوروبي" },
-    { flag:"🇱🇺", ar:"لوكسمبورغ", en:"Luxembourg", code:"+352", group:"الاتحاد الأوروبي" },
-    { flag:"🇲🇹", ar:"مالطا", en:"Malta", code:"+356", group:"الاتحاد الأوروبي" },
-    { flag:"🇳🇱", ar:"هولندا", en:"Netherlands", code:"+31", group:"الاتحاد الأوروبي" },
-    { flag:"🇵🇱", ar:"بولندا", en:"Poland", code:"+48", group:"الاتحاد الأوروبي" },
-    { flag:"🇵🇹", ar:"البرتغال", en:"Portugal", code:"+351", group:"الاتحاد الأوروبي" },
-    { flag:"🇷🇴", ar:"رومانيا", en:"Romania", code:"+40", group:"الاتحاد الأوروبي" },
-    { flag:"🇸🇰", ar:"سلوفاكيا", en:"Slovakia", code:"+421", group:"الاتحاد الأوروبي" },
-    { flag:"🇸🇮", ar:"سلوفينيا", en:"Slovenia", code:"+386", group:"الاتحاد الأوروبي" },
-    { flag:"🇪🇸", ar:"إسبانيا", en:"Spain", code:"+34", group:"الاتحاد الأوروبي" },
-    { flag:"🇸🇪", ar:"السويد", en:"Sweden", code:"+46", group:"الاتحاد الأوروبي" },
-
-
-    /* ================= ASIA ================= */
-
-    { flag:"🇮🇳", ar:"الهند", en:"India", code:"+91", group:"آسيا" },
-    { flag:"🇨🇳", ar:"الصين", en:"China", code:"+86", group:"آسيا" },
-    { flag:"🇯🇵", ar:"اليابان", en:"Japan", code:"+81", group:"آسيا" },
-    { flag:"🇰🇷", ar:"كوريا الجنوبية", en:"South Korea", code:"+82", group:"آسيا" },
-
-
-    /* ================= NORTH AMERICA ================= */
-
-    { flag:"🇺🇸", ar:"الولايات المتحدة", en:"United States", code:"+1", group:"أمريكا الشمالية" },
-    { flag:"🇨🇦", ar:"كندا", en:"Canada", code:"+1", group:"أمريكا الشمالية" },
-    { flag:"🇲🇽", ar:"المكسيك", en:"Mexico", code:"+52", group:"أمريكا الشمالية" }
-
-];
-
-
-const countryPicker =
-    document.getElementById("countryPicker");
-
-const countryDropdown =
-    document.getElementById("countryDropdown");
-
-const countryList =
-    document.getElementById("countryList");
-
-const countrySearch =
-    document.getElementById("countrySearch");
-
-const countryCode =
-    document.getElementById("countryCode");
-
-const selectedCountry =
-    document.querySelector(".selected-country");
-
-const selectedCode =
-    document.querySelector(".selected-code");
-
-
-/* =====================================================
-   CURRENT LANGUAGE
-===================================================== */
-
-function getCurrentLanguage() {
-
-    return document.documentElement.lang === "en"
-        ? "en"
-        : "ar";
-
-}
-
-
-/* =====================================================
-   RENDER COUNTRIES
-===================================================== */
-
-function renderCountries(search = "") {
-
-    const lang = getCurrentLanguage();
-
-    const query = search.trim().toLowerCase();
-
-    countryList.innerHTML = "";
-
-    let currentGroup = "";
-
-    const filtered = countries.filter(country => {
-
-        return (
-            country[lang].toLowerCase().includes(query) ||
-            country.ar.toLowerCase().includes(query) ||
-            country.en.toLowerCase().includes(query) ||
-            country.code.includes(query)
-        );
-
-    });
-
-
-    if (!filtered.length) {
-
-        countryList.innerHTML = `
-            <div class="no-country">
-                ${lang === "en"
-                    ? "No country found"
-                    : "لم يتم العثور على الدولة"}
-            </div>
-        `;
-
-        return;
-    }
-
-
-    filtered.forEach(country => {
-
-        if (country.group !== currentGroup) {
-
-            currentGroup = country.group;
-
-            const group = document.createElement("div");
-
-            group.className = "country-group";
-
-            group.textContent =
-                lang === "en"
-                    ? getEnglishGroup(country.group)
-                    : country.group;
-
-            countryList.appendChild(group);
-
-        }
-
-
-        const item = document.createElement("button");
-
-        item.type = "button";
-
-        item.className = "country-item";
-
-        if (country.code === countryCode.value &&
-            country.flag === selectedCountry.textContent) {
-
-            item.classList.add("active");
-
-        }
-
-
-        item.innerHTML = `
-
-            <span class="country-flag">
-                ${country.flag}
-            </span>
-
-            <span class="country-name">
-                ${country[lang]}
-            </span>
-
-            <span class="country-dial">
-                ${country.code}
-            </span>
-
-        `;
-
-
-        item.addEventListener("click", function() {
-
-            selectedCountry.textContent =
-                country.flag;
-
-            selectedCode.textContent =
-                country.code;
-
-            countryCode.value =
-                country.code;
-
-            countryPicker.classList.remove("active");
-
-            document.querySelector(".phone-picker")
-                .classList.remove("open");
-
-            countrySearch.value = "";
-
-            renderCountries();
-
-        });
-
-
-        countryList.appendChild(item);
-
-    });
-
-}
-
-
-/* =====================================================
-   GROUP TRANSLATION
-===================================================== */
-
-function getEnglishGroup(group) {
-
-    const groups = {
-
-        "العربية": "Arab Countries",
-
-        "الاتحاد الأوروبي":
-            "European Union",
-
-        "آسيا":
-            "Asia",
-
-        "أمريكا الشمالية":
-            "North America"
-
-    };
-
-    return groups[group] || group;
-
-}
-
-
-/* =====================================================
-   OPEN / CLOSE
-===================================================== */
-
-countryPicker.addEventListener("click", function(e) {
-
-    e.stopPropagation();
-
-    const wrapper =
-        document.querySelector(".phone-picker");
-
-    wrapper.classList.toggle("open");
-
-    if (wrapper.classList.contains("open")) {
-
-        renderCountries();
-
-        setTimeout(() => {
-
-            countrySearch.focus();
-
-        }, 100);
-
-    }
-
-});
-
-
-/* =====================================================
-   SEARCH
-===================================================== */
-
-countrySearch.addEventListener("input", function() {
-
-    renderCountries(this.value);
-
-});
-
-
-/* =====================================================
-   CLOSE OUTSIDE
-===================================================== */
-
-document.addEventListener("click", function(e) {
-
-    const wrapper =
-        document.querySelector(".phone-picker");
-
-    if (!wrapper.contains(e.target)) {
-
-        wrapper.classList.remove("open");
-
-    }
-
-});
-
-
-/* =====================================================
-   INITIALIZE
-===================================================== */
-
-renderCountries();
-
-
-/* =====================================================
-   UPDATE WHEN LANGUAGE CHANGES
-===================================================== */
-
-const originalChangeLanguage =
-    window.changeLanguage;
-
-window.changeLanguage = function(lang) {
-
-    if (typeof originalChangeLanguage === "function") {
-
-        originalChangeLanguage(lang);
-
-    }
-
-    setTimeout(() => {
-
-        const placeholder =
-            lang === "en"
-                ? "Search country..."
-                : "ابحث عن الدولة...";
-
-        countrySearch.placeholder =
-            placeholder;
-
-        renderCountries(
-            countrySearch.value
-        );
-
-    }, 100);
-
-};
-
-</script>
 </body>
 </html>
