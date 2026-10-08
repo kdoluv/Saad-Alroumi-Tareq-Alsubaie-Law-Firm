@@ -874,3 +874,103 @@ html[lang="en"] .contact-form-box{text-align:left}
 html[dir="rtl"] .practice-card,
 html[dir="rtl"] .team-card,
 html[dir="rtl"] .contact-form-box{text-align:right}
+
+/* =========================================================
+   PREMIUM CINEMATIC INTRO
+========================================================= */
+body.intro-lock{overflow:hidden}
+.cinematic-intro{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  background:#050b12;
+  overflow:hidden;
+  opacity:1;
+  visibility:visible;
+  transition:opacity .85s ease, visibility .85s ease;
+}
+.cinematic-intro.is-closing{opacity:0;visibility:hidden}
+.cinematic-intro.is-hidden{display:none}
+.cinematic-intro__video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  background:#050b12;
+}
+.cinematic-intro__veil{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(4,10,17,.22),rgba(4,10,17,.10) 45%,rgba(4,10,17,.72)),
+    radial-gradient(circle at center,transparent 35%,rgba(0,0,0,.42) 100%);
+}
+.cinematic-intro__goldline{
+  position:absolute;
+  left:50%;
+  bottom:12%;
+  width:min(180px,30vw);
+  height:2px;
+  transform:translateX(-50%) scaleX(0);
+  transform-origin:center;
+  background:var(--gold);
+  box-shadow:0 0 18px rgba(201,162,77,.35);
+  animation:introGoldLine 2.2s 1s ease forwards;
+}
+@keyframes introGoldLine{to{transform:translateX(-50%) scaleX(1)}}
+.cinematic-intro__controls{
+  position:absolute;
+  z-index:3;
+  left:28px;
+  right:28px;
+  bottom:30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  direction:ltr;
+}
+.intro-control{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(5,12,20,.35);
+  backdrop-filter:blur(8px);
+  color:rgba(255,255,255,.82);
+  padding:10px 14px;
+  font-size:10px;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:.25s ease;
+}
+.intro-control:hover{border-color:var(--gold);color:var(--gold-light);background:rgba(5,12,20,.58)}
+.intro-control i{color:var(--gold)}
+.intro-skip{margin-left:auto}
+.cinematic-intro__progress{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:2px;
+  background:rgba(255,255,255,.12);
+  z-index:4;
+}
+.cinematic-intro__progress span{
+  display:block;
+  width:0;
+  height:100%;
+  background:var(--gold);
+  transition:width .12s linear;
+}
+@media(max-width:600px){
+  .cinematic-intro__video{object-position:center}
+  .cinematic-intro__controls{left:14px;right:14px;bottom:20px}
+  .intro-control{padding:9px 11px;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+  .cinematic-intro{display:none!important}
+  body.intro-lock{overflow:auto}
+}
