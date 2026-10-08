@@ -31,33 +31,6 @@
 
 <body>
 
-<!-- ================= PREMIUM CINEMATIC INTRO ================= -->
-<div class="cinematic-intro" id="cinematicIntro" aria-label="Website introduction">
-  <video
-    id="introVideo"
-    class="cinematic-intro__video"
-    autoplay
-    muted
-    playsinline
-    preload="auto"
-    poster="assets/video/intro-poster.jpg">
-    <source src="assets/video/st-lawyers-premium-intro.mp4" type="video/mp4">
-  </video>
-  <div class="cinematic-intro__veil"></div>
-  <div class="cinematic-intro__goldline"></div>
-  <div class="cinematic-intro__controls">
-    <button type="button" id="introSound" class="intro-control">
-      <i class="fa-solid fa-volume-xmark"></i>
-      <span data-ar="تشغيل الصوت" data-en="Sound On">تشغيل الصوت</span>
-    </button>
-    <button type="button" id="introSkip" class="intro-control intro-skip">
-      <span data-ar="تخطي" data-en="Skip">تخطي</span>
-      <i class="fa-solid fa-arrow-right"></i>
-    </button>
-  </div>
-  <div class="cinematic-intro__progress"><span id="introProgress"></span></div>
-</div>
-
 <!-- ================= HEADER ================= -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
@@ -538,76 +511,6 @@
     <a href="https://wa.me/96595571635" target="_blank" class="wa-start" data-ar="بدء المحادثة" data-en="Start Chat">بدء المحادثة</a>
   </div>
 </div>
-
-
-<script>
-/* Premium cinematic intro */
-document.addEventListener("DOMContentLoaded", function () {
-  const intro = document.getElementById("cinematicIntro");
-  const video = document.getElementById("introVideo");
-  const sound = document.getElementById("introSound");
-  const skip = document.getElementById("introSkip");
-  const progress = document.getElementById("introProgress");
-  if (!intro || !video) return;
-
-  let closed = false;
-  const closeIntro = () => {
-    if (closed) return;
-    closed = true;
-    intro.classList.add("is-closing");
-    setTimeout(() => {
-      intro.classList.add("is-hidden");
-      document.body.classList.remove("intro-lock");
-    }, 850);
-  };
-
-  document.body.classList.add("intro-lock");
-
-  video.addEventListener("timeupdate", function () {
-    if (video.duration && progress) {
-      progress.style.width = Math.min(100, (video.currentTime / video.duration) * 100) + "%";
-    }
-  });
-
-  video.addEventListener("ended", closeIntro);
-
-  skip.addEventListener("click", function () {
-    video.pause();
-    closeIntro();
-  });
-
-  sound.addEventListener("click", function () {
-    video.muted = !video.muted;
-    const icon = sound.querySelector("i");
-    const label = sound.querySelector("span");
-    if (video.muted) {
-      icon.className = "fa-solid fa-volume-xmark";
-      label.textContent = document.documentElement.lang === "en" ? "Sound On" : "تشغيل الصوت";
-    } else {
-      icon.className = "fa-solid fa-volume-high";
-      label.textContent = document.documentElement.lang === "en" ? "Mute" : "كتم الصوت";
-      video.play().catch(() => {});
-    }
-  });
-
-  // A first user gesture can safely enable the cinematic soundtrack.
-  intro.addEventListener("click", function (e) {
-    if (e.target.closest("button")) return;
-    if (video.muted) {
-      video.muted = false;
-      const icon = sound.querySelector("i");
-      const label = sound.querySelector("span");
-      icon.className = "fa-solid fa-volume-high";
-      label.textContent = document.documentElement.lang === "en" ? "Mute" : "كتم الصوت";
-      video.play().catch(() => {});
-    }
-  });
-
-  // Fallback in case a browser refuses video playback.
-  setTimeout(closeIntro, 14000);
-  video.play().catch(() => {});
-});
-</script>
 
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
