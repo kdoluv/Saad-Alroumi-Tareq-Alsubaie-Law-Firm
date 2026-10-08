@@ -31,33 +31,6 @@
 
 <body>
 
-<!-- ================= PREMIUM CINEMATIC INTRO ================= -->
-<div class="cinematic-intro" id="cinematicIntro" aria-label="Website introduction">
-  <video
-    id="introVideo"
-    class="cinematic-intro__video"
-    autoplay
-    muted
-    playsinline
-    preload="auto"
-    poster="assets/video/intro-poster.jpg">
-    <source src="assets/video/st-lawyers-premium-intro.mp4" type="video/mp4">
-  </video>
-  <div class="cinematic-intro__veil"></div>
-  <div class="cinematic-intro__goldline"></div>
-  <div class="cinematic-intro__controls">
-    <button type="button" id="introSound" class="intro-control">
-      <i class="fa-solid fa-volume-xmark"></i>
-      <span data-ar="تشغيل الصوت" data-en="Sound On">تشغيل الصوت</span>
-    </button>
-    <button type="button" id="introSkip" class="intro-control intro-skip">
-      <span data-ar="تخطي" data-en="Skip">تخطي</span>
-      <i class="fa-solid fa-arrow-right"></i>
-    </button>
-  </div>
-  <div class="cinematic-intro__progress"><span id="introProgress"></span></div>
-</div>
-
 <!-- ================= HEADER ================= -->
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
@@ -440,21 +413,11 @@
         <div class="field phone-field">
           <label for="phone" data-ar="رقم الجوال" data-en="Phone Number">رقم الجوال</label>
           <div class="phone-row">
-            <div class="phone-picker" id="phonePicker">
-              <button type="button" class="country-picker" id="countryPicker" aria-haspopup="listbox" aria-expanded="false">
-                <span class="selected-country">🇰🇼</span>
-                <span class="selected-code">+965</span>
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <div class="country-dropdown" id="countryDropdown">
-                <div class="country-search">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                  <input type="text" id="countrySearch" placeholder="ابحث عن الدولة..." autocomplete="off">
-                </div>
-                <div class="country-list" id="countryList" role="listbox"></div>
-              </div>
-              <input type="hidden" id="countryCode" value="+965">
-            </div>
+            <select id="countryCode" aria-label="Country Code">
+              <option value="+965">🇰🇼 +965</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+20">🇪🇬 +20</option>
+            </select>
             <input type="tel" id="phone" required>
           </div>
         </div>
@@ -549,76 +512,6 @@
   </div>
 </div>
 
-
-<script>
-/* Premium cinematic intro */
-document.addEventListener("DOMContentLoaded", function () {
-  const intro = document.getElementById("cinematicIntro");
-  const video = document.getElementById("introVideo");
-  const sound = document.getElementById("introSound");
-  const skip = document.getElementById("introSkip");
-  const progress = document.getElementById("introProgress");
-  if (!intro || !video) return;
-
-  let closed = false;
-  const closeIntro = () => {
-    if (closed) return;
-    closed = true;
-    intro.classList.add("is-closing");
-    setTimeout(() => {
-      intro.classList.add("is-hidden");
-      document.body.classList.remove("intro-lock");
-    }, 850);
-  };
-
-  document.body.classList.add("intro-lock");
-
-  video.addEventListener("timeupdate", function () {
-    if (video.duration && progress) {
-      progress.style.width = Math.min(100, (video.currentTime / video.duration) * 100) + "%";
-    }
-  });
-
-  video.addEventListener("ended", closeIntro);
-
-  skip.addEventListener("click", function () {
-    video.pause();
-    closeIntro();
-  });
-
-  sound.addEventListener("click", function () {
-    video.muted = !video.muted;
-    const icon = sound.querySelector("i");
-    const label = sound.querySelector("span");
-    if (video.muted) {
-      icon.className = "fa-solid fa-volume-xmark";
-      label.textContent = document.documentElement.lang === "en" ? "Sound On" : "تشغيل الصوت";
-    } else {
-      icon.className = "fa-solid fa-volume-high";
-      label.textContent = document.documentElement.lang === "en" ? "Mute" : "كتم الصوت";
-      video.play().catch(() => {});
-    }
-  });
-
-  // A first user gesture can safely enable the cinematic soundtrack.
-  intro.addEventListener("click", function (e) {
-    if (e.target.closest("button")) return;
-    if (video.muted) {
-      video.muted = false;
-      const icon = sound.querySelector("i");
-      const label = sound.querySelector("span");
-      icon.className = "fa-solid fa-volume-high";
-      label.textContent = document.documentElement.lang === "en" ? "Mute" : "كتم الصوت";
-      video.play().catch(() => {});
-    }
-  });
-
-  // Fallback in case a browser refuses video playback.
-  setTimeout(closeIntro, 14000);
-  video.play().catch(() => {});
-});
-</script>
-
 <script src="js/lang.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script src="js/whatsapp.js"></script>
@@ -693,75 +586,6 @@ if (uploadBox && fileInput) {
     if (fileInput.files.length) uploadBox.querySelector("p").textContent = fileInput.files[0].name;
   });
 }
-</script>
-
-<script>
-/* Premium country-code picker */
-document.addEventListener("DOMContentLoaded", function () {
-  const picker = document.getElementById("countryPicker");
-  const dropdown = document.getElementById("countryDropdown");
-  const list = document.getElementById("countryList");
-  const search = document.getElementById("countrySearch");
-  const codeInput = document.getElementById("countryCode");
-  const selectedCountry = document.querySelector(".selected-country");
-  const selectedCode = document.querySelector(".selected-code");
-  const phonePicker = document.getElementById("phonePicker");
-
-  if (!picker || !dropdown || !list || !search || !codeInput) return;
-
-  const countries = [
-    ["🇰🇼","الكويت","Kuwait","+965"],["🇸🇦","السعودية","Saudi Arabia","+966"],["🇦🇪","الإمارات","United Arab Emirates","+971"],["🇶🇦","قطر","Qatar","+974"],["🇧🇭","البحرين","Bahrain","+973"],["🇴🇲","عُمان","Oman","+968"],["🇪🇬","مصر","Egypt","+20"],["🇯🇴","الأردن","Jordan","+962"],["🇱🇧","لبنان","Lebanon","+961"],["🇸🇾","سوريا","Syria","+963"],["🇮🇶","العراق","Iraq","+964"],["🇾🇪","اليمن","Yemen","+967"],["🇵🇸","فلسطين","Palestine","+970"],["🇱🇾","ليبيا","Libya","+218"],["🇹🇳","تونس","Tunisia","+216"],["🇩🇿","الجزائر","Algeria","+213"],["🇲🇦","المغرب","Morocco","+212"],["🇸🇩","السودان","Sudan","+249"],["🇲🇷","موريتانيا","Mauritania","+222"],["🇸🇴","الصومال","Somalia","+252"],["🇩🇯","جيبوتي","Djibouti","+253"],["🇰🇲","جزر القمر","Comoros","+269"],["🇮🇳","الهند","India","+91"],["🇵🇰","باكستان","Pakistan","+92"],["🇧🇩","بنغلاديش","Bangladesh","+880"],["🇳🇵","نيبال","Nepal","+977"],["🇱🇰","سريلانكا","Sri Lanka","+94"],["🇨🇳","الصين","China","+86"],["🇯🇵","اليابان","Japan","+81"],["🇰🇷","كوريا الجنوبية","South Korea","+82"],["🇮🇩","إندونيسيا","Indonesia","+62"],["🇲🇾","ماليزيا","Malaysia","+60"],["🇸🇬","سنغافورة","Singapore","+65"],["🇹🇭","تايلاند","Thailand","+66"],["🇵🇭","الفلبين","Philippines","+63"],["🇻🇳","فيتنام","Vietnam","+84"],["🇹🇼","تايوان","Taiwan","+886"],["🇭🇰","هونغ كونغ","Hong Kong","+852"],["🇹🇷","تركيا","Turkey","+90"],["🇮🇷","إيران","Iran","+98"],["🇮🇱","إسرائيل","Israel","+972"],["🇦🇫","أفغانستان","Afghanistan","+93"],["🇰🇿","كازاخستان","Kazakhstan","+7"],["🇺🇿","أوزبكستان","Uzbekistan","+998"],["🇦🇿","أذربيجان","Azerbaijan","+994"],["🇬🇪","جورجيا","Georgia","+995"],["🇦🇲","أرمينيا","Armenia","+374"],["🇹🇲","تركمانستان","Turkmenistan","+993"],["🇰🇬","قيرغيزستان","Kyrgyzstan","+996"],["🇹🇯","طاجيكستان","Tajikistan","+992"],["🇲🇳","منغوليا","Mongolia","+976"],["🇬🇧","المملكة المتحدة","United Kingdom","+44"],["🇫🇷","فرنسا","France","+33"],["🇩🇪","ألمانيا","Germany","+49"],["🇮🇹","إيطاليا","Italy","+39"],["🇪🇸","إسبانيا","Spain","+34"],["🇳🇱","هولندا","Netherlands","+31"],["🇧🇪","بلجيكا","Belgium","+32"],["🇨🇭","سويسرا","Switzerland","+41"],["🇦🇹","النمسا","Austria","+43"],["🇸🇪","السويد","Sweden","+46"],["🇳🇴","النرويج","Norway","+47"],["🇩🇰","الدنمارك","Denmark","+45"],["🇫🇮","فنلندا","Finland","+358"],["🇮🇪","أيرلندا","Ireland","+353"],["🇵🇹","البرتغال","Portugal","+351"],["🇬🇷","اليونان","Greece","+30"],["🇵🇱","بولندا","Poland","+48"],["🇨🇿","التشيك","Czech Republic","+420"],["🇷🇴","رومانيا","Romania","+40"],["🇭🇺","المجر","Hungary","+36"],["🇷🇺","روسيا","Russia","+7"],["🇺🇦","أوكرانيا","Ukraine","+380"],["🇺🇸","الولايات المتحدة","United States","+1"],["🇨🇦","كندا","Canada","+1"],["🇲🇽","المكسيك","Mexico","+52"]
-  ];
-
-  function currentLang(){ return document.documentElement.lang === "en" ? "en" : "ar"; }
-
-  function renderCountries(filter = "") {
-    const lang = currentLang();
-    const q = filter.trim().toLowerCase();
-    const matches = countries.filter(c => {
-      const name = (lang === "en" ? c[2] : c[1]).toLowerCase();
-      return !q || name.includes(q) || c[1].toLowerCase().includes(q) || c[2].toLowerCase().includes(q) || c[3].includes(q);
-    });
-    list.innerHTML = matches.map(c => `
-      <button type="button" class="country-item" data-code="${c[3]}" data-flag="${c[0]}" role="option">
-        <span class="country-flag">${c[0]}</span>
-        <span class="country-name">${lang === "en" ? c[2] : c[1]}</span>
-        <span class="country-dial">${c[3]}</span>
-      </button>
-    `).join("") || `<div class="no-country">${lang === "en" ? "No country found" : "لم يتم العثور على الدولة"}</div>`;
-  }
-
-  function closePicker(){
-    phonePicker.classList.remove("open");
-    picker.setAttribute("aria-expanded", "false");
-  }
-
-  picker.addEventListener("click", function(e){
-    e.stopPropagation();
-    const open = phonePicker.classList.toggle("open");
-    picker.setAttribute("aria-expanded", open ? "true" : "false");
-    if (open) { search.focus(); renderCountries(search.value); }
-  });
-
-  list.addEventListener("click", function(e){
-    const item = e.target.closest(".country-item");
-    if (!item) return;
-    selectedCountry.textContent = item.dataset.flag;
-    selectedCode.textContent = item.dataset.code;
-    codeInput.value = item.dataset.code;
-    closePicker();
-  });
-
-  search.addEventListener("input", function(){ renderCountries(this.value); });
-  search.addEventListener("click", e => e.stopPropagation());
-
-  document.addEventListener("click", function(e){
-    if (phonePicker && !phonePicker.contains(e.target)) closePicker();
-  });
-
-  window.renderCountryPicker = function(){ renderCountries(search.value); };
-  renderCountries();
-});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
