@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="apple-touch-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -87,8 +88,9 @@
     <div class="hero-title">
       <span class="eyebrow" data-ar="مكتب محاماة كويتي" data-en="Kuwaiti Law Firm">مكتب محاماة كويتي</span>
 
-      <h1 data-ar="نمارس مهنة المحاماة<br>منذ عام <em>1982</em>" data-en="Practicing Law<br>Since <em>1982</em>">
-        نمارس مهنة المحاماة<br>منذ عام <em>1982</em>
+      <h1>
+        <span class="h1-line" data-ar="نمارس مهنة المحاماة" data-en="Practicing Law">نمارس مهنة المحاماة</span>
+        <span class="h1-line since"><span data-ar="منذ عام" data-en="Since">منذ عام</span> <em>1982</em></span>
       </h1>
     </div>
 
@@ -406,11 +408,18 @@
         <div class="field phone-field">
           <label for="phone" data-ar="رقم الجوال" data-en="Phone Number">رقم الجوال</label>
           <div class="phone-row">
-            <select id="countryCode" aria-label="Country Code">
-              <option value="+965">🇰🇼 +965</option>
-              <option value="+966">🇸🇦 +966</option>
-              <option value="+20">🇪🇬 +20</option>
-            </select>
+            <div class="cc-picker" id="ccPicker">
+              <input type="hidden" id="countryCode" value="+965">
+              <button type="button" class="cc-btn" id="ccBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Country Code">
+                <span class="flag-icon flag-icon-kw" id="ccFlag"></span>
+                <span id="ccDial">+965</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="cc-panel" id="ccPanel" hidden>
+                <input type="search" class="cc-search" id="ccSearch" placeholder="بحث / Search" autocomplete="off">
+                <ul class="cc-list" id="ccList" role="listbox"></ul>
+              </div>
+            </div>
             <input type="tel" id="phone" required>
           </div>
         </div>
@@ -581,6 +590,58 @@ if (uploadBox && fileInput) {
 }
 </script>
 
+<script>
+(function(){
+  var C=[["af","أفغانستان","Afghanistan","+93"],["al","ألبانيا","Albania","+355"],["dz","الجزائر","Algeria","+213"],["ad","أندورا","Andorra","+376"],["ao","أنغولا","Angola","+244"],["ar","الأرجنتين","Argentina","+54"],["am","أرمينيا","Armenia","+374"],["au","أستراليا","Australia","+61"],["at","النمسا","Austria","+43"],["az","أذربيجان","Azerbaijan","+994"],["bh","البحرين","Bahrain","+973"],["bd","بنغلاديش","Bangladesh","+880"],["by","بيلاروس","Belarus","+375"],["be","بلجيكا","Belgium","+32"],["bj","بنين","Benin","+229"],["bt","بوتان","Bhutan","+975"],["bo","بوليفيا","Bolivia","+591"],["ba","البوسنة والهرسك","Bosnia & Herzegovina","+387"],["bw","بوتسوانا","Botswana","+267"],["br","البرازيل","Brazil","+55"],["bn","بروناي","Brunei","+673"],["bg","بلغاريا","Bulgaria","+359"],["bf","بوركينا فاسو","Burkina Faso","+226"],["bi","بوروندي","Burundi","+257"],["kh","كمبوديا","Cambodia","+855"],["cm","الكاميرون","Cameroon","+237"],["ca","كندا","Canada","+1"],["cv","الرأس الأخضر","Cape Verde","+238"],["cf","جمهورية أفريقيا الوسطى","Central African Republic","+236"],["td","تشاد","Chad","+235"],["cl","تشيلي","Chile","+56"],["cn","الصين","China","+86"],["co","كولومبيا","Colombia","+57"],["km","جزر القمر","Comoros","+269"],["cg","الكونغو - برازافيل","Congo - Brazzaville","+242"],["cd","الكونغو - كينشاسا","Congo - Kinshasa","+243"],["cr","كوستاريكا","Costa Rica","+506"],["ci","ساحل العاج","Côte d’Ivoire","+225"],["hr","كرواتيا","Croatia","+385"],["cu","كوبا","Cuba","+53"],["cy","قبرص","Cyprus","+357"],["cz","التشيك","Czechia","+420"],["dk","الدانمرك","Denmark","+45"],["dj","جيبوتي","Djibouti","+253"],["do","جمهورية الدومينيكان","Dominican Republic","+1809"],["ec","الإكوادور","Ecuador","+593"],["eg","مصر","Egypt","+20"],["sv","السلفادور","El Salvador","+503"],["gq","غينيا الاستوائية","Equatorial Guinea","+240"],["er","إريتريا","Eritrea","+291"],["ee","إستونيا","Estonia","+372"],["et","إثيوبيا","Ethiopia","+251"],["fj","فيجي","Fiji","+679"],["fi","فنلندا","Finland","+358"],["fr","فرنسا","France","+33"],["ga","الغابون","Gabon","+241"],["gm","غامبيا","Gambia","+220"],["ge","جورجيا","Georgia","+995"],["de","ألمانيا","Germany","+49"],["gh","غانا","Ghana","+233"],["gr","اليونان","Greece","+30"],["gt","غواتيمالا","Guatemala","+502"],["gn","غينيا","Guinea","+224"],["gw","غينيا بيساو","Guinea-Bissau","+245"],["gy","غيانا","Guyana","+592"],["ht","هايتي","Haiti","+509"],["hn","هندوراس","Honduras","+504"],["hk","هونغ كونغ الصينية (منطقة إدارية خاصة)","Hong Kong SAR China","+852"],["hu","هنغاريا","Hungary","+36"],["is","آيسلندا","Iceland","+354"],["in","الهند","India","+91"],["id","إندونيسيا","Indonesia","+62"],["ir","إيران","Iran","+98"],["iq","العراق","Iraq","+964"],["ie","أيرلندا","Ireland","+353"],["it","إيطاليا","Italy","+39"],["jm","جامايكا","Jamaica","+1876"],["jp","اليابان","Japan","+81"],["jo","الأردن","Jordan","+962"],["kz","كازاخستان","Kazakhstan","+7"],["ke","كينيا","Kenya","+254"],["kw","الكويت","Kuwait","+965"],["kg","قيرغيزستان","Kyrgyzstan","+996"],["la","لاوس","Laos","+856"],["lv","لاتفيا","Latvia","+371"],["lb","لبنان","Lebanon","+961"],["ls","ليسوتو","Lesotho","+266"],["lr","ليبيريا","Liberia","+231"],["ly","ليبيا","Libya","+218"],["li","ليختنشتاين","Liechtenstein","+423"],["lt","ليتوانيا","Lithuania","+370"],["lu","لوكسمبورغ","Luxembourg","+352"],["mo","منطقة ماكاو الإدارية الخاصة","Macao SAR China","+853"],["mg","مدغشقر","Madagascar","+261"],["mw","ملاوي","Malawi","+265"],["my","ماليزيا","Malaysia","+60"],["mv","جزر المالديف","Maldives","+960"],["ml","مالي","Mali","+223"],["mt","مالطا","Malta","+356"],["mr","موريتانيا","Mauritania","+222"],["mu","موريشيوس","Mauritius","+230"],["mx","المكسيك","Mexico","+52"],["md","مولدوفا","Moldova","+373"],["mc","موناكو","Monaco","+377"],["mn","منغوليا","Mongolia","+976"],["me","الجبل الأسود","Montenegro","+382"],["ma","المغرب","Morocco","+212"],["mz","موزمبيق","Mozambique","+258"],["mm","ميانمار (بورما)","Myanmar (Burma)","+95"],["na","ناميبيا","Namibia","+264"],["np","نيبال","Nepal","+977"],["nl","هولندا","Netherlands","+31"],["nz","نيوزيلندا","New Zealand","+64"],["ni","نيكاراغوا","Nicaragua","+505"],["ne","النيجر","Niger","+227"],["ng","نيجيريا","Nigeria","+234"],["kp","كوريا الشمالية","North Korea","+850"],["mk","مقدونيا الشمالية","North Macedonia","+389"],["no","النرويج","Norway","+47"],["om","عُمان","Oman","+968"],["pk","باكستان","Pakistan","+92"],["ps","الأراضي الفلسطينية","Palestinian Territories","+970"],["pa","بنما","Panama","+507"],["pg","بابوا غينيا الجديدة","Papua New Guinea","+675"],["py","باراغواي","Paraguay","+595"],["pe","بيرو","Peru","+51"],["ph","الفلبين","Philippines","+63"],["pl","بولندا","Poland","+48"],["pt","البرتغال","Portugal","+351"],["qa","قطر","Qatar","+974"],["ro","رومانيا","Romania","+40"],["ru","روسيا","Russia","+7"],["rw","رواندا","Rwanda","+250"],["sa","المملكة العربية السعودية","Saudi Arabia","+966"],["sn","السنغال","Senegal","+221"],["rs","صربيا","Serbia","+381"],["sc","سيشل","Seychelles","+248"],["sl","سيراليون","Sierra Leone","+232"],["sg","سنغافورة","Singapore","+65"],["sk","سلوفاكيا","Slovakia","+421"],["si","سلوفينيا","Slovenia","+386"],["so","الصومال","Somalia","+252"],["za","جنوب أفريقيا","South Africa","+27"],["kr","كوريا الجنوبية","South Korea","+82"],["ss","جنوب السودان","South Sudan","+211"],["es","إسبانيا","Spain","+34"],["lk","سريلانكا","Sri Lanka","+94"],["sd","السودان","Sudan","+249"],["sr","سورينام","Suriname","+597"],["sz","إسواتيني","Eswatini","+268"],["se","السويد","Sweden","+46"],["ch","سويسرا","Switzerland","+41"],["sy","سوريا","Syria","+963"],["tw","تايوان","Taiwan","+886"],["tj","طاجيكستان","Tajikistan","+992"],["tz","تنزانيا","Tanzania","+255"],["th","تايلاند","Thailand","+66"],["tl","تيمور - ليشتي","Timor-Leste","+670"],["tg","توغو","Togo","+228"],["tt","ترينيداد وتوباغو","Trinidad & Tobago","+1868"],["tn","تونس","Tunisia","+216"],["tr","تركيا","Türkiye","+90"],["tm","تركمانستان","Turkmenistan","+993"],["ug","أوغندا","Uganda","+256"],["ua","أوكرانيا","Ukraine","+380"],["ae","الإمارات العربية المتحدة","United Arab Emirates","+971"],["gb","المملكة المتحدة","United Kingdom","+44"],["us","الولايات المتحدة","United States","+1"],["uy","أورغواي","Uruguay","+598"],["uz","أوزبكستان","Uzbekistan","+998"],["ve","فنزويلا","Venezuela","+58"],["vn","فيتنام","Vietnam","+84"],["ye","اليمن","Yemen","+967"],["zm","زامبيا","Zambia","+260"],["zw","زيمبابوي","Zimbabwe","+263"]];
+  var PIN=['kw','sa','ae','qa','bh','om','eg','jo','lb','iq','sy','ye','ps','ly','sd','ma','dz','tn'];
+  var picker=document.getElementById('ccPicker');
+  if(!picker) return;
+  var btn=document.getElementById('ccBtn'), panel=document.getElementById('ccPanel'),
+      list=document.getElementById('ccList'), search=document.getElementById('ccSearch'),
+      val=document.getElementById('countryCode'), flag=document.getElementById('ccFlag'), dial=document.getElementById('ccDial');
+  var cur='kw';
+  function isEn(){return document.documentElement.lang==='en';}
+  function name(c){return isEn()?c[2]:c[1];}
+  function pick(c){
+    cur=c[0]; val.value=c[3]; dial.textContent=c[3];
+    flag.className='flag-icon flag-icon-'+c[0];
+    close();
+  }
+  function render(q){
+    q=(q||'').trim().toLowerCase();
+    var arr=C.slice().sort(function(a,b){
+      var pa=PIN.indexOf(a[0]), pb=PIN.indexOf(b[0]);
+      if(pa>-1||pb>-1) return (pa<0?99:pa)-(pb<0?99:pb);
+      return name(a).localeCompare(name(b),isEn()?'en':'ar');
+    });
+    list.innerHTML='';
+    arr.forEach(function(c){
+      if(q && (c[1].toLowerCase().indexOf(q)<0 && c[2].toLowerCase().indexOf(q)<0 && c[3].indexOf(q)<0)) return;
+      var li=document.createElement('li');
+      li.setAttribute('role','option');
+      if(c[0]===cur) li.className='active';
+      li.innerHTML='<span class="flag-icon flag-icon-'+c[0]+'"></span><span class="cc-name"></span><span class="cc-code" dir="ltr"></span>';
+      li.children[1].textContent=name(c);
+      li.children[2].textContent=c[3];
+      li.addEventListener('click',function(){pick(c);});
+      list.appendChild(li);
+    });
+  }
+  function open(){panel.hidden=false;btn.setAttribute('aria-expanded','true');search.value='';render('');search.focus();
+    var a=list.querySelector('.active'); if(a) list.scrollTop=a.offsetTop-60;}
+  function close(){panel.hidden=true;btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){panel.hidden?open():close();});
+  search.addEventListener('input',function(){render(search.value);});
+  document.addEventListener('click',function(e){if(!picker.contains(e.target)) close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') close();});
+  document.getElementById('contactForm').addEventListener('reset',function(){
+    pick(C.filter(function(c){return c[0]==='kw';})[0]);
+  });
+  new MutationObserver(function(){search.placeholder=isEn()?'Search country or code':'ابحث عن دولة أو مفتاح';})
+    .observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+  search.placeholder=isEn()?'Search country or code':'ابحث عن دولة أو مفتاح';
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
 (function(){
