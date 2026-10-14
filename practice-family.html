@@ -1,124 +1,39 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-ar="الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي" data-en="Personal Status | Saad Alroomi & Tareq Alsubaie">الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-
-<style>
-.page-hero{min-height:58vh;background:linear-gradient(110deg,rgba(7,22,36,.97),rgba(11,28,45,.72)),url("assets/images/hero.jpg") center/cover;display:flex;align-items:end;position:relative;overflow:hidden}
-.page-hero .hero-content{padding-top:150px;padding-bottom:90px;position:relative;z-index:2}
-.page-hero h1{font-size:clamp(2.4rem,6vw,5.2rem);line-height:1.05;color:#fff;margin:0 0 22px}
-.breadcrumb{font-size:.9rem;color:rgba(255,255,255,.72);margin-bottom:25px}.breadcrumb a{color:#fff}
-.gold-line{width:82px;height:3px;background:#c9a24d}
-.practice-content{padding-top:90px;padding-bottom:80px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.7fr);gap:65px;align-items:start}
-.practice-copy{font-size:1.05rem;line-height:2;color:#39434c}
-.practice-copy p{margin:0 0 22px}
-.service-panel{grid-column:2;grid-row:1 / span 3;background:#0b1c2d;color:#fff;box-shadow:0 24px 60px rgba(11,28,45,.15);padding:30px}
-.service-panel .eyebrow{color:#c9a24d;letter-spacing:.12em;font-size:.75rem;font-weight:800;margin-bottom:10px}
-.service-panel h2{margin:0 0 18px;font-size:1.45rem}
-.service-panel .service-text{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;line-height:1.9;color:rgba(255,255,255,.88)}
-.service-list{list-style:none;padding:0;margin:18px 0 0}
-.service-list li{position:relative;padding:13px 24px 13px 0;border-top:1px solid rgba(255,255,255,.12);line-height:1.7}
-.service-list li:before{content:"";position:absolute;right:0;top:23px;width:7px;height:7px;border-radius:50%;background:#c9a24d}
-[dir="ltr"] .service-list li{padding:13px 0 13px 24px}[dir="ltr"] .service-list li:before{right:auto;left:0}
-.back-button-container{padding:0 0 75px}.back-button{border:1px solid #c9a24d;background:transparent;color:#0b1c2d;padding:12px 24px;font-weight:700;cursor:pointer}
-@media(max-width:900px){.practice-content{grid-template-columns:1fr;gap:28px}.service-panel{grid-column:1;grid-row:auto}.page-hero{min-height:48vh}.page-hero .hero-content{padding-top:125px;padding-bottom:60px}}
-</style>
-
-</head>
-<body>
-
-<header class="site-header" id="siteHeader">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="ST Lawyers">
-      <img src="assets/images/logo.png" alt="ST Lawyers">
-    </a>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-      <a href="index.html#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a>
-      <div class="nav-dropdown dropdown">
-        <button class="dropdown-toggle" type="button" aria-expanded="false">
-          <span data-ar="الممارسات القانونية" data-en="Practice Areas">الممارسات القانونية</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="dropdown-menu">
-          <a href="practice-criminal.html" data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</a>
-          <a href="practice-civil.html" data-ar="القسم المدني" data-en="Civil Law">القسم المدني</a>
-          <a href="practice-commercial.html" data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</a>
-          <a href="practice-real-estate.html" data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</a>
-          <a href="practice-labor.html" data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</a>
-          <a href="practice-family.html" data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</a>
-          <a href="practice-arbitration.html" data-ar="التحكيم" data-en="Arbitration">التحكيم</a>
-        </div>
-      </div>
-      <a href="index.html#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a>
-      <a href="news.html" data-ar="أخبار المكتب" data-en="News & Insights">أخبار المكتب</a>
-      <a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a>
-    </nav>
-    <div class="lang-switcher" aria-label="Language">
-      <button type="button" class="active" onclick="changeLanguage('ar')">AR</button>
-      <span>/</span>
-      <button type="button" onclick="changeLanguage('en')">EN</button>
-    </div>
-  </div>
-</header>
-
-<section class="page-hero">
-  <div class="hero-content container">
-    <div class="breadcrumb"><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a><span> / </span><span data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</span></div>
-    <div class="eyebrow" style="color:#c9a24d;letter-spacing:.12em;font-size:.78rem;font-weight:800;margin-bottom:14px" data-ar="مجالات الممارسة القانونية" data-en="PRACTICE AREA">مجالات الممارسة القانونية</div>
-    <h1 data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</h1>
-    <div class="gold-line"></div>
-  </div>
-</section>
-<section class="practice-content container">
-  <div class="practice-copy">
-    <p data-ar="يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون." data-en="The firm handles family law matters including marriage, divorce, alimony, child custody, visitation rights, and lineage claims, ensuring the protection of family rights in accordance with Sharia and applicable law.">يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون.</p>
-  </div>
-  <aside class="service-panel">
-    <div class="eyebrow" data-ar="نطاق الممارسة" data-en="PRACTICE SCOPE">نطاق الممارسة</div>
-    <h2 data-ar="قضايا الأحوال الشخصية" data-en="Personal Status Matters">قضايا الأحوال الشخصية</h2>
-    <div class="service-text" data-ar="يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون." data-en="The firm handles family law matters including marriage, divorce, alimony, child custody, visitation rights, and lineage claims, ensuring the protection of family rights in accordance with Sharia and applicable law.">يتولى المكتب القضايا المتعلقة بالأحوال الشخصية بما يشمل الزواج، الطلاق، النفقة، الحضانة، الرؤية، وإثبات النسب، مع الحرص على حماية الحقوق الأسرية وفقاً لأحكام الشريعة والقانون.</div>
-    
-  </aside>
-</section>
-
-<div class="container back-button-container">
-  <button class="back-button" onclick="goBack()" data-ar="← رجوع" data-en="← Back">← رجوع</button>
-</div>
-<footer class="footer">
-  <div class="footer-center">
-    <img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers">
-    <p data-ar="جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026"
-       data-en="All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm © 2026">
-       جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026
-    </p>
-  </div>
-</footer>
-
-
-<script src="js/lang.js"></script>
-<script src="js/mobile-menu.js"></script>
-<script>
-function changeLanguage(lang){
-  if(typeof setLang==='function') setLang(lang);
-  else if(typeof setLanguage==='function') setLanguage(lang);
-  document.documentElement.lang=lang;
-  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
-  document.querySelectorAll('.lang-switcher button').forEach(b=>b.classList.remove('active'));
-  const a=document.querySelector('.lang-switcher button[onclick*="'+lang+'"]'); if(a) a.classList.add('active');
-}
-function goBack(){ window.history.back(); }
-</script>
-
-</body>
-</html>
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الأحوال الشخصية | مكتب سعد الرومي وطارق السبيعي</title><meta name="description" content="نقدم خدمات قانونية في مسائل الأحوال الشخصية، مع مراعاة خصوصية كل حالة والحرص على التعامل المهني مع المسائل الأسرية. وتشمل الخدمات تقديم الاستشارات والتمثيل في المنازعات المتعلقة بالزواج والطلاق والنفقة والحضانة والرؤية وغيرها من المسائل التي تدخل ضمن نطاق الأحوال الشخصية."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="assets/css/style.css"><style>
+.practice-page-hero{min-height:58vh;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:linear-gradient(100deg,rgba(5,17,28,.96),rgba(5,17,28,.72)),url('assets/images/hero.jpg') center/cover no-repeat}
+.practice-page-hero:after{content:"";position:absolute;inset:18px;border:1px solid rgba(201,162,77,.25);pointer-events:none}
+.practice-page-hero .container{position:relative;z-index:1;padding-top:150px;padding-bottom:76px;color:#fff}
+.practice-breadcrumb{font-size:12px;color:rgba(255,255,255,.7);margin-bottom:28px}
+.practice-breadcrumb a{color:#fff}
+.practice-page-eyebrow{color:var(--gold-light);font-size:12px;font-weight:800;letter-spacing:.12em;margin-bottom:14px}
+.practice-page-hero h1{margin:0 0 22px;font-family:'Playfair Display','Cairo',serif;font-size:clamp(38px,6vw,72px);line-height:1.2;color:#fff}
+.practice-page-hero .gold-line{width:82px;height:3px;background:var(--gold)}
+.practice-content{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.7fr);gap:60px;align-items:start;padding-top:85px;padding-bottom:65px}
+.practice-copy .eyebrow{color:#96752c;font-size:12px;font-weight:800;letter-spacing:.1em}
+.practice-copy h2{margin:10px 0 22px;font-size:clamp(26px,3vw,38px);line-height:1.4;color:var(--navy)}
+.practice-copy p{font-size:15px;line-height:2.1;color:#53606b;margin:0 0 20px}
+.practice-note{margin-top:28px;padding:22px 24px;border-inline-start:3px solid var(--gold);background:var(--cream);color:#53606b;font-size:13px;line-height:2}
+.service-panel{position:sticky;top:110px;background:var(--navy);color:#fff;box-shadow:var(--shadow);padding:30px}
+.service-panel .eyebrow{color:var(--gold-light);font-size:11px;font-weight:800;letter-spacing:.1em}
+.service-panel h2{margin:8px 0 15px;color:#fff;font-size:23px;line-height:1.5}
+.service-panel .service-text{padding-bottom:17px;border-bottom:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.72);font-size:12px;line-height:1.9}
+.service-list{list-style:none;padding:0;margin:8px 0 0}
+.service-list li{position:relative;padding:13px 23px 13px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:12px;line-height:1.8;color:rgba(255,255,255,.9)}
+.service-list li:before{content:"";position:absolute;right:0;top:22px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+[dir="ltr"] .service-list li{padding:13px 0 13px 23px}[dir="ltr"] .service-list li:before{right:auto;left:0}
+.practice-cta{margin:0 auto 85px;padding:30px 34px;display:flex;justify-content:space-between;align-items:center;gap:24px;background:#f6f3eb;border:1px solid #ebe4d3}
+.practice-cta h2{margin:0 0 5px;color:var(--navy);font-size:22px}
+.practice-cta p{margin:0;color:var(--muted);font-size:13px}
+.practice-cta a{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex-shrink:0;padding:13px 22px;background:var(--gold);color:var(--navy);font-size:13px;font-weight:800;transition:.2s}
+.practice-cta a:hover{background:var(--navy);color:#fff}
+@media(max-width:900px){.practice-page-hero{min-height:48vh}.practice-page-hero .container{padding-top:130px;padding-bottom:55px}.practice-content{grid-template-columns:1fr;gap:28px;padding-top:55px}.service-panel{position:static}.practice-cta{margin-bottom:60px;align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.practice-page-hero .container{padding-inline:22px}.practice-content{padding-top:45px;padding-bottom:40px}.practice-copy p{font-size:14px}.service-panel{padding:23px}.practice-cta{padding:24px 20px}.practice-cta a{width:100%}}
+</style></head><body>
+<header class="site-header" id="siteHeader"><div class="container header-inner"><a class="brand" href="index.html" aria-label="ST Lawyers"><img src="assets/images/logo.png" alt="ST Lawyers"></a><button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="main-nav" id="mainNav"><a href="index.html#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a><a href="index.html#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a><div class="nav-dropdown dropdown"><button class="dropdown-toggle" type="button" aria-expanded="false"><span data-ar="الممارسات القانونية" data-en="Practice Areas">الممارسات القانونية</span><i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-menu"><a href="practice-criminal.html" data-ar="القسم الجنائي" data-en="Criminal Law">القسم الجنائي</a><a href="practice-civil.html" data-ar="القسم المدني" data-en="Civil Law">القسم المدني</a><a href="practice-commercial.html" data-ar="القسم التجاري" data-en="Commercial Law">القسم التجاري</a><a href="practice-real-estate.html" data-ar="العقارات والإيجارات" data-en="Real Estate & Leases">العقارات والإيجارات</a><a href="practice-labor.html" data-ar="القسم العمالي" data-en="Labor Law">القسم العمالي</a><a href="practice-family.html" data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</a><a href="practice-arbitration.html" data-ar="التحكيم" data-en="Arbitration">التحكيم</a></div></div><a href="index.html#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a><a href="news.html" data-ar="أخبار المكتب" data-en="News & Insights">أخبار المكتب</a><a href="index.html#contact" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></nav><div class="lang-switcher" aria-label="Language"><button type="button" class="active" onclick="changeLanguage('ar')">AR</button><span>/</span><button type="button" onclick="changeLanguage('en')">EN</button></div></div></header>
+<main><section class="practice-page-hero"><div class="container"><div class="practice-breadcrumb"><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a><span> / </span><span data-ar="الممارسات القانونية" data-en="Practice Areas">الممارسات القانونية</span><span> / </span><span data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</span></div><div class="practice-page-eyebrow" data-ar="مجالات الممارسة القانونية" data-en="OUR PRACTICE AREAS">مجالات الممارسة القانونية</div><h1 data-ar="الأحوال الشخصية" data-en="Personal Status">الأحوال الشخصية</h1><div class="gold-line"></div></div></section>
+<section class="practice-content container"><article class="practice-copy"><span class="eyebrow" data-ar="نظرة عامة" data-en="OVERVIEW">نظرة عامة</span><h2 data-ar="خدمات قانونية تقوم على الخبرة والاهتمام بالتفاصيل" data-en="Legal services grounded in experience and attention to detail">خدمات قانونية تقوم على الخبرة والاهتمام بالتفاصيل</h2><p data-ar="نقدم خدمات قانونية في مسائل الأحوال الشخصية، مع مراعاة خصوصية كل حالة والحرص على التعامل المهني مع المسائل الأسرية. وتشمل الخدمات تقديم الاستشارات والتمثيل في المنازعات المتعلقة بالزواج والطلاق والنفقة والحضانة والرؤية وغيرها من المسائل التي تدخل ضمن نطاق الأحوال الشخصية." data-en="We provide legal services in personal status matters, taking into account the circumstances of each case and handling sensitive family issues professionally. Services include advice and representation in disputes involving marriage, divorce, maintenance, custody, visitation and other personal status matters.">نقدم خدمات قانونية في مسائل الأحوال الشخصية، مع مراعاة خصوصية كل حالة والحرص على التعامل المهني مع المسائل الأسرية. وتشمل الخدمات تقديم الاستشارات والتمثيل في المنازعات المتعلقة بالزواج والطلاق والنفقة والحضانة والرؤية وغيرها من المسائل التي تدخل ضمن نطاق الأحوال الشخصية.</p><p data-ar="نحرص على فهم ظروف كل ملف ومراجعة مستنداته، وتوضيح الخيارات القانونية المتاحة للموكل، مع متابعة الإجراءات ذات الصلة بصورة مهنية ومنظمة." data-en="We take care to understand the circumstances of each matter, review its documents, explain available legal options and follow relevant procedures in a professional and organized manner.">نحرص على فهم ظروف كل ملف ومراجعة مستنداته، وتوضيح الخيارات القانونية المتاحة للموكل، مع متابعة الإجراءات ذات الصلة بصورة مهنية ومنظمة.</p><div class="practice-note" data-ar="تُحدد الإجراءات والخدمات المناسبة بحسب وقائع كل حالة والمستندات المتاحة والقواعد القانونية ذات الصلة. ولا يُعد هذا الوصف بديلًا عن الاستشارة القانونية الخاصة بالحالة." data-en="The appropriate services and procedures depend on the facts of each matter, available documents and applicable legal rules. This overview is not a substitute for advice on a specific case.">تُحدد الإجراءات والخدمات المناسبة بحسب وقائع كل حالة والمستندات المتاحة والقواعد القانونية ذات الصلة. ولا يُعد هذا الوصف بديلًا عن الاستشارة القانونية الخاصة بالحالة.</div></article><aside class="service-panel"><div class="eyebrow" data-ar="نطاق الممارسة" data-en="PRACTICE SCOPE">نطاق الممارسة</div><h2 data-ar="مسائل الأسرة والأحوال الشخصية" data-en="Family & Personal Status Matters">مسائل الأسرة والأحوال الشخصية</h2><div class="service-text" data-ar="نساعدكم في تقييم المسألة القانونية وتحديد الخطوات المناسبة وفقًا لطبيعة النزاع واحتياجاتكم." data-en="We help assess the legal matter and identify appropriate next steps based on the nature of the dispute and your needs.">نساعدكم في تقييم المسألة القانونية وتحديد الخطوات المناسبة وفقًا لطبيعة النزاع واحتياجاتكم.</div><ul class="service-list"><li data-ar="تقديم الاستشارات في مسائل الأحوال الشخصية." data-en="Advising on personal status matters.">تقديم الاستشارات في مسائل الأحوال الشخصية.</li><li data-ar="المساعدة في قضايا الزواج والطلاق والتفريق." data-en="Assisting with marriage, divorce and separation proceedings.">المساعدة في قضايا الزواج والطلاق والتفريق.</li><li data-ar="متابعة المطالبات المتعلقة بالنفقة والمستحقات الأسرية." data-en="Following up on maintenance and family-entitlement claims.">متابعة المطالبات المتعلقة بالنفقة والمستحقات الأسرية.</li><li data-ar="معالجة مسائل الحضانة والرؤية وفقًا للقانون." data-en="Addressing custody and visitation matters in accordance with the law.">معالجة مسائل الحضانة والرؤية وفقًا للقانون.</li><li data-ar="تمثيل الموكلين ومتابعة الإجراءات أمام المحكمة المختصة." data-en="Representing clients before the competent court.">تمثيل الموكلين ومتابعة الإجراءات أمام المحكمة المختصة.</li></ul></aside></section>
+<section class="container practice-cta"><div><h2 data-ar="هل تحتاج إلى استشارة قانونية؟" data-en="Need legal advice?">هل تحتاج إلى استشارة قانونية؟</h2><p data-ar="تواصل مع المكتب لمناقشة استفسارك وتحديد الخطوات التالية." data-en="Contact the firm to discuss your enquiry and identify the next steps.">تواصل مع المكتب لمناقشة استفسارك وتحديد الخطوات التالية.</p></div><a href="index.html#contact"><span data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span><i class="fa-solid fa-arrow-left"></i></a></section></main>
+<footer class="footer"><div class="container footer-grid"><div class="footer-brand"><img src="assets/images/logo.png" class="footer-logo" alt="ST Lawyers"><p data-ar="مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية" data-en="Saad Alroomi & Tareq Alsubaie Law Firm">مكتب سعد الرومي وطارق السبيعي للمحاماة والاستشارات القانونية</p></div><div><h3 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3><a href="index.html#about" data-ar="عن المكتب" data-en="About Us">عن المكتب</a><a href="index.html#practice" data-ar="مجالات الممارسة" data-en="Practice Areas">مجالات الممارسة</a><a href="index.html#team" data-ar="فريق العمل" data-en="Our Team">فريق العمل</a></div><div><h3 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h3><a href="tel:+96522435001">+965 22435001</a><a href="mailto:info@st-lawyers.com">info@st-lawyers.com</a><span data-ar="الكويت – الشرق" data-en="Kuwait – Sharq">الكويت – الشرق</span></div></div><div class="footer-bottom"><p data-ar="جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026" data-en="All Rights Reserved – Saad Alroomi & Tareq Alsubaie Law Firm © 2026">جميع الحقوق محفوظة – مكتب سعد الرومي وطارق السبيعي للمحاماة © 2026</p></div></footer>
+<script src="js/lang.js"></script><script src="js/mobile-menu.js"></script><script>
+function changeLanguage(lang){if(typeof setLang==='function')setLang(lang);else{document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-ar]').forEach(el=>{const v=el.getAttribute('data-'+lang);if(v!==null)el.textContent=v;})}document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('.lang-switcher button').forEach(b=>b.classList.remove('active'));const a=document.querySelector('.lang-switcher button[onclick*="'+lang+'"]');if(a)a.classList.add('active');}
+document.addEventListener('DOMContentLoaded',()=>{const header=document.getElementById('siteHeader');const nav=document.getElementById('mainNav');const btn=document.getElementById('menuBtn');const drop=document.querySelector('.nav-dropdown');const toggle=document.querySelector('.dropdown-toggle');window.addEventListener('scroll',()=>header&&header.classList.toggle('scrolled',window.scrollY>20));if(btn&&nav)btn.addEventListener('click',e=>{e.stopPropagation();const open=nav.classList.toggle('open');btn.classList.toggle('active',open);btn.setAttribute('aria-expanded',String(open));});if(toggle&&drop)toggle.addEventListener('click',e=>{if(window.innerWidth<=900){e.preventDefault();e.stopPropagation();const open=drop.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));}});document.addEventListener('click',e=>{if(drop&&!drop.contains(e.target)){drop.classList.remove('open');if(toggle)toggle.setAttribute('aria-expanded','false');}if(nav&&btn&&!nav.contains(e.target)&&!btn.contains(e.target)){nav.classList.remove('open');btn.classList.remove('active');btn.setAttribute('aria-expanded','false');}});nav&&nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn&&btn.classList.remove('active');}));});
+</script></body></html>
